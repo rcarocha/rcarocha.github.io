@@ -2,7 +2,7 @@
 
 # Ricardo Couto Antunes da Rocha
 
-* Assistant Professor at Department of Computer Science ([DCC](https://dcc.catalao.ufg.br/)), Federal University of Goias ([UFG](http://www.ufg.br/)) - Regional Campus at Catal„o, Brazil (formerly professor at [Institute of Informatics](http://www.inf.ufg.br/), UFG, Goiania)
+* Assistant Professor at Department of Computer Science ([DCC](https://dcc.catalao.ufg.br/)), Federal University of Goias ([UFG](http://www.ufg.br/)) - Regional Campus at Catal√£o, Brazil (formerly professor at [Institute of Informatics](http://www.inf.ufg.br/), UFG, Goiania)
 * PhD in Computer Science at Pontifical Catholic University of Rio de Janeiro ([PUC-Rio](http://www.puc-rio.br/english/)) - 2009.
 * MsC in Computer Science by Institute of Mathematics and Statistics ([IME](http://www.ime.usp.br/dcc)) at University of Sao Paulo ([USP](http://www.usp.br)) - 2001.
 * Member of Brazilian Computer Society ([SBC](http://www.sbc.org.br/)), Association for Computer Machinery (ACM) and IEEE.
@@ -31,31 +31,31 @@ Please, check my [Lattes CV](http://buscatextual.cnpq.br/buscatextual/visualizac
 
 # Students
 
-+ [Oportunidades](opportunities.html) para estudantes de graduaÁ„o e pÛs-graduaÁ„o.
++ [Oportunidades](opportunities.html) para estudantes de gradua√ß√£o e p√≥s-gradua√ß√£o.
 
 
 # Teaching
 
-+ SeguranÁa (ES), SeguranÁa e Auditoria de Sistemas (CC), SeguranÁa em Sistemas de InformaÁ„o (SI)
-+ AplicaÁıes DistribuÌdas (SI)
-+ Linguagens de ProgramaÁ„o (CC/Catal„o)
-+ Redes de Computadores I e II (CC/Catal„o)
-+ Redes e Sistemas DistribuÌdos (ES)
-+ ProgramaÁ„o Orientada a Objetos (CC), Algoritmos e ProgramaÁ„o
-+ SeguranÁa em Banco de Dados (EspecializaÁ„o)
-+ Criptografia e Protocolos para ComunicaÁ„o Segura (EspecializaÁ„o)
-+ ProgramaÁ„o Paralela e DistribuÌda (Mestrado)
++ Seguran√ßa (ES), Seguran√ßa e Auditoria de Sistemas (CC), Seguran√ßa em Sistemas de Informa√ß√£o (SI)
++ Aplica√ß√µes Distribu√≠das (SI)
++ Linguagens de Programa√ß√£o (CC/Catal√£o)
++ Redes de Computadores I e II (CC/Catal√£o)
++ Redes e Sistemas Distribu√≠dos (ES)
++ Programa√ß√£o Orientada a Objetos (CC), Algoritmos e Programa√ß√£o
++ Seguran√ßa em Banco de Dados (Especializa√ß√£o)
++ Criptografia e Protocolos para Comunica√ß√£o Segura (Especializa√ß√£o)
++ Programa√ß√£o Paralela e Distribu√≠da (Mestrado)
 + Sistemas Operacionais (EngComp)
 
 
 # Address and Contact
 
 Prof. Dr. Ricardo Couto Antunes da Rocha<br>
-Departamento de CiÍncias da ComputaÁ„o<br>
-Universidade Federal de Goi·s - Regional Catal„o<br>
+Departamento de Ci√™ncias da Computa√ß√£o<br>
+Universidade Federal de Goi√°s - Regional Catal√£o<br>
 Av. Dr. Lamartine P. de Avelar, 1120<br>
-Setor Universit·rio<br>
-75704-020 - Catal„o - GO - Brazil<br>
+Setor Universit√°rio<br>
+75704-020 - Catal√£o - GO - Brazil<br>
 <ricardo@inf.ufg.br> or <rcarocha@ufg.br><br>
 <img src="images/email.gif"></img><br>
 (I'm at room **314**)
