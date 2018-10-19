@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-
 # Ricardo Couto Antunes da Rocha
 
 * Assistant Professor at Department of Computer Science ([DCC](https://dcc.catalao.ufg.br/)), Federal University of Goias ([UFG](http://www.ufg.br/)) - Regional Campus at Catalão, Brazil (formerly professor at [Institute of Informatics](http://www.inf.ufg.br/), UFG, Goiania)
