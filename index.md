@@ -59,8 +59,3 @@ Setor Universitário<br>
 <ricardo@inf.ufg.br> or <rcarocha@ufg.br><br>
 <img src="images/email.gif"></img><br>
 (I'm at room **314**)
-
-</xmp>
-
-<script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>
-</html>
