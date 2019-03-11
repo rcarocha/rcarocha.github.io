@@ -1119,7 +1119,7 @@ Preencha o formulário abaixo de auto-avaliação dos seus conhecimentos em **or
 
 </xmp>
 
-<script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>
+<script src="https://strapdownjs.com/v/0.2/strapdown.js"></script>
 </html>
 
 
