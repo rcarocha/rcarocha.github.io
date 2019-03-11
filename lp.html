@@ -1,39 +1,39 @@
 <!DOCTYPE html>
 <html>
-<title>Linguagens de ProgramaÁ„o - Prof. Ricardo da Rocha</title>
+<title>Linguagens de Programa√ß√£o - Prof. Ricardo da Rocha</title>
 
 <xmp theme="simplex" style="display:none;">
 
-Linguagens de ProgramaÁ„o
+Linguagens de Programa√ß√£o
 =========================
 
 <!--
-# Quest„o 7 da Prova
+# Quest√£o 7 da Prova
 
 **Oportunidade de recuperar alguma nota da prova**. Deve ser refeito e entregue na sexta, 9h.
 
-Implemente uma funÁ„o `listinv` em Scheme que receba como par‚metro uma lista e retorne a lista de tr·s para frente. Por exemplo, a chamada `(listinv '(0 1 2 3))` deve  retornar `'(3 2 1 0)`. 
+Implemente uma fun√ß√£o `listinv` em Scheme que receba como par√¢metro uma lista e retorne a lista de tr√°s para frente. Por exemplo, a chamada `(listinv '(0 1 2 3))` deve  retornar `'(3 2 1 0)`. 
 -->
 
-# InformaÁıes Gerais sobre a Disciplina
+# Informa√ß√µes Gerais sobre a Disciplina
 
-+ [ApresentaÁ„o da disciplina](slides/apresentacao-LP-2018.1.pdf) - slides usados na primeira aula
++ [Apresenta√ß√£o da disciplina](slides/apresentacao-LP-2018.1.pdf) - slides usados na primeira aula
 + <a href="plano/plano-LP-2018.1.pdf">Plano da Disciplina</a>
 + **Contato com o professor**: `rcarocha@gmail.com` ou `rcarocha@ufg.br`.
-+ **Hor·rio de Atendimento**
-   + TerÁas, 9:00-10:40, sala 231 (combinar sempre **previamente** por email)
++ **Hor√°rio de Atendimento**
+   + Ter√ßas, 9:00-10:40, sala 231 (combinar sempre **previamente** por email)
 
 ## Bibliografia
 
-1. SEBESTA, R.W. **Conceitos de linguagens de programaÁ„o**. 5 ed. Porto Alegre: Bookman, 2003.  (**b·sica**)
-2. VAREJ√O, F. Linguagens de ProgramaÁ„o - Conceitos e TÈcnicas. Rio de Janeiro: Editora Campus, 2004.  (**b·sica**)
-3. SILVA, J. C. G. - Linguagens de ProgramaÁ„o - Conceitos e avaliaÁ„o. McGraw-Hill, 1988.
+1. SEBESTA, R.W. **Conceitos de linguagens de programa√ß√£o**. 5 ed. Porto Alegre: Bookman, 2003.  (**b√°sica**)
+2. VAREJ√ÉO, F. Linguagens de Programa√ß√£o - Conceitos e T√©cnicas. Rio de Janeiro: Editora Campus, 2004.  (**b√°sica**)
+3. SILVA, J. C. G. - Linguagens de Programa√ß√£o - Conceitos e avalia√ß√£o. McGraw-Hill, 1988.
 1. SETHI, R. Programming Languages - Concepts and Constructs. 2ed. Addisson-Wesley, 1996.
 2. BRATHKO, I. - Prolog Programming for Artificial Intelligence. Addison Wesley, 1986.
 3. WINSTON, P; HORN, B. LISP. Addison-Wesley, 1984.
-4. NICOLETTI, M.C. A Cartilha Prolog. SÈrie apontamentos, Editora da UFSCar, 2003.
-5. SANTOS, R.; IntroduÁ„o ‡ ProgramaÁ„o Orientada a Objetos usando JAVA. Editora Campus, 2003.
-6. HORSTMANN, C.;CORNELL, G.; Core JAVA 2 - Volume I - Fundamentos. TraduÁ„o de Jo„o Eduardo NÛbrega Tortello, Makron Books, 2001.   
+4. NICOLETTI, M.C. A Cartilha Prolog. S√©rie apontamentos, Editora da UFSCar, 2003.
+5. SANTOS, R.; Introdu√ß√£o √† Programa√ß√£o Orientada a Objetos usando JAVA. Editora Campus, 2003.
+6. HORSTMANN, C.;CORNELL, G.; Core JAVA 2 - Volume I - Fundamentos. Tradu√ß√£o de Jo√£o Eduardo N√≥brega Tortello, Makron Books, 2001.   
 
 
 <hr />
@@ -47,52 +47,52 @@ Implemente uma funÁ„o `listinv` em Scheme que receba como par‚metro uma lista e 
 <table><tbody><tr><th>ALUNO</th><th>LINGUAGEM</th></tr><tr><td>ALANA COSTA MAC</td><td>go</td></tr><tr><td>ARTHUR BORGES G</td><td>ruby</td></tr><tr><td>BRUNO GOMES    </td><td>objective-c (trocado com Danilo)</td></tr><tr><td>BRUNO GONCALVES</td><td>kotlin</td></tr><tr><td>CHRISTINA DE SO</td><td>php</td></tr><tr><td>DANILO AUGUSTO </td><td>c# (trocado com Bruno G)</td></tr><tr><td>DIMAS ANTONIO R</td><td>javascript</td></tr><tr><td>FABIO LUCAS DE </td><td>typescript</td></tr><tr><td>FERNANDO CANEDO</td><td>pascal ou delphi</td></tr><tr><td>GABRIEL HENRIQU</td><td>perl</td></tr><tr><td>GABRIEL PERES L</td><td>java</td></tr><tr><td>HALLEFY FERREIR</td><td>lua</td></tr><tr><td>IGOR LUIDJI TUR</td><td>visual basic &Updownarrow;</td></tr><tr><td>IVO PALHETA MEN</td><td>python</td></tr><tr><td>LUCAS OLIVEIRA </td><td>rust</td></tr><tr><td>PEDRO HENRIQUE </td><td>swift</td></tr></tbody></table>
 
 * Linguagem que sobrou: **Ada**.
-* Linguagens marcadas com &Updownarrow; podem ser permutadas com outros alunos, desde que combinado antes do primeiro trabalho e com a concord‚ncia do outro aluno. A troca tambÈm pode ser feita com a linguagem que sobrou.
+* Linguagens marcadas com &Updownarrow; podem ser permutadas com outros alunos, desde que combinado antes do primeiro trabalho e com a concord√¢ncia do outro aluno. A troca tamb√©m pode ser feita com a linguagem que sobrou.
 
 
 <hr />
 
 <a name="listas"></a>
 
-# Listas de ExercÌcios
+# Listas de Exerc√≠cios
 
 
-* **Lista 1** (Sintaxe e Sem‚ntica): [Sintaxe e sem‚ntica do `switch/case` da sua linguagem](listas/lista-1.html).
+* **Lista 1** (Sintaxe e Sem√¢ntica): [Sintaxe e sem√¢ntica do `switch/case` da sua linguagem](listas/lista-1.html).
    * **Prazo de entrega**: 6/maio (domingo) 
-* **Lista 2** (Tipos de Dados): [ImplementaÁ„o do algoritmo forÁa-bruta de pesquisa de substrings](listas/lista-2.html).
-   * **Prazo de entrega**: 5/junho (terÁa)
-* **Lista 3** (Subprogramas): [UtilizaÁ„o do modelos de passagem de par‚metros na linguagem de programaÁ„o](listas/lista-3.html).
+* **Lista 2** (Tipos de Dados): [Implementa√ß√£o do algoritmo for√ßa-bruta de pesquisa de substrings](listas/lista-2.html).
+   * **Prazo de entrega**: 5/junho (ter√ßa)
+* **Lista 3** (Subprogramas): [Utiliza√ß√£o do modelos de passagem de par√¢metros na linguagem de programa√ß√£o](listas/lista-3.html).
    * **Prazo de entrega**: 27/junho (**quarta**) 
 
 <hr />
 
 <!--
-# **ExercÌcios Adicionais **
+# **Exerc√≠cios Adicionais **
 
-+ [Lista de exercÌcios para Prova 1](listas-parte1.html): cobrindo todos os tÛpicos da primeira parte do curso.
++ [Lista de exerc√≠cios para Prova 1](listas-parte1.html): cobrindo todos os t√≥picos da primeira parte do curso.
 -->
 
 <!--
-+ [Lista 1](listas.html#lista1): ImplementaÁ„o de pesquisa bin·rio genÈrica em vetor com duplicaÁıes. **Prazo**: 23/junho (Quinta)  ampliado para agosto, junto com demais exercÌcios
-+ [Listas 2 a 7](listas-parte1.html): cobrindo todos os tÛpicos da primeira parte do curso.
-+ [Listas 8 e 9](listas-8.9.html): cobrindo programaÁ„o orientada a objetos e programaÁ„o funcional.
-   + A lista deve ser considerada para estudo para a prova 2. Entretanto, aquele aluno que entregar as respostas, considerarei como **substituiÁ„o a uma das listas anteriores n„o entregue**.
++ [Lista 1](listas.html#lista1): Implementa√ß√£o de pesquisa bin√°rio gen√©rica em vetor com duplica√ß√µes. **Prazo**: 23/junho (Quinta)  ampliado para agosto, junto com demais exerc√≠cios
++ [Listas 2 a 7](listas-parte1.html): cobrindo todos os t√≥picos da primeira parte do curso.
++ [Listas 8 e 9](listas-8.9.html): cobrindo programa√ß√£o orientada a objetos e programa√ß√£o funcional.
+   + A lista deve ser considerada para estudo para a prova 2. Entretanto, aquele aluno que entregar as respostas, considerarei como **substitui√ß√£o a uma das listas anteriores n√£o entregue**.
 -->
 
 <a name="notas"> </a>
 
 # Notas
  
-* [Notas atualizadas das questıes QP e QA](https://docs.google.com/spreadsheets/d/1to73ta-wE4HErjKTmh0HzP6andErQu8HGuORt36M-Dw/edit?usp=sharing).
+* [Notas atualizadas das quest√µes QP e QA](https://docs.google.com/spreadsheets/d/1to73ta-wE4HErjKTmh0HzP6andErQu8HGuORt36M-Dw/edit?usp=sharing).
 
 <hr />
 # Aulas
 
-Algumas informaÁıes importantes:
+Algumas informa√ß√µes importantes:
 
-* **NP**: aula n„o-presencial
-* As questıes **QP** deve necessariamente ser respondidas atÈ o dia da respectiva aula.
-* Para responder as questıes **QA** ser· dado um prazo de atÈ 2-3 dias apÛs a respectiva aula: para aulas de terÁa o prazo È atÈ quinta, e para as aula de quinta, o prazo È domingo.
+* **NP**: aula n√£o-presencial
+* As quest√µes **QP** deve necessariamente ser respondidas at√© o dia da respectiva aula.
+* Para responder as quest√µes **QA** ser√° dado um prazo de at√© 2-3 dias ap√≥s a respectiva aula: para aulas de ter√ßa o prazo √© at√© quinta, e para as aula de quinta, o prazo √© domingo.
 
 <table>
 <tr>
@@ -100,11 +100,11 @@ Algumas informaÁıes importantes:
    </th>
    <th>Data
    </th>
-   <th>TÛpicos
+   <th>T√≥picos
    </th>
-   <th>Questıes QP
+   <th>Quest√µes QP
    </th>
-   <th>Questıes QA
+   <th>Quest√µes QA
    </th>
 </tr>
 
@@ -115,19 +115,19 @@ Algumas informaÁıes importantes:
    <td><!--Data -->
 		22/03/2018 (qui)
    </td>
-   <td><!--TÛpicos -->
+   <td><!--T√≥picos -->
 
 <ul>
-<li><a href="https://youtu.be/eLKjMA81LW4">ApresentaÁ„o da disciplina</a></li>
-<li><a href="https://youtu.be/M_UeV-H16Rc">Metodologia: InstruÁ„o por pares</a></li>
+<li><a href="https://youtu.be/eLKjMA81LW4">Apresenta√ß√£o da disciplina</a></li>
+<li><a href="https://youtu.be/M_UeV-H16Rc">Metodologia: Instru√ß√£o por pares</a></li>
 </ul>
 
    </td>
-   <td><!--Questıes QP -->
-n„o h·
+   <td><!--Quest√µes QP -->
+n√£o h√°
    </td>
-   <td><!--Questıes QA -->
-n„o h·
+   <td><!--Quest√µes QA -->
+n√£o h√°
    </td>
 </tr>
 
@@ -138,11 +138,11 @@ n„o h·
    <td><!--Data -->
 		27/03/2018 (ter)
    </td>
-   <td><!--TÛpicos -->
-1. IntroduÁ„o (NP)
+   <td><!--T√≥picos -->
+1. Introdu√ß√£o (NP)
 <ul>
-     <li>1.1.1 <a href="https://youtu.be/zd0xFZjr0jg">Par‚metros de AvaliaÁ„o - Perguntas-guia</a></li>
-</li><li>1.1.2 <a href="https://youtu.be/VXlppeNHkZg">Linguagens - comunicaÁ„o e programaÁ„o</a></li>
+     <li>1.1.1 <a href="https://youtu.be/zd0xFZjr0jg">Par√¢metros de Avalia√ß√£o - Perguntas-guia</a></li>
+</li><li>1.1.2 <a href="https://youtu.be/VXlppeNHkZg">Linguagens - comunica√ß√£o e programa√ß√£o</a></li>
 </li><li>1.1.3 <a href="https://youtu.be/EzDzBtoBqDs">Legibilidade</a></li>
 </li><li>1.1.4 <a href="https://youtu.be/ywUzxmsSXO0">Ortogonalidade</a></li>
 </li><li>1.1.5 <a href="https://youtu.be/IGytANesxeM">Redigibilidade</a></li>
@@ -151,11 +151,11 @@ n„o h·
 </ul>
 
    </td>
-   <td><!--Questıes QP -->
-n„o h·
+   <td><!--Quest√µes QP -->
+n√£o h√°
    </td>
-   <td><!--Questıes QA -->
-n„o h·
+   <td><!--Quest√µes QA -->
+n√£o h√°
    </td>
 </tr>
 
@@ -166,24 +166,24 @@ n„o h·
    </td>
    <td><!--Data -->29/03/2018 (qui)
    </td>
-   <td><!--TÛpicos -->
-1. IntroduÁ„o, MotivaÁ„o e HistÛrico (NP)
+   <td><!--T√≥picos -->
+1. Introdu√ß√£o, Motiva√ß√£o e Hist√≥rico (NP)
 <ul>
-     <li>1.2.1 <a href="https://youtu.be/XmXVKJLYxUk">Legibilidade em Linguagens de ProgramaÁ„o</a></li>
-</li><li>1.2.2 <a href="https://youtu.be/3Lhcn3H2hlU">Ortonalidade em Linguagens de ProgramaÁ„o</a></li>
-</li><li>1.2.3 <a href="https://youtu.be/zMpMGwK9FKM">Redigibilidade em Linguagens de ProgramaÁ„o</a></li>
-</li><li>1.2.4 <a href="https://youtu.be/er-hJnbU-gw">Confiabilidade em Linguagens de ProgramaÁ„o</a></li>
-</li><li>1.2.5 <a href="https://youtu.be/8wjag768Qwo">Outros critÈrios de avaliaÁ„o de Linguagens de ProgramaÁ„o</a></li>
-</li><li>1.2.6 <a href="https://youtu.be/6y6quLr3tSE">Diretivas de Projeto de Linguagens de ProgramaÁ„o</a></li>
-</li><li>1.2.7 <a href="https://youtu.be/rQNC9o82a2o">Categorias de Linguagens de ProgramaÁ„o</a></li>
+     <li>1.2.1 <a href="https://youtu.be/XmXVKJLYxUk">Legibilidade em Linguagens de Programa√ß√£o</a></li>
+</li><li>1.2.2 <a href="https://youtu.be/3Lhcn3H2hlU">Ortonalidade em Linguagens de Programa√ß√£o</a></li>
+</li><li>1.2.3 <a href="https://youtu.be/zMpMGwK9FKM">Redigibilidade em Linguagens de Programa√ß√£o</a></li>
+</li><li>1.2.4 <a href="https://youtu.be/er-hJnbU-gw">Confiabilidade em Linguagens de Programa√ß√£o</a></li>
+</li><li>1.2.5 <a href="https://youtu.be/8wjag768Qwo">Outros crit√©rios de avalia√ß√£o de Linguagens de Programa√ß√£o</a></li>
+</li><li>1.2.6 <a href="https://youtu.be/6y6quLr3tSE">Diretivas de Projeto de Linguagens de Programa√ß√£o</a></li>
+</li><li>1.2.7 <a href="https://youtu.be/rQNC9o82a2o">Categorias de Linguagens de Programa√ß√£o</a></li>
 </ul>
 
    </td>
-   <td><!--Questıes QP -->
+   <td><!--Quest√µes QP -->
       <!-- <a href="https://goo.gl/forms/DmN6wM0k95nvtr9S2">QP1.1</a>  (*expirado*) -->
       QP1.1  (*expirado*)
    </td>
-   <td><!--Questıes QA -->
+   <td><!--Quest√µes QA -->
       <!-- <a href="https://goo.gl/forms/J6z2ck5eB1qNtOjT2">QA1.1</a>  (*expirado*) -->
       QA1.1  (*expirado*)
    </td>
@@ -195,24 +195,24 @@ n„o h·
    </td>
    <td><!--Data -->03/04/2018 (ter)
    </td>
-   <td><!--TÛpicos -->
-1. IntroduÁ„o, MotivaÁ„o e HistÛrico (NP)
+   <td><!--T√≥picos -->
+1. Introdu√ß√£o, Motiva√ß√£o e Hist√≥rico (NP)
 <ul>
-     <li>1.3.1 <a href="https://youtu.be/g7aOTfT6rUw">NÌveis e MÈtodos de implementaÁ„o de LPs</a></li>
-</li><li>1.3.2 <a href="https://youtu.be/4ceIpWeoVxA">Processo de CompilaÁ„o e LPs </a></li>
-</li><li>1.3.3 <a href="https://youtu.be/CBfseGOAUpc">Exemplo - compilaÁ„o em C </a></li>
-</li><li>1.3.4 <a href="https://youtu.be/yB3zM-Wbp68">Processo de InterpretaÁ„o de LPs </a></li>
-</li><li>1.3.5 <a href="https://youtu.be/DHR46tm5dVQ">Exemplo - interpretaÁ„o em Python </a></li>
-</li><li>1.3.6 <a href="https://youtu.be/FGp1AlC4eL0">Modelo de ExecuÁ„o hÌbrido de LPs </a></li>
-</li><li>1.3.7 <a href="https://youtu.be/9FwpN2js3Qk">Exemplo - Modelo de ExecuÁ„o HÌbrida de Java </a></li>
-</li><li>1.3.8 <a href="https://youtu.be/eB--ghmzlFQ">Velocidade de cÛdigo e LPs </a></li>
+     <li>1.3.1 <a href="https://youtu.be/g7aOTfT6rUw">N√≠veis e M√©todos de implementa√ß√£o de LPs</a></li>
+</li><li>1.3.2 <a href="https://youtu.be/4ceIpWeoVxA">Processo de Compila√ß√£o e LPs </a></li>
+</li><li>1.3.3 <a href="https://youtu.be/CBfseGOAUpc">Exemplo - compila√ß√£o em C </a></li>
+</li><li>1.3.4 <a href="https://youtu.be/yB3zM-Wbp68">Processo de Interpreta√ß√£o de LPs </a></li>
+</li><li>1.3.5 <a href="https://youtu.be/DHR46tm5dVQ">Exemplo - interpreta√ß√£o em Python </a></li>
+</li><li>1.3.6 <a href="https://youtu.be/FGp1AlC4eL0">Modelo de Execu√ß√£o h√≠brido de LPs </a></li>
+</li><li>1.3.7 <a href="https://youtu.be/9FwpN2js3Qk">Exemplo - Modelo de Execu√ß√£o H√≠brida de Java </a></li>
+</li><li>1.3.8 <a href="https://youtu.be/eB--ghmzlFQ">Velocidade de c√≥digo e LPs </a></li>
 </ul>
    </td>
-   <td><!--Questıes QP -->
+   <td><!--Quest√µes QP -->
       <!-- <a href="https://goo.gl/forms/WnD2jHOtVVkwfYHt2">QP1.2</a>  (*expirado*) -->
       QP1.2  (*expirado*)
    </td>
-   <td><!--Questıes QA -->
+   <td><!--Quest√µes QA -->
       <!-- <a href="https://goo.gl/forms/Vmmloj3WETt1M2vp2">QA1.2</a> (*expirado*) -->
       QA1.2 (*expirado*)
    </td>
@@ -224,25 +224,25 @@ n„o h·
    </td>
    <td><!--Data -->05/04/2018 (qui)
    </td>
-   <td><!--TÛpicos -->
-2. Sintaxe e Sem‚ntica (NP)
+   <td><!--T√≥picos -->
+2. Sintaxe e Sem√¢ntica (NP)
 <ul>
-     <li>2.1.1 <a href="https://youtu.be/Lj9Y8-WIzOQ">Sintaxe vs. Sem‚ntica </a></li>
+     <li>2.1.1 <a href="https://youtu.be/Lj9Y8-WIzOQ">Sintaxe vs. Sem√¢ntica </a></li>
 </li><li>2.1.2 <a href="https://youtu.be/YvvGh-jSyM4">Sintaxe - componentes </a></li>
-</li><li>2.1.3 <a href="https://youtu.be/1cBxKQ2--4A">BNF - mÈtodo formal para sintaxe de linguagens </a></li>
+</li><li>2.1.3 <a href="https://youtu.be/1cBxKQ2--4A">BNF - m√©todo formal para sintaxe de linguagens </a></li>
 </li><li>2.1.4 <a href="https://youtu.be/WgWWG6fL3tY">Regras BNF </a></li>
-</li><li>2.1.5 <a href="https://youtu.be/JX1P5gFJv5s">Gram·tica</a></li>
-</li><li>2.1.6 <a href="https://youtu.be/Gqq-jMj3Je4">DerivaÁıes de Gram·tica </a></li>
-</li><li>2.1.7 <a href="https://youtu.be/7RIWZB5pwPI">¡rvore de An·lise Sint·tica </a></li>
-</li><li>2.1.8 <a href="https://youtu.be/fhXxYPG3tHk">Ambiguidade em Gram·ticas </a></li>
-</li><li>2.1.9 <a href="https://youtu.be/BDSjXqAxNMI">PrecedÍncia e Associatividade de Operadores </a></li>
+</li><li>2.1.5 <a href="https://youtu.be/JX1P5gFJv5s">Gram√°tica</a></li>
+</li><li>2.1.6 <a href="https://youtu.be/Gqq-jMj3Je4">Deriva√ß√µes de Gram√°tica </a></li>
+</li><li>2.1.7 <a href="https://youtu.be/7RIWZB5pwPI">√Årvore de An√°lise Sint√°tica </a></li>
+</li><li>2.1.8 <a href="https://youtu.be/fhXxYPG3tHk">Ambiguidade em Gram√°ticas </a></li>
+</li><li>2.1.9 <a href="https://youtu.be/BDSjXqAxNMI">Preced√™ncia e Associatividade de Operadores </a></li>
 </ul>
    </td>
-   <td><!--Questıes QP -->
+   <td><!--Quest√µes QP -->
       <!-- <a href="https://goo.gl/forms/2jKcawbgzEL3opgA2">QP2.1</a>  (*expirado*) -->
       QP2.1  (*expirado*)
    </td>
-   <td><!--Questıes QA -->
+   <td><!--Quest√µes QA -->
       <!-- <a href="https://goo.gl/forms/uJvsYa8a1nfm4oaf1">QA2.1</a> (*expirado*) -->
       QA2.1 (*expirado*)
    </td>
@@ -254,22 +254,22 @@ n„o h·
    </td>
    <td><!--Data -->10/04/2018 (ter)
    </td>
-   <td><!--TÛpicos -->
-2. Sintaxe e Sem‚ntica (NP)
+   <td><!--T√≥picos -->
+2. Sintaxe e Sem√¢ntica (NP)
 <ul>
-     <li>2.2.1 <a href="https://youtu.be/FYgmYqzKRzs">Sem‚ntica </a></li>
-</li><li>2.2.3 <a href="https://youtu.be/qL4EdeEGrNc">Sem‚ntica Est·tica - gram·tica de atributos </a></li>
-</li><li>2.2.4 <a href="https://youtu.be/zTFZ4kkMwgc"> Sem‚ntica Est·tica - gram·tica de atributos e exemplo de atribuiÁ„o</a></li>
-</li><li>2.2.5 <a href="https://youtu.be/uIOqRMSOVKA">Sem‚ntica Din‚mica - Sem‚ntica operacional </a></li>
-</li><li>2.2.6 <a href="https://youtu.be/gTfbXfabIw8">Sem‚ntica Din‚mica - Sem‚ntica Denotacional</a></li>
+     <li>2.2.1 <a href="https://youtu.be/FYgmYqzKRzs">Sem√¢ntica </a></li>
+</li><li>2.2.3 <a href="https://youtu.be/qL4EdeEGrNc">Sem√¢ntica Est√°tica - gram√°tica de atributos </a></li>
+</li><li>2.2.4 <a href="https://youtu.be/zTFZ4kkMwgc"> Sem√¢ntica Est√°tica - gram√°tica de atributos e exemplo de atribui√ß√£o</a></li>
+</li><li>2.2.5 <a href="https://youtu.be/uIOqRMSOVKA">Sem√¢ntica Din√¢mica - Sem√¢ntica operacional </a></li>
+</li><li>2.2.6 <a href="https://youtu.be/gTfbXfabIw8">Sem√¢ntica Din√¢mica - Sem√¢ntica Denotacional</a></li>
 </ul>
    </td>
-   <td><!--Questıes QP -->
+   <td><!--Quest√µes QP -->
       <!-- <a href="https://goo.gl/forms/umgEPyqREBbCSFsh1">QP2.2</a>  (*expirado*) -->
       QP2.2  (*expirado*)
    </td>
-   <td><!--Questıes QA -->
-      <!-- <a href="https://goo.gl/forms/bM3jTVvTKc6St16k2">QA2.2</a> (atÈ 13/4, sexta) -->
+   <td><!--Quest√µes QA -->
+      <!-- <a href="https://goo.gl/forms/bM3jTVvTKc6St16k2">QA2.2</a> (at√© 13/4, sexta) -->
       QA2.2  (*expirado*)
    </td>
 </tr>
@@ -280,24 +280,24 @@ n„o h·
    </td>
    <td><!--Data -->12/04/2018 (qui)
    </td>
-   <td><!--TÛpicos -->
-3. Nomes, vinculaÁıes, verificaÁ„o de tipos e escopos (NP)
+   <td><!--T√≥picos -->
+3. Nomes, vincula√ß√µes, verifica√ß√£o de tipos e escopos (NP)
 <ul>
-     <li>3.1.1 <a href="https://youtu.be/p6tiyUdj23c">Nomes - propÛsito e significado</a></li>
+     <li>3.1.1 <a href="https://youtu.be/p6tiyUdj23c">Nomes - prop√≥sito e significado</a></li>
 </li><li>3.1.2 <a href="https://youtu.be/DHaLqUjIuao">Nomes - palavras reservadas</a></li>
-</li><li>3.1.3 <a href="https://youtu.be/ok5qz2-YFV4">Vari·veis - Atributos e EndereÁamento</a></li>
-</li><li>3.1.4 <a href="https://youtu.be/DlBfAFLTKZ0">Vari·veis - Tipo e Valores l e r</a></li>
-</li><li>3.1.5 <a href="https://youtu.be/Twtz_HAk5Ko">AmarraÁıes em Linguagens</a></li>
-</li><li>3.1.6 <a href="https://youtu.be/xZxhNhhMvlo">AmarraÁ„o de Tipo - Est·tica e Din‚mica</a></li>
-</li><li>3.1.7 <a href="https://youtu.be/3Zb9XlZ18yo">AmarraÁ„o de Armazenagem e Layout da memÛria</a></li>
-</li><li>3.1.8 <a href="https://youtu.be/c3si96rxjTY">AmarraÁ„o de Armazenagem e Vari·veis Est·ticas</a></li>
+</li><li>3.1.3 <a href="https://youtu.be/ok5qz2-YFV4">Vari√°veis - Atributos e Endere√ßamento</a></li>
+</li><li>3.1.4 <a href="https://youtu.be/DlBfAFLTKZ0">Vari√°veis - Tipo e Valores l e r</a></li>
+</li><li>3.1.5 <a href="https://youtu.be/Twtz_HAk5Ko">Amarra√ß√µes em Linguagens</a></li>
+</li><li>3.1.6 <a href="https://youtu.be/xZxhNhhMvlo">Amarra√ß√£o de Tipo - Est√°tica e Din√¢mica</a></li>
+</li><li>3.1.7 <a href="https://youtu.be/3Zb9XlZ18yo">Amarra√ß√£o de Armazenagem e Layout da mem√≥ria</a></li>
+</li><li>3.1.8 <a href="https://youtu.be/c3si96rxjTY">Amarra√ß√£o de Armazenagem e Vari√°veis Est√°ticas</a></li>
 </ul>
    </td>
-   <td><!--Questıes QP -->
-      <a href="https://goo.gl/forms/1QJ90nduXFqJzFfP2">QP3.1</a>  (atÈ 13/4, sexta)
+   <td><!--Quest√µes QP -->
+      <a href="https://goo.gl/forms/1QJ90nduXFqJzFfP2">QP3.1</a>  (at√© 13/4, sexta)
    </td>
-   <td><!--Questıes QA -->
-      <a href="https://goo.gl/forms/nvqtVfAgG0HCNFfD3">QA3.1</a> (atÈ 15/4)
+   <td><!--Quest√µes QA -->
+      <a href="https://goo.gl/forms/nvqtVfAgG0HCNFfD3">QA3.1</a> (at√© 15/4)
       <a href="respostas/QA-03.1-nomes.vinculacao.tipos.escopo-RESP.md.html">&check; respostas</a>
    </td>
 </tr>
@@ -308,24 +308,24 @@ n„o h·
    </td>
    <td><!--Data -->17/04/2018 (ter)
    </td>
-   <td><!--TÛpicos -->
-3. Nomes, vinculaÁıes, verificaÁ„o de tipos e escopos (NP)
+   <td><!--T√≥picos -->
+3. Nomes, vincula√ß√µes, verifica√ß√£o de tipos e escopos (NP)
 <ul>
-     <li>3.2.1 <a href="https://youtu.be/1_-2CKMyZVA">AmarraÁ„o de Armazenagem - Pilha-din‚mica</a></li>
-</li><li>3.2.1.1 <a href="https://youtu.be/D9TTb3H8HYI">DEMO opcional: AmarraÁ„o de Armazenagem - DemonstraÁ„o de Pilha-din‚mica</a></li>
-</li><li>3.2.2 <a href="https://youtu.be/-sxrpwnqlrQ">AmarraÁ„o de Armazenagem - Heap explÌcito</a></li>
-</li><li>3.2.3 <a href="https://youtu.be/mTm8P0AVRDA">AmarraÁ„o de Armazenagem - Heap implÌcito</a></li>
-</li><li>3.2.4 <a href="https://youtu.be/9PGOrssmPG8">Escopo - Vari·veis locais e n„o-locais</a></li>
-</li><li>3.2.5 <a href="https://youtu.be/cD4Ub02yzes">Escopo est·tico</a></li>
-</li><li>3.2.6 <a href="https://youtu.be/6ykTv8FzBn4">Escopo Din‚mico</a></li>
-</li><li>3.2.7 <a href="https://youtu.be/evEgf4DGYvw">Ambiente de ReferenciaÁ„o - Fundamentos e exemplos</a></li>
+     <li>3.2.1 <a href="https://youtu.be/1_-2CKMyZVA">Amarra√ß√£o de Armazenagem - Pilha-din√¢mica</a></li>
+</li><li>3.2.1.1 <a href="https://youtu.be/D9TTb3H8HYI">DEMO opcional: Amarra√ß√£o de Armazenagem - Demonstra√ß√£o de Pilha-din√¢mica</a></li>
+</li><li>3.2.2 <a href="https://youtu.be/-sxrpwnqlrQ">Amarra√ß√£o de Armazenagem - Heap expl√≠cito</a></li>
+</li><li>3.2.3 <a href="https://youtu.be/mTm8P0AVRDA">Amarra√ß√£o de Armazenagem - Heap impl√≠cito</a></li>
+</li><li>3.2.4 <a href="https://youtu.be/9PGOrssmPG8">Escopo - Vari√°veis locais e n√£o-locais</a></li>
+</li><li>3.2.5 <a href="https://youtu.be/cD4Ub02yzes">Escopo est√°tico</a></li>
+</li><li>3.2.6 <a href="https://youtu.be/6ykTv8FzBn4">Escopo Din√¢mico</a></li>
+</li><li>3.2.7 <a href="https://youtu.be/evEgf4DGYvw">Ambiente de Referencia√ß√£o - Fundamentos e exemplos</a></li>
 </li><li>3.2.8 <a href="https://youtu.be/-8aD8kAgD-I">Constantes</a></li>
 </ul>
    </td>
-   <td><!--Questıes QP -->
+   <td><!--Quest√µes QP -->
       <a href="https://goo.gl/forms/p25tJD0BIF9atd2I2">QP3.2</a>
    </td>
-   <td><!--Questıes QA -->
+   <td><!--Quest√µes QA -->
       <a href="https://goo.gl/forms/KIp4n5ECm1o179UL2">QA3.2</a>
       <a href="respostas/QA-03.2-nomes.vinculacao.tipos.escopo-RESP.md.html">&check; respostas</a>
    </td>
@@ -337,16 +337,16 @@ n„o h·
    </td>
    <td><!--Data -->19/04/2018 (qui)
    </td>
-   <td><!--TÛpicos -->
-<!-- 3. Nomes, vinculaÁıes, verificaÁ„o de tipos e escopos (NP) -->
+   <td><!--T√≥picos -->
+<!-- 3. Nomes, vincula√ß√µes, verifica√ß√£o de tipos e escopos (NP) -->
 
-Aula liberada para <a href="http://www.inf.ufg.br/~ricardo/lp/listas/lista-1.html">resoluÁ„o da lista 1</a>
+Aula liberada para <a href="http://www.inf.ufg.br/~ricardo/lp/listas/lista-1.html">resolu√ß√£o da lista 1</a>
    </td>
-   <td><!--Questıes QP -->
-n„o haver·
+   <td><!--Quest√µes QP -->
+n√£o haver√°
    </td>
-   <td><!--Questıes QA -->
-n„o haver·
+   <td><!--Quest√µes QA -->
+n√£o haver√°
    </td>
 </tr>
 <!-- ********************************************************************* -->
@@ -356,13 +356,13 @@ n„o haver·
    </td>
    <td><!--Data -->24/04/2018 (ter)
    </td>
-   <td><!--TÛpicos -->
-3. Nomes, vinculaÁıes, verificaÁ„o de tipos e escopos (NP)
+   <td><!--T√≥picos -->
+3. Nomes, vincula√ß√µes, verifica√ß√£o de tipos e escopos (NP)
    </td>
-   <td><!--Questıes QP -->
+   <td><!--Quest√µes QP -->
 
    </td>
-   <td><!--Questıes QA -->
+   <td><!--Quest√µes QA -->
 
    </td>
 </tr>
@@ -373,7 +373,7 @@ n„o haver·
    </td>
    <td><!--Data -->26/04/2018 (qui)
    </td>
-   <td><!--TÛpicos -->
+   <td><!--T√≥picos -->
 4. Tipos de dados (NP)
 <ul>
      <li>4.1.1 <a href="https://youtu.be/xLGKzMuZuuQ">Tipos de Dados e Tipos Primitivos </a></li>
@@ -381,15 +381,15 @@ n„o haver·
      <li>4.1.3 <a href="https://youtu.be/AsDfWasybMY">Tipos ordinais  </a></li>
      <li>4.1.4 <a href="https://youtu.be/yb9XQJTTQhc">Arrays</a></li>
      <li>4.1.5 <a href="https://youtu.be/DQJFyRr_a-k">Categorias de Arrays</a></li>
-     <li>4.1.6 <a href="https://youtu.be/4G-zAYtavNE">InicializaÁ„o de Arrays </a></li>
-     <li>4.1.7 <a href="https://youtu.be/j5B2VHoTeBs">ImplementaÁ„o de Arrays </a></li>
+     <li>4.1.6 <a href="https://youtu.be/4G-zAYtavNE">Inicializa√ß√£o de Arrays </a></li>
+     <li>4.1.7 <a href="https://youtu.be/j5B2VHoTeBs">Implementa√ß√£o de Arrays </a></li>
      <li>4.1.8 <a href="https://youtu.be/WSolAvq9Z0M">Arrays Associativos</a></li>
 </ul>
    </td>
-   <td><!--Questıes QP -->
+   <td><!--Quest√µes QP -->
      <a href="respostas/QP-04.1-tipos.de.dados-RESP.md.html">&check; respostas</a>	
    </td>
-   <td><!--Questıes QA -->
+   <td><!--Quest√µes QA -->
      <a href="respostas/QA-04.1-tipos.de.dados-RESP.md.html">&check; respostas</a>
       <a href="respostas/QA-04.1-tipos.de.dados-RESP.md.html">&check; respostas</a>	
    </td>
@@ -401,13 +401,13 @@ n„o haver·
    </td>
    <td><!--Data -->01/05/2018 (ter)
    </td>
-   <td><!--TÛpicos -->
+   <td><!--T√≥picos -->
 RECESSO
    </td>
-   <td><!--Questıes QP -->
+   <td><!--Quest√µes QP -->
 -
    </td>
-   <td><!--Questıes QA -->
+   <td><!--Quest√µes QA -->
 -	
    </td>
 </tr>
@@ -418,18 +418,18 @@ RECESSO
    </td>
    <td><!--Data -->03/05/2018 (qui)
    </td>
-   <td><!--TÛpicos -->
-Discuss„o dos conte˙dos do capÌtulo 3 a partir de cÛdigos.
+   <td><!--T√≥picos -->
+Discuss√£o dos conte√∫dos do cap√≠tulo 3 a partir de c√≥digos.
 <ul>
    <li><a href="codigo/escopo.pl">escopo</a> em Perl</li>
    <li><a href="codigo/escopo.py">escopo</a> em Python</li>
    <li></li>
 </ul>
    </td>
-   <td><!--Questıes QP -->
+   <td><!--Quest√µes QP -->
 -
    </td>
-   <td><!--Questıes QA -->
+   <td><!--Quest√µes QA -->
 -	
    </td>
 </tr>
@@ -440,13 +440,13 @@ Discuss„o dos conte˙dos do capÌtulo 3 a partir de cÛdigos.
    </td>
    <td><!--Data -->08/05/2018 (ter)
    </td>
-   <td><!--TÛpicos -->
-ResoluÁıes das questıes QA da aula 11 (Tipos de Dados)
+   <td><!--T√≥picos -->
+Resolu√ß√µes das quest√µes QA da aula 11 (Tipos de Dados)
    </td>
-   <td><!--Questıes QP -->
+   <td><!--Quest√µes QP -->
 -
    </td>
-   <td><!--Questıes QA -->
+   <td><!--Quest√µes QA -->
 -	
    </td>
 </tr>
@@ -457,22 +457,22 @@ ResoluÁıes das questıes QA da aula 11 (Tipos de Dados)
    </td>
    <td><!--Data -->10/05/2018 (qui)
    </td>
-   <td><!--TÛpicos -->
+   <td><!--T√≥picos -->
 4. Tipos de dados (NP)
 <ul>
-     <li>4.2.1 <a href="https://youtu.be/Mt7YKSnHXkY">Tipo Registro e operaÁıes b·sicas</a></li>
-     <li>4.2.2 <a href="https://youtu.be/Of7D2yuCAVs">ImplementaÁ„o em memÛria do tipo registro</a></li>
-     <li>4.2.3 <a href="https://youtu.be/nXWHlYoyZEM">Tipos Union, uniıes livres e discriminadas</a></li>
-     <li>4.2.4 <a href="https://youtu.be/RVWVnlZ_f3s">Ponteiros I: OperaÁıes B·sicas</a></li>
-     <li>4.2.5 <a href="https://youtu.be/UBBIEW8nJ9E">Ponteiros II: Problemas, AritmÈtica de Ponteiros e Tipos ReferÍncia</a></li>
-     <li>4.2.6 <a href="https://youtu.be/_FYR9dKPHVk">Gerenciamento ExplÌcito e ImplÌcito de MemÛria de Heap e Algoritmos para Coleta de Lixo</a></li>
-     <li>4.2.7 <a href="https://youtu.be/Ci9bpyaMpY8">Sistema de tipos e verificaÁ„o, verificaÁ„o est·tica e din‚mica</a></li>
+     <li>4.2.1 <a href="https://youtu.be/Mt7YKSnHXkY">Tipo Registro e opera√ß√µes b√°sicas</a></li>
+     <li>4.2.2 <a href="https://youtu.be/Of7D2yuCAVs">Implementa√ß√£o em mem√≥ria do tipo registro</a></li>
+     <li>4.2.3 <a href="https://youtu.be/nXWHlYoyZEM">Tipos Union, uni√µes livres e discriminadas</a></li>
+     <li>4.2.4 <a href="https://youtu.be/RVWVnlZ_f3s">Ponteiros I: Opera√ß√µes B√°sicas</a></li>
+     <li>4.2.5 <a href="https://youtu.be/UBBIEW8nJ9E">Ponteiros II: Problemas, Aritm√©tica de Ponteiros e Tipos Refer√™ncia</a></li>
+     <li>4.2.6 <a href="https://youtu.be/_FYR9dKPHVk">Gerenciamento Expl√≠cito e Impl√≠cito de Mem√≥ria de Heap e Algoritmos para Coleta de Lixo</a></li>
+     <li>4.2.7 <a href="https://youtu.be/Ci9bpyaMpY8">Sistema de tipos e verifica√ß√£o, verifica√ß√£o est√°tica e din√¢mica</a></li>
 </ul>
    </td>
-   <td><!--Questıes QP -->
-     <a href="https://goo.gl/forms/BzIrC7amAtSeglw63">QP4.2</a>  (atÈ 10/5, quinta, 1 hora antes da aula)
+   <td><!--Quest√µes QP -->
+     <a href="https://goo.gl/forms/BzIrC7amAtSeglw63">QP4.2</a>  (at√© 10/5, quinta, 1 hora antes da aula)
    </td>
-   <td><!--Questıes QA -->
+   <td><!--Quest√µes QA -->
      <a href="respostas/QA-04.2-tipos.de.dados-RESP.md.html">&check; respostas</a>	
    </td>
 </tr>
@@ -483,13 +483,13 @@ ResoluÁıes das questıes QA da aula 11 (Tipos de Dados)
    </td>
    <td><!--Data -->15/05/2018 (ter)
    </td>
-   <td><!--TÛpicos -->
-N„o houve aula (ENACOMP)
+   <td><!--T√≥picos -->
+N√£o houve aula (ENACOMP)
    </td>
-   <td><!--Questıes QP -->
+   <td><!--Quest√µes QP -->
 -
    </td>
-   <td><!--Questıes QA -->
+   <td><!--Quest√µes QA -->
 -	
    </td>
 </tr>
@@ -500,13 +500,13 @@ N„o houve aula (ENACOMP)
    </td>
    <td><!--Data -->17/05/2018 (qui)
    </td>
-   <td><!--TÛpicos -->
-N„o houve aula (ENACOMP)
+   <td><!--T√≥picos -->
+N√£o houve aula (ENACOMP)
    </td>
-   <td><!--Questıes QP -->
+   <td><!--Quest√µes QP -->
 -
    </td>
-   <td><!--Questıes QA -->
+   <td><!--Quest√µes QA -->
 -	
    </td>
 </tr>
@@ -517,25 +517,25 @@ N„o houve aula (ENACOMP)
    </td>
    <td><!--Data -->22/05/2018 (ter)
    </td>
-   <td><!--TÛpicos -->
-5. Expressıes e SentenÁas
+   <td><!--T√≥picos -->
+5. Express√µes e Senten√ßas
 <ul>
-     <li>5.1.1 <a href="https://youtu.be/z9rZTMCFlLw"> PrecedÍncia de Operadores </a></li>
+     <li>5.1.1 <a href="https://youtu.be/z9rZTMCFlLw"> Preced√™ncia de Operadores </a></li>
      <li>5.1.2 <a href="https://youtu.be/bZVjfTAIAmg"> Regras de Associatividade </a></li>
-     <li>5.1.3 <a href="https://youtu.be/hutXbXOgZew"> Operador Tern·rio </a></li>
-     <li>5.1.4 <a href="https://youtu.be/BZSwdxYbuvU"> Ordem de AvaliaÁ„o e Efeito Colateral </a></li>
+     <li>5.1.3 <a href="https://youtu.be/hutXbXOgZew"> Operador Tern√°rio </a></li>
+     <li>5.1.4 <a href="https://youtu.be/BZSwdxYbuvU"> Ordem de Avalia√ß√£o e Efeito Colateral </a></li>
      <li>5.1.5 <a href="https://youtu.be/UJpqEmzPe-4"> Sobrecarga de Operadores </a></li>
-     <li>5.1.6 <a href="https://youtu.be/WasSrqq0ON0"> Conversıes de Tipos </a></li>
-     <li>5.1.7 <a href="https://youtu.be/XV0uDzhHLZY"> Expressıes Relacionais e Booleanas </a></li>
-     <li>5.1.8 <a href="https://youtu.be/mQyYN-DyBao"> AvaliaÁ„o com Curto-circuito </a></li>
-     <li>5.1.9 <a href="https://youtu.be/dMBRls-oRLE"> AtribuiÁ„o </a></li>
+     <li>5.1.6 <a href="https://youtu.be/WasSrqq0ON0"> Convers√µes de Tipos </a></li>
+     <li>5.1.7 <a href="https://youtu.be/XV0uDzhHLZY"> Express√µes Relacionais e Booleanas </a></li>
+     <li>5.1.8 <a href="https://youtu.be/mQyYN-DyBao"> Avalia√ß√£o com Curto-circuito </a></li>
+     <li>5.1.9 <a href="https://youtu.be/dMBRls-oRLE"> Atribui√ß√£o </a></li>
 </ul>
 
    </td>
-   <td><!--Questıes QP -->
-     <a href="https://docs.google.com/forms/d/e/1FAIpQLSeInF7hP7V-gXSQ1eXW3nNsCC_d8iH3q8_Dm63Bvpyu9DnHng/viewform?usp=sf_link">QP5.1</a> (atÈ 1 hora antes da aula)
+   <td><!--Quest√µes QP -->
+     <a href="https://docs.google.com/forms/d/e/1FAIpQLSeInF7hP7V-gXSQ1eXW3nNsCC_d8iH3q8_Dm63Bvpyu9DnHng/viewform?usp=sf_link">QP5.1</a> (at√© 1 hora antes da aula)
    </td>
-   <td><!--Questıes QA -->
+   <td><!--Quest√µes QA -->
 em sala de aula - <a href="respostas/QP-05.1-expressoes.e.sentencas-RESP.md.html">&check; respostas</a>	
    </td>
 </tr>
@@ -546,23 +546,23 @@ em sala de aula - <a href="respostas/QP-05.1-expressoes.e.sentencas-RESP.md.html
    </td>
    <td><!--Data -->24/05/2018 (ter)
    </td>
-   <td><!--TÛpicos -->
+   <td><!--T√≥picos -->
 6. Estruturas de Controle
 <ul>
      <li>6.1.1 <a href="https://youtu.be/IJ7QPoJ2wWU"> Estruturas de controle em programas </a></li>
-     <li>6.1.2 <a href="https://youtu.be/vV0K71dvOgI"> InstruÁ„o de SeleÁ„o </a></li>
-     <li>6.1.3 <a href="https://youtu.be/VLl3baho6i4"> SentenÁas de seleÁ„o - M˙ltipla SeleÁ„o </a></li>
-     <li>6.1.4 <a href="https://youtu.be/JBzimVnHF9Y"> SentenÁas iterativas </a></li>
-     <li>6.1.5 <a href="https://youtu.be/L-8_EFWTk3s"> LaÁos controlados por contador </a></li>
-     <li>6.1.6 <a href="https://youtu.be/0sSgcMq8lfA"> LaÁos controlados logicamente </a></li>
-     <li>6.1.7 <a href="https://youtu.be/cKn2ilqNKBM"> Controle definido pelo usu·rio </a></li>
-     <li>6.1.8 <a href="https://youtu.be/2W5HTiXoSDc"> IteraÁ„o baseada em estrutura de dados </a></li>
+     <li>6.1.2 <a href="https://youtu.be/vV0K71dvOgI"> Instru√ß√£o de Sele√ß√£o </a></li>
+     <li>6.1.3 <a href="https://youtu.be/VLl3baho6i4"> Senten√ßas de sele√ß√£o - M√∫ltipla Sele√ß√£o </a></li>
+     <li>6.1.4 <a href="https://youtu.be/JBzimVnHF9Y"> Senten√ßas iterativas </a></li>
+     <li>6.1.5 <a href="https://youtu.be/L-8_EFWTk3s"> La√ßos controlados por contador </a></li>
+     <li>6.1.6 <a href="https://youtu.be/0sSgcMq8lfA"> La√ßos controlados logicamente </a></li>
+     <li>6.1.7 <a href="https://youtu.be/cKn2ilqNKBM"> Controle definido pelo usu√°rio </a></li>
+     <li>6.1.8 <a href="https://youtu.be/2W5HTiXoSDc"> Itera√ß√£o baseada em estrutura de dados </a></li>
 </ul>
    </td>
-   <td><!--Questıes QP -->
-     <a href="https://docs.google.com/forms/d/e/1FAIpQLSeTHoKXZHYYJcCPXjrWxqlBWeuYjcySD92QRwHFp2Fd16qq9Q/viewform?usp=sf_link">QP6.1</a> (atÈ 1 hora antes da aula)
+   <td><!--Quest√µes QP -->
+     <a href="https://docs.google.com/forms/d/e/1FAIpQLSeTHoKXZHYYJcCPXjrWxqlBWeuYjcySD92QRwHFp2Fd16qq9Q/viewform?usp=sf_link">QP6.1</a> (at√© 1 hora antes da aula)
    </td>
-   <td><!--Questıes QA -->
+   <td><!--Quest√µes QA -->
 em sala de aula - <a href="respostas/QA-6.1-estruturas.controle-RESP.md.html">&check; respostas</a>
    </td>
 </tr>
@@ -572,27 +572,27 @@ em sala de aula - <a href="respostas/QA-6.1-estruturas.controle-RESP.md.html">&c
    </td>
    <td><!--Data -->29/05/2018 (ter)
    </td>
-   <td><!--TÛpicos -->
+   <td><!--T√≥picos -->
 7. Subprogramas (NP)
 <ul>
      <li>7.1.1 <a href="https://youtu.be/N7wpsOy1bqs">Subprograma</a></li>
      <li>7.1.2 <a href="https://youtu.be/U8Dx5kPxpAk">Subprogramas em Linguagens - exemplos</a></li>
-     <li>7.1.3 <a href="https://youtu.be/R2QV1syxviw">DeclaraÁ„o e DefiniÁ„o</a></li>
-     <li>7.1.4 <a href="https://youtu.be/LsWrkB10NRY">FunÁıes e Procedimentos</a></li>
-     <li>7.1.5 <a href="https://youtu.be/Zc7n-5iqiRg">Par‚metros formais e reais</a></li>
-     <li>7.1.6 <a href="https://youtu.be/6cEfoIMtUD4">Passagem de par‚metros - posicional, nomeado, default</a></li>
-     <li>7.1.7 <a href="https://youtu.be/lbLKPjL5m9Q">Par‚metro vari·dico</a></li>
+     <li>7.1.3 <a href="https://youtu.be/R2QV1syxviw">Declara√ß√£o e Defini√ß√£o</a></li>
+     <li>7.1.4 <a href="https://youtu.be/LsWrkB10NRY">Fun√ß√µes e Procedimentos</a></li>
+     <li>7.1.5 <a href="https://youtu.be/Zc7n-5iqiRg">Par√¢metros formais e reais</a></li>
+     <li>7.1.6 <a href="https://youtu.be/6cEfoIMtUD4">Passagem de par√¢metros - posicional, nomeado, default</a></li>
+     <li>7.1.7 <a href="https://youtu.be/lbLKPjL5m9Q">Par√¢metro vari√°dico</a></li>
      <li>7.1.8 <a href="https://youtu.be/2A7rE-VlwFg">Blocos em Ruby</a></li>
-     <li>7.1.9 <a href="https://youtu.be/LNEdQrEdMLs">Escopo - Vari·veis Locais</a></li>
+     <li>7.1.9 <a href="https://youtu.be/LNEdQrEdMLs">Escopo - Vari√°veis Locais</a></li>
 </ul>
    </td>
-   <td><!--Questıes QP -->
+   <td><!--Quest√µes QP -->
      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfnNqOn4CO3cxEE_HILKK5wUO6LDLgVY7UkrM2iVbEmlpcMbA/viewform?usp=sf_link">QP7.1</a>
-     (deve ser finalizado atÈ 12/06)
+     (deve ser finalizado at√© 12/06)
    </td>
-   <td><!--Questıes QA -->
+   <td><!--Quest√µes QA -->
      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfJfYJa2zazJXAxksJYlLyWY0NB9574Q-SOYQ8C0mAhjVqRqw/viewform?usp=sf_link">QA7.1</a>
-     (deve ser finalizado atÈ 12/06)
+     (deve ser finalizado at√© 12/06)
    </td>
 </tr>
 
@@ -600,27 +600,27 @@ em sala de aula - <a href="respostas/QA-6.1-estruturas.controle-RESP.md.html">&c
    <td><!-- Aula -->
 		21
    </td>
-   <td><!--Data -->extra n„o presencial
+   <td><!--Data -->extra n√£o presencial
    </td>
-   <td><!--TÛpicos -->
+   <td><!--T√≥picos -->
 7. Subprogramas (NP)
 <ul>
-     <li>7.2.1 <a href="https://youtu.be/zItR9NiYgz8">Passagem de Par‚metros</a></li>
-     <li>7.2.2 <a href="https://youtu.be/45fLynvjo6M">Modelos de Passagem de par‚metros</a></li>
-     <li>7.2.3 <a href="https://youtu.be/OS6kYkIVaaI">Passagem de Par‚metros por Valor</a></li>
-     <li>7.2.4 <a href="https://youtu.be/DzQkxRuZE88">Passagem de Par‚metros por Resultado</a></li>
-     <li>7.2.5 <a href="https://youtu.be/ad8v-pas26w">Passagem de Par‚metros por Valor-resultado</a></li>
-     <li>7.2.6 <a href="https://youtu.be/6rWLF8SutCE">Passagem de Par‚metros por ReferÍncia</a></li>
-     <li>7.2.7 <a href="https://youtu.be/cYomyVK-wkI">Passagem de Par‚metros por Nome</a></li>
-     <li>7.2.8 <a href="https://youtu.be/1B_xWCSM_pE">Notas Adicionais em Passagem de Par‚metros</a></li>
+     <li>7.2.1 <a href="https://youtu.be/zItR9NiYgz8">Passagem de Par√¢metros</a></li>
+     <li>7.2.2 <a href="https://youtu.be/45fLynvjo6M">Modelos de Passagem de par√¢metros</a></li>
+     <li>7.2.3 <a href="https://youtu.be/OS6kYkIVaaI">Passagem de Par√¢metros por Valor</a></li>
+     <li>7.2.4 <a href="https://youtu.be/DzQkxRuZE88">Passagem de Par√¢metros por Resultado</a></li>
+     <li>7.2.5 <a href="https://youtu.be/ad8v-pas26w">Passagem de Par√¢metros por Valor-resultado</a></li>
+     <li>7.2.6 <a href="https://youtu.be/6rWLF8SutCE">Passagem de Par√¢metros por Refer√™ncia</a></li>
+     <li>7.2.7 <a href="https://youtu.be/cYomyVK-wkI">Passagem de Par√¢metros por Nome</a></li>
+     <li>7.2.8 <a href="https://youtu.be/1B_xWCSM_pE">Notas Adicionais em Passagem de Par√¢metros</a></li>
 </ul>
    </td>
-   <td><!--Questıes QP -->
+   <td><!--Quest√µes QP -->
      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdthIhWSO84CzaE1XxcgEL0ivcqnmodLjfZGe3RY2QcCzJgRQ/viewform?usp=sf_link">QP7.2</a>
-     (deve ser finalizado atÈ 12/06)
+     (deve ser finalizado at√© 12/06)
    </td>
-   <td><!--Questıes QA -->
-     n„o haver·
+   <td><!--Quest√µes QA -->
+     n√£o haver√°
    </td>
 </tr>
 
@@ -628,24 +628,24 @@ em sala de aula - <a href="respostas/QA-6.1-estruturas.controle-RESP.md.html">&c
    <td><!-- Aula -->
 		22
    </td>
-   <td><!--Data -->extra n„o presencial
+   <td><!--Data -->extra n√£o presencial
    </td>
-   <td><!--TÛpicos -->
+   <td><!--T√≥picos -->
 7. Subprogramas (NP)
 <ul>
-     <li>7.3.1 <a href="https://youtu.be/YhJt-MxlyRM">VerificaÁ„o de Tipos</a></li>
+     <li>7.3.1 <a href="https://youtu.be/YhJt-MxlyRM">Verifica√ß√£o de Tipos</a></li>
      <li>7.3.2 <a href="https://youtu.be/PvRA5tNp88o">Array multidimensional</a></li>
-     <li>7.3.3 <a href="https://youtu.be/ojXroIE7V-I">Subprogramas como par‚metros</a></li>
-     <li>7.3.4 <a href="https://youtu.be/pSEkJxHUqjY">AmarraÁıes em subprogramas como par‚metros - amarraÁ„o rasa, profunda e ad hoc</a></li>
+     <li>7.3.3 <a href="https://youtu.be/ojXroIE7V-I">Subprogramas como par√¢metros</a></li>
+     <li>7.3.4 <a href="https://youtu.be/pSEkJxHUqjY">Amarra√ß√µes em subprogramas como par√¢metros - amarra√ß√£o rasa, profunda e ad hoc</a></li>
 </ul>
    </td>
-   <td><!--Questıes QP -->
+   <td><!--Quest√µes QP -->
      QP7.3
-     (deve ser finalizado atÈ 12/06)
+     (deve ser finalizado at√© 12/06)
    </td>
-   <td><!--Questıes QA -->
+   <td><!--Quest√µes QA -->
      QA7.3
-     (deve ser finalizado atÈ 12/06)
+     (deve ser finalizado at√© 12/06)
    </td>
 </tr>
 
@@ -655,16 +655,16 @@ em sala de aula - <a href="respostas/QA-6.1-estruturas.controle-RESP.md.html">&c
    </td>
    <td><!--Data -->5/06/2018 (ter)
    </td>
-   <td><!--TÛpicos -->
+   <td><!--T√≥picos -->
 4. Tipos de Dados (aula complementar)
 <ul>
-     <li>discuss„o de cÛdigo de ordenaÁ„o genÈrica ([Bubble Sort genÈrico](codigo/ordenacao.generica.final.c))</li>
+     <li>discuss√£o de c√≥digo de ordena√ß√£o gen√©rica ([Bubble Sort gen√©rico](codigo/ordenacao.generica.final.c))</li>
 </ul>
    </td>
-   <td><!--Questıes QP -->
+   <td><!--Quest√µes QP -->
 -
    </td>
-   <td><!--Questıes QA -->
+   <td><!--Quest√µes QA -->
 -
    </td>
 </tr>
@@ -675,12 +675,12 @@ em sala de aula - <a href="respostas/QA-6.1-estruturas.controle-RESP.md.html">&c
    </td>
    <td><!--Data -->07/06/2018 (qui)
    </td>
-   <td><!--TÛpicos -->
+   <td><!--T√≥picos -->
 Prova P1   </td>
-   <td><!--Questıes QP -->
+   <td><!--Quest√µes QP -->
 -
    </td>
-   <td><!--Questıes QA -->
+   <td><!--Quest√µes QA -->
 -
    </td>
 </tr>
@@ -691,13 +691,13 @@ Prova P1   </td>
    </td>
    <td><!--Data -->12/06/2018 (ter)
    </td>
-   <td><!--TÛpicos -->
-      7. Subprogramas - ImplementaÁ„o de subprogramas - aula expositiva
+   <td><!--T√≥picos -->
+      7. Subprogramas - Implementa√ß√£o de subprogramas - aula expositiva
    </td>
-   <td><!--Questıes QP -->
+   <td><!--Quest√µes QP -->
 -
    </td>
-   <td><!--Questıes QA -->
+   <td><!--Quest√µes QA -->
 -
    </td>
 </tr>
@@ -708,19 +708,19 @@ Prova P1   </td>
    </td>
    <td><!--Data -->14/06/2018 (qui)
    </td>
-   <td><!--TÛpicos -->
-      8. Suporte a ProgramaÁ„o Orientada a Objetos - aula em lab
+   <td><!--T√≥picos -->
+      8. Suporte a Programa√ß√£o Orientada a Objetos - aula em lab
 <ul>
      <li>Suporte a Tipos Abstratos de Dados</li>
      <li>TAD em C++ (sem OO)</li>
-     <li>ImplementaÁ„o de pilha</li>
+     <li>Implementa√ß√£o de pilha</li>
 </ul>
 
    </td>
-   <td><!--Questıes QP -->
+   <td><!--Quest√µes QP -->
 -
    </td>
-   <td><!--Questıes QA -->
+   <td><!--Quest√µes QA -->
 -
    </td>
 </tr>
@@ -731,17 +731,17 @@ Prova P1   </td>
    </td>
    <td><!--Data -->19/06/2018 (ter)
    </td>
-   <td><!--TÛpicos -->
-      8. Suporte a ProgramaÁ„o Orientada a Objetos
+   <td><!--T√≥picos -->
+      8. Suporte a Programa√ß√£o Orientada a Objetos
 <ul>
      <li></li>
 </ul>
 
    </td>
-   <td><!--Questıes QP -->
+   <td><!--Quest√µes QP -->
 -
    </td>
-   <td><!--Questıes QA -->
+   <td><!--Quest√µes QA -->
 -
    </td>
 </tr>
@@ -752,17 +752,17 @@ Prova P1   </td>
    </td>
    <td><!--Data -->21/06/2018 (qui)
    </td>
-   <td><!--TÛpicos -->
-      8. Suporte a ProgramaÁ„o Orientada a Objetos
+   <td><!--T√≥picos -->
+      8. Suporte a Programa√ß√£o Orientada a Objetos
 <ul>
      <li></li>
 </ul>
 
    </td>
-   <td><!--Questıes QP -->
+   <td><!--Quest√µes QP -->
 -
    </td>
-   <td><!--Questıes QA -->
+   <td><!--Quest√µes QA -->
 -
    </td>
 </tr>
@@ -773,17 +773,17 @@ Prova P1   </td>
    </td>
    <td><!--Data -->26/06/2018 (ter)
    </td>
-   <td><!--TÛpicos -->
-      8. Suporte a ProgramaÁ„o Orientada a Objetos
+   <td><!--T√≥picos -->
+      8. Suporte a Programa√ß√£o Orientada a Objetos
 <ul>
      <li></li>
 </ul>
 
    </td>
-   <td><!--Questıes QP -->
+   <td><!--Quest√µes QP -->
 -
    </td>
-   <td><!--Questıes QA -->
+   <td><!--Quest√µes QA -->
 -
    </td>
 </tr>
@@ -794,13 +794,13 @@ Prova P1   </td>
    </td>
    <td><!--Data -->28/06/2018 (qui)
    </td>
-   <td><!--TÛpicos -->
+   <td><!--T√≥picos -->
      <strong>Prova P2</strong>
    </td>
-   <td><!--Questıes QP -->
+   <td><!--Quest√µes QP -->
 -
    </td>
-   <td><!--Questıes QA -->
+   <td><!--Quest√µes QA -->
 -
    </td>
 </tr>
@@ -811,25 +811,25 @@ Prova P1   </td>
    </td>
    <td><!--Data -->-
    </td>
-   <td><!--TÛpicos -->
-9. Linguagens de ProgramaÁ„o Funcionais (NP)
+   <td><!--T√≥picos -->
+9. Linguagens de Programa√ß√£o Funcionais (NP)
 <ul>
-     <li>8.1.1 <a href="https://youtu.be/9dmnLOXrqcs">Linguagens e FunÁıes Matem·ticas</a></li>
-     <li>8.1.2 <a href="https://youtu.be/yaivawIel9E">CaracterÌsticas de Linguagens Funcionais</a></li>
+     <li>8.1.1 <a href="https://youtu.be/9dmnLOXrqcs">Linguagens e Fun√ß√µes Matem√°ticas</a></li>
+     <li>8.1.2 <a href="https://youtu.be/yaivawIel9E">Caracter√≠sticas de Linguagens Funcionais</a></li>
      <li>8.1.3 <a href="https://youtu.be/uMRTPk3kgyA">LISP</a></li>
-     <li>8.1.4 <a href="https://youtu.be/wOijIqYnm0Q">CaracterÌsticas de Scheme</a></li>
-     <li>8.1.5 <a href="https://youtu.be/8tTFQq4troo">AvaliaÁ„o de FunÁıes Primitivas e Lambda em Scheme</a></li>
-     <li>8.1.6 <a href="https://youtu.be/xZTXsHGb4kY">FunÁ„o DEFINE</a></li>
-     <li>8.1.7 FunÁıes de SaÌda</li>
-     <li>8.1.8 <a href="https://youtu.be/VDsJ73GoG1Q">FunÁıes de Predicados NumÈricos</a></li>
+     <li>8.1.4 <a href="https://youtu.be/wOijIqYnm0Q">Caracter√≠sticas de Scheme</a></li>
+     <li>8.1.5 <a href="https://youtu.be/8tTFQq4troo">Avalia√ß√£o de Fun√ß√µes Primitivas e Lambda em Scheme</a></li>
+     <li>8.1.6 <a href="https://youtu.be/xZTXsHGb4kY">Fun√ß√£o DEFINE</a></li>
+     <li>8.1.7 Fun√ß√µes de Sa√≠da</li>
+     <li>8.1.8 <a href="https://youtu.be/VDsJ73GoG1Q">Fun√ß√µes de Predicados Num√©ricos</a></li>
      <li>8.1.9 <a href="https://youtu.be/gAOnfXdxzFA">Fluxo de Controle em Scheme</a></li>
 </ul>
 
    </td>
-   <td><!--Questıes QP -->
+   <td><!--Quest√µes QP -->
 -
    </td>
-   <td><!--Questıes QA -->
+   <td><!--Quest√µes QA -->
 -
    </td>
 </tr>
@@ -840,20 +840,20 @@ Prova P1   </td>
    </td>
    <td><!--Data -->-
    </td>
-   <td><!--TÛpicos -->
-9. Linguagens de ProgramaÁ„o Funcionais (NP)
+   <td><!--T√≥picos -->
+9. Linguagens de Programa√ß√£o Funcionais (NP)
 <ul>
-     <li>8.2.1 <a href="https://youtu.be/PTe5atSktM0">FunÁ„o QUOTE</a></li>
-     <li>8.2.2 <a href="https://youtu.be/5ZDQtRCTZrM">FunÁıes de ManipulaÁ„o de Listas</a></li>
-     <li>8.2.3 <a href="https://youtu.be/V54MPzuhVd0">FunÁıes Predicado </a></li>
-     <li>8.2.4 <a href="https://youtu.be/gGIQKX9eK64">Recurs„o em Cauda </a></li>
+     <li>8.2.1 <a href="https://youtu.be/PTe5atSktM0">Fun√ß√£o QUOTE</a></li>
+     <li>8.2.2 <a href="https://youtu.be/5ZDQtRCTZrM">Fun√ß√µes de Manipula√ß√£o de Listas</a></li>
+     <li>8.2.3 <a href="https://youtu.be/V54MPzuhVd0">Fun√ß√µes Predicado </a></li>
+     <li>8.2.4 <a href="https://youtu.be/gGIQKX9eK64">Recurs√£o em Cauda </a></li>
 </ul>
 
    </td>
-   <td><!--Questıes QP -->
+   <td><!--Quest√µes QP -->
 -
    </td>
-   <td><!--Questıes QA -->
+   <td><!--Quest√µes QA -->
 -
    </td>
 </tr>
@@ -869,51 +869,51 @@ Prova P1   </td>
 
 <hr />
 
-# Parte 1: **IntroduÁ„o: MotivaÁ„o, AvaliaÁ„o, CategorizaÁ„o e ImplementaÁ„o de Linguagens**
+# Parte 1: **Introdu√ß√£o: Motiva√ß√£o, Avalia√ß√£o, Categoriza√ß√£o e Implementa√ß√£o de Linguagens**
 
-### Slides de referÍncia
+### Slides de refer√™ncia
 
-+ [01 - IntroduÁ„o: MotivaÁ„o, AvaliaÁ„o, CategorizaÁ„o e ImplementaÁ„o de Linguagens](http://www.portal.inf.ufg.br/~ricardo/lp/slides/01-Introducao.pdf) utilizados neste conte˙do.
-   + [Slides adicionais](slides/01-Introducao-Complementacao.pdf) para reforÁar a compreens„o de legibilidade, redigibilidade e confiabilidade
++ [01 - Introdu√ß√£o: Motiva√ß√£o, Avalia√ß√£o, Categoriza√ß√£o e Implementa√ß√£o de Linguagens](http://www.portal.inf.ufg.br/~ricardo/lp/slides/01-Introducao.pdf) utilizados neste conte√∫do.
+   + [Slides adicionais](slides/01-Introducao-Complementacao.pdf) para refor√ßar a compreens√£o de legibilidade, redigibilidade e confiabilidade
 
 <!-- 
 ### Aulas 
 
-Como metodologia da disciplina, antes do encontro em sala de aula vocÍ dever·: (i) **assistir** as videos-aulas (ou ler os textos), E **responder** as questıes deixadas para a aula.
+Como metodologia da disciplina, antes do encontro em sala de aula voc√™ dever√°: (i) **assistir** as videos-aulas (ou ler os textos), E **responder** as quest√µes deixadas para a aula.
 
-1. [ApresentaÁ„o do curso](slides/apresentacao-LP-2018.1.pdf)
-2. LaboratÛrio: Modelos de execuÁ„o de linguagens de programaÁ„o
+1. [Apresenta√ß√£o do curso](slides/apresentacao-LP-2018.1.pdf)
+2. Laborat√≥rio: Modelos de execu√ß√£o de linguagens de programa√ß√£o
 3. [Aula 1.1](aulas/capitulo1-introducao.motivacao.historico.html)
-3. ReforÁo dos conceitos de legibilidade, redigibilidade e confiabilidade. [Slides usados](slides/01-Introducao-Complementacao.pdf).
+3. Refor√ßo dos conceitos de legibilidade, redigibilidade e confiabilidade. [Slides usados](slides/01-Introducao-Complementacao.pdf).
 -->
 
 ## Exemplos mostrados em sala e nas video-aulas
 
 + Redigibilidade vs. Legibilidade: [Operadores da linguagem APL](https://en.wikipedia.org/wiki/APL_syntax_and_symbols)
-+ AbstraÁıes nas diversas linguagens: [ImplementaÁ„o de mesmo algoritmo em diversas linguagens](https://en.wikibooks.org/wiki/Algorithm_Implementation/Sorting/Quicksort)
++ Abstra√ß√µes nas diversas linguagens: [Implementa√ß√£o de mesmo algoritmo em diversas linguagens](https://en.wikibooks.org/wiki/Algorithm_Implementation/Sorting/Quicksort)
 + Bytecode Java
    + [Exemplo](https://en.wikipedia.org/wiki/Java_bytecode)
-   + [InstruÁıes](https://en.wikipedia.org/wiki/Java_bytecode_instruction_listings)
-+ Modelo de execuÁ„o das linguagens
-   + [CÛdigo-exemplo](http://www.inf.ufg.br/~ricardo/lp/lab/lab-modelo-execucao.zip) usado nas video-aulas.
+   + [Instru√ß√µes](https://en.wikipedia.org/wiki/Java_bytecode_instruction_listings)
++ Modelo de execu√ß√£o das linguagens
+   + [C√≥digo-exemplo](http://www.inf.ufg.br/~ricardo/lp/lab/lab-modelo-execucao.zip) usado nas video-aulas.
 
-## ReferÍncias bibliogr·ficas
+## Refer√™ncias bibliogr√°ficas
 
-+ 1. SEBESTA, R.W. *Conceitos de linguagens de programaÁ„o*. **CapÌtulo 1**. 5 ed. Porto Alegre: Bookman, 2003. 
++ 1. SEBESTA, R.W. *Conceitos de linguagens de programa√ß√£o*. **Cap√≠tulo 1**. 5 ed. Porto Alegre: Bookman, 2003. 
 
 <hr />
 
-# Parte 2: **Sintaxe e Sem‚ntica**
+# Parte 2: **Sintaxe e Sem√¢ntica**
 
-### Slides de referÍncia
+### Slides de refer√™ncia
 
-+ [02 - Sintaxe e Sem‚ntica](http://www.portal.inf.ufg.br/~ricardo/lp/slides/02-sintaxe.semantica) utilizados neste conte˙do.
++ [02 - Sintaxe e Sem√¢ntica](http://www.portal.inf.ufg.br/~ricardo/lp/slides/02-sintaxe.semantica) utilizados neste conte√∫do.
 
 
 ### Aulas 
 
 <!--
-Como metodologia da disciplina, antes do encontro em sala de aula vocÍ dever·: (i) **assistir** as videos-aulas (ou ler os textos), E **responder** as questıes deixadas para a aula.
+Como metodologia da disciplina, antes do encontro em sala de aula voc√™ dever√°: (i) **assistir** as videos-aulas (ou ler os textos), E **responder** as quest√µes deixadas para a aula.
 -->
 
 1. [Aula 2.1](aulas/capitulo02-sintaxe.e.semantica.html)
@@ -928,46 +928,46 @@ Como metodologia da disciplina, antes do encontro em sala de aula vocÍ dever·: (
    + [Linguagem C](exemplos/ANSI.C.grammar.html)
    + [Linguagem Java](exemplos/sintaxe.java.html)
    + [Linguagem Python](exemplos/python.grammar.html)
-+ [EspecificaÁ„o completa de Java](exemplos/java.specification.pdf)
++ [Especifica√ß√£o completa de Java](exemplos/java.specification.pdf)
 
-## ReferÍncias bibliogr·ficas
+## Refer√™ncias bibliogr√°ficas
 
-+ 1. SEBESTA, R.W. *Conceitos de linguagens de programaÁ„o*. **CapÌtulo 3**. 5 ed. Porto Alegre: Bookman, 2003. 
++ 1. SEBESTA, R.W. *Conceitos de linguagens de programa√ß√£o*. **Cap√≠tulo 3**. 5 ed. Porto Alegre: Bookman, 2003. 
 
 
 <hr />
 
-# Parte 3: **Nomes, VinculaÁıes, VerificaÁıes de Tipo e Escopo**
+# Parte 3: **Nomes, Vincula√ß√µes, Verifica√ß√µes de Tipo e Escopo**
 
-### Slides de referÍncia
+### Slides de refer√™ncia
 
-+ [03 - Nomes, VinculaÁıes, VerificaÁıes de Tipo e Escopo](http://www.portal.inf.ufg.br/~ricardo/lp/slides/03-nomes.vinculacoes.escopo.pdf) utilizados neste conte˙do.
++ [03 - Nomes, Vincula√ß√µes, Verifica√ß√µes de Tipo e Escopo](http://www.portal.inf.ufg.br/~ricardo/lp/slides/03-nomes.vinculacoes.escopo.pdf) utilizados neste conte√∫do.
 
 ### Aulas 
 
-Como metodologia da disciplina, antes do encontro em sala de aula vocÍ dever·: (i) **assistir** as videos-aulas (ou ler os textos), E **responder** as questıes deixadas para a aula.
+Como metodologia da disciplina, antes do encontro em sala de aula voc√™ dever√°: (i) **assistir** as videos-aulas (ou ler os textos), E **responder** as quest√µes deixadas para a aula.
 
 1. [Aula 3.1](aulas/capitulo03-nomes.vinculacoes.tipos.escopo.html#03.1)
-2. Aula de implementaÁ„o (n„o h· video-aulas ou questıes)
+2. Aula de implementa√ß√£o (n√£o h√° video-aulas ou quest√µes)
 2. [Aula 3.2](aulas/capitulo03-nomes.vinculacoes.tipos.escopo.html#03.2)
 
 
-## ReferÍncias bibliogr·ficas
+## Refer√™ncias bibliogr√°ficas
 
-+ 1. SEBESTA, R.W. *Conceitos de linguagens de programaÁ„o*. **CapÌtulo 4**. 5 ed. Porto Alegre: Bookman, 2003. 
++ 1. SEBESTA, R.W. *Conceitos de linguagens de programa√ß√£o*. **Cap√≠tulo 4**. 5 ed. Porto Alegre: Bookman, 2003. 
 
 
 <hr />
 
 # Parte 4: **Tipos de Dados**
 
-## Slides de referÍncia
+## Slides de refer√™ncia
 
-[04 - Tipos de Dados](http://www.portal.inf.ufg.br/~ricardo/lp/slides/04-tipos.de.dados.pdf) utilizados neste conte˙do.
+[04 - Tipos de Dados](http://www.portal.inf.ufg.br/~ricardo/lp/slides/04-tipos.de.dados.pdf) utilizados neste conte√∫do.
 
 ### Aulas 
 
-Como metodologia da disciplina, antes do encontro em sala de aula vocÍ dever·: (i) **assistir** as videos-aulas (ou ler os textos), E **responder** as questıes deixadas para a aula.
+Como metodologia da disciplina, antes do encontro em sala de aula voc√™ dever√°: (i) **assistir** as videos-aulas (ou ler os textos), E **responder** as quest√µes deixadas para a aula.
 
 1. [Aula 4.1](aulas/capitulo04-tipos.de.dados.html#04.1)
 2. [Aula 4.2](aulas/capitulo04-tipos.de.dados.html#04.2)
@@ -976,21 +976,21 @@ Como metodologia da disciplina, antes do encontro em sala de aula vocÍ dever·: (
 
 ## Exemplos mostrados em sala
 
-+ CÛdigo C: ordenaÁ„o genÈrica
-   + [Bubble Sort genÈrico](codigo/ordenacao.generica.final.c)
++ C√≥digo C: ordena√ß√£o gen√©rica
+   + [Bubble Sort gen√©rico](codigo/ordenacao.generica.final.c)
 
 <!-- 
 
-## Listas de ExercÌcios
+## Listas de Exerc√≠cios
 
-+ [Lista 1](listas.html#lista1): ImplementaÁ„o de pesquisa bin·rio genÈrica em vetor com duplicaÁıes. **Prazo**: 23/junho (Quinta)
++ [Lista 1](listas.html#lista1): Implementa√ß√£o de pesquisa bin√°rio gen√©rica em vetor com duplica√ß√µes. **Prazo**: 23/junho (Quinta)
 
 -->
 
 
-## ReferÍncias bibliogr·ficas
+## Refer√™ncias bibliogr√°ficas
 
-+ 1. SEBESTA, R.W. *Conceitos de linguagens de programaÁ„o*. **CapÌtulo 5**. 5 ed. Porto Alegre: Bookman, 2003. 
++ 1. SEBESTA, R.W. *Conceitos de linguagens de programa√ß√£o*. **Cap√≠tulo 5**. 5 ed. Porto Alegre: Bookman, 2003. 
 
 
 <a name="cap05">.</a>
@@ -998,15 +998,15 @@ Como metodologia da disciplina, antes do encontro em sala de aula vocÍ dever·: (
 <hr />
 
 
-# Parte 5: **Expressıes e SentenÁas**
+# Parte 5: **Express√µes e Senten√ßas**
 
-## Slides de referÍncia
+## Slides de refer√™ncia
 
-[05 - Expressıes e SentenÁas](http://www.portal.inf.ufg.br/~ricardo/lp/slides/05-expressoes.sentencas.pdf) utilizados neste conte˙do.
+[05 - Express√µes e Senten√ßas](http://www.portal.inf.ufg.br/~ricardo/lp/slides/05-expressoes.sentencas.pdf) utilizados neste conte√∫do.
 
 ### Aulas 
 
-Como metodologia da disciplina, antes do encontro em sala de aula vocÍ dever·: (i) **assistir** as video-aulas (ou ler os textos), E **responder** as questıes deixadas para a aula.
+Como metodologia da disciplina, antes do encontro em sala de aula voc√™ dever√°: (i) **assistir** as video-aulas (ou ler os textos), E **responder** as quest√µes deixadas para a aula.
 
 2. [Aula 5.1](aulas/capitulo05-expressoes.e.sentencas.html#05.1)
 
@@ -1015,14 +1015,14 @@ Como metodologia da disciplina, antes do encontro em sala de aula vocÍ dever·: (
 
 # Parte 6: **Estruturas de Controle**
 
-## Slides de referÍncia
+## Slides de refer√™ncia
 
-[06 - Estruturas de Controle](http://www.portal.inf.ufg.br/~ricardo/lp/slides/06-estruturas.controle.pdf) utilizados neste conte˙do.
+[06 - Estruturas de Controle](http://www.portal.inf.ufg.br/~ricardo/lp/slides/06-estruturas.controle.pdf) utilizados neste conte√∫do.
 
 
 ### Aulas 
 
-Como metodologia da disciplina, antes do encontro em sala de aula vocÍ dever·: (i) **assistir** as video-aulas (ou ler os textos), E **responder** as questıes deixadas para a aula.
+Como metodologia da disciplina, antes do encontro em sala de aula voc√™ dever√°: (i) **assistir** as video-aulas (ou ler os textos), E **responder** as quest√µes deixadas para a aula.
 
 2. [Aula 6.1](aulas/capitulo06-estruturas.controle.html#06.1)
 
@@ -1030,65 +1030,65 @@ Como metodologia da disciplina, antes do encontro em sala de aula vocÍ dever·: (
 
 # Parte 7: **Subprogramas**
 
-## Slides de referÍncia
+## Slides de refer√™ncia
 
 + [07a - Subprogramas, parte A](http://www.portal.inf.ufg.br/~ricardo/lp/slides/07a-subprogramas.pdf)
-+ [07b - Subprogramas - par‚metros (parte B)](http://www.portal.inf.ufg.br/~ricardo/lp/slides/07b-subprogramas-parametros.pdf): discute suporte a passagem de par‚metros em subprogramas.
++ [07b - Subprogramas - par√¢metros (parte B)](http://www.portal.inf.ufg.br/~ricardo/lp/slides/07b-subprogramas-parametros.pdf): discute suporte a passagem de par√¢metros em subprogramas.
 
 ### Aulas 
 
-Como metodologia da disciplina, antes do encontro em sala de aula vocÍ dever·: (i) **assistir** as video-aulas (ou ler os textos), E **responder** as questıes deixadas para a aula.
+Como metodologia da disciplina, antes do encontro em sala de aula voc√™ dever√°: (i) **assistir** as video-aulas (ou ler os textos), E **responder** as quest√µes deixadas para a aula.
 
 2. [Aula 7.1](aulas/capitulo07-subprogramas.html#07.1)
 
 
 <hr />
 
-# Parte 8: **Suporte a ProgramaÁ„o Orientada a Objetos**
+# Parte 8: **Suporte a Programa√ß√£o Orientada a Objetos**
 
 <!-- 
-## Auto-avaliaÁ„o
+## Auto-avalia√ß√£o
 
-Preencha o formul·rio abaixo de auto-avaliaÁ„o dos seus conhecimentos em **orientaÁ„o a objetos**:
+Preencha o formul√°rio abaixo de auto-avalia√ß√£o dos seus conhecimentos em **orienta√ß√£o a objetos**:
 
 + <https://docs.google.com/forms/d/e/1FAIpQLSeXyAr-9i-SLshyOr4DKXDVzwHpUOn5hcCtY4HCPCBtX0sadg/viewform>
 
 --> 
 
-## Slides de referÍncia
+## Slides de refer√™ncia
 
-+ [08 - Suporte a ProgramaÁ„o Orientada a Objetos](http://www.portal.inf.ufg.br/~ricardo/lp/slides/08-suporte.OO.pdf)
++ [08 - Suporte a Programa√ß√£o Orientada a Objetos](http://www.portal.inf.ufg.br/~ricardo/lp/slides/08-suporte.OO.pdf)
 
 ## Aulas
 
-1. LaboratÛrio 8.1 (TAD) e motivaÁ„o para suporte a TADs em linguagens
-2. HeranÁa, polimorfismo e generalidade em OO, com caso de uso em C++
+1. Laborat√≥rio 8.1 (TAD) e motiva√ß√£o para suporte a TADs em linguagens
+2. Heran√ßa, polimorfismo e generalidade em OO, com caso de uso em C++
 3. Projetos de Linguagens OO
-4. ImplementaÁ„o dos Conceitos em Linguagens OO
+4. Implementa√ß√£o dos Conceitos em Linguagens OO
 
 
-## LaboratÛrios
+## Laborat√≥rios
 
-* **LaboratÛrio 8.1**: [Tipos Abstratos de Dados](lab/lab8.1-tad.html)
-* **LaboratÛrio 8.2**: [POO em C++](lab/lab8.2-oo_em_cpp.html)
+* **Laborat√≥rio 8.1**: [Tipos Abstratos de Dados](lab/lab8.1-tad.html)
+* **Laborat√≥rio 8.2**: [POO em C++](lab/lab8.2-oo_em_cpp.html)
 
 
-# Parte 9: **Linguagens de ProgramaÁ„o Funcionais**
+# Parte 9: **Linguagens de Programa√ß√£o Funcionais**
 
-## Slides de referÍncia
+## Slides de refer√™ncia
 
-+ [09 - Linguagens de ProgramaÁ„o Funcionais](http://www.portal.inf.ufg.br/~ricardo/lp/slides/09-Linguagens.Funcionais.pdf)
++ [09 - Linguagens de Programa√ß√£o Funcionais](http://www.portal.inf.ufg.br/~ricardo/lp/slides/09-Linguagens.Funcionais.pdf)
 
-## LaboratÛrio
+## Laborat√≥rio
 
-+ Usar o ambiente Scheme disponÌvel online em [REPL.it](https://repl.it/languages/scheme)
++ Usar o ambiente Scheme dispon√≠vel online em [REPL.it](https://repl.it/languages/scheme)
 
-   + [Pequena referÍncia](http://www.nada.kth.se/kurser/su/DA2001/sudata16/examination/schemeCheatsheet.pdf) que pode ser ˙til
+   + [Pequena refer√™ncia](http://www.nada.kth.se/kurser/su/DA2001/sudata16/examination/schemeCheatsheet.pdf) que pode ser √∫til
 
-+ ExercÌcios
++ Exerc√≠cios
 
-   2. Defina uma funÁ„o que calcule o valor de uma raiz de equaÁ„o de segundo grau, dados os par‚metros necess·rios.
-   1. Qual o valor das expressıes abaixo ([fonte](http://www.inf.puc-rio.br/~roberto/icc/texto/icc.html))?
+   2. Defina uma fun√ß√£o que calcule o valor de uma raiz de equa√ß√£o de segundo grau, dados os par√¢metros necess√°rios.
+   1. Qual o valor das express√µes abaixo ([fonte](http://www.inf.puc-rio.br/~roberto/icc/texto/icc.html))?
       1. `(car '(a b))`
       2. `(cdr '(a b))`
       3. `(car '(a))`
@@ -1096,22 +1096,22 @@ Preencha o formul·rio abaixo de auto-avaliaÁ„o dos seus conhecimentos em **orien
       5. `(cdr '(a))`
       6. `(cdr '((a)))`
 
-   2. Como retornar o segundo elemento de uma lista `(primeiro segundo terceiro)`? Defina uma funÁ„o Scheme que faÁa isso!
-   2. Defina uma funÁ„o Scheme que retorne o tamanho de uma lista!
-   2. Defina uma funÁ„o Scheme que retorne o enÈsimo elemento de uma lista!
-   3. Usando apenas n˙meros, `cons` e a lista vazia, escreva expressıes que resultem nas listas abaixo ([fonte](http://www.inf.puc-rio.br/~roberto/icc/texto/icc.html)):
+   2. Como retornar o segundo elemento de uma lista `(primeiro segundo terceiro)`? Defina uma fun√ß√£o Scheme que fa√ßa isso!
+   2. Defina uma fun√ß√£o Scheme que retorne o tamanho de uma lista!
+   2. Defina uma fun√ß√£o Scheme que retorne o en√©simo elemento de uma lista!
+   3. Usando apenas n√∫meros, `cons` e a lista vazia, escreva express√µes que resultem nas listas abaixo ([fonte](http://www.inf.puc-rio.br/~roberto/icc/texto/icc.html)):
       1. `(2 4)`
       2. `((2 4))`
       3. `(((2 4)))`
       4. `((2 4) (3 5))`
-   4. Defina uma funÁ„o `tamanho` que retorne o tamanho de uma lista (n˙mero de elementos).
-   3. Implementar uma funÁ„o `pertence` que retorna `#t` se um sÌmbolo pertence a uma lista. Exemplo: `(pertence 'B '(A B C))` retorna `#t`.
-   4. Defina uma funÁ„o que compare duas listas. *Dica*: use `cond` e inicie avaliando se as listas s„o nulas (`null?`).
-   5. Definir uma funÁ„o `acrescenta` que acrescente os elementos de uma lista em outra. Exemplo: `(acrescenta '(A B) '(C D R))` retorna `(A B C D R)`.
-   6. Definir uma funÁ„o fatorial utilizando recurs„o em cauda.
+   4. Defina uma fun√ß√£o `tamanho` que retorne o tamanho de uma lista (n√∫mero de elementos).
+   3. Implementar uma fun√ß√£o `pertence` que retorna `#t` se um s√≠mbolo pertence a uma lista. Exemplo: `(pertence 'B '(A B C))` retorna `#t`.
+   4. Defina uma fun√ß√£o que compare duas listas. *Dica*: use `cond` e inicie avaliando se as listas s√£o nulas (`null?`).
+   5. Definir uma fun√ß√£o `acrescenta` que acrescente os elementos de uma lista em outra. Exemplo: `(acrescenta '(A B) '(C D R))` retorna `(A B C D R)`.
+   6. Definir uma fun√ß√£o fatorial utilizando recurs√£o em cauda.
 
 
-+ **Respostas** dos [exercÌcios de 3 a 6](respostas.exercicios.funcionais.html).
++ **Respostas** dos [exerc√≠cios de 3 a 6](respostas.exercicios.funcionais.html).
 
 
 
