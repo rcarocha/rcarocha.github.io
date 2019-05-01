@@ -1,8 +1,3 @@
-<!DOCTYPE html>
-<html>
-<title>Linguagens de Programação - Prof. Ricardo da Rocha</title>
-
-<xmp theme="simplex" style="display:none;">
 
 Linguagens de Programação
 =========================
@@ -749,11 +744,6 @@ Preencha o formulário abaixo de auto-avaliação dos seus conhecimentos em **orien
 
 
 
-
-
-</xmp>
-
 <script src="https://strapdownjs.com/v/0.2/strapdown.js"></script>
-</html>
 
 
