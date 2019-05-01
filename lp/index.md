@@ -1,4 +1,3 @@
-
 Linguagens de Programação
 =========================
 
@@ -742,8 +741,5 @@ Preencha o formulário abaixo de auto-avaliação dos seus conhecimentos em **orien
 
 + **Respostas** dos [exercícios de 3 a 6](respostas.exercicios.funcionais.html).
 
-
-
-<script src="https://strapdownjs.com/v/0.2/strapdown.js"></script>
 
 
