@@ -27,6 +27,7 @@ Programação Funcional e Lógica
 A bibliografia *completa* encontra-se no plano da disciplina.
 
    1. APT, K. R. From logic programming to Prolog. New York: Prentice Hall, 1997. 
+   1. ["Aprender Haskell será um grande bem para você!"](http://haskell.tailorfontela.com.br/chapters)
    1. BIRD, R. Introduction to Functional Programming using Haskell. 2 nd Edition. Editora Prentice Hall, 1998. 
    1. DOETS, K. From Logic to Logic Programming. Editora MIT Press, 1994. 
 

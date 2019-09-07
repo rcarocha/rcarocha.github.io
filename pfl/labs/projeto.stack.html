@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
-<title>Programação Funcional e Lógica - Prof. Ricardo da Rocha</title>
+<title>ProgramaÃÂ§ÃÂ£o Funcional e LÃÂ³gica - Prof. Ricardo da Rocha</title>
 
 <xmp theme="simplex" style="display:none;">
 
 # Gerenciamento de Projetos Haskell com Stack
 
-## Criação do Projeto stack
+## CriaÃÂ§ÃÂ£o do Projeto stack
 
-Um projeto stack é criado com o comando `stack new meuprojeto`, onde `meuprojeto` o nome do seu projeto. O stack criará um diretório `meuprojeto` com a seguinte estrutura de diretórios:
+Um projeto stack ÃÂ© criado com o comando `stack new meuprojeto`, onde `meuprojeto` o nome do seu projeto. O stack criarÃÂ¡ um diretÃÂ³rio `meuprojeto` com a seguinte estrutura de diretÃÂ³rios:
 
         .
         |-- quicksort
@@ -28,26 +28,26 @@ Um projeto stack é criado com o comando `stack new meuprojeto`, onde `meuprojet
         `-- quicksort.zip
 
 
-Essencialmente vocês precisarão modificar quatro arquivos:
+Essencialmente vocÃÂªs precisarÃÂ£o modificar quatro arquivos:
 
-* `app/Main.hs`: é o seu programa principal, que contém a função `main` e que será a base para o executável criado. 
-* `src/Lib.hs`: Diretório onde ficarão as bibliotecas que dão suporte ao seu programa. A idéia é evitar que você coloque todo o código no `Main.hs`, colocando as funções nesse arquivo e importando o módulo no seu `Main.hs`.
-* `test/Spec.hs`: contém os testes de unidade do seu código.
-* `package.yaml`: contém a configuração do seu projeto. Provavelmente, sua única preocupação nesse arquivo será acrescentar as bibliotecas usadas pelo seu código (indicando o nome delas), que serão baixadas automaticamente ao compilar o seu código.
+* `app/Main.hs`: ÃÂ© o seu programa principal, que contÃÂ©m a funÃÂ§ÃÂ£o `main` e que serÃÂ¡ a base para o executÃÂ¡vel criado. 
+* `src/Lib.hs`: DiretÃÂ³rio onde ficarÃÂ£o as bibliotecas que dÃÂ£o suporte ao seu programa. A idÃÂ©ia ÃÂ© evitar que vocÃÂª coloque todo o cÃÂ³digo no `Main.hs`, colocando as funÃÂ§ÃÂµes nesse arquivo e importando o mÃÂ³dulo no seu `Main.hs`.
+* `test/Spec.hs`: contÃÂ©m os testes de unidade do seu cÃÂ³digo.
+* `package.yaml`: contÃÂ©m a configuraÃÂ§ÃÂ£o do seu projeto. Provavelmente, sua ÃÂºnica preocupaÃÂ§ÃÂ£o nesse arquivo serÃÂ¡ acrescentar as bibliotecas usadas pelo seu cÃÂ³digo (indicando o nome delas), que serÃÂ£o baixadas automaticamente ao compilar o seu cÃÂ³digo.
 
 ## Comando stack
 
-* `stack build`: compila o seu código
-* `stack exec meuprojeto-exe`: executa o seu código que, no projeto padrão stack é referenciado pelo nome do projeto seguido de `-exe`. Observe que esse nome aparece no processo de compilação e é definido no arquivo `package.yaml` no bloco de compilação `executables` (trata-se do nome do bloco). No caso do exemplo `quicksort` é `quicksort-exe`.
+* `stack build`: compila o seu cÃÂ³digo
+* `stack exec meuprojeto-exe`: executa o seu cÃÂ³digo que, no projeto padrÃÂ£o stack ÃÂ© referenciado pelo nome do projeto seguido de `-exe`. Observe que esse nome aparece no processo de compilaÃÂ§ÃÂ£o e ÃÂ© definido no arquivo `package.yaml` no bloco de compilaÃÂ§ÃÂ£o `executables` (trata-se do nome do bloco). No caso do exemplo `quicksort` ÃÂ© `quicksort-exe`.
 * `stack test`: executa os testes indicado em `test/Spec.hs`, mostrando resultado no seu terminal.
 
 ## Testes de Unidade com Hspec
 
-Um projeto stack utiliza os testes de unidade hspec, e para isso você precisará incluir a biblioteca do Hspec no seu projeto no bloco `dependencies` de `tests`. Veja o exemplo do quicksort.
+Um projeto stack utiliza os testes de unidade hspec, e para isso vocÃÂª precisarÃÂ¡ incluir a biblioteca do Hspec no seu projeto no bloco `dependencies` de `tests`. Veja o exemplo do quicksort.
 
-### Referências úteis
+### ReferÃÂªncias ÃÂºteis
 
-* [HSpec; A importância de testes](http://blog.haskellbr.com/2015/12/10/24-dias-de-hackage-2015-dia-3-hspec-a-importancia-de-testes.html) - em portugues
+* [HSpec; A importÃÂ¢ncia de testes](http://blog.haskellbr.com/2015/12/10/24-dias-de-hackage-2015-dia-3-hspec-a-importancia-de-testes.html) - em portugues
 * <https://hspec.github.io/>
 * <https://github.com/hspec/hspec-example>
 * <https://hspec.github.io/running-specs.html>
