@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
-<title>ProgramaÃÂÃÂ§ÃÂÃÂ£o Funcional e LÃÂÃÂ³gica - Prof. Ricardo da Rocha</title>
+<title>ProgramaÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂ£o Funcional e LÃÂÃÂÃÂÃÂ³gica - Prof. Ricardo da Rocha</title>
 
 <xmp theme="simplex" style="display:none;">
 
 # Gerenciamento de Projetos Haskell com Stack
 
-## CriaÃÂÃÂ§ÃÂÃÂ£o do Projeto stack
+## CriaÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂ£o do Projeto stack
 
-Um projeto stack ÃÂÃÂ© criado com o comando `stack new meuprojeto`, onde `meuprojeto` o nome do seu projeto. O stack criarÃÂÃÂ¡ um diretÃÂÃÂ³rio `meuprojeto` com a seguinte estrutura de diretÃÂÃÂ³rios:
+Um projeto stack ÃÂÃÂÃÂÃÂ© criado com o comando `stack new meuprojeto`, onde `meuprojeto` o nome do seu projeto. O stack criarÃÂÃÂÃÂÃÂ¡ um diretÃÂÃÂÃÂÃÂ³rio `meuprojeto` com a seguinte estrutura de diretÃÂÃÂÃÂÃÂ³rios:
 
         .
         |-- quicksort
@@ -28,26 +28,26 @@ Um projeto stack ÃÂÃÂ© criado com o comando `stack new meuprojeto`, o
         `-- quicksort.zip
 
 
-Essencialmente vocÃÂÃÂªs precisarÃÂÃÂ£o modificar quatro arquivos:
+Essencialmente vocÃÂÃÂÃÂÃÂªs precisarÃÂÃÂÃÂÃÂ£o modificar quatro arquivos:
 
-* `app/Main.hs`: ÃÂÃÂ© o seu programa principal, que contÃÂÃÂ©m a funÃÂÃÂ§ÃÂÃÂ£o `main` e que serÃÂÃÂ¡ a base para o executÃÂÃÂ¡vel criado. 
-* `src/Lib.hs`: DiretÃÂÃÂ³rio onde ficarÃÂÃÂ£o as bibliotecas que dÃÂÃÂ£o suporte ao seu programa. A idÃÂÃÂ©ia ÃÂÃÂ© evitar que vocÃÂÃÂª coloque todo o cÃÂÃÂ³digo no `Main.hs`, colocando as funÃÂÃÂ§ÃÂÃÂµes nesse arquivo e importando o mÃÂÃÂ³dulo no seu `Main.hs`.
-* `test/Spec.hs`: contÃÂÃÂ©m os testes de unidade do seu cÃÂÃÂ³digo.
-* `package.yaml`: contÃÂÃÂ©m a configuraÃÂÃÂ§ÃÂÃÂ£o do seu projeto. Provavelmente, sua ÃÂÃÂºnica preocupaÃÂÃÂ§ÃÂÃÂ£o nesse arquivo serÃÂÃÂ¡ acrescentar as bibliotecas usadas pelo seu cÃÂÃÂ³digo (indicando o nome delas), que serÃÂÃÂ£o baixadas automaticamente ao compilar o seu cÃÂÃÂ³digo.
+* `app/Main.hs`: ÃÂÃÂÃÂÃÂ© o seu programa principal, que contÃÂÃÂÃÂÃÂ©m a funÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂ£o `main` e que serÃÂÃÂÃÂÃÂ¡ a base para o executÃÂÃÂÃÂÃÂ¡vel criado. 
+* `src/Lib.hs`: DiretÃÂÃÂÃÂÃÂ³rio onde ficarÃÂÃÂÃÂÃÂ£o as bibliotecas que dÃÂÃÂÃÂÃÂ£o suporte ao seu programa. A idÃÂÃÂÃÂÃÂ©ia ÃÂÃÂÃÂÃÂ© evitar que vocÃÂÃÂÃÂÃÂª coloque todo o cÃÂÃÂÃÂÃÂ³digo no `Main.hs`, colocando as funÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂµes nesse arquivo e importando o mÃÂÃÂÃÂÃÂ³dulo no seu `Main.hs`.
+* `test/Spec.hs`: contÃÂÃÂÃÂÃÂ©m os testes de unidade do seu cÃÂÃÂÃÂÃÂ³digo.
+* `package.yaml`: contÃÂÃÂÃÂÃÂ©m a configuraÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂ£o do seu projeto. Provavelmente, sua ÃÂÃÂÃÂÃÂºnica preocupaÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂ£o nesse arquivo serÃÂÃÂÃÂÃÂ¡ acrescentar as bibliotecas usadas pelo seu cÃÂÃÂÃÂÃÂ³digo (indicando o nome delas), que serÃÂÃÂÃÂÃÂ£o baixadas automaticamente ao compilar o seu cÃÂÃÂÃÂÃÂ³digo.
 
 ## Comando stack
 
-* `stack build`: compila o seu cÃÂÃÂ³digo
-* `stack exec meuprojeto-exe`: executa o seu cÃÂÃÂ³digo que, no projeto padrÃÂÃÂ£o stack ÃÂÃÂ© referenciado pelo nome do projeto seguido de `-exe`. Observe que esse nome aparece no processo de compilaÃÂÃÂ§ÃÂÃÂ£o e ÃÂÃÂ© definido no arquivo `package.yaml` no bloco de compilaÃÂÃÂ§ÃÂÃÂ£o `executables` (trata-se do nome do bloco). No caso do exemplo `quicksort` ÃÂÃÂ© `quicksort-exe`.
+* `stack build`: compila o seu cÃÂÃÂÃÂÃÂ³digo
+* `stack exec meuprojeto-exe`: executa o seu cÃÂÃÂÃÂÃÂ³digo que, no projeto padrÃÂÃÂÃÂÃÂ£o stack ÃÂÃÂÃÂÃÂ© referenciado pelo nome do projeto seguido de `-exe`. Observe que esse nome aparece no processo de compilaÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂ£o e ÃÂÃÂÃÂÃÂ© definido no arquivo `package.yaml` no bloco de compilaÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂ£o `executables` (trata-se do nome do bloco). No caso do exemplo `quicksort` ÃÂÃÂÃÂÃÂ© `quicksort-exe`.
 * `stack test`: executa os testes indicado em `test/Spec.hs`, mostrando resultado no seu terminal.
 
 ## Testes de Unidade com Hspec
 
-Um projeto stack utiliza os testes de unidade hspec, e para isso vocÃÂÃÂª precisarÃÂÃÂ¡ incluir a biblioteca do Hspec no seu projeto no bloco `dependencies` de `tests`. Veja o exemplo do quicksort.
+Um projeto stack utiliza os testes de unidade hspec, e para isso vocÃÂÃÂÃÂÃÂª precisarÃÂÃÂÃÂÃÂ¡ incluir a biblioteca do Hspec no seu projeto no bloco `dependencies` de `tests`. Veja o exemplo do quicksort.
 
-### ReferÃÂÃÂªncias ÃÂÃÂºteis
+### ReferÃÂÃÂÃÂÃÂªncias ÃÂÃÂÃÂÃÂºteis
 
-* [HSpec; A importÃÂÃÂ¢ncia de testes](http://blog.haskellbr.com/2015/12/10/24-dias-de-hackage-2015-dia-3-hspec-a-importancia-de-testes.html) - em portugues
+* [HSpec; A importÃÂÃÂÃÂÃÂ¢ncia de testes](http://blog.haskellbr.com/2015/12/10/24-dias-de-hackage-2015-dia-3-hspec-a-importancia-de-testes.html) - em portugues
 * <https://hspec.github.io/>
 * <https://github.com/hspec/hspec-example>
 * <https://hspec.github.io/running-specs.html>

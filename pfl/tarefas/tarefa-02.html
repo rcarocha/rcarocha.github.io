@@ -1,37 +1,37 @@
 <p><!DOCTYPE html>
 <html>
-<title>ProgramaÃÂÃÂ§ÃÂÃÂ£o Funcional e LÃÂÃÂ³gica - Prof. Ricardo da Rocha</title></p>
+<title>ProgramaÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂ£o Funcional e LÃÂÃÂÃÂÃÂ³gica - Prof. Ricardo da Rocha</title></p>
 
 <p><xmp theme="simplex" style="display:none;"></p>
 
-<h1>Tarefa 2 de ProgramaÃÂÃÂ§ÃÂÃÂ£o Funcional e LÃÂÃÂ³gica</h1>
+<h1>Tarefa 2 de ProgramaÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂ£o Funcional e LÃÂÃÂÃÂÃÂ³gica</h1>
 
-<h1>VisÃÂÃÂ£o geral</h1>
+<h1>VisÃÂÃÂÃÂÃÂ£o geral</h1>
 
-<p>Nesta tarefa vocÃÂÃÂª deverÃÂÃÂ¡ implementar funÃÂÃÂ§ÃÂÃÂµes de manipulaÃÂÃÂ§ÃÂÃÂ£o de nÃÂÃÂºmero de boleto bancÃÂÃÂ¡rio brasileiro, de maneira a praticar a construÃÂÃÂ§ÃÂÃÂ£o de funÃÂÃÂ§ÃÂÃÂµes simples em Haskell.</p>
+<p>Nesta tarefa vocÃÂÃÂÃÂÃÂª deverÃÂÃÂÃÂÃÂ¡ implementar funÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂµes de manipulaÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂ£o de nÃÂÃÂÃÂÃÂºmero de boleto bancÃÂÃÂÃÂÃÂ¡rio brasileiro, de maneira a praticar a construÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂ£o de funÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂµes simples em Haskell.</p>
 
-<h1>DescriÃÂÃÂ§ÃÂÃÂ£o</h1>
+<h1>DescriÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂ£o</h1>
 
 <p><img src="images/BoletoBancario.png" /></p>
 
-<p>O <a href="https://pt.wikipedia.org/wiki/Boleto_banc%C3%A1rio">boleto bancÃÂÃÂ¡rio brasileiro</a> pode ser identificado por um de dois nÃÂÃÂºmeros:</p>
+<p>O <a href="https://pt.wikipedia.org/wiki/Boleto_banc%C3%A1rio">boleto bancÃÂÃÂÃÂÃÂ¡rio brasileiro</a> pode ser identificado por um de dois nÃÂÃÂÃÂÃÂºmeros:</p>
 
 <ul>
-<li>Linha digitÃÂÃÂ¡vel:  ÃÂÃÂ© um identificador com 47 nÃÂÃÂºmeros que aparece no topo do boleto bancÃÂÃÂ¡rio que ÃÂÃÂ© projetado para facilitar a digitaÃÂÃÂ§ÃÂÃÂ£o por humanos.</li>
-<li>CÃÂÃÂ³digo de barras: ÃÂÃÂ© um identificador com 44 nÃÂÃÂºmeros representado no boleto pelo cÃÂÃÂ³digo de barras bidimensional que ÃÂÃÂ© projetado para a leitura automÃÂÃÂ¡tica por dispositivos eletrÃÂÃÅnicos.</li>
+<li>Linha digitÃÂÃÂÃÂÃÂ¡vel:  ÃÂÃÂÃÂÃÂ© um identificador com 47 nÃÂÃÂÃÂÃÂºmeros que aparece no topo do boleto bancÃÂÃÂÃÂÃÂ¡rio que ÃÂÃÂÃÂÃÂ© projetado para facilitar a digitaÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂ£o por humanos.</li>
+<li>CÃÂÃÂÃÂÃÂ³digo de barras: ÃÂÃÂÃÂÃÂ© um identificador com 44 nÃÂÃÂÃÂÃÂºmeros representado no boleto pelo cÃÂÃÂÃÂÃÂ³digo de barras bidimensional que ÃÂÃÂÃÂÃÂ© projetado para a leitura automÃÂÃÂÃÂÃÂ¡tica por dispositivos eletrÃÂÃÂÃÂÃÂnicos.</li>
 </ul>
 
-<p>Ambas as identificaÃÂÃÂ§ÃÂÃÂµes traduzem um mesmo boleto bancÃÂÃÂ¡rio e possuem o mesmo conjunto de informaÃÂÃÂ§ÃÂÃÂµes que, entretanto, ÃÂÃÂ© traduzida em nÃÂÃÂºmeros de maneiras diferentes. Esta tarefa envolve unicamente a interpretaÃÂÃÂ§ÃÂÃÂ£o da <strong>linha digitÃÂÃÂ¡vel</strong> e por isso vocÃÂÃÂª deve ter <strong>cuidado para nÃÂÃÂ£o implementar</strong> a manipulaÃÂÃÂ§ÃÂÃÂ£o do cÃÂÃÂ³digo de barras (tenha cuidado ao procurar informaÃÂÃÂ§ÃÂÃÂµes de outras fontes alÃÂÃÂ©m desta descriÃÂÃÂ§ÃÂÃÂ£o).</p>
+<p>Ambas as identificaÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂµes traduzem um mesmo boleto bancÃÂÃÂÃÂÃÂ¡rio e possuem o mesmo conjunto de informaÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂµes que, entretanto, ÃÂÃÂÃÂÃÂ© traduzida em nÃÂÃÂÃÂÃÂºmeros de maneiras diferentes. Esta tarefa envolve unicamente a interpretaÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂ£o da <strong>linha digitÃÂÃÂÃÂÃÂ¡vel</strong> e por isso vocÃÂÃÂÃÂÃÂª deve ter <strong>cuidado para nÃÂÃÂÃÂÃÂ£o implementar</strong> a manipulaÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂ£o do cÃÂÃÂÃÂÃÂ³digo de barras (tenha cuidado ao procurar informaÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂµes de outras fontes alÃÂÃÂÃÂÃÂ©m desta descriÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂ£o).</p>
 
-<p>Por exemplo, as seguintes "linha digitÃÂÃÂ¡vel" e "cÃÂÃÂ³digo de barras" representam o mesmo boleto:</p>
+<p>Por exemplo, as seguintes "linha digitÃÂÃÂÃÂÃÂ¡vel" e "cÃÂÃÂÃÂÃÂ³digo de barras" representam o mesmo boleto:</p>
 
-<pre><code>    00190.50095 40144.816069 06809.350314 3 37370000000100 - linha digitÃÂÃÂ¡vel
-    00193373700000001000500940144816060680935031 - cÃÂÃÂ³digo de barras
+<pre><code>    00190.50095 40144.816069 06809.350314 3 37370000000100 - linha digitÃÂÃÂÃÂÃÂ¡vel
+    00193373700000001000500940144816060680935031 - cÃÂÃÂÃÂÃÂ³digo de barras
 </code></pre>
 
-<h2>Estrutura da Linha DigitÃÂÃÂ¡vel</h2>
+<h2>Estrutura da Linha DigitÃÂÃÂÃÂÃÂ¡vel</h2>
 
-<p>Considere a seguinte estrutura dos 47 nÃÂÃÂºmero da "linha digitÃÂÃÂ¡vel":</p>
+<p>Considere a seguinte estrutura dos 47 nÃÂÃÂÃÂÃÂºmero da "linha digitÃÂÃÂÃÂÃÂ¡vel":</p>
 
 <pre><code>    +-------------+--------------+--------------+---------+----------------+
     |   Campo 1   |   Campo 2    |   Campo 3    | Campo 4 |    Campo 5     |
@@ -40,35 +40,35 @@
     +-------------+--------------+--------------+---------+----------------+
 </code></pre>
 
-<p>Os nÃÂÃÂºmeros devem ser interpretados da seguinte maneira:</p>
+<p>Os nÃÂÃÂÃÂÃÂºmeros devem ser interpretados da seguinte maneira:</p>
 
 <ul>
-<li><code>AAA</code>: posiÃÂÃÂ§ÃÂÃÂµes 1 a 3 identificam o banco de acordo com um identificador ÃÂÃÂºnico atribuÃÂÃÂ­do a cada banco. Por exemplo, "001" ÃÂÃÂ© Banco do Brasil e "237" ÃÂÃÂ© Bradesco (vocÃÂÃÂª encontra os cÃÂÃÂ³digos de todos os banco <a href="https://www.febraban.org.br/associados/utilitarios/bancos.asp">aqui</a>).</li>
-<li><code>B</code>: posiÃÂÃÂ§ÃÂÃÂ£o 4 identifica a moeda aplicada ao boleto, que ÃÂÃÂ© usualmente "9", cÃÂÃÂ³digo do real.</li>
-<li><code>C</code>: posiÃÂÃÂ§ÃÂÃÂ£o 5 ÃÂÃÂ© o dÃÂÃÂ­gito verificador do cÃÂÃÂ³digo de barras</li>
-<li><code>CCCC</code>: posiÃÂÃÂ§ÃÂÃÂµes 6 a 9 ÃÂÃÂ© o fator de vencimento, que indica a data de vencimento do boleto na forma de nÃÂÃÂºmero de dias apÃÂÃÂ³s 7/10/1997. </li>
-<li><code>X</code>: posiÃÂÃÂ§ÃÂÃÂ£o 10 ÃÂÃÂ© o dÃÂÃÂ­gito verificador das informaÃÂÃÂ§ÃÂÃÂµes do "Campo 1".</li>
-<li><code>Y</code>: posiÃÂÃÂ§ÃÂÃÂ£o 21 ÃÂÃÂ© o dÃÂÃÂ­gito verificador das informaÃÂÃÂ§ÃÂÃÂµes do "Campo 2".</li>
-<li><code>Z</code>: posiÃÂÃÂ§ÃÂÃÂ£o 31 ÃÂÃÂ© o dÃÂÃÂ­gito verificador das informaÃÂÃÂ§ÃÂÃÂµes do "Campo 3".
-<!-- * <code>DDDDD.DDDDD</code>: posiÃÂÃÂ§ÃÂÃÂµes 11 a 20 identificam o valor do boleto, multiplicado por 100. EntÃÂÃÂ£o se os nÃÂÃÂºmero sÃÂÃÂ£o <code>00009.13499</code> entÃÂÃÂ£o o valor do boleto ÃÂÃÂ© R$ 9.134,99 (considerando que moeda ÃÂÃÂ© real). --></li>
-<li><code>VVVVVVVVVV</code>: posiÃÂÃÂ§ÃÂÃÂµes 38 a 47 identificam o valor do boleto, multiplicado por 100. EntÃÂÃÂ£o se os nÃÂÃÂºmero sÃÂÃÂ£o <code>0000913499</code> entÃÂÃÂ£o o valor do boleto ÃÂÃÂ© R$ 9.134,99 (considerando que moeda ÃÂÃÂ© real).</li>
-<li><code>DDDDD.DDDDD</code>, <code>K</code> e <code>UUUU</code>: a interpretaÃÂÃÂ§ÃÂÃÂ£o dessas posiÃÂÃÂ§ÃÂÃÂµes ÃÂÃÂ© definida pelo banco e por este motivo nÃÂÃÂ£o serÃÂÃÂ£o consideradas nesta tarefa.</li>
+<li><code>AAA</code>: posiÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂµes 1 a 3 identificam o banco de acordo com um identificador ÃÂÃÂÃÂÃÂºnico atribuÃÂÃÂÃÂÃÂ­do a cada banco. Por exemplo, "001" ÃÂÃÂÃÂÃÂ© Banco do Brasil e "237" ÃÂÃÂÃÂÃÂ© Bradesco (vocÃÂÃÂÃÂÃÂª encontra os cÃÂÃÂÃÂÃÂ³digos de todos os banco <a href="https://www.febraban.org.br/associados/utilitarios/bancos.asp">aqui</a>).</li>
+<li><code>B</code>: posiÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂ£o 4 identifica a moeda aplicada ao boleto, que ÃÂÃÂÃÂÃÂ© usualmente "9", cÃÂÃÂÃÂÃÂ³digo do real.</li>
+<li><code>C</code>: posiÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂ£o 5 ÃÂÃÂÃÂÃÂ© o dÃÂÃÂÃÂÃÂ­gito verificador do cÃÂÃÂÃÂÃÂ³digo de barras</li>
+<li><code>CCCC</code>: posiÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂµes 6 a 9 ÃÂÃÂÃÂÃÂ© o fator de vencimento, que indica a data de vencimento do boleto na forma de nÃÂÃÂÃÂÃÂºmero de dias apÃÂÃÂÃÂÃÂ³s 7/10/1997. </li>
+<li><code>X</code>: posiÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂ£o 10 ÃÂÃÂÃÂÃÂ© o dÃÂÃÂÃÂÃÂ­gito verificador das informaÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂµes do "Campo 1".</li>
+<li><code>Y</code>: posiÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂ£o 21 ÃÂÃÂÃÂÃÂ© o dÃÂÃÂÃÂÃÂ­gito verificador das informaÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂµes do "Campo 2".</li>
+<li><code>Z</code>: posiÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂ£o 31 ÃÂÃÂÃÂÃÂ© o dÃÂÃÂÃÂÃÂ­gito verificador das informaÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂµes do "Campo 3".
+<!-- * <code>DDDDD.DDDDD</code>: posiÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂµes 11 a 20 identificam o valor do boleto, multiplicado por 100. EntÃÂÃÂÃÂÃÂ£o se os nÃÂÃÂÃÂÃÂºmero sÃÂÃÂÃÂÃÂ£o <code>00009.13499</code> entÃÂÃÂÃÂÃÂ£o o valor do boleto ÃÂÃÂÃÂÃÂ© R$ 9.134,99 (considerando que moeda ÃÂÃÂÃÂÃÂ© real). --></li>
+<li><code>VVVVVVVVVV</code>: posiÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂµes 38 a 47 identificam o valor do boleto, multiplicado por 100. EntÃÂÃÂÃÂÃÂ£o se os nÃÂÃÂÃÂÃÂºmero sÃÂÃÂÃÂÃÂ£o <code>0000913499</code> entÃÂÃÂÃÂÃÂ£o o valor do boleto ÃÂÃÂÃÂÃÂ© R$ 9.134,99 (considerando que moeda ÃÂÃÂÃÂÃÂ© real).</li>
+<li><code>DDDDD.DDDDD</code>, <code>K</code> e <code>UUUU</code>: a interpretaÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂ£o dessas posiÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂµes ÃÂÃÂÃÂÃÂ© definida pelo banco e por este motivo nÃÂÃÂÃÂÃÂ£o serÃÂÃÂÃÂÃÂ£o consideradas nesta tarefa.</li>
 </ul>
 
-<h2>Tarefas de ImplementaÃÂÃÂ§ÃÂÃÂ£o</h2>
+<h2>Tarefas de ImplementaÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂ£o</h2>
 
-<p>Dado um cÃÂÃÂ³digo de boleto bancÃÂÃÂ¡rio na representaÃÂÃÂ§ÃÂÃÂ£o de linha digitÃÂÃÂ¡vel (nÃÂÃÂºmeros que aparecem no boleto), vocÃÂÃÂª deverÃÂÃÂ¡ implementar funÃÂÃÂ§ÃÂÃÂµes que retornem:</p>
+<p>Dado um cÃÂÃÂÃÂÃÂ³digo de boleto bancÃÂÃÂÃÂÃÂ¡rio na representaÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂ£o de linha digitÃÂÃÂÃÂÃÂ¡vel (nÃÂÃÂÃÂÃÂºmeros que aparecem no boleto), vocÃÂÃÂÃÂÃÂª deverÃÂÃÂÃÂÃÂ¡ implementar funÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂµes que retornem:</p>
 
 <ul>
-<li>Se o boleto ÃÂÃÂ© vÃÂÃÂ¡lido, ou seja, se os dÃÂÃÂ­gitos verificadores dos trÃÂÃÂªs campos (<code>X</code>, <code>Y</code> e <code>Z</code>) estÃÂÃÂ£o corretos.</li>
+<li>Se o boleto ÃÂÃÂÃÂÃÂ© vÃÂÃÂÃÂÃÂ¡lido, ou seja, se os dÃÂÃÂÃÂÃÂ­gitos verificadores dos trÃÂÃÂÃÂÃÂªs campos (<code>X</code>, <code>Y</code> e <code>Z</code>) estÃÂÃÂÃÂÃÂ£o corretos.</li>
 <li>Data de vencimento de um boleto</li>
 <li>Valor de um boleto</li>
 <li>Banco associado ao boleto</li>
 </ul>
 
-<h3>CÃÂÃÂ¡lculo do fator de vencimento</h3>
+<h3>CÃÂÃÂÃÂÃÂ¡lculo do fator de vencimento</h3>
 
-<p>O fator de vencimento indica a data de vencimento do boleto a forma de nÃÂÃÂºmero de dias apÃÂÃÂ³s 7 de outubro de 1997. Se o fator de vencimento ÃÂÃÂ© <code>0001</code> entÃÂÃÂ£o a data de vencimento ÃÂÃÂ© 8 de outubro de 1997 e assim por diante, como no exemplo mostrado na tabela.</p>
+<p>O fator de vencimento indica a data de vencimento do boleto a forma de nÃÂÃÂÃÂÃÂºmero de dias apÃÂÃÂÃÂÃÂ³s 7 de outubro de 1997. Se o fator de vencimento ÃÂÃÂÃÂÃÂ© <code>0001</code> entÃÂÃÂÃÂÃÂ£o a data de vencimento ÃÂÃÂÃÂÃÂ© 8 de outubro de 1997 e assim por diante, como no exemplo mostrado na tabela.</p>
 
 <!--
 Fator   Data de Vencimento
@@ -80,15 +80,15 @@ Fator   Data de Vencimento
 
 <table><tbody><tr><th>Fator</th><th>Data de Vencimento</th></tr><tr><td>1000</td><td>03/07/2000</td></tr><tr><td>1001</td><td>04/07/2000</td></tr><tr><td>1002</td><td>05/07/2000</td></tr><tr><td>9999</td><td>21/02/2025</td></tr></tbody></table>
 
-<p>HÃÂÃÂ¡ algumas regras adicionais para avaliar o fator de vencimento a partir de 21/02/2025, mas elas nÃÂÃÂ£o serÃÂÃÂ£o consideradas nesta tarefa.</p>
+<p>HÃÂÃÂÃÂÃÂ¡ algumas regras adicionais para avaliar o fator de vencimento a partir de 21/02/2025, mas elas nÃÂÃÂÃÂÃÂ£o serÃÂÃÂÃÂÃÂ£o consideradas nesta tarefa.</p>
 
-<h3>CÃÂÃÂ¡lculo dos DÃÂÃÂ­gitos Verificadores</h3>
+<h3>CÃÂÃÂÃÂÃÂ¡lculo dos DÃÂÃÂÃÂÃÂ­gitos Verificadores</h3>
 
-<p>Para o cÃÂÃÂ¡lculo dos digitos verificadores de cada campo, cada nÃÂÃÂºmero deve ser multiplicado por um "multiplicador" (1 ou 2), resumido em um nÃÂÃÂºmero de um dÃÂÃÂ­gito (ver <code>resumeDigito</code>) e somados entre si. Do valor total, ÃÂÃÂ© extraÃÂÃÂ­do o resultado da divisÃÂÃÂ£o inteira e o resto (<code>R</code>). O valor do dÃÂÃÂ­gito ÃÂÃÂ© <code>(10-R) mod 10</code>. </p>
+<p>Para o cÃÂÃÂÃÂÃÂ¡lculo dos digitos verificadores de cada campo, cada nÃÂÃÂÃÂÃÂºmero deve ser multiplicado por um "multiplicador" (1 ou 2), resumido em um nÃÂÃÂÃÂÃÂºmero de um dÃÂÃÂÃÂÃÂ­gito (ver <code>resumeDigito</code>) e somados entre si. Do valor total, ÃÂÃÂÃÂÃÂ© extraÃÂÃÂÃÂÃÂ­do o resultado da divisÃÂÃÂÃÂÃÂ£o inteira e o resto (<code>R</code>). O valor do dÃÂÃÂÃÂÃÂ­gito ÃÂÃÂÃÂÃÂ© <code>(10-R) mod 10</code>. </p>
 
-<p>A funÃÂÃÂ§ÃÂÃÂ£o <code>resumeDigito</code>, que transforma um nÃÂÃÂºmero de dois dÃÂÃÂ­gito em um dÃÂÃÂ­gito, soma o valor da dezena com a unidade, atÃÂÃÂ© que o resultado seja um nÃÂÃÂºmero de um dÃÂÃÂ­gito.</p>
+<p>A funÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂ£o <code>resumeDigito</code>, que transforma um nÃÂÃÂÃÂÃÂºmero de dois dÃÂÃÂÃÂÃÂ­gito em um dÃÂÃÂÃÂÃÂ­gito, soma o valor da dezena com a unidade, atÃÂÃÂÃÂÃÂ© que o resultado seja um nÃÂÃÂÃÂÃÂºmero de um dÃÂÃÂÃÂÃÂ­gito.</p>
 
-<p>O multiplicador ÃÂÃÂ© uma sequÃÂÃÂªncia de alternada de "2" e "1", iniciando por "2", a associada ÃÂÃÂ s respectivas posiÃÂÃÂ§ÃÂÃÂµes dos nÃÂÃÂºmeros do cÃÂÃÂ³digo, <strong>excluindo</strong> as posiÃÂÃÂ§ÃÂÃÂµes dos dÃÂÃÂ­gitos verificadores. </p>
+<p>O multiplicador ÃÂÃÂÃÂÃÂ© uma sequÃÂÃÂÃÂÃÂªncia de alternada de "2" e "1", iniciando por "2", a associada ÃÂÃÂÃÂÃÂ s respectivas posiÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂµes dos nÃÂÃÂÃÂÃÂºmeros do cÃÂÃÂÃÂÃÂ³digo, <strong>excluindo</strong> as posiÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂµes dos dÃÂÃÂÃÂÃÂ­gitos verificadores. </p>
 
 <pre><code>    00190.50095 40144.816069 06809.350314 3 37370000000100
     Campo 1     Campo 2      Campo 3
@@ -99,71 +99,71 @@ Fator   Data de Vencimento
 <p>Para o "campo 2":</p>
 
 <ol>
-<li><p>AplicaÃÂÃÂ§ÃÂÃÂ£o do multiplicador: </p>
+<li><p>AplicaÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂ£o do multiplicador: </p>
 
 <pre><code>4*1 + 0*2 + 1*1 + 4*2 + 4*1 + 8*2 + 1*1 + 6*2 + 0*1 + 6*2
 4   + 0   + 1   + 8   + 4   + 16  + 1   + 12  + 0   + 12
 </code></pre></li>
-<li><p>AplicaÃÂÃÂ§ÃÂÃÂ£o do <code>resumeDigito</code>, totalizando 31.</p>
+<li><p>AplicaÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂ£o do <code>resumeDigito</code>, totalizando 31.</p>
 
 <pre><code>4 + 0 + 1 + 8 + 4 + 16    + 1 + 12    + 0 + 12
 4 + 0 + 1 + 8 + 4 + (1+6) + 1 + (1+2) + 0 + (1+2) = 31
 </code></pre></li>
-<li><p>ObtenÃÂÃÂ§ÃÂÃÂ£o do resto</p>
+<li><p>ObtenÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂ£o do resto</p>
 
 <pre><code>31 mod 10 = 1
 </code></pre></li>
-<li><p>CÃÂÃÂ¡culo do valor do dÃÂÃÂ­gito (que deve gerar o mesmo nÃÂÃÂºmero na posiÃÂÃÂ§ÃÂÃÂ£o 21 da linha digitÃÂÃÂ¡vel)</p>
+<li><p>CÃÂÃÂÃÂÃÂ¡culo do valor do dÃÂÃÂÃÂÃÂ­gito (que deve gerar o mesmo nÃÂÃÂÃÂÃÂºmero na posiÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂ£o 21 da linha digitÃÂÃÂÃÂÃÂ¡vel)</p>
 
 <pre><code>(10 - 1) mod 10 = 9
 </code></pre></li>
 </ol>
 
-<p>VocÃÂÃÂª encontra uma demonstraÃÂÃÂ§ÃÂÃÂ£o completos para o cÃÂÃÂ¡lculo dos campos 1, 2 e 3 para essa linha digitÃÂÃÂ¡vel no extrado da <a href="boleto/especificacao.boleto.banco.brasil-anexoIV.pdf">especificaÃÂÃÂ§ÃÂÃÂ£o do boleto do banco do Brasil (Anexo IV)</a>. Observe que o cÃÂÃÂ¡lculo (3) e (4) indicados no documento sÃÂÃÂ£o ligeiramente diferentes dos indicados anteriormente, mas - salvo engano - produzem o mesmo resultado final.</p>
+<p>VocÃÂÃÂÃÂÃÂª encontra uma demonstraÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂ£o completos para o cÃÂÃÂÃÂÃÂ¡lculo dos campos 1, 2 e 3 para essa linha digitÃÂÃÂÃÂÃÂ¡vel no extrado da <a href="boleto/especificacao.boleto.banco.brasil-anexoIV.pdf">especificaÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂ£o do boleto do banco do Brasil (Anexo IV)</a>. Observe que o cÃÂÃÂÃÂÃÂ¡lculo (3) e (4) indicados no documento sÃÂÃÂÃÂÃÂ£o ligeiramente diferentes dos indicados anteriormente, mas - salvo engano - produzem o mesmo resultado final.</p>
 
-<h2>Requisitos Funcionais de ImplementaÃÂÃÂ§ÃÂÃÂ£o</h2>
+<h2>Requisitos Funcionais de ImplementaÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂ£o</h2>
 
-<p>O nÃÂÃÂºmero do boleto serÃÂÃÂ¡ apresentado na forma de uma String, podendo ou nÃÂÃÂ£o conter espaÃÂÃÂ§os ou pontos. Para efeito de avaliaÃÂÃÂ§ÃÂÃÂ£o, espaÃÂÃÂ§os e pontos serÃÂÃÂ£o ignorados e os seguintes boletos deverÃÂÃÂ£o ser considerados iguais</p>
+<p>O nÃÂÃÂÃÂÃÂºmero do boleto serÃÂÃÂÃÂÃÂ¡ apresentado na forma de uma String, podendo ou nÃÂÃÂÃÂÃÂ£o conter espaÃÂÃÂÃÂÃÂ§os ou pontos. Para efeito de avaliaÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂ£o, espaÃÂÃÂÃÂÃÂ§os e pontos serÃÂÃÂÃÂÃÂ£o ignorados e os seguintes boletos deverÃÂÃÂÃÂÃÂ£o ser considerados iguais</p>
 
 <pre><code>    "23791.11103 60000.000103 01000.222206 1 48622000000000"
     "23791111036000000010301000222206148622000000000"
 </code></pre>
 
 <ol>
-<li><p>FunÃÂÃÂ§ÃÂÃÂ£o <code>boletoNum</code> que recebe um boleto e retorna uma lista de inteiros (<code>Int</code>) com o valor referente a cada posiÃÂÃÂ§ÃÂÃÂ£o do boleto.</p>
+<li><p>FunÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂ£o <code>boletoNum</code> que recebe um boleto e retorna uma lista de inteiros (<code>Int</code>) com o valor referente a cada posiÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂ£o do boleto.</p>
 
 <pre><code>boletoNum "23791.11103 60000.000103 01000.222206 1 48622000000000" =&gt; [2,3,7,9,1,1,1,1,0,3,6,0,0,0,0,0,0,0,1,0,3,0,1,0,0,0,2,2,2,2,0,6,1,4,8,6,2,2,0,0,0,0,0,0,0,0,0]
 </code></pre></li>
-<li><p>FunÃÂÃÂ§ao <code>bancoBoleto</code> que recebe a lista de inteiros de um boleto e retorna o cÃÂÃÂ³digo do banco</p>
+<li><p>FunÃÂÃÂÃÂÃÂ§ao <code>bancoBoleto</code> que recebe a lista de inteiros de um boleto e retorna o cÃÂÃÂÃÂÃÂ³digo do banco</p>
 
 <pre><code>bancoBoleto [2,3,7,9,1,1,1,1,0,3,6,0,0,0,0,0,0,0,1,0,3,0,1,0,0,0,2,2,2,2,0,6,1,4,8,6,2,2,0,0,0,0,0,0,0,0,0] =&gt; 237
 </code></pre></li>
-<li><p>FunÃÂÃÂ§ÃÂÃÂ£o <code>valorBoleto</code> que recebe a lista de inteiros de um boleto e retorna o valor do boleto (como <code>Float</code>)</p>
+<li><p>FunÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂ£o <code>valorBoleto</code> que recebe a lista de inteiros de um boleto e retorna o valor do boleto (como <code>Float</code>)</p>
 
 <pre><code>valorBoleto [2,3,7,9,1,1,1,1,0,3,6,0,0,0,0,0,0,0,1,0,3,0,1,0,0,0,2,2,2,2,0,6,1,4,8,6,2,2,0,0,0,0,0,0,0,0,0] =&gt; 20000000,00
 </code></pre></li>
-<li><p>FunÃÂÃÂ§ÃÂÃÂ£o <code>vencimentoBoleto</code> que recebe a lista de inteiros de um boleto e retorna a sua data de vencimento na forma de uma tupla com os valores numÃÂÃÂ©ricos de dia, mÃÂÃÂªs e ano, respectivamente. Por exemplo, a data 13 de agosto de 2019 deverÃÂÃÂ¡ ser representada como a tupla <code>(13,8,2019)</code>.</p>
+<li><p>FunÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂ£o <code>vencimentoBoleto</code> que recebe a lista de inteiros de um boleto e retorna a sua data de vencimento na forma de uma tupla com os valores numÃÂÃÂÃÂÃÂ©ricos de dia, mÃÂÃÂÃÂÃÂªs e ano, respectivamente. Por exemplo, a data 13 de agosto de 2019 deverÃÂÃÂÃÂÃÂ¡ ser representada como a tupla <code>(13,8,2019)</code>.</p>
 
 <pre><code>vencimentoBoleto [2,3,7,9,1,1,1,1,0,3,6,0,0,0,0,0,0,0,1,0,3,0,1,0,0,0,2,2,2,2,0,6,1,4,8,6,2,2,0,0,0,0,0,0,0,0,0] =&gt; (29,1,2011)
 </code></pre>
 
-<p>Como parte da implementaÃÂÃÂ§ÃÂÃÂ£o desta funÃÂÃÂ§ÃÂÃÂ£o, vocÃÂÃÂª necessariamente deverÃÂÃÂ¡ implementar as seguintes funÃÂÃÂ§ÃÂÃÂµes de (1) a (3):</p>
+<p>Como parte da implementaÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂ£o desta funÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂ£o, vocÃÂÃÂÃÂÃÂª necessariamente deverÃÂÃÂÃÂÃÂ¡ implementar as seguintes funÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂµes de (1) a (3):</p>
 
 <ol>
-<li><p>FunÃÂÃÂ§ÃÂÃÂ£o <code>bissexto</code> que recebe um ano e retorna verdadeiro se ele ÃÂÃÂ© bissexto. Um ano ÃÂÃÂ© bissexto se <em>"(ano ÃÂÃÂ© divisÃÂÃÂ­vel por 400)"</em> OU <em>"(ano ÃÂÃÂ© divisÃÂÃÂ­vel por 4 E nÃÂÃÂ£o ÃÂÃÂ© divisÃÂÃÂ­vel por 100)"</em>.</p>
+<li><p>FunÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂ£o <code>bissexto</code> que recebe um ano e retorna verdadeiro se ele ÃÂÃÂÃÂÃÂ© bissexto. Um ano ÃÂÃÂÃÂÃÂ© bissexto se <em>"(ano ÃÂÃÂÃÂÃÂ© divisÃÂÃÂÃÂÃÂ­vel por 400)"</em> OU <em>"(ano ÃÂÃÂÃÂÃÂ© divisÃÂÃÂÃÂÃÂ­vel por 4 E nÃÂÃÂÃÂÃÂ£o ÃÂÃÂÃÂÃÂ© divisÃÂÃÂÃÂÃÂ­vel por 100)"</em>.</p>
 
 <pre><code>bissexto 2016 =&gt; True
 bissexto 2017 =&gt; False
 bissexto 2020 =&gt; True
 </code></pre></li>
-<li><p>FunÃÂÃÂ§ÃÂÃÂ£o <code>dataSomaDias</code> que recebe uma tupla <code>D1</code> com dia, mÃÂÃÂªs e ano, respectivamente, um inteiro com nÃÂÃÂºmero de dias <code>d</code> e retorna outra tupla <code>D2</code> representando a data referente ao dia <code>D1</code> acrescido dos dias <code>d</code>. </p>
+<li><p>FunÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂ£o <code>dataSomaDias</code> que recebe uma tupla <code>D1</code> com dia, mÃÂÃÂÃÂÃÂªs e ano, respectivamente, um inteiro com nÃÂÃÂÃÂÃÂºmero de dias <code>d</code> e retorna outra tupla <code>D2</code> representando a data referente ao dia <code>D1</code> acrescido dos dias <code>d</code>. </p>
 
 <pre><code>dataSomaDias (7,10,1997) 1000 =&gt; (3,7,2000)
 dataSomaDias (7,10,1997) 1001 =&gt; (4,7,2000)
 dataSomaDias (7,10,1997) 1002 =&gt; (5,7,2000)
 dataSomaDias (7,10,1997) 9999 =&gt; (21,2,2025)
 </code></pre></li>
-<li><p>FunÃÂÃÂ§ÃÂÃÂ£o <code>diasMesAno</code> que dado um mÃÂÃÂªs, representado como numeral (janeiro = 1, fevereiro = 2) e um ano, retorna o nÃÂÃÂºmero de dias daquele mÃÂÃÂªs.</p>
+<li><p>FunÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂ£o <code>diasMesAno</code> que dado um mÃÂÃÂÃÂÃÂªs, representado como numeral (janeiro = 1, fevereiro = 2) e um ano, retorna o nÃÂÃÂÃÂÃÂºmero de dias daquele mÃÂÃÂÃÂÃÂªs.</p>
 
 <pre><code>diasMesAno 1 2016 =&gt; 31
 diasMesAno 2 2016 =&gt; 29
@@ -171,36 +171,36 @@ diasMesAno 2 2017 =&gt; 28
 diasMesAno 4 2017 =&gt; 30
 </code></pre></li>
 </ol></li>
-<li><p>FunÃÂÃÂ§ÃÂÃÂ£o <code>boletoValido</code> que retorna <code>True</code> caso os dÃÂÃÂ­gitos verificadores do boleto estejam corretos.</p>
+<li><p>FunÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂ£o <code>boletoValido</code> que retorna <code>True</code> caso os dÃÂÃÂÃÂÃÂ­gitos verificadores do boleto estejam corretos.</p>
 
 <pre><code>boletoValido [2,3,7,9,1,1,1,1,0,3,6,0,0,0,0,0,0,0,1,0,3,0,1,0,0,0,2,2,2,2,0,6,1,4,8,6,2,2,0,0,0,0,0,0,0,0,0] =&gt; True
 boletoValido [2,3,7,9,1,1,0,1,0,3,6,0,0,0,0,0,0,0,1,0,3,0,1,0,0,0,2,2,2,2,0,6,1,4,8,6,2,2,0,0,0,0,0,0,0,0,0] =&gt; False
 </code></pre></li>
 </ol>
 
-<h1>Recursos ÃÂÃÂºteis</h1>
+<h1>Recursos ÃÂÃÂÃÂÃÂºteis</h1>
 
 <ul>
-<li>PÃÂÃÂ¡gina ÃÂÃÂºtil para testes com <a href="https://boletobancario-codigodebarras.blogspot.com/">cÃÂÃÂ¡lculo online de boleto bancÃÂÃÂ¡rio</a></li>
-<li><a href="boleto/especificacao.boleto.banco.brasil.pdf">EspecificaÃÂÃÂ§ÃÂÃÂ£o completa</a> do formato do boleto do Banco do Brasil</li>
+<li>PÃÂÃÂÃÂÃÂ¡gina ÃÂÃÂÃÂÃÂºtil para testes com <a href="https://boletobancario-codigodebarras.blogspot.com/">cÃÂÃÂÃÂÃÂ¡lculo online de boleto bancÃÂÃÂÃÂÃÂ¡rio</a></li>
+<li><a href="boleto/especificacao.boleto.banco.brasil.pdf">EspecificaÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂ£o completa</a> do formato do boleto do Banco do Brasil</li>
 </ul>
 
 <h1>Requisitos</h1>
 
-<p>Reveja o <a href="http://inf.ufg.br/~ricardo/pfl/plano/plano-PFL-2019.2.pdf">plano da disciplina</a> na seÃÂÃÂ§ÃÂÃÂ£o "PROCESSOS E CRITÃÂÃÂRIOS DE AVALIAÃÂÃÂÃÂÃÂO", caso seja necessÃÂÃÂ¡rio relembrar como as tarefas serÃÂÃÂ£o avaliadas.</p>
+<p>Reveja o <a href="http://inf.ufg.br/~ricardo/pfl/plano/plano-PFL-2019.2.pdf">plano da disciplina</a> na seÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂ£o "PROCESSOS E CRITÃÂÃÂÃÂÃÂRIOS DE AVALIAÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂO", caso seja necessÃÂÃÂÃÂÃÂ¡rio relembrar como as tarefas serÃÂÃÂÃÂÃÂ£o avaliadas.</p>
 
-<p>Os seguintes requisitos devem ser satisfeitos para o seu cÃÂÃÂ³digo ter o conceito <strong>FINALIZADO</strong>.</p>
+<p>Os seguintes requisitos devem ser satisfeitos para o seu cÃÂÃÂÃÂÃÂ³digo ter o conceito <strong>FINALIZADO</strong>.</p>
 
 <ol>
-<li>Todas as funÃÂÃÂ§ÃÂÃÂµes indicadas devem ser implementadas.</li>
-<li>Todas as funÃÂÃÂ§ÃÂÃÂµes implementadas devem incluir cÃÂÃÂ³digo de teste, para alÃÂÃÂ©m das funÃÂÃÂ§ÃÂÃÂµes indicadas acima.</li>
-<li>O seu cÃÂÃÂ³digo deverÃÂÃÂ¡ ser submetido pelo <a href="https://classroom.github.com/">GitHub Classroom</a>, no local indicado pelo email com o assunto: <strong><code>[PFL] submissÃÂÃÂ£o da tarefa 02 - processamento de boleto bancÃÂÃÂ¡rio</code></strong>. </li>
-<li>As tarefas sÃÂÃÂ£o individuais e nenhum tipo de cÃÂÃÂ³pia ou similaridade com cÃÂÃÂ³digo, seja de outro aluno, seja da Internet ou livros, serÃÂÃÂ¡ aceita.</li>
+<li>Todas as funÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂµes indicadas devem ser implementadas.</li>
+<li>Todas as funÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂµes implementadas devem incluir cÃÂÃÂÃÂÃÂ³digo de teste, para alÃÂÃÂÃÂÃÂ©m das funÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂµes indicadas acima.</li>
+<li>O seu cÃÂÃÂÃÂÃÂ³digo deverÃÂÃÂÃÂÃÂ¡ ser submetido pelo <a href="https://classroom.github.com/">GitHub Classroom</a>, no local indicado pelo email com o assunto: <strong><code>[PFL] submissÃÂÃÂÃÂÃÂ£o da tarefa 02 - processamento de boleto bancÃÂÃÂÃÂÃÂ¡rio</code></strong>. </li>
+<li>As tarefas sÃÂÃÂÃÂÃÂ£o individuais e nenhum tipo de cÃÂÃÂÃÂÃÂ³pia ou similaridade com cÃÂÃÂÃÂÃÂ³digo, seja de outro aluno, seja da Internet ou livros, serÃÂÃÂÃÂÃÂ¡ aceita.</li>
 </ol>
 
 <h1>Prazo</h1>
 
-<p>O prazo para entrega da atividade ÃÂÃÂ© o dia <strong>21 de setembro</strong> (sÃÂÃÂ¡bado). Depois desse prazo, vocÃÂÃÂª poderÃÂÃÂ¡ efetuar correÃÂÃÂ§ÃÂÃÂµes na sua implementaÃÂÃÂ§ÃÂÃÂ£o - quando solicitadas pelo professor - em atÃÂÃÂ© 7 dias adicionais.</p>
+<p>O prazo para entrega da atividade ÃÂÃÂÃÂÃÂ© o dia <strong>21 de setembro</strong> (sÃÂÃÂÃÂÃÂ¡bado). Depois desse prazo, vocÃÂÃÂÃÂÃÂª poderÃÂÃÂÃÂÃÂ¡ efetuar correÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂµes na sua implementaÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂ£o - quando solicitadas pelo professor - em atÃÂÃÂÃÂÃÂ© 7 dias adicionais.</p>
 
 <p></xmp></p>
 
