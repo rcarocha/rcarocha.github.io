@@ -1,6 +1,6 @@
 <p><!DOCTYPE html>
 <html>
-<title>ProgramaÁ„o Funcional e LÛgica - Prof. Ricardo da Rocha</title></p>
+<title>Programa√ß√£o Funcional e L√≥gica - Prof. Ricardo da Rocha</title></p>
 
 <p><xmp theme="simplex" style="display:none;"></p>
 
@@ -16,27 +16,27 @@
 
 <h2>PFL</h2>
 
-<p>Fiquem a vontade para usar o ambiente de programaÁ„o Haskell que desejarem. Essa È a minha recomendaÁ„o baseada nos seguintes referenciais: </p>
+<p>Fiquem a vontade para usar o ambiente de programa√ß√£o Haskell que desejarem. Essa √© a minha recomenda√ß√£o baseada nos seguintes referenciais: </p>
 
 <ul>
-<li>Ambiente razoalmente equivalente tanto no Linux quanto no Windows. O ambiente no laboratÛrio est· baseado nesta configuraÁ„o.</li>
-<li>Ambiente aberto e flexÌvel ‡s necessidades de programaÁ„o e da disciplina. </li>
-<li>Ambiente minimamente amig·vel ‡ programaÁ„o.</li>
-<li>N„o È necess·rio acesso de administrador (<code>sudo</code> ou senha admin Windows) para realizar nenhuma dessas instalaÁıes.</li>
+<li>Ambiente razoalmente equivalente tanto no Linux quanto no Windows. O ambiente no laborat√≥rio est√° baseado nesta configura√ß√£o.</li>
+<li>Ambiente aberto e flex√≠vel √†s necessidades de programa√ß√£o e da disciplina. </li>
+<li>Ambiente minimamente amig√°vel √† programa√ß√£o.</li>
+<li>N√£o √© necess√°rio acesso de administrador (<code>sudo</code> ou senha admin Windows) para realizar nenhuma dessas instala√ß√µes.</li>
 </ul>
 
-<p>Os requisitos do ambiente s„o os seguintes:</p>
+<p>Os requisitos do ambiente s√£o os seguintes:</p>
 
 <ol>
 <li>Compilador (GHC) e interpretador (GHCi) Haskell</li>
-<li>Gerenciador de pacotes Haskell, para instalaÁ„o de pacotes e ferramentas adicionais com o mÌnimo de problemas.</li>
+<li>Gerenciador de pacotes Haskell, para instala√ß√£o de pacotes e ferramentas adicionais com o m√≠nimo de problemas.</li>
 <li>Cliente GIT (particularmente Github), para uso com o Github Classroom.</li>
-<li>Editor de texto com mÌnimo suporte a Haskell</li>
+<li>Editor de texto com m√≠nimo suporte a Haskell</li>
 </ol>
 
-<p>As escolhas para para um desses elementos (e alternativas) est„o na tabela abaixo:</p>
+<p>As escolhas para para um desses elementos (e alternativas) est√£o na tabela abaixo:</p>
 
-<table><tbody><tr><th>Ambiente</th><th>Escolha/Sugest„o</th><th>Alternativas</th></tr><tr>
+<table><tbody><tr><th>Ambiente</th><th>Escolha/Sugest√£o</th><th>Alternativas</th></tr><tr>
 <td>Compilador/Interpretador Haskell</td>
 <td>Ambiente <a href="https://www.haskell.org/downloads">oficial Haskell</a> (GHC/GHCi)</td>
 <td>-</td></tr><tr>
@@ -45,16 +45,16 @@
 <td>usar o <a href="https://www.haskell.org/downloads">instalador GHC/GHCi</a></td></tr><tr>
 <td>Cliente GIT</td>
 <td><a href="https://desktop.github.com/">Github Desktop<a href=""></td>
-<td>Cliente de terminal ou <a href="https://git-scm.com/download/gui/windows">in˙meras alternativas</a> (prÛprio Atom)</td></tr><tr>
+<td>Cliente de terminal ou <a href="https://git-scm.com/download/gui/windows">in√∫meras alternativas</a> (pr√≥prio Atom)</td></tr><tr>
 <td>Editor</td>
 <td><a href="https://atom.io">Atom</a></td>
 <td><a href="https://wiki.haskell.org/IDEs#Open_Source">Eclipse (com Plugin Haskell)</a> / <a href="https://wiki.haskell.org/IDEs#Leksah">Leksah</a> / Editor de texto qualquer</td></tr></tbody></table>
 
-<p>O restante deste texto, descreve brevemente a instalaÁ„o usando as escolhas indicadas acima. Exceto pelo ambiente Haskell, elas s„o opcionais e dependem da sua preferÍncia. </p>
+<p>O restante deste texto, descreve brevemente a instala√ß√£o usando as escolhas indicadas acima. Exceto pelo ambiente Haskell, elas s√£o opcionais e dependem da sua prefer√™ncia. </p>
 
-<h2>InstalaÁ„o do ambiente Haskell e Stack</h2>
+<h2>Instala√ß√£o do ambiente Haskell e Stack</h2>
 
-<p>A instalaÁ„o do ambiente Haskell È feito pelo <strong>stack</strong>, usando a instruÁ„o indicada em <a href="https://docs.haskellstack.org/en/stable/README/">https://docs.haskellstack.org/en/stable/README/</a> (ver link para Instalador Windows). A instalaÁ„o È bem simples e r·pida e ao fim do processo, vocÍ ter· em estado funcional:</p>
+<p>A instala√ß√£o do ambiente Haskell √© feito pelo <strong>stack</strong>, usando a instru√ß√£o indicada em <a href="https://docs.haskellstack.org/en/stable/README/">https://docs.haskellstack.org/en/stable/README/</a> (ver link para Instalador Windows). A instala√ß√£o √© bem simples e r√°pida e ao fim do processo, voc√™ ter√° em estado funcional:</p>
 
 <ul>
 <li>Compilador Haskell GHC</li>
@@ -66,69 +66,69 @@
 <pre><code>    stack install ghci
 </code></pre>
 
-<p>A partir dessa instalaÁ„o, todos os comandos do Haskell s„o executados via <code>stack</code>. Por exemplo:</p>
+<p>A partir dessa instala√ß√£o, todos os comandos do Haskell s√£o executados via <code>stack</code>. Por exemplo:</p>
 
 <ul>
 <li><a href="https://docs.haskellstack.org/en/stable/GUIDE/#ghcrunghc">Executar</a> o compilador Haskell: <code>stack exec ghc</code>, ou apenas <code>stack ghc</code>.</li>
 <li>Iniciar o GHCi (interpretador): <code>stack ghci</code></li>
 </ul>
 
-<p>A documentaÁ„o da ferramenta <code>stack</code> est· descrita em: <a href="https://docs.haskellstack.org/en/stable/GUIDE/">https://docs.haskellstack.org/en/stable/GUIDE/</a>. Iremos utiliz·-la para instalaÁ„o de pacotes necess·rios para algumas pr·ticas e tarefas. VocÍ precisar· obrigatoriamente usar o "Prompt de Comandos" do Windows para usar o <code>stack</code> (ele colocar· todas as vari·veis/diretÛrios necess·rios no PATH)</p>
+<p>A documenta√ß√£o da ferramenta <code>stack</code> est√° descrita em: <a href="https://docs.haskellstack.org/en/stable/GUIDE/">https://docs.haskellstack.org/en/stable/GUIDE/</a>. Iremos utiliz√°-la para instala√ß√£o de pacotes necess√°rios para algumas pr√°ticas e tarefas. Voc√™ precisar√° obrigatoriamente usar o "Prompt de Comandos" do Windows para usar o <code>stack</code> (ele colocar√° todas as vari√°veis/diret√≥rios necess√°rios no PATH)</p>
 
 <h2>Atom</h2>
 
-<p>No laboratÛrio, utilizaremos o <a href="https://atom.io/">Atom</a> como ambiente de programaÁ„o. Uma vez instalado, instale via linha de comando os plugins para programaÁ„o Haskell descritos em <a href="https://atom-haskell.github.io/">https://atom-haskell.github.io/</a>.</p>
+<p>No laborat√≥rio, utilizaremos o <a href="https://atom.io/">Atom</a> como ambiente de programa√ß√£o. Uma vez instalado, instale via linha de comando os plugins para programa√ß√£o Haskell descritos em <a href="https://atom-haskell.github.io/">https://atom-haskell.github.io/</a>.</p>
 
-<p>O processo de instalaÁ„o est· descrito em <a href="https://atom-haskell.github.io/installation/">https://atom-haskell.github.io/installation/</a> e envolve usar o <code>apm</code> (parte da ferramenta) em linha de comando para instalar os pacotes Atom necess·rios.</p>
+<p>O processo de instala√ß√£o est√° descrito em <a href="https://atom-haskell.github.io/installation/">https://atom-haskell.github.io/installation/</a> e envolve usar o <code>apm</code> (parte da ferramenta) em linha de comando para instalar os pacotes Atom necess√°rios.</p>
 
-<p>Utilize a seguinte linha de comando para instalar os plugins necess·rios:</p>
+<p>Utilize a seguinte linha de comando para instalar os plugins necess√°rios:</p>
 
 <pre><code>    apm install language-haskell ide-haskell
 </code></pre>
 
-<p>Com esses plugins <em>8n„o ser· possÌvel compilar ou executar</em>* o seu cÛdigo via Atom. Originalmente, a instalaÁ„o sugeria usar o comando</p>
+<p>Com esses plugins <em>8n√£o ser√° poss√≠vel compilar ou executar</em>* o seu c√≥digo via Atom. Originalmente, a instala√ß√£o sugeria usar o comando</p>
 
 <pre><code>    apm install language-haskell ide-haskell ide-haskell-cabal haskell-ghc-mod autocomplete-haskell
 </code></pre>
 
-<p>que incluia ferramentas para compilaÁ„o, execuÁ„o e completar o cÛdigo. Entretanto, nem todos os plugins funcionam com a vers„o 8.4 do Haskell - instalada pelo <code>stack</code>, causando mensagens de erro do Atom. H· outros mÈtodos de instalaÁ„o combinados do Haskell+Atom que evitam tais problemas, mas devido ‡ dificuldade em coloc·-los funcionais no laboratÛrio, preferi deix·-los de lado (fique livre para tentar). </p>
+<p>que incluia ferramentas para compila√ß√£o, execu√ß√£o e completar o c√≥digo. Entretanto, nem todos os plugins funcionam com a vers√£o 8.4 do Haskell - instalada pelo <code>stack</code>, causando mensagens de erro do Atom. H√° outros m√©todos de instala√ß√£o combinados do Haskell+Atom que evitam tais problemas, mas devido √† dificuldade em coloc√°-los funcionais no laborat√≥rio, preferi deix√°-los de lado (fique livre para tentar). </p>
 
-<h2>InstalaÁ„o do cliente Git</h2>
+<h2>Instala√ß√£o do cliente Git</h2>
 
-<p>Nas tarefas de programaÁ„o, utilizaremos o Git para submiss„o das tarefas pelo sistema <a href="http://classroom.github.com/">Github Classroom</a>.</p>
+<p>Nas tarefas de programa√ß√£o, utilizaremos o Git para submiss√£o das tarefas pelo sistema <a href="http://classroom.github.com/">Github Classroom</a>.</p>
 
-<p>Git È um sistema de gerenciamento de versıes de cÛdigo (e arquivos) amplamente utilizado. H· uma infinidade de clientes Git existentes, descritos abaixo:</p>
+<p>Git √© um sistema de gerenciamento de vers√µes de c√≥digo (e arquivos) amplamente utilizado. H√° uma infinidade de clientes Git existentes, descritos abaixo:</p>
 
 <ul>
 <li><a href="https://git-scm.com/download/gui/windows">Git/GitHub/Cliente Git</a></li>
 </ul>
 
-<p>Utilize aquele em que ficar mais confort·vel. No laboratÛrio, instalado o <a href="Github Desktop">https://desktop.github.com/</a> que È um cliente <strong>para o Github</strong>, ou seja, ele <strong>n„o deve funcionar</strong> com outro servidor Git, como <a href="https://www.gitlab.com">gitlab</a> ou <a href="https://www.bitbucket.org">BitBucket</a>. Trata-se de uma conveniÍncia para aprendermos mais facilmente o uso do Git Classroom.</p>
+<p>Utilize aquele em que ficar mais confort√°vel. No laborat√≥rio, instalado o <a href="Github Desktop">https://desktop.github.com/</a> que √© um cliente <strong>para o Github</strong>, ou seja, ele <strong>n√£o deve funcionar</strong> com outro servidor Git, como <a href="https://www.gitlab.com">gitlab</a> ou <a href="https://www.bitbucket.org">BitBucket</a>. Trata-se de uma conveni√™ncia para aprendermos mais facilmente o uso do Git Classroom.</p>
 
-<p>Entretanto, o Atom <strong>j· possui um cliente Git</strong> muito amig·vel.</p>
+<p>Entretanto, o Atom <strong>j√° possui um cliente Git</strong> muito amig√°vel.</p>
 
 <h2>Uso do Compilador e do Interpretador GHC/i</h2>
 
-<p>Na instalaÁ„o do GHC/GHCi <strong>via stack</strong>, compilador e interpretador s„o invocados usando a respectiva opÁ„o do stack:</p>
+<p>Na instala√ß√£o do GHC/GHCi <strong>via stack</strong>, compilador e interpretador s√£o invocados usando a respectiva op√ß√£o do stack:</p>
 
 <ul>
 <li>Compilador: <code>stack ghc &lt;opcoes&gt;</code></li>
 <li>Interpretador: <code>stack ghci</code></li>
 </ul>
 
-<p>Um cÛdigo <code>.hs</code> Haskell para ser execut·vel deve ser declarado como do mÛdulo <code>Main</code> (apenas o cÛdigo com o corpo principal), como no cÛdigo abaixo:</p>
+<p>Um c√≥digo <code>.hs</code> Haskell para ser execut√°vel deve ser declarado como do m√≥dulo <code>Main</code> (apenas o c√≥digo com o corpo principal), como no c√≥digo abaixo:</p>
 
 <pre><code>    module Main where
 
     main = putStr "-- programa --"
 </code></pre>
 
-<p>A compilaÁ„o È feita passando o par‚metro <code>-o</code> para o <code>ghc</code> incluindo <code>--</code> no stack, como no seguinte comando, onde o cÛdigo fonte est· em <code>t.hs</code> e o execut·vel ter· o nome <code>t</code>.</p>
+<p>A compila√ß√£o √© feita passando o par√¢metro <code>-o</code> para o <code>ghc</code> incluindo <code>--</code> no stack, como no seguinte comando, onde o c√≥digo fonte est√° em <code>t.hs</code> e o execut√°vel ter√° o nome <code>t</code>.</p>
 
 <pre><code>    stack ghc -- -o t t.hs
 </code></pre>
 
-<p>Do interpretador GHCi, o cÛdigo È carregado usando os comandos <code>:l &lt;arquivo .hs&gt;</code>, de load, seguido do nome do arquivo (com caminho completo, caso necess·rio). </p>
+<p>Do interpretador GHCi, o c√≥digo √© carregado usando os comandos <code>:l &lt;arquivo .hs&gt;</code>, de load, seguido do nome do arquivo (com caminho completo, caso necess√°rio). </p>
 
 <p></xmp></p>
 
