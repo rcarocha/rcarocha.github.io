@@ -1,0 +1,137 @@
+<p><!DOCTYPE html>
+<html>
+<title>Programação Funcional e Lógica - Prof. Ricardo da Rocha</title></p>
+
+<p><xmp theme="simplex" style="display:none;"></p>
+
+<!-- 
+# Ambiente Computacional para as Aulas
+
+## Redes 2
+
+- Linux
+- Mininet
+- Git/Github
+-->
+
+<h2>PFL</h2>
+
+<p>Fiquem a vontade para usar o ambiente de programação Haskell que desejarem. Essa é a minha recomendação baseada nos seguintes referenciais: </p>
+
+<ul>
+<li>Ambiente razoalmente equivalente tanto no Linux quanto no Windows. O ambiente no laboratório está baseado nesta configuração.</li>
+<li>Ambiente aberto e flexível às necessidades de programação e da disciplina. </li>
+<li>Ambiente minimamente amigável à programação.</li>
+<li>Não é necessário acesso de administrador (<code>sudo</code> ou senha admin Windows) para realizar nenhuma dessas instalações.</li>
+</ul>
+
+<p>Os requisitos do ambiente são os seguintes:</p>
+
+<ol>
+<li>Compilador (GHC) e interpretador (GHCi) Haskell</li>
+<li>Gerenciador de pacotes Haskell, para instalação de pacotes e ferramentas adicionais com o mínimo de problemas.</li>
+<li>Cliente GIT (particularmente Github), para uso com o Github Classroom.</li>
+<li>Editor de texto com mínimo suporte a Haskell</li>
+</ol>
+
+<p>As escolhas para para um desses elementos (e alternativas) estão na tabela abaixo:</p>
+
+<table><tbody><tr><th>Ambiente</th><th>Escolha/Sugestão</th><th>Alternativas</th></tr><tr>
+<td>Compilador/Interpretador Haskell</td>
+<td>Ambiente <a href="https://www.haskell.org/downloads">oficial Haskell</a> (GHC/GHCi)</td>
+<td>-</td></tr><tr>
+<td>Gerenciador de pacotes Haskell</td>
+<td><a href="https://docs.haskellstack.org/en/stable/README/">Stack</a></td>
+<td>usar o <a href="https://www.haskell.org/downloads">instalador GHC/GHCi</a></td></tr><tr>
+<td>Cliente GIT</td>
+<td><a href="https://desktop.github.com/">Github Desktop<a href=""></td>
+<td>Cliente de terminal ou <a href="https://git-scm.com/download/gui/windows">inúmeras alternativas</a> (próprio Atom)</td></tr><tr>
+<td>Editor</td>
+<td><a href="https://atom.io">Atom</a></td>
+<td><a href="https://wiki.haskell.org/IDEs#Open_Source">Eclipse (com Plugin Haskell)</a> / <a href="https://wiki.haskell.org/IDEs#Leksah">Leksah</a> / Editor de texto qualquer</td></tr></tbody></table>
+
+<p>O restante deste texto, descreve brevemente a instalação usando as escolhas indicadas acima. Exceto pelo ambiente Haskell, elas são opcionais e dependem da sua preferência. </p>
+
+<h2>Instalação do ambiente Haskell e Stack</h2>
+
+<p>A instalação do ambiente Haskell é feito pelo <strong>stack</strong>, usando a instrução indicada em <a href="https://docs.haskellstack.org/en/stable/README/">https://docs.haskellstack.org/en/stable/README/</a> (ver link para Instalador Windows). A instalação é bem simples e rápida e ao fim do processo, você terá em estado funcional:</p>
+
+<ul>
+<li>Compilador Haskell GHC</li>
+<li>Gerenciador de pacotes Stack</li>
+</ul>
+
+<p>Para instalar o interpretador GHCi, utiliza-se do prompt de comandos o seguinte comando <code>stack</code>:</p>
+
+<pre><code>    stack install ghci
+</code></pre>
+
+<p>A partir dessa instalação, todos os comandos do Haskell são executados via <code>stack</code>. Por exemplo:</p>
+
+<ul>
+<li><a href="https://docs.haskellstack.org/en/stable/GUIDE/#ghcrunghc">Executar</a> o compilador Haskell: <code>stack exec ghc</code>, ou apenas <code>stack ghc</code>.</li>
+<li>Iniciar o GHCi (interpretador): <code>stack ghci</code></li>
+</ul>
+
+<p>A documentação da ferramenta <code>stack</code> está descrita em: <a href="https://docs.haskellstack.org/en/stable/GUIDE/">https://docs.haskellstack.org/en/stable/GUIDE/</a>. Iremos utilizá-la para instalação de pacotes necessários para algumas práticas e tarefas. Você precisará obrigatoriamente usar o "Prompt de Comandos" do Windows para usar o <code>stack</code> (ele colocará todas as variáveis/diretórios necessários no PATH)</p>
+
+<h2>Atom</h2>
+
+<p>No laboratório, utilizaremos o <a href="https://atom.io/">Atom</a> como ambiente de programação. Uma vez instalado, instale via linha de comando os plugins para programação Haskell descritos em <a href="https://atom-haskell.github.io/">https://atom-haskell.github.io/</a>.</p>
+
+<p>O processo de instalação está descrito em <a href="https://atom-haskell.github.io/installation/">https://atom-haskell.github.io/installation/</a> e envolve usar o <code>apm</code> (parte da ferramenta) em linha de comando para instalar os pacotes Atom necessários.</p>
+
+<p>Utilize a seguinte linha de comando para instalar os plugins necessários:</p>
+
+<pre><code>    apm install language-haskell ide-haskell
+</code></pre>
+
+<p>Com esses plugins <em>8não será possível compilar ou executar</em>* o seu código via Atom. Originalmente, a instalação sugeria usar o comando</p>
+
+<pre><code>    apm install language-haskell ide-haskell ide-haskell-cabal haskell-ghc-mod autocomplete-haskell
+</code></pre>
+
+<p>que incluia ferramentas para compilação, execução e completar o código. Entretanto, nem todos os plugins funcionam com a versão 8.4 do Haskell - instalada pelo <code>stack</code>, causando mensagens de erro do Atom. Há outros métodos de instalação combinados do Haskell+Atom que evitam tais problemas, mas devido à dificuldade em colocá-los funcionais no laboratório, preferi deixá-los de lado (fique livre para tentar). </p>
+
+<h2>Instalação do cliente Git</h2>
+
+<p>Nas tarefas de programação, utilizaremos o Git para submissão das tarefas pelo sistema <a href="http://classroom.github.com/">Github Classroom</a>.</p>
+
+<p>Git é um sistema de gerenciamento de versões de código (e arquivos) amplamente utilizado. Há uma infinidade de clientes Git existentes, descritos abaixo:</p>
+
+<ul>
+<li><a href="https://git-scm.com/download/gui/windows">Git/GitHub/Cliente Git</a></li>
+</ul>
+
+<p>Utilize aquele em que ficar mais confortável. No laboratório, instalado o <a href="Github Desktop">https://desktop.github.com/</a> que é um cliente <strong>para o Github</strong>, ou seja, ele <strong>não deve funcionar</strong> com outro servidor Git, como <a href="https://www.gitlab.com">gitlab</a> ou <a href="https://www.bitbucket.org">BitBucket</a>. Trata-se de uma conveniência para aprendermos mais facilmente o uso do Git Classroom.</p>
+
+<p>Entretanto, o Atom <strong>já possui um cliente Git</strong> muito amigável.</p>
+
+<h2>Uso do Compilador e do Interpretador GHC/i</h2>
+
+<p>Na instalação do GHC/GHCi <strong>via stack</strong>, compilador e interpretador são invocados usando a respectiva opção do stack:</p>
+
+<ul>
+<li>Compilador: <code>stack ghc &lt;opcoes&gt;</code></li>
+<li>Interpretador: <code>stack ghci</code></li>
+</ul>
+
+<p>Um código <code>.hs</code> Haskell para ser executável deve ser declarado como do módulo <code>Main</code> (apenas o código com o corpo principal), como no código abaixo:</p>
+
+<pre><code>    module Main where
+
+    main = putStr "-- programa --"
+</code></pre>
+
+<p>A compilação é feita passando o parâmetro <code>-o</code> para o <code>ghc</code> incluindo <code>--</code> no stack, como no seguinte comando, onde o código fonte está em <code>t.hs</code> e o executável terá o nome <code>t</code>.</p>
+
+<pre><code>    stack ghc -- -o t t.hs
+</code></pre>
+
+<p>Do interpretador GHCi, o código é carregado usando os comandos <code>:l &lt;arquivo .hs&gt;</code>, de load, seguido do nome do arquivo (com caminho completo, caso necessário). </p>
+
+<p></xmp></p>
+
+<script src="https://strapdownjs.com/v/0.2/strapdown.js"></script>
+
+<p></html></p>
