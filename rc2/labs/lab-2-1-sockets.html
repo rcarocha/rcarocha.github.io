@@ -1,0 +1,188 @@
+<p><!DOCTYPE html>
+<html>
+<title>Redes de Computadores 2 - Prof. Ricardo da Rocha</title></p>
+
+<p><xmp theme="simplex" style="display:none;"></p>
+
+<h1>Laboratório: Comunicação com Sockets</h1>
+
+<!--
+
+nc DEVE ser usado com -k
+
+identificar o IP da sua estação
+
+ nc -kl 127.0.0.1 8888
+
+1. Observar os sockets abertos na própria estação (servidores e clientes) utilizando o `netstat`, utilizando a opção `-c` junto às demais opções referentes ao tipo de socket pretendido.
+2. Estabelecer uma conexão TCP com um servidor e fechá-la, observando a mudança nos estados na conexão via `netstat`. *Sugestão*: utilize o `wget` para realizar uma requisição HTTP simples com um servidor.
+3. As atividades abaixo devem ser preferencialmente realizadas no mininet.
+   1. Utilizando um cenário mininet com um mínimo de duas estações, abra um terminal (`xterm`) para cada estação. Sempre que você precisar executar mais de um comando simultâneo em uma estação, você deverá abrir um novo terminal. **Identifique** os endereços IPs das estações.
+   2. Nesses terminais, utilizando o netcat (`nc`, não confundir com `netstat`), estabelecer um socket servidor e iniciar uma conexão TCP com esse servidor (que deve ser iniciado com a opção `-k` do `netcat`). Realizar uma troca curta de mensagens.
+   3. Indique os pares de portas utilizados em cada conexão TCP no servidor, utilizando o padrão do seguinte exemplo para cada sessão encontrada (identificada pelo número):
+
+        sessao 1: 192.168.1.1:8888 - 192.168.1.99:1000
+
+   4. Registre os comandos utilizados para obter tais informações das conexões.
+   5. Acompanhe as mudanças nos estados da conexão TCP, durante o estabelecimento de conexão e até o fim da conexão.
+   6. Indique os estados das conexões na **ordem em que eles ocorrem** e de seguindo o nome especificado na própria especificação TCP (como aparece no netstat). A sua resposta deve ter um estado por linha. 
+      * Se necessário, repita o experimento várias vezes até conseguir reportar todos os estados.
+   7. Inspecione os pacotes TCP trocados durante uma conexão usando `wireshark`, referentes ao início e fechamento de sessão e troca de mensagens. Copie os pacotes trocados, usando a funcionalidade **Copy as CSV**.
+   8. Antes de finalizar uma conexão no `netcat`, procure iniciar outra conexão com o servidor e veja os pacotes que chegam no servidor e como ele os responde. Compare com o caso da conexão anterior.
+   9. Estabelecer duas conexões TCP com o mesmo servidor e realizar trocas curtas de mensagens. 
+   10. Inspecionar os pacotes trocados, percebendo a diferença entre as duas conexões nos pacotes TCP. 
+   7. Refaça os experimentos de (3.2) a (3.10), para sockets UDP.
+
+
+
+
+portas
+   multiplas conexões com mesmo servidor - portas utilizadas
+   TODO:  (1) publicar os pares de portas usados. 
+          (2) comandos utilizados - cliente e servidor
+          (3) colocar duas conexões simultâneas TCP (com mesmo servidor) e indicar os pares de portas cliente e servidor
+
+estados da conexao
+   (1) acompanhar a mudança dos estados da conexão TCP (estabelecimento de conexão, conectado, fim)
+       quais são os estados (ordenados) em cada um desses estados.
+
+   (1) verificar o equivalente para UDP (1), (2), (3)
+
+
+    ( ) testar broadcast no UDP: qual foi o endereço usado (envie o seu nome)
+
+    (x) repetir tudo com o wireshark e observar os campos TCP/UDP atendendo aos passos
+
+quais são as temporizações associadas?
+
+ucspi-tcp-ipv6
+tcpclient
+tcpcat
+
+
+multiplexação
+estabelecimento de conexão
+
+uso do nc para comunicação.
+-->
+
+<h1>Objetivos</h1>
+
+<ul>
+<li>Compreender o conceito de sockets como primitiva de comunicação na rede</li>
+<li>Compreender o conceito de portas de comunicação como identificador de processos comunicantes</li>
+<li>Compreender o estado de conexões TCP e UDP</li>
+</ul>
+
+<h1>Visão Geral</h1>
+
+<p>Neste laboratório você irá inspecionar os estados de conexões TCP e UDP, assim como as suas trocas de pacotes, de maneira a compreender melhor os aspectos da abstração de comunicação provida por sockets. </p>
+
+<h1>Recursos</h1>
+
+<h2>Slides</h2>
+
+<ul>
+<li><a href="pdf/SOCKETS.I.pdf">Slides utilizados no laboratório</a> pelo professor.</li>
+</ul>
+
+<h2>Softwares</h2>
+
+<ul>
+<li>Máquina Virtual utilizada nos experimentos, inclui o sistema <code>mininet</code> (ver em <a href="https://github.com/mininet/mininet/wiki/Mininet-VM-Images">mininet.org</a>).</li>
+<li><p><strong><code>netstat</code></strong>: ferramenta para verificação das conexões TCP e UDP.
+Opções no Linux</p>
+
+<pre><code>-t : sockets TCP
+-u : sockets UDP
+-n : exibe o valor numérico das portas
+-l : sockets esperando conexões (ouvindo)
+-c : atualiza continuamente o estado dos sockets
+</code></pre>
+
+<p><a href="http://pt.wikipedia.org/wiki/Netstat">Opções no Windows</a> (ou utilize a opção /?)</p></li>
+<li><p><strong><code>nc</code></strong> (<code>netcat</code>): ferramenta de propósito gerar para criação de sockets UDP e TCP para comunicação.
+Opções utilizadas neste laboratório</p>
+
+<pre><code>-t : sockets TCP
+-u : sockets UDP
+-n : valor numérico das portas
+-l : sockets esperando conexões (ouvindo)
+-c : atualiza continuamente o estado dos sockets 
+-k : mantém o servidor aceitando e respondendo requisições após o término da sessão com cliente (sessões são sequenciais - uma após o término de outra)
+</code></pre>
+
+<p>Exemplos de uso: </p>
+
+<ul>
+<li><strong>Servidor</strong>
+<ul>
+<li><code>nc -l 8888</code>: cria um socket servidor TCP ouvindo na porta 8888</li>
+<li><code>nc -kl 8888</code>: mesmo que o anterior, mas se mantém ouvindo novas conexões após o término da primeira <strong>será opção preferida neste lab</strong></li>
+<li><code>nc -ul 8888</code> (UDP): cria um socket servidor UDP ouvindo na porta 8888</li>
+</ul></li>
+<li><strong>Cliente</strong>
+<ul>
+<li><code>nc  127.0.0.1 8888</code>: estabelece uma conexão TCP com o socket servidor no IP <code>127.0.0.1</code>, ouvindo na porta <code>8888</code>.</li>
+<li><code>nc -u 127.0.0.1 8888</code> (UDP): envia pacotes UDP por sockets cliente UDP para o servidor no IP <code>127.0.0.1</code> na porta <code>8888</code>.</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h1>Atividades</h1>
+
+<ol>
+<li>Observar os sockets abertos na própria estação (servidores e clientes) utilizando o <code>netstat</code>, utilizando a opção <code>-c</code> junto às demais opções referentes ao tipo de socket pretendido.</li>
+<li>Estabelecer uma conexão TCP com um servidor e fechá-la, observando a mudança nos estados na conexão via <code>netstat</code>. <em>Sugestão</em>: utilize o <code>wget</code> para realizar uma requisição HTTP simples com um servidor.</li>
+<li><p>As atividades abaixo devem ser preferencialmente realizadas no mininet.</p>
+
+<ol>
+<li>Utilizando um cenário mininet com um mínimo de duas estações, abra um terminal (<code>xterm</code>) para cada estação. Sempre que você precisar executar mais de um comando simultâneo em uma estação, você deverá abrir um novo terminal. <strong>Identifique</strong> os endereços IPs das estações.</li>
+<li>Nesses terminais, utilizando o netcat (<code>nc</code>, não confundir com <code>netstat</code>), estabelecer um socket servidor e iniciar uma conexão TCP com esse servidor (que deve ser iniciado com a opção <code>-k</code> do <code>netcat</code>). Realizar uma troca curta de mensagens.</li>
+<li><p>Indique os pares de portas utilizados em cada conexão TCP no servidor, utilizando o padrão do seguinte exemplo para cada sessão encontrada (identificada pelo número):</p>
+
+<p><code>sessao 1: 192.168.1.1:8888 - 192.168.1.99:1000</code></p></li>
+<li><p>Registre os comandos utilizados para obter tais informações das conexões.</p></li>
+<li>Acompanhe as mudanças nos estados da conexão TCP, durante o estabelecimento de conexão e até o fim da conexão.</li>
+<li>Indique os estados das conexões na <strong>ordem em que eles ocorrem</strong> e de seguindo o nome especificado na própria especificação TCP (como aparece no netstat). A sua resposta deve ter um estado por linha. 
+<ul>
+<li>Se necessário, repita o experimento várias vezes até conseguir reportar todos os estados.</li>
+</ul></li>
+<li>Inspecione os pacotes TCP trocados durante uma conexão usando <code>wireshark</code>, referentes ao início e fechamento de sessão e troca de mensagens. Copie os pacotes trocados, usando a funcionalidade <strong>Copy as CSV</strong>.</li>
+<li>Antes de finalizar uma conexão no <code>netcat</code>, procure iniciar outra conexão com o servidor e veja os pacotes que chegam no servidor e como ele os responde. Compare com o caso da conexão anterior.</li>
+<li>Estabelecer duas conexões TCP com o mesmo servidor e realizar trocas curtas de mensagens. </li>
+<li>Inspecionar os pacotes trocados, percebendo a diferença entre as duas conexões nos pacotes TCP. </li>
+</ol></li>
+<li>Refaça os experimentos de (3.2) a (3.10), para sockets UDP.</li>
+</ol>
+
+<h1>Questões para Refletir e Fixar</h1>
+
+<ol>
+<li>Por que o TCP estabelece precisamente diversos estados em uma conexão, enquanto que isso não ocorre com o UDP?</li>
+<li>Quais são os estados de uma conexão TCP e qual é o significado de cada uma delas?</li>
+<li>Se há mais de uma conexão TCP estabelecida para um mesmo servidor, de que maneira o TCP diferencia uma conexão de outra?</li>
+</ol>
+
+<h1>Relatório</h1>
+
+<p>A entrega do relatório deve ser pelo github classroom, com o qual vocês terão uma área indicada a partir de email enviado para vocês. Esse relatório deve ser entregue em até 5 dias.</p>
+
+<p>Todos os arquivos colocados no githuv devem estar codificados em <code>UTF-8</code> e devem ser arquivos de texto, seguindo a seguinte estrutura</p>
+
+<pre><code>    README.md       - deve conter uma linha com o seu nome
+    Lab2.1.3.3.txt    - resposta do item (3.3), de acordo com o formato indicado
+    Lab2.1.3.4.txt    - resposta do item (3.4), de acordo com o formato indicado
+    Lab2.1.3.6.txt    - resposta do item (3.6), de acordo com o formato indicado
+    Lab2.1.3.7.txt    - resposta do item (3.7), de acordo com o formato indicado
+    Lab2.1.4.3.txt    - resposta do item (4.3)
+    Lab2.1.4.4.txt    - resposta do item (4.4)
+    Lab2.1.4.6.txt    - resposta do item (4.6)
+    Lab2.1.4.7.txt    - resposta do item (4.7)
+</code></pre>
+
+<p></xmp></p>
+
+<script src="https://strapdownjs.com/v/0.2/strapdown.js"></script>
+
+<p></html></p>

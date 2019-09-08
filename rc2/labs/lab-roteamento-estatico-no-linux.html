@@ -1,0 +1,255 @@
+<p><!DOCTYPE html>
+<html>
+<title>Redes de Computadores 2 - Prof. Ricardo da Rocha</title></p>
+
+<p><xmp theme="readable" style="display:none;"></p>
+
+<h1>Laboratório: Roteamento Estático no Linux</h1>
+
+<!--
+- exercicios de implementacao de roteador
+https://www.srg.cl.cam.ac.uk/mininet/simple-router/
+https://github.com/mininet/mininet/wiki/Simple-Router
+https://github.com/mininet/mininet/wiki/Introduction-to-Mininet#multipath
+https://github.com/brandonheller/riplpox
+
+-->
+
+<h1>Objetivos</h1>
+
+<ul>
+<li>Reforçar o uso das funcionalidades do mininet.</li>
+<li>Entender a configuração e o funcionamento do software de roteamento do Linux.</li>
+<li>Configurar e testar uma rede simples com roteamento estático (configurar as tabelas de roteamento).</li>
+<li>Dar noções da programabilidade do mininet, via Python.</li>
+</ul>
+
+<h1>Visão Geral</h1>
+
+<p>Neste laboratório você irá utilizar o mininet para experimentar uma rede IP simples, que usa dois roteadores para permitir a comunicação entre estações de redes diferentes. Você configurará a tabela de roteamento dos roteadores. </p>
+
+<!--
+# Requisitos
+
+# Recursos
+-->
+
+<h2>Roteamento no Linux</h2>
+
+<p>Uma estação Linux pode ser facilmente configurada para realizar o roteamento estático. Primeiramente, é necessário configurar as propriedade do sistema operacional que controlam o funcionamento do roteamento. </p>
+
+<p>Todas as propriedades de rede do Linux podem ser vistas e controladas pelo programa <code>sysctl</code>. Para visualizar as propriedade, utilize o comando:</p>
+
+<pre><code>    sysctl -a
+</code></pre>
+
+<p>Em particular, estamos interessados na propriedade <code>net.ipv4.ip_forward</code>, que controla se a estação poderá encaminhar pacotes IP de uma interface para outra (<em>forwarding</em>) ou não (configurando uma estação normal). Em ambos os casos, o Linux utilizará a tabela de roteamento para decidir o que fazer com os pacotes. O valor da propriedade pode ser 0 ou 1, e 1 permite o funcionamento como roteador:</p>
+
+<pre><code>    sysctl net.ipv4.ip_forward
+</code></pre>
+
+<p>A mudança da propriedade é realizada com o comando:</p>
+
+<pre><code>    sysctl net.ipv4.ip_forward=1
+</code></pre>
+
+<p>A tabela de roteamento da estação pode ser obtida com o comando <code>route</code> (com ou sem a opção <code>-n</code>).</p>
+
+<pre><code>    route
+    route -n
+</code></pre>
+
+<p>A tabela abaixo mostra um exemplo de saída do programa</p>
+
+<pre><code>    Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+    192.168.1.0     0.0.0.0         255.255.255.0   U     0      0        0 eth0
+    0.0.0.0         192.168.1.10    0.0.0.0         UG    0      0        0 eth0
+</code></pre>
+
+<p>Para adicionar uma rota <em>default</em> à tabela, utiliza-se a opção <code>add</code> ao comando <code>route</code>, junto com os respectivos parâmetros. Por exemplo: </p>
+
+<pre><code>    route add default gw 192.168.1.10
+</code></pre>
+
+<p>Para adicionar uma rota específica, deve-se acrescentar os parâmetros <code>-net</code>, <code>netmask</code> e <code>gw</code> (gateway, que significa roteador ou rota)</p>
+
+<pre><code>    route add -net 192.168.3.0 netmask 255.255.255.0 gw 192.168.3.10
+</code></pre>
+
+<p>Para remover uma rota, utiliza-se a opção <code>del</code>, com a indicação completa da rota a remover</p>
+
+<pre><code>    route del -net 192.168.3.0 netmask 255.255.255.0 gw 192.168.3.10
+</code></pre>
+
+<!-- 
+Respostas:
+route add default gw 10.1.0.1
+route add -net 10.2.0.0 netmask 255.255.0.0 gw 10.1.0.2
+-->
+
+<h2>Topologias específicas no mininet</h2>
+
+<p>No laboratório introdutório, utilizamos ou a topologia default do mininet ou o parâmetro <code>--topo</code> para configurar topologias de referência existentes no mininet. Por exemplo: </p>
+
+<pre><code>    sudo mn --topo single,3
+    sudo mn --topo linear,4
+</code></pre>
+
+<p>Na maioria das vezes, essas topologias não representam adequadamente o cenário que precisamos experimentar e por isso precisamos escrever um código de configuração indicando exatamente as características da topologia desejada. Toda configuração e programação do mininet é realizada por código Python.</p>
+
+<p>Um exemplo de topologia personalizada está disponível no arquivo <code>~/mininet/custom/topo-2sw-2host.py</code>. Para visualizar arquivos você pode usar os comandos:</p>
+
+<pre><code>    less ~/mininet/custom/topo-2sw-2host.py
+</code></pre>
+
+<p>ou usar o editor de textos <code>pico</code>.</p>
+
+<pre><code>    pico ~/mininet/custom/topo-2sw-2host.py
+</code></pre>
+
+<p>Para usar essa topologia no mininet, inicie o mininet, com o parâmetro <code>--custom</code>, conforme abaixo:</p>
+
+<pre><code>    sudo mn --custom ~/mininet/custom/topo-2sw-2host.py --topo mytopo
+</code></pre>
+
+<h2>Exemplos de topologias e funcionalidades personalizadas</h2>
+
+<p>Além de topologias, utilizando programas Python é possível adicionar ou modificar funcionalidades de rede no mininet e automatizar algumas tarefas necessárias ao seu experimento. Exemplo de códigos que fazem isso estão disponíveis no diretório <strong><code>~/mininet/examples</code></strong>.</p>
+
+<h2>Um roteador Linux no mininet</h2>
+
+<p>Um dos exemplos, mostra a implementação da funcionalidade de um roteador Linux. O exemplo está no arquivo <a href="https://github.com/mininet/mininet/blob/master/examples/linuxrouter.py">~/mininet/examples/linuxrouter.py</a>. Na verdade, o exemplo apenas configura uma estação para realizar o roteamento corretamente. </p>
+
+<p>Para executor o código, utilize o comando </p>
+
+<pre><code>    sudo python ~/mininet/examples/linuxrouter.py
+</code></pre>
+
+<p><strong>Observe</strong> que o próprio código já inicia o mininet.</p>
+
+<h3>Tarefas</h3>
+
+<ol>
+<li>Verifique as tabelas de roteamento do roteador <code>r0</code> e de cada um dos hosts.</li>
+<li>Teste a conectividade entre os hosts (usando <code>ping</code> ou <code>pingpair</code>)</li>
+</ol>
+
+<h2>Topologia com dois roteadores</h2>
+
+<p>Neste laboratório, utilizaremos uma topologia com dois roteadores descrita no arquivo <a href="http://www.inf.ufg.br/~ricardo/rc2/labs/codigo/linuxrouter-adaptado.py"><code>linuxrouter-adaptado.py</code></a>.</p>
+
+<p>Baixe esse código para a sua estação mininet usando o comando</p>
+
+<pre><code>    wget http://www.inf.ufg.br/~ricardo/rc2/labs/codigo/linuxrouter-adaptado.py
+</code></pre>
+
+<h1>Atividades</h1>
+
+<ol>
+<li><p>Execute a rede descrita pelo código <strong><code>linuxrouter-adaptado.py</code></strong>. Descreva as redes e estações participantes do experimento, de acordo com o seguinte exemplo (uma linha para cada rede e os IPs das estações separador por vírgulas):</p>
+
+<pre><code>rede 1: 10.1.0.0/16 - 10.1.0.1, 10.1.0.2, 10.1.0.3 
+rede 2: 10.2.0.0/16 - 10.2.0.1, 10.1.0.2, 10.1.0.3 
+rede 3: 10.3.0.0/16 - 10.3.0.1, 10.1.0.2, 10.1.0.3 
+...
+rede n: 10.16.0.0/16 - 10.16.0.1, 10.1.0.2, 10.1.0.3
+</code></pre></li>
+<li><p>Verifique as tabelas de roteamento das estações e roteadores, particularmente <strong><code>r0</code></strong>, <strong><code>r2</code></strong> e a estação <strong><code>h4</code></strong>. Reproduza as tabelas de roteamento, indicando a saída do comando <code>route</code> para <strong>cada</strong> estação devidamente identificada, conforme seguinte exemplo (utilize <code>---</code> como separador das tabelas):</p>
+
+<pre><code>tabela de r0:
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+192.168.1.0     0.0.0.0         255.255.255.0   U     0      0        0 eth0
+0.0.0.0         192.168.1.10    0.0.0.0         UG    0      0        0 eth0
+---
+tabela de r2:
+...
+</code></pre></li>
+<li><p>Teste a conectividade entre as estações (particularmente entre <strong><code>h4</code></strong> e as demais estações)</p></li>
+<li>Explique os problemas de conectividade obtidos, em função da estrutura da rede e das tabelas de roteamento, em um texto livre no arquivo <code>Lab1.2.4.txt</code>.</li>
+<li><p>Conserte as tabelas de roteamento das estações, de maneira que a conectividade seja restabelecida. </p>
+
+<ol>
+<li>Indique o(s) comando(s) utilizados para ajustar a tabela de roteamento, reproduzindo <strong>apenas</strong> os comandos utilizados, um por linha.</li>
+<li>Reproduza as tabelas de roteamento corretas, a exemplo do que foi feito no item <strong>2</strong>.</li>
+</ol></li>
+</ol>
+
+<h1>Relatório</h1>
+
+<p>A entrega do relatório deve ser pelo github classroom, com o qual vocês terão uma área indicada a partir de email enviado para vocês. Esse relatório deve ser entregue em até 5 dias.</p>
+
+<p>Todos os arquivos colocados no github devem estar codificados em <code>UTF-8</code> e devem ser arquivos de texto, seguindo a seguinte estrutura</p>
+
+<pre><code>    README.md       - deve conter uma linha com o seu nome
+    Lab1.3.1.txt    - resposta do item (1), de acordo com o formato indicado
+    Lab1.3.2.txt    - resposta do item (2), de acordo com o formato indicado
+    Lab1.3.4.txt    - resposta do item (4), que é um texto livre (arquivo de texto necessariamente)
+    Lab1.3.5.1.txt  - resposta do subitem (1) do item (5), um comando por linha.
+    Lab1.3.5.2.txt  - resposta do subitem (2) do item (5), de acordo com o mesmo formato usado em (2)
+</code></pre>
+
+<!--
+
+===================
+
++ objetivos:
+
+- relembrar o funcionamento do ARP
+   + inspecionar os pacotes IP e Ethernet
+- reforçar o uso das funcionalidades do mininet
+- entender a configuração e o funcionamento do software de roteamento do Linux
+- configurar e testar uma rede simples com roteamento estático (configurar as tabelas de roteamento)
+   + reforçar por experimento o funcionamento do roteamento estático no IP
++ introdução (noções) à programabilidade do mininet
+
+
+
+adicionando rota default
+route add default gw 192.168.1.10
+
+rota específica
+route add -net 192.168.3.0 netmask 255.255.255.0 gw 192.168.3.10
+
+
+## Referências
+
+LinuxRouter
+https://github.com/mininet/mininet/blob/master/examples/linuxrouter.py
+
+aula de sexta:
++ saída do mininet no terminal unix
++ uso do miniedit
+
+
+uso do arp
+
+
+intro mininet: https://github.com/mininet/mininet/wiki/Introduction-to-Mininet
+
+
+referências
+
+ver LinuxRouter em http://mininet.org/blog/
+
+ccódigo do router: https://github.com/mininet/mininet/blob/master/examples/linuxrouter.py
+
+https://github.com/mininet/openflow-tutorial/wiki/Create-a-Learning-Switch
+https://openflow.stanford.edu/display/ONL/POX+Wiki/
+http://sdnhub.org/tutorials/pox/
+
+
+# roteamento
+
+
+objetivo e tarefas
+- roteamento no linux
+- entender o funcionamento e criação de tabelas de roteamento
+
+
+-->
+
+<p></xmp></p>
+
+<script src="https://strapdownjs.com/v/0.2/strapdown.js"></script>
+
+<p></html></p>

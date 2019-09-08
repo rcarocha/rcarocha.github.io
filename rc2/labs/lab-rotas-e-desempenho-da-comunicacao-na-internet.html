@@ -1,0 +1,275 @@
+<p><!DOCTYPE html>
+<html>
+<title>Redes de Computadores 2 - Prof. Ricardo da Rocha</title></p>
+
+<p><xmp theme="simplex" style="display:none;"></p>
+
+<h1>Laboratório: Rotas e Desempenho da Comunicação na Internet</h1>
+
+<h1>Objetivos</h1>
+
+<ul>
+<li>Compreender as características das rotas seguidas pelos pacotes/mensagens na Internet</li>
+<li>Experimentas os atrasos na comunicação via Internet</li>
+</ul>
+
+<h1>Pré-requisitos</h1>
+
+<ul>
+<li><em>Conhecimento:</em> Compreender os aspectos gerais do roteamento na Internet e as componentes de atraso de mensagens.</li>
+<li><strong>Atividades pré-lab</strong>
+<ul>
+<li>Assistir às video-aulas de RC1:
+<ul>
+<li><a href="https://youtu.be/6sGCQ1_KnqM">Internet como Rede Hierárquica e Heterogênea</a></li>
+<li><a href="https://youtu.be/MSYJm0GWizM">Componentes e Natureza do Atraso de Pacotes</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h1>Visão Geral</h1>
+
+<p>Nesta tarefa, você terá que realizar experimentos para analisar o comportamento da comunicação na Internet, utilizando as ferramentas de comunicação <strong>traceroute</strong> e <strong>mtr</strong>.</p>
+
+<!-- # Requisitos
+
+Todos os requisitos abaixos devem ser atendidos para que você obtenha **SUCESSO** como conceito da sua tarefa:
+
+1. A atividade é **individual** e não pode haver nenhum tipo de cópia ou similaridade entre os programas ou resultados.
+2. Todos os resultados dos experimentos devem ser entregues até a data e horários combinados com o professor. 
+3. Todos os experimentos são obrigatórios. 
+4. O relatório deverá seguir o formato indicado na seção **Formato do Relatório**.
+
+-->
+
+<h1>Tarefas</h1>
+
+<ol>
+<li><p>Indique o endereço IP alvo que será utilizado por você nos experimentos. O endereço IP que você deverá utilizar está indicado no arquivo <a href="dados/lab1.1-destinos.txt">lab1.1-destinos.txt</a> ao lado do seu número de matricula ou nome.</p></li>
+<li><p>No laboratório (em sala de aula), meça os atrasos da sua estação até o destino, utilizando o utilitário <code>ping</code>. Faça 100 medições (acompanhe no campo <code>icmp_seq</code>). Identifique o menor e o maior valor medido. Reporte o resultado do seu teste - saída do ping - e os menores e maiores valores obtidos. Anote também o comando que você executou neste passo (identificado por <code>&lt;2&gt;</code>).</p>
+
+<pre><code>destino:
+menor-atraso:
+maior-atraso:
+saida:
+</code></pre></li>
+<li><p>Execute o programa <code>traceroute</code> ou <code>mtr</code> para identificar a rota entre a sua estação e o destino no momento do experimento. Utilize inicialmente o comando sem nenhum parâmetro adicional, para perceber o comportamento da rota e depois com os parâmetros abaixo, para solicitar a realização de 10 testes e reportar todo o resultado de uma vez. O resultado deverá ser submetido como um dos resultados do experimento.</p>
+
+<pre><code>mtr --show-ips --report-wide -c 10 8.8.8.8
+</code></pre></li>
+<li><p>Realize novamente o teste, utilizando o envio de pacotes por TCP na porta <code>80</code>, usando os parâmetros <code>--tcp -P 80</code> para facilitar o roteamento por diferentes caminhos (não use o parâmetro <code>--report-wide</code>). Anote o número do salto e IP, em cada situação que se encontrou uma rota diferente. A sua resposta deve ter o formato do exemplo abaixo, indicando que no salto <strong>5</strong> a rota passou pelos IPs indicados e no salto <strong>8</strong> pelos dois IPs indicados.</p>
+
+<pre><code>5 3.3.3.3
+5 3.3.3.4
+5 3.3.3.5
+8 7.7.7.7
+8 7.7.7.8
+</code></pre></li>
+<li><p>Calcule o atraso médio estimado <strong>entre</strong> cada um dos hops (saltos). Lembre-se que o atraso indicado na saída do programa é o RTT entre a origem (sua estação) e o respectivo salto. A sua resposta deve seguir o formato do seguinte exemplo (observe o uso de "." e não "," e valores em "ms"):</p>
+
+<pre><code>1-2 1 ms
+2-3 5.22 ms
+3-4 10 ms
+4-5 10 ms
+</code></pre></li>
+<li><p>Para cada estação, identifique a sua localização, utilizando o endereço IP e um serviço de mapeamento entre IP e localização (sugestão: <a href="https://iplocation.com/">https://iplocation.com/</a> ou <a href="https://www.iplocation.net/">https://www.iplocation.net/</a>). Indique o provedor de acesso (ISP) responsável pelo IP. A sua resposta deve seguir o formato do seguinte exemplo (a localização é livre, com nomes separados por vírgula):</p>
+
+<pre><code>1 219.163.164.114 Japan, Tokyo, Open Kikaku Co. Ltd.
+2 163.43.24.70 Japan, Tokyo, Sakura Internet Inc.
+</code></pre></li>
+<li><p>Repita os passos de <strong>2</strong> a <strong>6</strong> em casa em dois horários diferentes. Olhe nos <a href="https://ix.br/agregado/">gráficos de tráfego da Internet brasileira</a> os dias e horários em que o tráfego da Internet é baixo e é alto e faça os experimentos próximos destes. </p></li>
+<li><p>Descrevas as diferenças de rotas e atrasos entre os dois experimentos e o experimento feito em sala de aula.</p></li>
+</ol>
+
+<p>Todos os comandos usados em cada etapa de <strong>2</strong> a <strong>6</strong> deverão ser  documentados em arquivo <code>Lab1.1-comandos.txt</code>, usando o seguinte formato:</p>
+
+<pre><code>    2 ls -la
+    3 clear
+</code></pre>
+
+<p>Para um caso hipotético de que foi usado o comando <code>ls -la</code> no passo <strong>2</strong> e <code>clear</code> no passo <strong>3</strong>.</p>
+
+<h1>Relatório</h1>
+
+<p>A entrega do relatório deve ser pelo github classroom, com o qual vocês terão uma área indicada a partir de email enviado para vocês. Esse relatório deve ser entregue em até 5 dias.</p>
+
+<p>Todos os arquivos colocados no githuv devem estar codificados em <code>UTF-8</code> e devem ser arquivos de texto, seguindo a seguinte estrutura</p>
+
+<pre><code>    README.md       - deve conter uma linha com o seu nome
+    Lab1.1.2.txt    - resposta do item (2), de acordo com o formato indicado
+    Lab1.1.3.txt    - resposta do item (3)
+    Lab1.1.4.txt
+    Lab1.1.5.txt
+    Lab1.1.6.txt
+    Lab1.1.7.2a.txt - resposta da execução do item (2) para outro horário do dia
+    Lab1.1.7.3a.txt 
+    Lab1.1.7.4a.txt
+    Lab1.1.7.5a.txt
+    Lab1.1.7.6a.txt
+    Lab1.1.7.2b.txt - resposta da execução do item (2) para outro horário do dia
+    Lab1.1.7.3b.txt
+    Lab1.1.7.4b.txt
+    Lab1.1.7.5b.txt
+    Lab1.1.7.6b.txt
+    Lab1.1-comandos.txt - comandos usandos nos passos de (2) a (6).
+    Lab1.1.8.txt    - resposta em texto livre para o item (8)
+</code></pre>
+
+<!--
+* Laboratório 1.1: Rotas e Desempenho da Comunicação na Internet
+
+
+
+
+   + objetivo:
+   + pré-lab: 
+
+     github: usar
+     em quais situações não há resposta?
+
+     roteamento com datagramas
+     traceroute
+
+
+se você não lembra:
+  - modelo de camadas: ver
+
+       funcionamento do traceroute e ping, TTL, ICMP, mtr
+       **necessário** 
+           1. preparar máquinas na rede para experimento. 
+           2. preparar questões
+           3. video sobre github classroom e github
+   + atividades: 
+        1. enviar trace para ipinexistente, 2. rotas com *, 3. em casa em horários diferentes
+   + relatório: resultado do trace route com atrasos. 
+
+mtr -rw 8.8.8.8
+-n no dns
+-l (raw)
+-c para número de medições
+
+- atrasos -> usar aplicações usuais
+- rotas diferentes -> 
+- diferentes atrasos ao longo do dia
+- roteamento de datagramas na Internet
+- efeito de testar: ICMP, UDP, TCP?
+
+
+- pegar rotas para japan e russia
+google:"ip russia", "ip japan" (mostra proxies)
+atrasos em enlaces transoceanicos
+- provedores de acesso responsáveis pelos IPs
+
+https://www.caida.org/tools/taxonomy/perftaxonomy.xml
+https://www.linode.com/docs/networking/diagnostics/diagnosing-network-issues-with-mtr/
+
+artigos sobre medição
+https://www.rnp.br/destaques/confira-dez-artigos-academicos-entender-monitoramento-redes
+
+atraso de propagação, de transmissão, processamento, 
+baixe um conteúdo X de tamanho K 
+
+avaliar as diferenças dos atrasos em diversas medições
+
+velocidade??
+bwping ??
+
+sudo apt install geoip-bin
+
+# tarefas
+
+1. Indique o endereço IP alvo que será utilizado por você nos experimentos. O endereço IP que você deverá utilizar está indicado no arquivo lab1.1-destinos.txt ao lado do seu número de matricula.
+
+2. No laboratório (em sala de aula), meça os atrasos da sua estação até o destino, utilizando o utilitário ping. Faça 100 medições (acompanhe no campo icmp_seq). Identifique o menor e o maior valor medido. Reporte o resultado do seu teste - saída do ping - e os menos e maiores valores objetidos.
+
+   saída programa
+   menor
+   maior valor
+
+3. Execute o programa traceroute ou mtr para identificar a rota entre a sua estação e o destino no momento do experimento.
+
+mtr --show-ips --report-wide -c 10 8.8.8.8
+
+teste com rotas diferentes. mostre.
+usar mtr -n --tcp -P 80 118.151.186.55
+
+4. Calcule o atraso médio estimado entre cada um dos hops (saltos). Lembre-se que o atraso indicado é o RTT entre a origem (sua estação) e o respectivo salto.
+
+5. Para cada estação, identifique a sua localização, utilizando o endereço IP e um serviço de mapeamento entre IP e localização (exemplo: <https://iplocation.com/> ou <https://www.iplocation.net/>). Indique o provedor de acesso (ISP). 
+
+6. Repita os passos de 2 a 5 em casa em dois horários diferentes. Olhe nos [gráficos de tráfego da Internet brasileira](https://ix.br/agregado/) os dias e horários em que o tráfego da Internet é baixo e é alto e faça os experimentos próximos destes. 
+
+7. Descrevas as diferenças de rotas e atrasos entre os dois experimentos e o experimento feito em sala de aula.
+
+
+
+- descrever mudanças na rota e diferenças dos atrasos.
+- 
+
+README.md
+Lab1.1.txt
+Lab1.1-comandos.txt
+
+
+
+
+--> 
+
+<h1>Recursos</h1>
+
+<ul>
+<li><p>Ferramentas</p>
+
+<ul>
+<li><code>ping</code>: ferramenta que testa a disponibilidade de uma estação na rede com o uso de ICMP</li>
+<li><code>traceroute</code>: ferramenta que explora o uso de ICMP e TTL do IP para traçar o caminho aproximadado percorrido por pacotes entre duas estações. Disponível no Windows com o nome de <code>tracert</code>. <code>paris-traceroute</code> é uma ferramenta com o mesmo propósito, mas que utiliza estratégias diferentes e por isso é capaz de determinar rotas alternativas entre dois destinos.</li>
+<li><code>mtr</code>: versão mais amigável do <code>traceroute</code>. </li>
+</ul></li>
+<li><p><a href="../slides/01-Revisao-RedesComputadores.pdf">Slides utilizados no laboratório</a> - a partir do slide <strong>46</strong>.</p></li>
+</ul>
+
+<!--
++ Máquina Virtual utilizada nos experimentos, inclui o sistema `mininet` (ver em [mininet.org](https://github.com/mininet/mininet/wiki/Mininet-VM-Images)).
+   + Ubuntu 14.04 - 64 bit (com Mininet 2.2.1)
+   + Ubuntu 14.04 - 32 bit (com Mininet 2.2.1)
+-->
+
+<h1>Referências</h1>
+
+<ul>
+<li><code>traceroute</code> (no Windows <code>tracert</code>): o capítulo 1 do livro do Kurose oferece uma explicação sobre a ferramenta.
+<ul>
+<li>Opções usualmente úteis no <code>traceroute</code>:
+<ul>
+<li><code>-n</code>: não tenta realizar o DNS reverso do IP das estações para obter o seu nome fazendo que a resposta da ferramenta seja mais rápida.</li>
+<li><code>-I</code>:  usa mensagens ICMP para realizar o teste, garantindo uma resposta provável das estações na rota. Esta opção, entretanto, <strong>exige executar a ferramenta com direitos de administrador</strong>, o que é inviável no laboratório.</li>
+</ul></li>
+</ul></li>
+<li><code>mtr</code>: ferramenta equivalente ao <code>traceroute</code>, mas que mantém estatísticas mais detalhadas e medições constantes sobre o atraso para envio de pacotes para a estação. A ferramenta é particularmente ruim para detectar mudanças de rotas, pois ela naturalmente <em>apaga</em> rotas anteriores. Para evitar esse efeito e ter controle total sobre a saída da ferramenta, sugiro utilizar as opções:
+<ul>
+<li><code>-r</code>: modo de relatório, que evita que a ferramenta fique constantemente fazendo medidas, e faz apenas um número fixo de medições (default 10), quando então gera o resultado. Pode-se ajustar o número de medições com a opção <code>-c</code>, indicando o número de medições desejadas (exemplo: <code>-c 5</code>)</li>
+<li><code>-l</code>: gerando os dados mais <em>crus</em> para posterior análise, sendo mais interessante para inclusão no relatório.</li>
+</ul></li>
+<li><code>iperf</code>
+<ul>
+<li><a href="http://iperf.sourceforge.net/">http://iperf.sourceforge.net/</a></li>
+<li><a href="http://pt.wikipedia.org/wiki/Iperf">http://pt.wikipedia.org/wiki/Iperf</a></li>
+<li><a href="http://labcisco.blogspot.com.br/2013/04/iperf-no-monitoramento-de-desempenho-em.html">http://labcisco.blogspot.com.br/2013/04/iperf-no-monitoramento-de-desempenho-em.html</a></li>
+</ul></li>
+<li><code>httperf</code>
+<ul>
+<li>Mosberger, David, and Tai Jin. <a href="http://www.hpl.hp.com/research/linux/httperf/wisp98/httperf.pdf">"httperf - a tool for measuring web server performance."</a> ACM SIGMETRICS Performance Evaluation Review 26.3 (1998): 31-37.</li>
+<li><a href="http://www.comlore.com/httperf.html">http://www.comlore.com/httperf.html</a></li>
+<li><a href="http://mervine.net/performance-testing-with-httperf">http://mervine.net/performance-testing-with-httperf</a></li>
+</ul></li>
+<li>Discussão geral de ferramentas de teste de desempenho
+<ul>
+<li><a href="http://kb.pert.geant.net/twiki/bin/view/PERTKB/IperfTool">http://kb.pert.geant.net/twiki/bin/view/PERTKB/IperfTool</a></li>
+</ul></li>
+</ul>
+
+<p></xmp></p>
+
+<script src="https://strapdownjs.com/v/0.2/strapdown.js"></script>
+
+<p></html></p>
