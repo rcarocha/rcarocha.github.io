@@ -4,114 +4,114 @@
 
 <p><xmp theme="simplex" style="display:none;"></p>
 
-<h1>Laboratório: Protocolo ARP e Inspeção em Pacotes IP e Ethernet</h1>
+<h1>LaboratÃ³rio: Protocolo ARP e InspeÃ§Ã£o em Pacotes IP e Ethernet</h1>
 
 <!--
-rede com estações e roteador.
+rede com estaÃ§Ãµes e roteador.
 ARP
 - verificar tabela
 - --mac
-- forçar estação a aparecer no ARP. confirmar.
+- forÃ§ar estaÃ§Ã£o a aparecer no ARP. confirmar.
 
     arp -n
 
 - verificar tempo de vida das entradas no ARP e entradas sumindo. (default 60s)
-- estações em redes diferentes o ARP não aparece.
-Inspeção de pacotes
+- estaÃ§Ãµes em redes diferentes o ARP nÃ£o aparece.
+InspeÃ§Ã£o de pacotes
 - geral no funcionamento
-- interceptação e interpretação dos pacotes
+- interceptaÃ§Ã£o e interpretaÃ§Ã£o dos pacotes
 
-1. Escolha uma das estações do experimento realizado e use o **wireshark** para capturar os pacotes daquela estação. Para isso, **dentro do mininet**:
+1. Escolha uma das estaÃ§Ãµes do experimento realizado e use o **wireshark** para capturar os pacotes daquela estaÃ§Ã£o. Para isso, **dentro do mininet**:
 
-   1. Inicie um terminal executando naquela estação, por exemplo:
+   1. Inicie um terminal executando naquela estaÃ§Ã£o, por exemplo:
 
         xterm h1
 
-   2. Inicie o wireshark (`sudo wireshark &`). Se o procedimento foi realizado corretamente, o wireshark mostrará apenas as interfaces de rede da estação com rede virtual que você selecionou, como `h1-eth0`.
-   3. Capture a interface ethernet (exemplo: `h1-eth0`) daquela estação.
+   2. Inicie o wireshark (`sudo wireshark &`). Se o procedimento foi realizado corretamente, o wireshark mostrarÃ¡ apenas as interfaces de rede da estaÃ§Ã£o com rede virtual que vocÃª selecionou, como `h1-eth0`.
+   3. Capture a interface ethernet (exemplo: `h1-eth0`) daquela estaÃ§Ã£o.
 
-2. Repita as etapas anteriores de uso do ARP, verificando os pacotes ARP que são enviados e recebidos pela estação. 
-3. Copie os dados dos pacotes recebidos e enviados, usando a função **"Copy"**->**"Summary (CSV)"** do wireshark (clique no pacote capturado com o botão da direita).
-4. Force o envio de um pacote da sua estação da uma estação na outra rede (por exemplo, use um `ping`). Verifique no pacote enviado e na resposta recebida, os endereços IPs e MAC de origem e destino. Copie dois desses pacotes.
+2. Repita as etapas anteriores de uso do ARP, verificando os pacotes ARP que sÃ£o enviados e recebidos pela estaÃ§Ã£o. 
+3. Copie os dados dos pacotes recebidos e enviados, usando a funÃ§Ã£o **"Copy"**->**"Summary (CSV)"** do wireshark (clique no pacote capturado com o botÃ£o da direita).
+4. Force o envio de um pacote da sua estaÃ§Ã£o da uma estaÃ§Ã£o na outra rede (por exemplo, use um `ping`). Verifique no pacote enviado e na resposta recebida, os endereÃ§os IPs e MAC de origem e destino. Copie dois desses pacotes.
 
 
 
 - troca de pacotes do ARP - saindo e chegando.
-    endereços dos pacotes que saem
-    endereço de broadcast
+    endereÃ§os dos pacotes que saem
+    endereÃ§o de broadcast
 -->
 
 <h1>Objetivos</h1>
 
 <ul>
 <li>Aprender a inspecionar pacotes via Wireshark no mininet</li>
-<li>Reforçar o conhecimento do funcionamento da camada de rede e enlace</li>
-<li>Verificar o efeito dos algoritmos dos protocolos IP e IEE 802.3 nas modificações de seus pacotes.</li>
-<li>Verificar, na prática, o modelo de camadas funcionando</li>
+<li>ReforÃ§ar o conhecimento do funcionamento da camada de rede e enlace</li>
+<li>Verificar o efeito dos algoritmos dos protocolos IP e IEE 802.3 nas modificaÃ§Ãµes de seus pacotes.</li>
+<li>Verificar, na prÃ¡tica, o modelo de camadas funcionando</li>
 </ul>
 
-<h1>Visão Geral</h1>
+<h1>VisÃ£o Geral</h1>
 
-<p>Neste laboratório você irá inspecionar pacotes IP e Ethernet para identificar o efeito do roteamento nos pacotes da camada de rede e de enlace. </p>
+<p>Neste laboratÃ³rio vocÃª irÃ¡ inspecionar pacotes IP e Ethernet para identificar o efeito do roteamento nos pacotes da camada de rede e de enlace. </p>
 
 <h1>Recursos</h1>
 
 <ul>
-<li><p>Máquina Virtual utilizada nos experimentos, inclui o sistema <code>mininet</code> (ver em <a href="https://github.com/mininet/mininet/wiki/Mininet-VM-Images">mininet.org</a>).</p>
+<li><p>MÃ¡quina Virtual utilizada nos experimentos, inclui o sistema <code>mininet</code> (ver em <a href="https://github.com/mininet/mininet/wiki/Mininet-VM-Images">mininet.org</a>).</p>
 
 <ul>
-<li>A VM ficará disponível no laboratório em um servidor web na máquina pessoal do professor no endereço IP indicado em sala, porta 8888 e caminho <strong><code>vmlab.zip</code></strong>. Você poderá baixar usando o comando <strong><code>wget http://ip.maq.professor:8888/vmlab.zip</code></strong>. A VM é um Ubuntu 14.04 - 64 bit (com Mininet 2.2.1).</li>
-<li>Espere que o professor coloque a distribuição da máquina no ar.</li>
+<li>A VM ficarÃ¡ disponÃ­vel no laboratÃ³rio em um servidor web na mÃ¡quina pessoal do professor no endereÃ§o IP indicado em sala, porta 8888 e caminho <strong><code>vmlab.zip</code></strong>. VocÃª poderÃ¡ baixar usando o comando <strong><code>wget http://ip.maq.professor:8888/vmlab.zip</code></strong>. A VM Ã© um Ubuntu 14.04 - 64 bit (com Mininet 2.2.1).</li>
+<li>Espere que o professor coloque a distribuiÃ§Ã£o da mÃ¡quina no ar.</li>
 </ul></li>
-<li><p>Na VM com mininet, tanto o login como a senha são <code>mininet</code>.</p></li>
+<li><p>Na VM com mininet, tanto o login como a senha sÃ£o <code>mininet</code>.</p></li>
 </ul>
 
-<h2>Ambiente gráfico na VM Mininet</h2>
+<h2>Ambiente grÃ¡fico na VM Mininet</h2>
 
-<p>Neste laboratório, precisaremos utilizar o programa <strong>wireshark</strong> na VM do mininet que possui interface gráfica. Para isso, é necessário configurar o ambiente (estação hospedeira) conforme indicado do primeiro laboratório mininet.</p>
+<p>Neste laboratÃ³rio, precisaremos utilizar o programa <strong>wireshark</strong> na VM do mininet que possui interface grÃ¡fica. Para isso, Ã© necessÃ¡rio configurar o ambiente (estaÃ§Ã£o hospedeira) conforme indicado do primeiro laboratÃ³rio mininet.</p>
 
-<p>Outra opção é instalar um ambiente gráfico da VM mininet, seguindo as instruções indicadas em <a href="https://github.com/mininet/mininet/wiki/FAQ#vm-console-gui">https://github.com/mininet/mininet/wiki/FAQ#vm-console-gui</a>. Para isto basta instalar o pacote (sugerido) com o comando abaixo (<em>poderá demorar</em>):</p>
+<p>Outra opÃ§Ã£o Ã© instalar um ambiente grÃ¡fico da VM mininet, seguindo as instruÃ§Ãµes indicadas em <a href="https://github.com/mininet/mininet/wiki/FAQ#vm-console-gui">https://github.com/mininet/mininet/wiki/FAQ#vm-console-gui</a>. Para isto basta instalar o pacote (sugerido) com o comando abaixo (<em>poderÃ¡ demorar</em>):</p>
 
 <pre><code>    sudo apt-get install xinit lxde
 </code></pre>
 
-<p>O ambiente gráfico é iniciado com o comando <code>startx</code>.</p>
+<p>O ambiente grÃ¡fico Ã© iniciado com o comando <code>startx</code>.</p>
 
 <h1>Atividades</h1>
 
 <ol>
-<li>Execute o mininet com o exemplo <code>~/mininet/examples/linuxrouter.py</code>, do laboratório <em>"Roteamento Estático com mininet"</em>, que possui duas redes e um roteador.</li>
-<li><p>Verifique o estado das tabelas ARP nas estações, utilizando o comando:</p>
+<li>Execute o mininet com o exemplo <code>~/mininet/examples/linuxrouter.py</code>, do laboratÃ³rio <em>"Roteamento EstÃ¡tico com mininet"</em>, que possui duas redes e um roteador.</li>
+<li><p>Verifique o estado das tabelas ARP nas estaÃ§Ãµes, utilizando o comando:</p>
 
 <pre><code>arp -n
 </code></pre></li>
-<li><p>Force a atualização das tabelas ARP por meio do envio de mensagens entre as estações. Sugiro efetue um ping entre <code>h1</code> e <code>h2</code> do exemplo (na verdade, qualquer par de estações, excetuando o roteador <code>r0</code>). Para realizar o seu teste, sugiro utilizar o parâmetro <strong><code>-c 1</code></strong> no ping, com o qual ele envia apenas uma mensagem. Assim, será mais fácil correlacionar requisição e resposta produzidos pelo ping.</p></li>
-<li>Verifique novamente o estado das tabelas ARP, lembrando de fazê-lo com estações em redes diferentes.</li>
-<li><p><em>Antes desta etapa o professor realizará uma demonstração de uso do wireshark</em>. Escolha uma das estações do experimento realizado e use o <strong>wireshark</strong> para capturar os pacotes daquela estação. Para isso, <strong>dentro do mininet</strong>:</p>
+<li><p>Force a atualizaÃ§Ã£o das tabelas ARP por meio do envio de mensagens entre as estaÃ§Ãµes. Sugiro efetue um ping entre <code>h1</code> e <code>h2</code> do exemplo (na verdade, qualquer par de estaÃ§Ãµes, excetuando o roteador <code>r0</code>). Para realizar o seu teste, sugiro utilizar o parÃ¢metro <strong><code>-c 1</code></strong> no ping, com o qual ele envia apenas uma mensagem. Assim, serÃ¡ mais fÃ¡cil correlacionar requisiÃ§Ã£o e resposta produzidos pelo ping.</p></li>
+<li>Verifique novamente o estado das tabelas ARP, lembrando de fazÃª-lo com estaÃ§Ãµes em redes diferentes.</li>
+<li><p><em>Antes desta etapa o professor realizarÃ¡ uma demonstraÃ§Ã£o de uso do wireshark</em>. Escolha uma das estaÃ§Ãµes do experimento realizado e use o <strong>wireshark</strong> para capturar os pacotes daquela estaÃ§Ã£o. Para isso, <strong>dentro do mininet</strong>:</p>
 
 <ol>
-<li><p>Inicie um terminal executando naquela estação, por exemplo:</p>
+<li><p>Inicie um terminal executando naquela estaÃ§Ã£o, por exemplo:</p>
 
 <p>xterm h1</p></li>
-<li><p>Inicie o wireshark (<code>sudo wireshark &amp;</code>). Se o procedimento foi realizado corretamente, o wireshark mostrará apenas as interfaces de rede da estação com rede virtual que você selecionou, como <code>h1-eth0</code>.</p></li>
-<li>Capture a interface ethernet (exemplo: <code>h1-eth0</code>) daquela estação.</li>
+<li><p>Inicie o wireshark (<code>sudo wireshark &amp;</code>). Se o procedimento foi realizado corretamente, o wireshark mostrarÃ¡ apenas as interfaces de rede da estaÃ§Ã£o com rede virtual que vocÃª selecionou, como <code>h1-eth0</code>.</p></li>
+<li>Capture a interface ethernet (exemplo: <code>h1-eth0</code>) daquela estaÃ§Ã£o.</li>
 </ol></li>
-<li><p>Repita as etapas anteriores de uso do ARP (de <strong>1</strong> a <strong>4</strong>), verificando os pacotes ARP que são enviados e recebidos pela estação. </p></li>
-<li>Copie os dados dos pacotes recebidos e enviados, usando a função <strong>"Copy"</strong>-><strong>"Summary (CSV)"</strong> do wireshark (clique no pacote capturado com o botão da direita).</li>
-<li>Force o envio de um pacote da sua estação da uma estação na outra rede (por exemplo, use um <code>ping</code>). Verifique no pacote enviado e na resposta recebida, os endereços IPs e MAC de origem e destino. Copie dois desses pacotes.</li>
+<li><p>Repita as etapas anteriores de uso do ARP (de <strong>1</strong> a <strong>4</strong>), verificando os pacotes ARP que sÃ£o enviados e recebidos pela estaÃ§Ã£o. </p></li>
+<li>Copie os dados dos pacotes recebidos e enviados, usando a funÃ§Ã£o <strong>"Copy"</strong>-><strong>"Summary (CSV)"</strong> do wireshark (clique no pacote capturado com o botÃ£o da direita).</li>
+<li>Force o envio de um pacote da sua estaÃ§Ã£o da uma estaÃ§Ã£o na outra rede (por exemplo, use um <code>ping</code>). Verifique no pacote enviado e na resposta recebida, os endereÃ§os IPs e MAC de origem e destino. Copie dois desses pacotes.</li>
 </ol>
 
-<h1>Relatório</h1>
+<h1>RelatÃ³rio</h1>
 
-<p>A entrega do relatório deve ser pelo github classroom, com o qual vocês terão uma área indicada a partir de email enviado para vocês. Esse relatório deve ser entregue em até 8 dias.</p>
+<p>A entrega do relatÃ³rio deve ser pelo github classroom, com o qual vocÃªs terÃ£o uma Ã¡rea indicada a partir de email enviado para vocÃªs. Esse relatÃ³rio deve ser entregue em atÃ© 8 dias.</p>
 
 <p>Todos os arquivos colocados no github devem estar codificados em <code>UTF-8</code> e devem ser arquivos de texto, seguindo a seguinte estrutura</p>
 
 <pre><code>    README.md       - deve conter uma linha com o seu nome
     Lab1.4.2.txt    - tabela produzida no item (2)
     Lab1.4.4.txt    - tabela produzida no item (4)
-    Lab1.4.6.3.txt  - resposta do item (6), após repetir os itens de (2) a (4) e copiar o conteúdo dos pacotes ARP enviados e recebidos.
-    Lab1.4.8.txt    - resposta do item (8), e copiar o conteúdo dos pacotes ICMP (do `ping`) enviados e recebidos.
+    Lab1.4.6.3.txt  - resposta do item (6), apÃ³s repetir os itens de (2) a (4) e copiar o conteÃºdo dos pacotes ARP enviados e recebidos.
+    Lab1.4.8.txt    - resposta do item (8), e copiar o conteÃºdo dos pacotes ICMP (do `ping`) enviados e recebidos.
 </code></pre>
 
 <p></xmp></p>
@@ -124,14 +124,14 @@ Inspeção de pacotes
 #################################
 aprender a inspecionar pacotes via Wireshark
 montar a rede da aula anterior
-- revisão de pacotes IP
-- revisão de pacotes Ethernet
+- revisÃ£o de pacotes IP
+- revisÃ£o de pacotes Ethernet
 rever funcionamento do ARP
 inspecionar os pacotes recebidos e transmitidos pelo roteador
 
-questões:
-- quais modificações ocorrem no pacote IP transmitido de A para B
-- explique as razões de tais modificações
-- quais modificações ocorrem no pacote Ethernet (Enlace) transmitido de A para B (chegando e saindo do roteador)
-- explique as razões de tais modificações
+questÃµes:
+- quais modificaÃ§Ãµes ocorrem no pacote IP transmitido de A para B
+- explique as razÃµes de tais modificaÃ§Ãµes
+- quais modificaÃ§Ãµes ocorrem no pacote Ethernet (Enlace) transmitido de A para B (chegando e saindo do roteador)
+- explique as razÃµes de tais modificaÃ§Ãµes
 -->

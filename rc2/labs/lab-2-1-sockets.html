@@ -4,112 +4,112 @@
 
 <p><xmp theme="simplex" style="display:none;"></p>
 
-<h1>Laboratório: Comunicação com Sockets</h1>
+<h1>LaboratÃ³rio: ComunicaÃ§Ã£o com Sockets</h1>
 
 <!--
 
 nc DEVE ser usado com -k
 
-identificar o IP da sua estação
+identificar o IP da sua estaÃ§Ã£o
 
  nc -kl 127.0.0.1 8888
 
-1. Observar os sockets abertos na própria estação (servidores e clientes) utilizando o `netstat`, utilizando a opção `-c` junto às demais opções referentes ao tipo de socket pretendido.
-2. Estabelecer uma conexão TCP com um servidor e fechá-la, observando a mudança nos estados na conexão via `netstat`. *Sugestão*: utilize o `wget` para realizar uma requisição HTTP simples com um servidor.
+1. Observar os sockets abertos na prÃ³pria estaÃ§Ã£o (servidores e clientes) utilizando o `netstat`, utilizando a opÃ§Ã£o `-c` junto Ã s demais opÃ§Ãµes referentes ao tipo de socket pretendido.
+2. Estabelecer uma conexÃ£o TCP com um servidor e fechÃ¡-la, observando a mudanÃ§a nos estados na conexÃ£o via `netstat`. *SugestÃ£o*: utilize o `wget` para realizar uma requisiÃ§Ã£o HTTP simples com um servidor.
 3. As atividades abaixo devem ser preferencialmente realizadas no mininet.
-   1. Utilizando um cenário mininet com um mínimo de duas estações, abra um terminal (`xterm`) para cada estação. Sempre que você precisar executar mais de um comando simultâneo em uma estação, você deverá abrir um novo terminal. **Identifique** os endereços IPs das estações.
-   2. Nesses terminais, utilizando o netcat (`nc`, não confundir com `netstat`), estabelecer um socket servidor e iniciar uma conexão TCP com esse servidor (que deve ser iniciado com a opção `-k` do `netcat`). Realizar uma troca curta de mensagens.
-   3. Indique os pares de portas utilizados em cada conexão TCP no servidor, utilizando o padrão do seguinte exemplo para cada sessão encontrada (identificada pelo número):
+   1. Utilizando um cenÃ¡rio mininet com um mÃ­nimo de duas estaÃ§Ãµes, abra um terminal (`xterm`) para cada estaÃ§Ã£o. Sempre que vocÃª precisar executar mais de um comando simultÃ¢neo em uma estaÃ§Ã£o, vocÃª deverÃ¡ abrir um novo terminal. **Identifique** os endereÃ§os IPs das estaÃ§Ãµes.
+   2. Nesses terminais, utilizando o netcat (`nc`, nÃ£o confundir com `netstat`), estabelecer um socket servidor e iniciar uma conexÃ£o TCP com esse servidor (que deve ser iniciado com a opÃ§Ã£o `-k` do `netcat`). Realizar uma troca curta de mensagens.
+   3. Indique os pares de portas utilizados em cada conexÃ£o TCP no servidor, utilizando o padrÃ£o do seguinte exemplo para cada sessÃ£o encontrada (identificada pelo nÃºmero):
 
         sessao 1: 192.168.1.1:8888 - 192.168.1.99:1000
 
-   4. Registre os comandos utilizados para obter tais informações das conexões.
-   5. Acompanhe as mudanças nos estados da conexão TCP, durante o estabelecimento de conexão e até o fim da conexão.
-   6. Indique os estados das conexões na **ordem em que eles ocorrem** e de seguindo o nome especificado na própria especificação TCP (como aparece no netstat). A sua resposta deve ter um estado por linha. 
-      * Se necessário, repita o experimento várias vezes até conseguir reportar todos os estados.
-   7. Inspecione os pacotes TCP trocados durante uma conexão usando `wireshark`, referentes ao início e fechamento de sessão e troca de mensagens. Copie os pacotes trocados, usando a funcionalidade **Copy as CSV**.
-   8. Antes de finalizar uma conexão no `netcat`, procure iniciar outra conexão com o servidor e veja os pacotes que chegam no servidor e como ele os responde. Compare com o caso da conexão anterior.
-   9. Estabelecer duas conexões TCP com o mesmo servidor e realizar trocas curtas de mensagens. 
-   10. Inspecionar os pacotes trocados, percebendo a diferença entre as duas conexões nos pacotes TCP. 
-   7. Refaça os experimentos de (3.2) a (3.10), para sockets UDP.
+   4. Registre os comandos utilizados para obter tais informaÃ§Ãµes das conexÃµes.
+   5. Acompanhe as mudanÃ§as nos estados da conexÃ£o TCP, durante o estabelecimento de conexÃ£o e atÃ© o fim da conexÃ£o.
+   6. Indique os estados das conexÃµes na **ordem em que eles ocorrem** e de seguindo o nome especificado na prÃ³pria especificaÃ§Ã£o TCP (como aparece no netstat). A sua resposta deve ter um estado por linha. 
+      * Se necessÃ¡rio, repita o experimento vÃ¡rias vezes atÃ© conseguir reportar todos os estados.
+   7. Inspecione os pacotes TCP trocados durante uma conexÃ£o usando `wireshark`, referentes ao inÃ­cio e fechamento de sessÃ£o e troca de mensagens. Copie os pacotes trocados, usando a funcionalidade **Copy as CSV**.
+   8. Antes de finalizar uma conexÃ£o no `netcat`, procure iniciar outra conexÃ£o com o servidor e veja os pacotes que chegam no servidor e como ele os responde. Compare com o caso da conexÃ£o anterior.
+   9. Estabelecer duas conexÃµes TCP com o mesmo servidor e realizar trocas curtas de mensagens. 
+   10. Inspecionar os pacotes trocados, percebendo a diferenÃ§a entre as duas conexÃµes nos pacotes TCP. 
+   7. RefaÃ§a os experimentos de (3.2) a (3.10), para sockets UDP.
 
 
 
 
 portas
-   multiplas conexões com mesmo servidor - portas utilizadas
+   multiplas conexÃµes com mesmo servidor - portas utilizadas
    TODO:  (1) publicar os pares de portas usados. 
           (2) comandos utilizados - cliente e servidor
-          (3) colocar duas conexões simultâneas TCP (com mesmo servidor) e indicar os pares de portas cliente e servidor
+          (3) colocar duas conexÃµes simultÃ¢neas TCP (com mesmo servidor) e indicar os pares de portas cliente e servidor
 
 estados da conexao
-   (1) acompanhar a mudança dos estados da conexão TCP (estabelecimento de conexão, conectado, fim)
-       quais são os estados (ordenados) em cada um desses estados.
+   (1) acompanhar a mudanÃ§a dos estados da conexÃ£o TCP (estabelecimento de conexÃ£o, conectado, fim)
+       quais sÃ£o os estados (ordenados) em cada um desses estados.
 
    (1) verificar o equivalente para UDP (1), (2), (3)
 
 
-    ( ) testar broadcast no UDP: qual foi o endereço usado (envie o seu nome)
+    ( ) testar broadcast no UDP: qual foi o endereÃ§o usado (envie o seu nome)
 
     (x) repetir tudo com o wireshark e observar os campos TCP/UDP atendendo aos passos
 
-quais são as temporizações associadas?
+quais sÃ£o as temporizaÃ§Ãµes associadas?
 
 ucspi-tcp-ipv6
 tcpclient
 tcpcat
 
 
-multiplexação
-estabelecimento de conexão
+multiplexaÃ§Ã£o
+estabelecimento de conexÃ£o
 
-uso do nc para comunicação.
+uso do nc para comunicaÃ§Ã£o.
 -->
 
 <h1>Objetivos</h1>
 
 <ul>
-<li>Compreender o conceito de sockets como primitiva de comunicação na rede</li>
-<li>Compreender o conceito de portas de comunicação como identificador de processos comunicantes</li>
-<li>Compreender o estado de conexões TCP e UDP</li>
+<li>Compreender o conceito de sockets como primitiva de comunicaÃ§Ã£o na rede</li>
+<li>Compreender o conceito de portas de comunicaÃ§Ã£o como identificador de processos comunicantes</li>
+<li>Compreender o estado de conexÃµes TCP e UDP</li>
 </ul>
 
-<h1>Visão Geral</h1>
+<h1>VisÃ£o Geral</h1>
 
-<p>Neste laboratório você irá inspecionar os estados de conexões TCP e UDP, assim como as suas trocas de pacotes, de maneira a compreender melhor os aspectos da abstração de comunicação provida por sockets. </p>
+<p>Neste laboratÃ³rio vocÃª irÃ¡ inspecionar os estados de conexÃµes TCP e UDP, assim como as suas trocas de pacotes, de maneira a compreender melhor os aspectos da abstraÃ§Ã£o de comunicaÃ§Ã£o provida por sockets. </p>
 
 <h1>Recursos</h1>
 
 <h2>Slides</h2>
 
 <ul>
-<li><a href="pdf/SOCKETS.I.pdf">Slides utilizados no laboratório</a> pelo professor.</li>
+<li><a href="pdf/SOCKETS.I.pdf">Slides utilizados no laboratÃ³rio</a> pelo professor.</li>
 </ul>
 
 <h2>Softwares</h2>
 
 <ul>
-<li>Máquina Virtual utilizada nos experimentos, inclui o sistema <code>mininet</code> (ver em <a href="https://github.com/mininet/mininet/wiki/Mininet-VM-Images">mininet.org</a>).</li>
-<li><p><strong><code>netstat</code></strong>: ferramenta para verificação das conexões TCP e UDP.
-Opções no Linux</p>
+<li>MÃ¡quina Virtual utilizada nos experimentos, inclui o sistema <code>mininet</code> (ver em <a href="https://github.com/mininet/mininet/wiki/Mininet-VM-Images">mininet.org</a>).</li>
+<li><p><strong><code>netstat</code></strong>: ferramenta para verificaÃ§Ã£o das conexÃµes TCP e UDP.
+OpÃ§Ãµes no Linux</p>
 
 <pre><code>-t : sockets TCP
 -u : sockets UDP
--n : exibe o valor numérico das portas
--l : sockets esperando conexões (ouvindo)
+-n : exibe o valor numÃ©rico das portas
+-l : sockets esperando conexÃµes (ouvindo)
 -c : atualiza continuamente o estado dos sockets
 </code></pre>
 
-<p><a href="http://pt.wikipedia.org/wiki/Netstat">Opções no Windows</a> (ou utilize a opção /?)</p></li>
-<li><p><strong><code>nc</code></strong> (<code>netcat</code>): ferramenta de propósito gerar para criação de sockets UDP e TCP para comunicação.
-Opções utilizadas neste laboratório</p>
+<p><a href="http://pt.wikipedia.org/wiki/Netstat">OpÃ§Ãµes no Windows</a> (ou utilize a opÃ§Ã£o /?)</p></li>
+<li><p><strong><code>nc</code></strong> (<code>netcat</code>): ferramenta de propÃ³sito gerar para criaÃ§Ã£o de sockets UDP e TCP para comunicaÃ§Ã£o.
+OpÃ§Ãµes utilizadas neste laboratÃ³rio</p>
 
 <pre><code>-t : sockets TCP
 -u : sockets UDP
--n : valor numérico das portas
--l : sockets esperando conexões (ouvindo)
+-n : valor numÃ©rico das portas
+-l : sockets esperando conexÃµes (ouvindo)
 -c : atualiza continuamente o estado dos sockets 
--k : mantém o servidor aceitando e respondendo requisições após o término da sessão com cliente (sessões são sequenciais - uma após o término de outra)
+-k : mantÃ©m o servidor aceitando e respondendo requisiÃ§Ãµes apÃ³s o tÃ©rmino da sessÃ£o com cliente (sessÃµes sÃ£o sequenciais - uma apÃ³s o tÃ©rmino de outra)
 </code></pre>
 
 <p>Exemplos de uso: </p>
@@ -118,12 +118,12 @@ Opções utilizadas neste laboratório</p>
 <li><strong>Servidor</strong>
 <ul>
 <li><code>nc -l 8888</code>: cria um socket servidor TCP ouvindo na porta 8888</li>
-<li><code>nc -kl 8888</code>: mesmo que o anterior, mas se mantém ouvindo novas conexões após o término da primeira <strong>será opção preferida neste lab</strong></li>
+<li><code>nc -kl 8888</code>: mesmo que o anterior, mas se mantÃ©m ouvindo novas conexÃµes apÃ³s o tÃ©rmino da primeira <strong>serÃ¡ opÃ§Ã£o preferida neste lab</strong></li>
 <li><code>nc -ul 8888</code> (UDP): cria um socket servidor UDP ouvindo na porta 8888</li>
 </ul></li>
 <li><strong>Cliente</strong>
 <ul>
-<li><code>nc  127.0.0.1 8888</code>: estabelece uma conexão TCP com o socket servidor no IP <code>127.0.0.1</code>, ouvindo na porta <code>8888</code>.</li>
+<li><code>nc  127.0.0.1 8888</code>: estabelece uma conexÃ£o TCP com o socket servidor no IP <code>127.0.0.1</code>, ouvindo na porta <code>8888</code>.</li>
 <li><code>nc -u 127.0.0.1 8888</code> (UDP): envia pacotes UDP por sockets cliente UDP para o servidor no IP <code>127.0.0.1</code> na porta <code>8888</code>.</li>
 </ul></li>
 </ul></li>
@@ -132,41 +132,41 @@ Opções utilizadas neste laboratório</p>
 <h1>Atividades</h1>
 
 <ol>
-<li>Observar os sockets abertos na própria estação (servidores e clientes) utilizando o <code>netstat</code>, utilizando a opção <code>-c</code> junto às demais opções referentes ao tipo de socket pretendido.</li>
-<li>Estabelecer uma conexão TCP com um servidor e fechá-la, observando a mudança nos estados na conexão via <code>netstat</code>. <em>Sugestão</em>: utilize o <code>wget</code> para realizar uma requisição HTTP simples com um servidor.</li>
+<li>Observar os sockets abertos na prÃ³pria estaÃ§Ã£o (servidores e clientes) utilizando o <code>netstat</code>, utilizando a opÃ§Ã£o <code>-c</code> junto Ã s demais opÃ§Ãµes referentes ao tipo de socket pretendido.</li>
+<li>Estabelecer uma conexÃ£o TCP com um servidor e fechÃ¡-la, observando a mudanÃ§a nos estados na conexÃ£o via <code>netstat</code>. <em>SugestÃ£o</em>: utilize o <code>wget</code> para realizar uma requisiÃ§Ã£o HTTP simples com um servidor.</li>
 <li><p>As atividades abaixo devem ser preferencialmente realizadas no mininet.</p>
 
 <ol>
-<li>Utilizando um cenário mininet com um mínimo de duas estações, abra um terminal (<code>xterm</code>) para cada estação. Sempre que você precisar executar mais de um comando simultâneo em uma estação, você deverá abrir um novo terminal. <strong>Identifique</strong> os endereços IPs das estações.</li>
-<li>Nesses terminais, utilizando o netcat (<code>nc</code>, não confundir com <code>netstat</code>), estabelecer um socket servidor e iniciar uma conexão TCP com esse servidor (que deve ser iniciado com a opção <code>-k</code> do <code>netcat</code>). Realizar uma troca curta de mensagens.</li>
-<li><p>Indique os pares de portas utilizados em cada conexão TCP no servidor, utilizando o padrão do seguinte exemplo para cada sessão encontrada (identificada pelo número):</p>
+<li>Utilizando um cenÃ¡rio mininet com um mÃ­nimo de duas estaÃ§Ãµes, abra um terminal (<code>xterm</code>) para cada estaÃ§Ã£o. Sempre que vocÃª precisar executar mais de um comando simultÃ¢neo em uma estaÃ§Ã£o, vocÃª deverÃ¡ abrir um novo terminal. <strong>Identifique</strong> os endereÃ§os IPs das estaÃ§Ãµes.</li>
+<li>Nesses terminais, utilizando o netcat (<code>nc</code>, nÃ£o confundir com <code>netstat</code>), estabelecer um socket servidor e iniciar uma conexÃ£o TCP com esse servidor (que deve ser iniciado com a opÃ§Ã£o <code>-k</code> do <code>netcat</code>). Realizar uma troca curta de mensagens.</li>
+<li><p>Indique os pares de portas utilizados em cada conexÃ£o TCP no servidor, utilizando o padrÃ£o do seguinte exemplo para cada sessÃ£o encontrada (identificada pelo nÃºmero):</p>
 
 <p><code>sessao 1: 192.168.1.1:8888 - 192.168.1.99:1000</code></p></li>
-<li><p>Registre os comandos utilizados para obter tais informações das conexões.</p></li>
-<li>Acompanhe as mudanças nos estados da conexão TCP, durante o estabelecimento de conexão e até o fim da conexão.</li>
-<li>Indique os estados das conexões na <strong>ordem em que eles ocorrem</strong> e de seguindo o nome especificado na própria especificação TCP (como aparece no netstat). A sua resposta deve ter um estado por linha. 
+<li><p>Registre os comandos utilizados para obter tais informaÃ§Ãµes das conexÃµes.</p></li>
+<li>Acompanhe as mudanÃ§as nos estados da conexÃ£o TCP, durante o estabelecimento de conexÃ£o e atÃ© o fim da conexÃ£o.</li>
+<li>Indique os estados das conexÃµes na <strong>ordem em que eles ocorrem</strong> e de seguindo o nome especificado na prÃ³pria especificaÃ§Ã£o TCP (como aparece no netstat). A sua resposta deve ter um estado por linha. 
 <ul>
-<li>Se necessário, repita o experimento várias vezes até conseguir reportar todos os estados.</li>
+<li>Se necessÃ¡rio, repita o experimento vÃ¡rias vezes atÃ© conseguir reportar todos os estados.</li>
 </ul></li>
-<li>Inspecione os pacotes TCP trocados durante uma conexão usando <code>wireshark</code>, referentes ao início e fechamento de sessão e troca de mensagens. Copie os pacotes trocados, usando a funcionalidade <strong>Copy as CSV</strong>.</li>
-<li>Antes de finalizar uma conexão no <code>netcat</code>, procure iniciar outra conexão com o servidor e veja os pacotes que chegam no servidor e como ele os responde. Compare com o caso da conexão anterior.</li>
-<li>Estabelecer duas conexões TCP com o mesmo servidor e realizar trocas curtas de mensagens. </li>
-<li>Inspecionar os pacotes trocados, percebendo a diferença entre as duas conexões nos pacotes TCP. </li>
+<li>Inspecione os pacotes TCP trocados durante uma conexÃ£o usando <code>wireshark</code>, referentes ao inÃ­cio e fechamento de sessÃ£o e troca de mensagens. Copie os pacotes trocados, usando a funcionalidade <strong>Copy as CSV</strong>.</li>
+<li>Antes de finalizar uma conexÃ£o no <code>netcat</code>, procure iniciar outra conexÃ£o com o servidor e veja os pacotes que chegam no servidor e como ele os responde. Compare com o caso da conexÃ£o anterior.</li>
+<li>Estabelecer duas conexÃµes TCP com o mesmo servidor e realizar trocas curtas de mensagens. </li>
+<li>Inspecionar os pacotes trocados, percebendo a diferenÃ§a entre as duas conexÃµes nos pacotes TCP. </li>
 </ol></li>
-<li>Refaça os experimentos de (3.2) a (3.10), para sockets UDP.</li>
+<li>RefaÃ§a os experimentos de (3.2) a (3.10), para sockets UDP.</li>
 </ol>
 
-<h1>Questões para Refletir e Fixar</h1>
+<h1>QuestÃµes para Refletir e Fixar</h1>
 
 <ol>
-<li>Por que o TCP estabelece precisamente diversos estados em uma conexão, enquanto que isso não ocorre com o UDP?</li>
-<li>Quais são os estados de uma conexão TCP e qual é o significado de cada uma delas?</li>
-<li>Se há mais de uma conexão TCP estabelecida para um mesmo servidor, de que maneira o TCP diferencia uma conexão de outra?</li>
+<li>Por que o TCP estabelece precisamente diversos estados em uma conexÃ£o, enquanto que isso nÃ£o ocorre com o UDP?</li>
+<li>Quais sÃ£o os estados de uma conexÃ£o TCP e qual Ã© o significado de cada uma delas?</li>
+<li>Se hÃ¡ mais de uma conexÃ£o TCP estabelecida para um mesmo servidor, de que maneira o TCP diferencia uma conexÃ£o de outra?</li>
 </ol>
 
-<h1>Relatório</h1>
+<h1>RelatÃ³rio</h1>
 
-<p>A entrega do relatório deve ser pelo github classroom, com o qual vocês terão uma área indicada a partir de email enviado para vocês. Esse relatório deve ser entregue em até 5 dias.</p>
+<p>A entrega do relatÃ³rio deve ser pelo github classroom, com o qual vocÃªs terÃ£o uma Ã¡rea indicada a partir de email enviado para vocÃªs. Esse relatÃ³rio deve ser entregue em atÃ© 5 dias.</p>
 
 <p>Todos os arquivos colocados no githuv devem estar codificados em <code>UTF-8</code> e devem ser arquivos de texto, seguindo a seguinte estrutura</p>
 
