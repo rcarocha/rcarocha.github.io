@@ -31,6 +31,7 @@
 
 <ol>
 <li>APT, K. R. From logic programming to Prolog. New York: Prentice Hall, 1997. </li>
+<li><a href="http://haskell.tailorfontela.com.br/chapters">"Aprender Haskell será um grande bem para você!"</a></li>
 <li>BIRD, R. Introduction to Functional Programming using Haskell. 2 nd Edition. Editora Prentice Hall, 1998. </li>
 <li>DOETS, K. From Logic to Logic Programming. Editora MIT Press, 1994. </li>
 </ol>
@@ -98,6 +99,7 @@ material/RealWorldHaskell.pdf</li>
 <li><strong><code>/Lab1.1</code></strong>: código <code>.hs</code> do <a href="#labs-haskell">laboratório 1.1</a></li>
 <li><strong><code>/Lab1.2</code></strong>: código <code>.hs</code> do <a href="#labs-haskell">laboratório 1.2</a></li>
 <li><strong><code>/Lab1.3</code></strong>: código <code>.hs</code> do <a href="#labs-haskell">laboratório 1.3</a></li>
+<li><strong><code>/Lab1.4</code></strong>: código <code>.hs</code> do <a href="#labs-haskell">laboratório 1.4</a></li>
 </ul></li>
 <li><strong>Tarefa 2</strong>: <a href="tarefas/tarefa-02.html">Processamento de boleto bancário</a>
 <ul>
@@ -353,11 +355,10 @@ b19eb87e753bdbff43365558c4ee5f70
 <ul>
 <li><a href="slides/01-introducao.programacao.funcional.pdf">01 - Introdução à Programação Funcional</a></li>
 <li><a href="slides/02-introducao.haskell.pdf">02 - Introdução à Programação em Haskell</a></li>
+<li><a href="slides/03-tipos.de.dados.pdf">03 - Tipos de Dados em Haskell</a></li>
 </ul>
 
-<!--
-
-* [03 - Tipos de Dados em Haskell](slides/03-tipos.de.dados.pdf)
+<!-- 
 * [04 - Entrada e Saída](slides/04-entrada.e.saida.pdf)
 * [05 - Funções de Alta Ordem](slides/05-funcoes.de.alta.ordem.pdf)
 * [06 - Mônadas](slides/06-monadas.pdf)
@@ -415,6 +416,24 @@ b19eb87e753bdbff43365558c4ee5f70
 <li><code>removeN [1,2,3,4,5,6,7,8,9,10] 3 =&gt; [1,2,4,5,7,8,10]</code></li>
 </ul></li>
 </ol></li>
+<li><p><strong>Lab 1.4</strong>: Dados estruturados e registros (este laboratório deve ser submetido na <strong>Tarefa 1: Laboratórios de Haskell</strong>, dentro do diretório <code>Lab1.4</code>)</p>
+
+<ol>
+<li>Projete uma estrutura de dados em Haskell que permita armazenar uma figura geometrica (chame-a de <code>FiguraGeometrica</code>), podendo ser um <code>Circulo</code> ou um <code>Retangulo</code>, os quais devem ser descritos com as seguintes informações:
+<ul>
+<li><code>Circulo</code>: as coordenadas do ponto central e o seu raio</li>
+<li><code>Retangulo</code>: as coordenadas da extremidade inferior esquerda e da superior direita.</li>
+</ul></li>
+<li>Implemente as seguintes operações de manipulação dessas figuras:
+<ul>
+<li><code>area</code>: retorna a área de uma figura geométrica</li>
+<li><code>getRaio</code>: retorna o raio de um <code>Circulo</code></li>
+<li><code>deslocar</code>: mudar as coordenadas por um valor no <code>x</code> e outro no <code>y</code>.</li>
+</ul></li>
+<li>Inclua a representação utilizando um dado <code>Ponto</code> (par de coordenadas), ao invés da posição <code>x</code> e <code>y</code> literal no seu dado.</li>
+</ol>
+
+<p><img src="images/lab1.4-figurageom.png" /></p></li>
 </ul>
 
 <!--
