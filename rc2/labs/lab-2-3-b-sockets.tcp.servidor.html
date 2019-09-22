@@ -4,49 +4,49 @@
 
 <p><xmp theme="simplex" style="display:none;"></p>
 
-<h1>Laboratório: Implementação de Protocolo com Sockets TCP em Python</h1>
+<h1>LaboratÃ³rio: ImplementaÃ§Ã£o de Protocolo com Sockets TCP em Python</h1>
 
 <h1>Objetivos</h1>
 
 <ul>
-<li>Reforçar a compreensão do conceito de sockets como primitiva de comunicação na rede</li>
-<li>Compreender as chamadas de sistema do SO para manipulação de sockets e suas consequências</li>
-<li>Compreender como as chamadas de sistema para sockets podem ser mapeadas para construções de software (em APIs)</li>
-<li>Compreender a estrutura básica de um programa baseado em sockets.</li>
-<li>Ter uma visão geral da API de manipulação de sockets do Python</li>
-<li>Ter uma compreensão inicial sobre a construção de protocolos e os problemas envolvidos (incluindo problemas de comunicação)</li>
+<li>ReforÃ§ar a compreensÃ£o do conceito de sockets como primitiva de comunicaÃ§Ã£o na rede</li>
+<li>Compreender as chamadas de sistema do SO para manipulaÃ§Ã£o de sockets e suas consequÃªncias</li>
+<li>Compreender como as chamadas de sistema para sockets podem ser mapeadas para construÃ§Ãµes de software (em APIs)</li>
+<li>Compreender a estrutura bÃ¡sica de um programa baseado em sockets.</li>
+<li>Ter uma visÃ£o geral da API de manipulaÃ§Ã£o de sockets do Python</li>
+<li>Ter uma compreensÃ£o inicial sobre a construÃ§Ã£o de protocolos e os problemas envolvidos (incluindo problemas de comunicaÃ§Ã£o)</li>
 </ul>
 
-<h1>Visão Geral</h1>
+<h1>VisÃ£o Geral</h1>
 
-<p>Neste laboratório você irá construir programas simples em Python ou Java para se comportarem como cliente e servidor TCP. </p>
+<p>Neste laboratÃ³rio vocÃª irÃ¡ construir programas simples em Python ou Java para se comportarem como cliente e servidor TCP. </p>
 
-<p>Este laboratório poderá ser realizado na linguagem de sua preferência. Há informações e códigos de referência em Python e am Java para ajudá-lo no desenvolvimento. Por questões didática, utilizaremos Python para apresentar o conteúdo. </p>
+<p>Este laboratÃ³rio poderÃ¡ ser realizado na linguagem de sua preferÃªncia. HÃ¡ informaÃ§Ãµes e cÃ³digos de referÃªncia em Python e am Java para ajudÃ¡-lo no desenvolvimento. Por questÃµes didÃ¡tica, utilizaremos Python para apresentar o conteÃºdo. </p>
 
-<p>Neste laboratório nós implementaremos o protocolo de um simples servidor de banco de dados, usando sockets TCP.</p>
+<p>Neste laboratÃ³rio nÃ³s implementaremos o protocolo de um simples servidor de banco de dados, usando sockets TCP.</p>
 
 <h1>Recursos</h1>
 
 <p>Utilizaremos o <code>netstat</code> e o <code>netcat</code> (<code>nc</code>) como ferramentas auxiliares.</p>
 
-<p>Há uma documentação bem resumida e superficial sobre as chamadas oferecidas no módulo <code>socket</code> em: <a href="http://www.inf.ufg.br/~ricardo/python/programacao.sockets.html">http://www.inf.ufg.br/~ricardo/python/programacao.sockets.html</a></p>
+<p>HÃ¡ uma documentaÃ§Ã£o bem resumida e superficial sobre as chamadas oferecidas no mÃ³dulo <code>socket</code> em: <a href="http://www.inf.ufg.br/~ricardo/python/programacao.sockets.html">http://www.inf.ufg.br/~ricardo/python/programacao.sockets.html</a></p>
 
 <h2>Slides</h2>
 
 <ul>
-<li><a href="SOCKETS.TCP.PYTHON.pdf">Slides utilizados no laboratório</a> pelo professor.</li>
+<li><a href="SOCKETS.TCP.PYTHON.pdf">Slides utilizados no laboratÃ³rio</a> pelo professor.</li>
 </ul>
 
-<h2>Códigos e Snippets de Código</h2>
+<h2>CÃ³digos e Snippets de CÃ³digo</h2>
 
-<h3>Código de Referência para cliente e servidor TCP em Java</h3>
+<h3>CÃ³digo de ReferÃªncia para cliente e servidor TCP em Java</h3>
 
 <ul>
-<li>Código do <a href="codigo/java-sock-protocol.zip">Cliente e servidor TCP trivial</a>, ilustrado nos slides.</li>
+<li>CÃ³digo do <a href="codigo/java-sock-protocol.zip">Cliente e servidor TCP trivial</a>, ilustrado nos slides.</li>
 <li>Exemplo Python deve ser retirado diretamente dos slides</li>
 </ul>
 
-<h3>Manipulação de JSON em Java e Python</h3>
+<h3>ManipulaÃ§Ã£o de JSON em Java e Python</h3>
 
 <ul>
 <li><p><strong>Python</strong> - Uso de JSON em Python: <a href="https://docs.python-guide.org/scenarios/json/">1</a>, <a href="https://realpython.com/python-json/">2</a>. Exemplo de carga do json:</p>
@@ -57,12 +57,12 @@
 arq = open('dados/banco.json')
 bd = json.load(arq)
 </code></pre></li>
-<li><p><strong>Java</strong> - Há uma série de bibliotecas para manipulação de JSON em Java, que podem ser encontradas em <a href="http://json.org/json-pt.html">http://json.org/json-pt.html</a>.</p></li>
+<li><p><strong>Java</strong> - HÃ¡ uma sÃ©rie de bibliotecas para manipulaÃ§Ã£o de JSON em Java, que podem ser encontradas em <a href="http://json.org/json-pt.html">http://json.org/json-pt.html</a>.</p></li>
 </ul>
 
 <h3>Leitura de Strings terminadas com nova linha em Python</h3>
 
-<p>Duas alternativas de código para ler strings terminadas com <code>\n</code> em conexões:</p>
+<p>Duas alternativas de cÃ³digo para ler strings terminadas com <code>\n</code> em conexÃµes:</p>
 
 <ul>
 <li><p><a href="http://stackoverflow.com/questions/29023885/python-socket-readline-without-socket-makefile">Snippet 1</a></p>
@@ -98,25 +98,25 @@ print buff.getvalue().splitlines()[0]
 <h2>Softwares</h2>
 
 <ul>
-<li>Máquina Virtual utilizada nos experimentos, inclui o sistema <code>mininet</code> (ver em <a href="https://github.com/mininet/mininet/wiki/Mininet-VM-Images">mininet.org</a>).</li>
-<li><p><strong><code>netstat</code></strong>: ferramenta para verificação das conexões TCP e UDP.
-Opções no Linux</p>
+<li>MÃ¡quina Virtual utilizada nos experimentos, inclui o sistema <code>mininet</code> (ver em <a href="https://github.com/mininet/mininet/wiki/Mininet-VM-Images">mininet.org</a>).</li>
+<li><p><strong><code>netstat</code></strong>: ferramenta para verificaÃ§Ã£o das conexÃµes TCP e UDP.
+OpÃ§Ãµes no Linux</p>
 
 <pre><code>-t : sockets TCP
 -u : sockets UDP
--n : exibe o valor numérico das portas
--l : sockets esperando conexões (ouvindo)
+-n : exibe o valor numÃ©rico das portas
+-l : sockets esperando conexÃµes (ouvindo)
 -c : atualiza continuamente o estado dos sockets
 </code></pre>
 
-<p><a href="http://pt.wikipedia.org/wiki/Netstat">Opções no Windows</a> (ou utilize a opção /?)</p></li>
-<li><p><strong><code>nc</code></strong> (<code>netcat</code>): ferramenta de propósito gerar para criação de sockets UDP e TCP para comunicação.
-Opções utilizadas neste laboratório</p>
+<p><a href="http://pt.wikipedia.org/wiki/Netstat">OpÃ§Ãµes no Windows</a> (ou utilize a opÃ§Ã£o /?)</p></li>
+<li><p><strong><code>nc</code></strong> (<code>netcat</code>): ferramenta de propÃ³sito gerar para criaÃ§Ã£o de sockets UDP e TCP para comunicaÃ§Ã£o.
+OpÃ§Ãµes utilizadas neste laboratÃ³rio</p>
 
 <pre><code>-t : sockets TCP
 -u : sockets UDP
--n : valor numérico das portas
--l : sockets esperando conexões (ouvindo)
+-n : valor numÃ©rico das portas
+-l : sockets esperando conexÃµes (ouvindo)
 -c : atualiza continuamente o estado dos sockets
 </code></pre>
 
@@ -124,16 +124,16 @@ Opções utilizadas neste laboratório</p>
 
 <ul>
 <li>Servidor: <code>nc -l 8888</code>: cria um socket servidor TCP ouvindo na porta 8888</li>
-<li>Servidor: <code>nc -kl 8888</code>: mesmo que o anterior, mas se mantém ouvindo novas conexões após o término da primeira</li>
+<li>Servidor: <code>nc -kl 8888</code>: mesmo que o anterior, mas se mantÃ©m ouvindo novas conexÃµes apÃ³s o tÃ©rmino da primeira</li>
 <li>Servidor: <code>nc -ul 8888</code>: cria um socket servidor UDP ouvindo na porta 8888</li>
-<li>Cliente: <code>nc  127.0.0.1 8888</code>: estabelece uma conexão TCP com o socket servidor no IP <code>127.0.0.1</code>, ouvindo na porta <code>8888</code>.</li>
+<li>Cliente: <code>nc  127.0.0.1 8888</code>: estabelece uma conexÃ£o TCP com o socket servidor no IP <code>127.0.0.1</code>, ouvindo na porta <code>8888</code>.</li>
 <li>Cliente: <code>nc -u 127.0.0.1 8888</code>: envia pacotes UDP por sockets cliente UDP para o servidor no IP <code>127.0.0.1</code> na porta <code>8888</code>.</li>
 </ul></li>
 </ul>
 
-<h1>Atividades do Laboratório</h1>
+<h1>Atividades do LaboratÃ³rio</h1>
 
-<p>Neste laboratório, nós implementaremos o protocolo de um simples servidor de banco de dados, que mantém os seus dados em <a href="https://pt.wikipedia.org/wiki/JSON">JSON</a>. O nosso banco de teste conterá os resultados de uma consulta ao <a href="https://dadosabertos.camara.leg.br/swagger/api.html">serviço de dados abertos</a> da Câmara de Deputados, contendo dados sobre os deputados da atual legislatura. O JSON abaixo mostra um trecho do banco de dados usado.</p>
+<p>Neste laboratÃ³rio, nÃ³s implementaremos o protocolo de um simples servidor de banco de dados, que mantÃ©m os seus dados em <a href="https://pt.wikipedia.org/wiki/JSON">JSON</a>. O nosso banco de teste conterÃ¡ os resultados de uma consulta ao <a href="https://dadosabertos.camara.leg.br/swagger/api.html">serviÃ§o de dados abertos</a> da CÃ¢mara de Deputados, contendo dados sobre os deputados da atual legislatura. O JSON abaixo mostra um trecho do banco de dados usado.</p>
 
 <pre><code>    {
         "dados": [
@@ -151,13 +151,13 @@ Opções utilizadas neste laboratório</p>
     }
 </code></pre>
 
-<p>O arquivo abaixo, contém o banco de dados que usaremos nesse laboratório:</p>
+<p>O arquivo abaixo, contÃ©m o banco de dados que usaremos nesse laboratÃ³rio:</p>
 
 <ul>
-<li><a href="dados/banco.json">JSON de deputados da câmara</a></li>
+<li><a href="dados/banco.json">JSON de deputados da cÃ¢mara</a></li>
 </ul>
 
-<p>Você deverá implementar um servidor (mantém o socket servidor do servidor de banco de dados) que permitirá consultas nesse JSON, permitindo pesquisar:</p>
+<p>VocÃª deverÃ¡ implementar um servidor (mantÃ©m o socket servidor do servidor de banco de dados) que permitirÃ¡ consultas nesse JSON, permitindo pesquisar:</p>
 
 <ul>
 <li>Campos do json</li>
@@ -165,42 +165,42 @@ Opções utilizadas neste laboratório</p>
 <li>Pesquisa por wildcards</li>
 </ul>
 
-<p>O protocolo sugerido para o servidor é o seguinte:</p>
+<p>O protocolo sugerido para o servidor Ã© o seguinte:</p>
 
 <ul>
 <li><strong><code>campos</code></strong> - deve responder com o nome do campo no topo do JSON. No caso do banco de dados usado, deve responder com <code>"dados"</code>.</li>
-<li><p><strong><code>campos &lt;subcampo&gt;</code></strong> - deve responder com os nomes dos campos existentes imediatamente após o campo <code>&lt;subcampo&gt;</code>. Por exemplo, para <code>campos dados</code>, ele deve responder <code>id idLegislatura nome siglaPartido siglaUf uri uriPartido urlFoto</code>. Exemplo de obtenção dos dados em Python:</p>
+<li><p><strong><code>campos &lt;subcampo&gt;</code></strong> - deve responder com os nomes dos campos existentes imediatamente apÃ³s o campo <code>&lt;subcampo&gt;</code>. Por exemplo, para <code>campos dados</code>, ele deve responder <code>id idLegislatura nome siglaPartido siglaUf uri uriPartido urlFoto</code>. Exemplo de obtenÃ§Ã£o dos dados em Python:</p>
 
 <pre><code>    # Exemplo para `campos dados`(`campos &lt;subcampo&gt;`)
     print(bd['dados'][0].keys())
 </code></pre></li>
-<li><p><strong><code>dados</code></strong> - deve retornar todos os dados no maior nível do JSON (ou seja, todos o dados do banco)</p></li>
+<li><p><strong><code>dados</code></strong> - deve retornar todos os dados no maior nÃ­vel do JSON (ou seja, todos o dados do banco)</p></li>
 <li><strong><code>dados &lt;subcampo&gt;</code></strong> - deve retornar os dados associados ao nome do campo <code>&lt;subcampo&gt;</code>. Por exemplo, para <code>dados dados/id</code> deve retornar o id de todos os deputados.</li>
-<li><strong><code>dados &lt;subcampo&gt; num &lt;num&gt;</code></strong> - o mesmo do anterior, mas deve retornar o dado associada à entrada de número <code>&lt;num&gt;</code>.</li>
+<li><strong><code>dados &lt;subcampo&gt; num &lt;num&gt;</code></strong> - o mesmo do anterior, mas deve retornar o dado associada Ã  entrada de nÃºmero <code>&lt;num&gt;</code>.</li>
 <li><strong><code>dados &lt;subcampo&gt; conteudo &lt;cont&gt;</code></strong> - deve retornar os dados associados ao subcampo, e que iniciem com o texto <code>&lt;cont&gt;</code>. Por exemplo, <code>dados dados/nome conteudo AB</code> deve retornar todos os nomes de deputados que inicial com "AB".</li>
 <li><code>fechar</code> - termina a conversa com o servidor.</li>
-<li><strong><code>quantos &lt;comando&gt;</code></strong> - retorno o número de respostas (sem o conteudo) na execução do comando <code>&lt;comando&gt;</code>.</li>
+<li><strong><code>quantos &lt;comando&gt;</code></strong> - retorno o nÃºmero de respostas (sem o conteudo) na execuÃ§Ã£o do comando <code>&lt;comando&gt;</code>.</li>
 </ul>
 
-<p>Todas as mensagens são textuais e usam um caracter de novalinha <code>\n</code> ao final. No final de cada resposta, os servidor deve responder com uma mensagem <code>OK\n</code>.</p>
+<p>Todas as mensagens sÃ£o textuais e usam um caracter de novalinha <code>\n</code> ao final. No final de cada resposta, os servidor deve responder com uma mensagem <code>OK\n</code>.</p>
 
-<p>Fique a vontade para corrigir inconsistências do protocolo como bem entender. Implemente as funcionalidades aos poucos.</p>
+<p>Fique a vontade para corrigir inconsistÃªncias do protocolo como bem entender. Implemente as funcionalidades aos poucos.</p>
 
 <h2>Roteiro de Atividades</h2>
 
 <ol>
-<li>Implemente o seu servidor, testando-o com um cliente <code>nc</code>. Inicie apenas implementando a troca de mensagens (garantindo que o servidor interpretará corretamente as mensagens). Depois implemente as consultas propriamente ditas no seu código e as respostas. <strong>Sugestão:</strong> faça isso para cada tipo de mensagem.</li>
-<li>Teste o comportamento do seu servidor, quando ocorre um problema na comunicação. Procure tratar todos esses problemas no seu protocolo.</li>
+<li>Implemente o seu servidor, testando-o com um cliente <code>nc</code>. Inicie apenas implementando a troca de mensagens (garantindo que o servidor interpretarÃ¡ corretamente as mensagens). Depois implemente as consultas propriamente ditas no seu cÃ³digo e as respostas. <strong>SugestÃ£o:</strong> faÃ§a isso para cada tipo de mensagem.</li>
+<li>Teste o comportamento do seu servidor, quando ocorre um problema na comunicaÃ§Ã£o. Procure tratar todos esses problemas no seu protocolo.</li>
 </ol>
 
-<h1>Relatório</h1>
+<h1>RelatÃ³rio</h1>
 
-<p>A entrega do relatório deve ser pelo github classroom, com o qual vocês terão uma área indicada a partir de email enviado para vocês. Esse relatório deve ser entregue em até 7 dias.</p>
+<p>A entrega do relatÃ³rio deve ser pelo github classroom, com o qual vocÃªs terÃ£o uma Ã¡rea indicada a partir de email enviado para vocÃªs. Esse relatÃ³rio deve ser entregue em atÃ© 7 dias.</p>
 
 <p>Todos os arquivos colocados no github devem estar codificados em <code>UTF-8</code> e devem ser arquivos de texto, seguindo a seguinte estrutura</p>
 
 <pre><code>    README.md     - deve conter uma linha com o seu nome
-    Lab2.3B/     - diretório com o(s) código(s) produzido neste laboratório
+    Lab2.3B/     - diretÃ³rio com o(s) cÃ³digo(s) produzido neste laboratÃ³rio
 </code></pre>
 
 <p></xmp></p>
