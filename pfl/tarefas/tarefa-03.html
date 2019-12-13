@@ -1,19 +1,19 @@
 <p><!DOCTYPE html>
 <html>
-<title>Programação Funcional e Lógica - Prof. Ricardo da Rocha</title></p>
+<title>ProgramaÃ§Ã£o Funcional e LÃ³gica - Prof. Ricardo da Rocha</title></p>
 
 <p><xmp theme="simplex" style="display:none;"></p>
 
-<h1>Tarefa 3 de Programação Funcional e Lógica</h1>
+<h1>Tarefa 3 de ProgramaÃ§Ã£o Funcional e LÃ³gica</h1>
 
-<h1>Visão geral</h1>
+<h1>VisÃ£o geral</h1>
 
-<p>Nesta tarefa você deverá implementar algumas funções para exercitar o uso de recursão dos tipos básicos de Haskell. </p>
+<p>Nesta tarefa vocÃª deverÃ¡ implementar algumas funÃ§Ãµes para exercitar o uso de recursÃ£o dos tipos bÃ¡sicos de Haskell. </p>
 
-<h1>Descrição</h1>
+<h1>DescriÃ§Ã£o</h1>
 
 <ol>
-<li><p>Implemente um função <code>combinacoes n lista</code> que gera uma lista de todas as combinações possíveis de <code>n</code> elementos da lista <code>lista</code>. O número possível é a formula de combinações <code>C(p,n)</code>, onde <code>p</code> é o número de elementos e <code>n</code> o tamanho da combinação (para 12 elementos 3 a 3, há 220 possíveis valores). Observe que a ordem dos elementos em uma combinação não importa e, por isso, "123", "213", "321" é uma mesma cominação. Espera que você tenha <strong>mais trabalho</strong> para encontrar uma solução em relação aos demais problemas, por isso coloquei esta questão no <strong>inicio</strong> desta lista, assim você pode saltar para os outros problemas enquanto pensa em uma solução. Exemplo de saídas:</p>
+<li><p>Implemente um funÃ§Ã£o <code>combinacoes n lista</code> que gera uma lista de todas as combinaÃ§Ãµes possÃ­veis de <code>n</code> elementos da lista <code>lista</code>. O nÃºmero possÃ­vel Ã© a formula de combinaÃ§Ãµes <code>C(p,n)</code>, onde <code>p</code> Ã© o nÃºmero de elementos e <code>n</code> o tamanho da combinaÃ§Ã£o (para 12 elementos 3 a 3, hÃ¡ 220 possÃ­veis valores). Observe que a ordem dos elementos em uma combinaÃ§Ã£o nÃ£o importa e, por isso, "123", "213", "321" Ã© uma mesma cominaÃ§Ã£o. Espera que vocÃª tenha <strong>mais trabalho</strong> para encontrar uma soluÃ§Ã£o em relaÃ§Ã£o aos demais problemas, por isso coloquei esta questÃ£o no <strong>inicio</strong> desta lista, assim vocÃª pode saltar para os outros problemas enquanto pensa em uma soluÃ§Ã£o. Exemplo de saÃ­das:</p>
 
 <ul>
 <li><code>combinacoes 3 "123" =&gt; ["123"]</code></li>
@@ -21,26 +21,26 @@
 <li><code>combinacoes 1 "123" =&gt; ["1", "2", "3"]</code></li>
 <li><code>combinacoes 3 "123456" =&gt; ["123", "124", "125", ...</code></li>
 </ul></li>
-<li><p>Crie uma função <code>divida</code> que divida uma lista em duas partes, dado o tamanho da primeira parte.</p>
+<li><p>Crie uma funÃ§Ã£o <code>divida</code> que divida uma lista em duas partes, dado o tamanho da primeira parte.</p>
 
 <ul>
 <li><code>divida [1, 2, 3, 4, 5, 6, 7] 3 =&gt; [[1,2,3], [4,5,6,7]]</code></li>
 </ul></li>
-<li>Crie uma função que extraia uma fatia de uma lista. Dados dois indices, <code>i</code> e <code>k</code>, uma fatia é a porção da lista incluindo o elemento <code>i</code>, <code>i+1</code>, ... até <code>k</code>.
+<li>Crie uma funÃ§Ã£o que extraia uma fatia de uma lista. Dados dois indices, <code>i</code> e <code>k</code>, uma fatia Ã© a porÃ§Ã£o da lista incluindo o elemento <code>i</code>, <code>i+1</code>, ... atÃ© <code>k</code>.
 <ul>
 <li><code>fatia [1, 2, 3, 4, 5, 6, 7] 3 6 =&gt; [3,4,5,6]</code></li>
 </ul></li>
-<li>Crie uma função <code>rotaciona</code> que rotacione uma lista <code>N</code> posições à esquerda. <strong>Sugestão:</strong> use a função <code>length</code> e o operador <code>(++)</code> para auxiliar a sua implementação.
+<li>Crie uma funÃ§Ã£o <code>rotaciona</code> que rotacione uma lista <code>N</code> posiÃ§Ãµes Ã  esquerda. <strong>SugestÃ£o:</strong> use a funÃ§Ã£o <code>length</code> e o operador <code>(++)</code> para auxiliar a sua implementaÃ§Ã£o.
 <ul>
 <li><code>rotaciona [1, 2, 3, 4, 5, 6, 7] 3 =&gt; [4,5,6,7,1,2,3]</code></li>
 <li><code>rotaciona [1, 2, 3, 4, 5, 6, 7] (-2) =&gt; [6,7,1,2,3,4,5]</code></li>
 </ul></li>
-<li>Crie uma função <code>codifica</code> que armazena uma <a href="https://pt.wikipedia.org/wiki/Codifica%C3%A7%C3%A3o_run-length">codificacao run-length</a> de uma lista, na qual elementos repetidos consecutivos sao substituídos por uma tupla <code>(e, R)</code>, onde <code>e</code> é o elemento e <code>R</code> é o número de vezes consecutivas que ele foi encontrado.
+<li>Crie uma funÃ§Ã£o <code>codifica</code> que armazena uma <a href="https://pt.wikipedia.org/wiki/Codifica%C3%A7%C3%A3o_run-length">codificacao run-length</a> de uma lista, na qual elementos repetidos consecutivos sao substituÃ­dos por uma tupla <code>(e, R)</code>, onde <code>e</code> Ã© o elemento e <code>R</code> Ã© o nÃºmero de vezes consecutivas que ele foi encontrado.
 <ul>
 <li><code>codifica "aaaabccccaaddd" =&gt; [('a',4),('b',1),('c',3),('a',2),('d',3)]</code></li>
 <li><code>codifica "aaaabccccaaddda" =&gt; [('a',4),('b',1),('c',3),('a',2),('d',3),('a',1)]</code></li>
 </ul></li>
-<li><p>Implemente uma função <code>numeralParaExtenso n</code> (<code>n :: Integer</code>) que recebe um inteiro positivo e retorna o número por extenso em uma <code>String</code>, até número limite de <code>9.999.999.999</code> (última da casa dos bilhões). Por exemplo:</p>
+<li><p>Implemente uma funÃ§Ã£o <code>numeralParaExtenso n</code> (<code>n :: Integer</code>) que recebe um inteiro positivo e retorna o nÃºmero por extenso em uma <code>String</code>, atÃ© nÃºmero limite de <code>9.999.999.999</code> (Ãºltima da casa dos bilhÃµes). Por exemplo:</p>
 
 <ul>
 <li><code>numeralParaExtenso 0 =&gt; zero</code></li>
@@ -51,7 +51,7 @@
 <li><code>numeralParaExtenso 1256759 =&gt; um milhao, duzentos e cinquenta e seis, setecentos e cinquenta e nove</code></li>
 </ul>
 
-<p>Tenhar particular atenção no uso da vírgula e "e" entre as porções do numeral. O conectivo "e" é usado apenas para unir apenas a parte final do número. <strong>Não use acentos ou maiúsculas</strong>.</p></li>
+<p>Tenhar particular atenÃ§Ã£o no uso da vÃ­rgula e "e" entre as porÃ§Ãµes do numeral. O conectivo "e" Ã© usado apenas para unir apenas a parte final do nÃºmero. <strong>NÃ£o use acentos ou maiÃºsculas</strong>.</p></li>
 </ol>
 
 <!--
@@ -82,40 +82,40 @@ numeroValidoCelula (resolvendo por celula)
 
 <h1>Requisitos</h1>
 
-<p>A sua solução deve ser implementada em um projeto <strong>Stack</strong> e deve possuir testes de unidade especificados em <a href="https://hspec.github.io/">HSpec</a>. Informação sobre o uso do Stack e HSpec:</p>
+<p>A sua soluÃ§Ã£o deve ser implementada em um projeto <strong>Stack</strong> e deve possuir testes de unidade especificados em <a href="https://hspec.github.io/">HSpec</a>. InformaÃ§Ã£o sobre o uso do Stack e HSpec:</p>
 
 <ul>
-<li><a href="../softwares.html">Instalação e uso do Stack e Testes de Unidade</a></li>
+<li><a href="../softwares.html">InstalaÃ§Ã£o e uso do Stack e Testes de Unidade</a></li>
 </ul>
 
-<p>Vocês podem iniciar a sua solução sem usar o Stack e depois migrar, sem problema, para o uso do ambiente de execução.</p>
+<p>VocÃªs podem iniciar a sua soluÃ§Ã£o sem usar o Stack e depois migrar, sem problema, para o uso do ambiente de execuÃ§Ã£o.</p>
 
-<p>Reveja o <a href="http://inf.ufg.br/~ricardo/pfl/plano/plano-PFL-2019.2.pdf">plano da disciplina</a> na seção "PROCESSOS E CRITÉRIOS DE AVALIAÇÃO", caso seja necessário relembrar como as tarefas serão avaliadas.</p>
+<p>Reveja o <a href="http://inf.ufg.br/~ricardo/pfl/plano/plano-PFL-2019.2.pdf">plano da disciplina</a> na seÃ§Ã£o "PROCESSOS E CRITÃRIOS DE AVALIAÃÃO", caso seja necessÃ¡rio relembrar como as tarefas serÃ£o avaliadas.</p>
 
-<p>Os seguintes requisitos devem ser satisfeitos para o seu código ter o conceito <strong>FINALIZADO</strong>.</p>
+<p>Os seguintes requisitos devem ser satisfeitos para o seu cÃ³digo ter o conceito <strong>FINALIZADO</strong>.</p>
 
 <ol>
-<li>Todas as funções indicadas devem ser implementadas.</li>
-<li>Todas as funções implementadas devem incluir código de teste HSpec, para além das funções indicadas acima.</li>
-<li>A sua implementação deve estar em um projeto Stack.</li>
-<li>O seu código deverá ser submetido pelo <a href="https://classroom.github.com/">GitHub Classroom</a>, no local indicado pelo email com o assunto: <strong><code>[PFL] submissão da tarefa 03 - Funções em Listas e Numeral para Extenso</code></strong>. </li>
-<li>As tarefas são individuais e nenhum tipo de cópia ou similaridade com código, seja de outro aluno, seja da Internet ou livros, será aceita.</li>
+<li>Todas as funÃ§Ãµes indicadas devem ser implementadas.</li>
+<li>Todas as funÃ§Ãµes implementadas devem incluir cÃ³digo de teste HSpec, para alÃ©m das funÃ§Ãµes indicadas acima.</li>
+<li>A sua implementaÃ§Ã£o deve estar em um projeto Stack.</li>
+<li>O seu cÃ³digo deverÃ¡ ser submetido pelo <a href="https://classroom.github.com/">GitHub Classroom</a>, no local indicado pelo email com o assunto: <strong><code>[PFL] submissÃ£o da tarefa 03 - FunÃ§Ãµes em Listas e Numeral para Extenso</code></strong>. </li>
+<li>As tarefas sÃ£o individuais e nenhum tipo de cÃ³pia ou similaridade com cÃ³digo, seja de outro aluno, seja da Internet ou livros, serÃ¡ aceita.</li>
 </ol>
 
 <h1>Prazo</h1>
 
-<p>O prazo para entrega da atividade é o dia <strong>5 de outubro</strong> (sábado). Depois desse prazo, você poderá efetuar correções na sua implementação - quando solicitadas pelo professor - em até 7 dias adicionais.</p>
+<p>O prazo para entrega da atividade Ã© o dia <strong>5 de outubro</strong> (sÃ¡bado). Depois desse prazo, vocÃª poderÃ¡ efetuar correÃ§Ãµes na sua implementaÃ§Ã£o - quando solicitadas pelo professor - em atÃ© 7 dias adicionais.</p>
 
 <h1>Requisitos</h1>
 
-<p>Reveja o <a href="http://inf.ufg.br/~ricardo/pfl/plano/plano-PFL-2018.2.pdf">plano da disciplina</a> na seção "PROCESSOS E CRITÉRIOS DE AVALIAÇÃO", caso seja necessário relembrar como as tarefas serão avaliadas.</p>
+<p>Reveja o <a href="http://inf.ufg.br/~ricardo/pfl/plano/plano-PFL-2018.2.pdf">plano da disciplina</a> na seÃ§Ã£o "PROCESSOS E CRITÃRIOS DE AVALIAÃÃO", caso seja necessÃ¡rio relembrar como as tarefas serÃ£o avaliadas.</p>
 
-<p>Os seguintes requisitos devem ser satisfeitos para o seu código ter o conceito <strong>FINALIZADO</strong>.</p>
+<p>Os seguintes requisitos devem ser satisfeitos para o seu cÃ³digo ter o conceito <strong>FINALIZADO</strong>.</p>
 
 <ol>
-<li>Todas as funções implementadas devem incluir código de teste, para além das funções indicadas acima.</li>
-<li>O seu código deverá ser submetido pelo <a href="https://classroom.github.com/">GitHub Classroom</a>. </li>
-<li>As tarefas são individuais e nenhum tipo de cópia ou similaridade com código, seja de outro aluno, seja da Internet ou livros, será aceita.</li>
+<li>Todas as funÃ§Ãµes implementadas devem incluir cÃ³digo de teste, para alÃ©m das funÃ§Ãµes indicadas acima.</li>
+<li>O seu cÃ³digo deverÃ¡ ser submetido pelo <a href="https://classroom.github.com/">GitHub Classroom</a>. </li>
+<li>As tarefas sÃ£o individuais e nenhum tipo de cÃ³pia ou similaridade com cÃ³digo, seja de outro aluno, seja da Internet ou livros, serÃ¡ aceita.</li>
 </ol>
 
 <p></xmp></p>
