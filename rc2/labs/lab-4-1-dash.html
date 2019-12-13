@@ -1,0 +1,83 @@
+<p><!DOCTYPE html>
+<html>
+<title>Laboratório de Redes de Computadores 2 - Prof. Ricardo da Rocha</title></p>
+
+<p><xmp theme="simplex" style="display:none;"></p>
+
+<h1>Multimidia: Protocolo de Entrega de Conteúdo Multimidia sobre HTTP/TCP - DASH - e efeitos do atraso</h1>
+
+<h2>Objetivos</h2>
+
+<ul>
+<li>Entender o funcionamento do protocolo DASH sobre HTTP para entrega de conteúdo multimidia, bem como suas vantagens e desvantagens.</li>
+<li>Perceber o efeito dos atrasos e da largura de banda dispocnível no funcionamento dos protocolos para multimidia, especificamente o DASH.</li>
+<li>Perceber efeito do tamanho do buffer do funcionamento de clientes multimidia e seu funcionamento na prática.</li>
+</ul>
+
+<h2>Recursos</h2>
+
+<ul>
+<li>Protótipo de Player DASH-HTTP para demonstração e depuração: <a href="http://mediapm.edgesuite.net/dash/public/support-player/current/index.html">http://mediapm.edgesuite.net/dash/public/support-player/current/index.html</a></li>
+<li>Ferramentas para verificação de atrasos na rede: <code>ping</code>, <code>traceroute</code>.</li>
+</ul>
+
+<!-- + Amostras de videos para testes: <http://www.sample-videos.com/> -->
+
+<h2>Referências</h2>
+
+<ul>
+<li>Iraj Sodagar, <a href="http://ieeexplore.ieee.org/xpls/icp.jsp?arnumber=6077864">"The MPEG-DASH Standard for Multimedia Streaming Over the Internet,"</a> IEEE Multimedia, vol. 18, no. 4, pp. 62-67, October-December, 2011 </li>
+<li>Stoekhammer, T. <a href="https://www.w3.org/2010/11/web-and-tv/papers/webtv2_submission_64.pdf">"Dynamic adaptive streaming over HTTP-design principles and standards."</a> Proceedings of the Second Annual ACM Conference on Multimedia Systems. Vol. 2014. New York, USA: ACM, 2011.</li>
+<li><a href="https://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTP">https://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTP</a>
+<!-- http://santoniadis.blogspot.com.br/2014/01/mpeg-dash-multimedia-streaming-over.html --></li>
+</ul>
+
+<hr />
+
+<h2>Atividades </h2>
+
+<h3>Parte I:</h3>
+
+<ol>
+<li><a href="pdf/funcionamento-DASH.pdf">Apresentação</a> sobre o DASH.</li>
+</ol>
+
+<h3>Parte II: Funcionamento de Players DASH</h3>
+
+<ol>
+<li>No navegador, abra o protótipo de player DASH disponibilizado pela Akamai em: <a href="http://mediapm.edgesuite.net/dash/public/support-player/current/index.html">http://mediapm.edgesuite.net/dash/public/support-player/current/index.html</a></li>
+<li><p>Escolha duas ou mais midias do seguinte tipo:</p>
+
+<ul>
+<li>Um video sob demanda (VOD), que corresponde a <strong>uma aplicação de multimidia armazenada</strong>. Procure fazer testes também com o video em 4K (requer 4 Kbps de bitrate)</li>
+<li>Um video ao vivo (LIVE), que corresponde a <strong>uma aplicação de multimidia ao vivo</strong>.</li>
+</ul></li>
+<li><p>Para cada uma das midias escolhidas anteriormente:</p>
+
+<ol>
+<li>Baixe a descrição da midia pela URL com terminação MPD que aparece no topo da aplicação. Use o <code>wget</code> para isso. </li>
+<li>Abra o arquivo baixado em um editor de textos e visualize o tipo de midia oferecido e o seu respectivo endereço. Caso o endereço seja relativo, a fonte da midia será a própria estação de onde foi recuperado o arquivo baixado.</li>
+<li>Meça os atrasos para a estação-fonte da midia, usando <code>ping</code> e/ou <code>traceroute</code>. A rota é distante (nos EUA)!</li>
+<li>Habilite o debug do player de midia (na própria interface do player).</li>
+<li><p>Reproduza a midia no player e observe:</p>
+
+<ul>
+<li>As variações no tamanho do buffer de video e áudio e o seu efeito na reprodução.</li>
+<li>As mudanças na taxa de transmissão (bitrate)</li>
+</ul></li>
+<li><p>No <strong>browser</strong>, habilite o debug de rede. No Firefox, você deverá usar o menu <code>Tools-&gt;Web Developer-&gt;Network</code>. Observe:</p>
+
+<ul>
+<li>Os atrasos na obtenção dos quadros (frames) solicitados.</li>
+<li>Habilite o throttling em conexões, simulando a velocidade e atraso de conexões <strong>Regular 2G</strong> e <strong>Regular 3G</strong> (ver atributos dessas conexões simuladas em <a href="https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor/Throttling">https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor/Throttling</a>).</li>
+</ul></li>
+</ol></li>
+<li><p>Compare a diferença do tamanho das requisições no video ao vivo e sob demanda. Explique.</p></li>
+<li>Faça o mesmo para conteúdo executado no YouTube. </li>
+</ol>
+
+<p></xmp></p>
+
+<script src="https://strapdownjs.com/v/0.2/strapdown.js"></script>
+
+<p></html></p>
