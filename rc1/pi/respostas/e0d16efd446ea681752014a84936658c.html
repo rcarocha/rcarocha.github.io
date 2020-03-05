@@ -1,0 +1,118 @@
+<h1>Resposta das Questões Pré-aula</h1>
+
+<h3>QP-3.2-1: De alguma maneira, um hacker conseguiu alterar os registros de um servidor de DNS do domínio ufg.br, fazendo com que o endereço www.ufg.br fosse resolvido no endereço IP 193.25.185.36. Dessa maneira, desconsiderando qualquer cache DNS, se o usuário digitar no navegador web http://www.ufg.br/ ele terá como resposta:</h3>
+
+<ul>
+<li><strong>A resposta do servidor HTTP (porta 80) disponível no endereço 193.25.185.36, e a barra de endereços do navegador informará o endereço acessado como http://www.ufg.br/</strong>.</li>
+<li>A página (originalmente) da UFG, independentemente do ataque e alteração do DNS realizada.</li>
+<li>A resposta do servidor HTTP (porta 80) disponível no endereço 193.25.185.36, e a barra de endereços do navegador informará o endereço acessado como http://193.25.185.36/.</li>
+<li>A resposta do servidor HTTP (porta 80) disponível no endereço 193.25.185.36, e a barra de endereços do navegador informará o endereço acessado como http://193.25.185.36/www.ufg.br/.</li>
+<li>Um erro, pois o navegador tentará acessar um servidor em 193.25.185.36 sem saber a priori a porta do processo servidor que deverá ser utilizada.</li>
+</ul>
+
+<h3>QP-3.2-2: Considere que a página disponível no endereço http://www.pequi.com.br incorpora conteúdo (exemplo: imagens) do facebook.com, akamaihd.net, cxense.com e googlesyndication.com. Quando um usuário requisita ao navegador web a abertura da página http://www.pequi.com.br, qual é o número de requisições HTTP feitas pelo navegador?</h3>
+
+<ul>
+<li><strong>no mínimo, 5 requisições, para cada um dos endereços indicados.</strong></li>
+<li>5 requisições, para cada um dos endereços indicados.</li>
+<li>4 requisições, para cada um dos endereços indicados.</li>
+<li>1 requisição, para o endereço http://www.pequi.com.br.</li>
+<li>no mínimo, 4 requisições, para cada um dos endereços indicados.</li>
+<li>no máximo, 5 requisições, para cada um dos endereços indicados.</li>
+<li>no máximo, 4 requisições, para cada um dos endereços indicados.</li>
+</ul>
+
+<h3>QP-3.2-3: Um servidor HTTP no endereço IP 200.137.218.130 está esperando conexões na porta 8080. Constitui URL válida para solicitar um acesso a conteúdo nesse servidor:</h3>
+
+<ul>
+<li><strong>http://200.137.218.130:8080/</strong></li>
+<li>http://200.137.218.130/</li>
+<li>http://200.137.218.130/8080</li>
+<li>Não há URL válida, pois URL exigem nomes DNS na indicação do servidor (então é necessário descobrir o nome DNS da estação).</li>
+<li>http://200.137.218.130/index.html:8080</li>
+<li>Não há URL válida, pois URL necessariamente precisam estar associadas a servidores que utilizam a porta 80.</li>
+</ul>
+
+<h3>QP-3.2-4: Quando o usuário solicita o acesso à página http://www.ufg.br, qual é a requisição HTTP realizada pelo navegador (considere HTTP 1.1)?</h3>
+
+<ul>
+<li><strong><code>GET / HTTP/1.1</code></strong></li>
+<li><code>GET HTTP/1.1</code></li>
+<li><code>GET  HTTP/1.1</code> (dois espaços após o GET)</li>
+<li><code>GET index.html HTTP/1.1</code></li>
+<li><code>GET /index.html HTTP/1.1</code></li>
+</ul>
+
+<h3>QP-3.2-5: Por que o HTTP informa o número da versão do protocolo na própria requisição (e também na resposta)?</h3>
+
+<ul>
+<li><strong>Para indicar ao servidor a versão mais recente do HTTP que o cliente é capaz de compreender e então, ambos conversarem com a versão mais recente em que ambos são compatíveis.</strong></li>
+<li>Para indicar ao servidor que o cliente espera conversar utilizando o protocolo HTTP.</li>
+<li>Para indicar qual porta deve ser utilizada para comunicação, de acordo com o protocolo do cliente, que no caso é 80, já que o protocolo é HTTP.</li>
+<li>Para forçar o servidor a utilizar conexões persistentes.</li>
+<li>Na verdade, a versão do protocolo é interpretada pelo TCP (HTTP usa TCP!) para que o TCP saiba para qual processo os pacotes recebidos devem ser entregues, que são processos que "falam" HTTP na versão indicada.</li>
+</ul>
+
+<h3>QP-3.2-6: Observe a requisição HTTP completa indicada no link e indicada no link, e marque a afirmativa correta. <a href="http://www.inf.ufg.br/~ricardo/rc1/pi/exemplos/reqhttp.1.txt">http://www.inf.ufg.br/~ricardo/rc1/pi/exemplos/reqhttp.1.txt</a></h3>
+
+<ul>
+<li><strong>O cliente que fez a requisição testou se o servidor possui uma versão mais nova do conteúdo armazenado no cache.</strong></li>
+<li>A requisição foi feita ao servidor http://www.inf.ufg.br/</li>
+<li>O cliente requisitou o conteúdo index.html.</li>
+<li>Pode ser a primeira vez que o cliente acessa esse servidor.</li>
+<li>Todas as demais alternativas estão corretas.</li>
+</ul>
+
+<h3>QP-3.2-7: Observe o cabeçalho da resposta HTTP indicada no link, e marque a afirmativa correta. <a href="http://www.inf.ufg.br/~ricardo/rc1/pi/exemplos/resphttp.1.txt">http://www.inf.ufg.br/~ricardo/rc1/pi/exemplos/resphttp.1.txt</a></h3>
+
+<ul>
+<li><strong>A resposta HTTP está incompleta, pois falta o conteúdo propriamente dito requisitado.</strong></li>
+<li>O conteúdo requisitado pelo cliente não existe.</li>
+<li>A conexão TCP do servidor está fechada.</li>
+<li>O conteúdo retornado pelo servidor está armazenado no cache do cliente.</li>
+<li>Todas as demais alternativas estão erradas.</li>
+</ul>
+
+<h3>QP-3.2-8: Qual é a resposta HTTP à requisição HTTP ao endereço http://www.google.com?</h3>
+
+<ul>
+<li><strong>Acesso com sucesso (200) e o corpo da respectiva página /.</strong></li>
+<li>Acesso sem sucesso: página inexistente.</li>
+<li>Página existente em outro endereço (código 302).</li>
+<li>Resposta HTTP com código 404.</li>
+<li>Google Brasil</li>
+</ul>
+
+<h3>QP-3.2-9: Um cliente precisa fazer várias requisições a um servidor para carregar todo o conteúdo de uma página. Assinale a afirmativa verdadeira.</h3>
+
+<ul>
+<li><em>*Para permitir o carregamento mais rápido do conteúdo, o cliente HTTP precisará abrir diversas conexões TCP simultâneas com o mesmo servidor. *</em></li>
+<li>Para permitir o carregamento mais rápido do conteúdo, o cliente HTTP precisará enviar diversas requisições em pipeline.</li>
+<li>Se o servidor ou cliente não permitirem conexões persistentes, então será possível realizar o carregamento simultâneo de conteúdo.</li>
+<li>Se o cliente precisar estabelecer diversas conexões TCP simultâneas com o mesmo servidor, será necessário que este possua diversas portas servidoras disponíveis, além da porta 80.</li>
+<li>O cliente só poderá realizar as várias requisições se o servidor utilizar HTTP versão 1.1 ou em uma versão mais recente.</li>
+</ul>
+
+<h3>QP-3.2-10: Um usuário com email aluno1@gmail.com envia uma mensagem de email para aluno2@hotmail.com. Por quais processos, em quais endereços e usando quais protocolos a mensagem passou? Considere C<em>x um processo cliente de email, usado pelo usuário x e S</em>d um processo servidor de email do dominio d. O símbolo --PROT--> indica a direção da mensagem e PROT o protocolo utilizado.</h3>
+
+<ul>
+<li><strong><code>C_aluno1--SMTP--&gt;S_gmail.com--SMTP--&gt;S_hotmail.com--POP3--&gt;C_aluno2</code></strong></li>
+<li><code>C_aluno1--POP3--&gt;S_gmail.com--SMTP--&gt;S_hotmail.com--POP3--&gt;C_aluno2.</code></li>
+<li><code>C_aluno1--POP3--&gt;S_gmail.com--SMTP--&gt;S_hotmail.com--SMTP--&gt;C_aluno2.</code></li>
+<li><code>C_aluno1--POP3--&gt;S_gmail.com--SMTP--&gt;C_aluno2.</code></li>
+<li><code>C_aluno1--POP3--&gt;S_gmail.com--POP3--&gt;C_aluno2.</code></li>
+<li><code>C_aluno1--SMTP--&gt;S_gmail.com--POP3--&gt;C_aluno2.</code></li>
+<li><code>C_aluno1--SMTP--&gt;S_hotmail.com--POP3--&gt;C_aluno2.</code></li>
+<li><code>C_aluno1--SMTP--&gt;S_hotmail.com--SMTP--&gt;C_aluno2.</code></li>
+<li><code>C_aluno1--POP3--&gt;S_hotmail.com--SMTP--&gt;C_aluno2.</code></li>
+</ul>
+
+<h3>QP-3.2-11: Atualmente, os clientes de email mais utilizados funcionam como aplicações web, consequentemente são acessados por navegadores web. Qual das afirmativas abaixo está correta?</h3>
+
+<ul>
+<li><strong>Navegadores web se conectam à aplicação web cliente de email (exemplo: Gmail) usando HTTP que, por sua vez, transfere e recebe mensagens utilizando protocolo SMTP e POP3/IMAP, respectivamente.</strong></li>
+<li>Navegadores web se conectam à aplicação web cliente de email (exemplo: Gmail) usando SMTP que, por sua vez, transfere e recebe mensagens utilizando protocolo SMTP e POP3/IMAP, respectivamente.</li>
+<li>Navegadores web se conectam à aplicação web cliente de email (exemplo: Gmail) usando POP3/IMAP que, por sua vez, transfere e recebe mensagens utilizando protocolo SMTP e POP3/IMAP, respectivamente.</li>
+<li>Navegadores web se conectam à aplicação web cliente de email (exemplo: Gmail)  usando HTTP que, por sua vez, transfere e recebe mensagens utilizando o protocolo SMTP.</li>
+<li>Nenhuma das demais afirmativas está correta.</li>
+</ul>

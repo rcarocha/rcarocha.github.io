@@ -1,0 +1,119 @@
+<h2><strong>Questão 1</strong></h2>
+
+<p>Um protocolo confiável na camada de transporte precisa enviar 100 pacotes para outra estação. Considere os seguintes parâmetros:</p>
+
+<ul>
+<li><code>100</code> pacotes para serem entregues</li>
+<li><code>R</code> = tempo de ida e volta</li>
+<li><code>T</code> = timeout</li>
+<li><code>t</code> = tempo de transmissão de cada pacote na origem (colocação dos bits na rede)</li>
+</ul>
+
+<p>Quanto tempo demora para transmitir esses pacotes considerando que <strong>não há erro de transmissão</strong>? Considere três possíveis abordagens de correção de erros: Bit Alternado e Go-Back-N com retransmissão integral e seletiva.</p>
+
+<!--
+    Bit Alternado   Go-Back-N (integral)    Go-Back-N (seletiva)
+1   100*t   100*t   100*t
+2   100*T   100*t   100*t
+3   100*(T+t)   100*t   100*t
+4   100*(R+t)   100*t   100*t
+5   100*(R+t)   100*(t+R)   100*(t+R)
+6   100*(T+t)   100*(t+R)   100*(t+R)
+-->
+
+<table><tbody><tr><th> </th><th>Bit Alternado</th><th>Go-Back-N (integral)</th><th>Go-Back-N (seletiva)</th></tr><tr><td>1</td><td>100*t</td><td>100*t</td><td>100*t</td></tr><tr><td>2</td><td>100*T</td><td>100*t</td><td>100*t</td></tr><tr><td>3</td><td>100*(T+t)</td><td>100*t</td><td>100*t</td></tr><tr><td>4</td><td>=100*(R+t)</td><td>100*t</td><td>100*t</td></tr><tr><td>5</td><td>100*(R+t)</td><td>100*(t+R)</td><td>100*(t+R)</td></tr><tr><td>6</td><td>100*(T+t)</td><td>100*(t+R)</td><td>100*(t+R)</td></tr></tbody></table>
+
+<p>Qual das opções representa mais adequadamente o tempo de transporte?</p>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>Opção 1</li>
+<li>Opção 2</li>
+<li>Opção 3</li>
+<li><strong>[X]</strong> Opção 4</li>
+<li>Opção 5</li>
+<li>Opção 6</li>
+</ol>
+</blockquote>
+
+<hr />
+
+<h2><strong>Questão 2</strong></h2>
+
+<p>Considere a questão anterior, com erro de transmissão de 50% dos pacotes transmitidos (ignore erros nos ACKs). </p>
+
+<p>Um protocolo confiável na camada de transporte precisa enviar 100 pacotes para outra estação. Considere os seguintes parâmetros:</p>
+
+<ul>
+<li><code>100</code> pacotes para serem entregues</li>
+<li><code>R</code> = tempo de ida e volta</li>
+<li><code>T</code> = timeout</li>
+<li><code>t</code> = tempo de transmissão de cada pacote na origem (colocação dos bits na rede)</li>
+</ul>
+
+<p>Quanto tempo demora para transmitir esses pacotes? Considere três possíveis abordagens de correção de erros: Bit Alternado e Go-Back-N com retransmissão integral e seletiva. Considere que a janela de transmissão <strong>é maior que os 100 pacotes</strong>. Não também nenhum impeditivo na transmissão, como largura de banda de transmissão ou congestionamento, e há simetria nos caminhos dos pacotes.</p>
+
+<!--
+    Bit Alternado   Go-Back-N (integral)    Go-Back-N (seletiva)
+1   50*(3T) 50*(2R+3t+T)< x <150*t  x < 150*t
+2   =50*(2R+3t+T)   50*(2R+3t+T)< x <150*t  x < 150*t
+3   50*(2R+3t+T)    150*t   150*t
+4   50*(3T) 50*(2R+3t+T)    150*t
+5   50*(2R+2T)  150*t   150*t
+6   50*(3T) 150*t   150*t
+-->
+
+<table><tbody><tr><th> </th><th>Bit Alternado</th><th>Go-Back-N (integral)</th><th>Go-Back-N (seletiva)</th></tr><tr><td>1</td><td>50*(3T)</td><td>50*(2R+3t+T)&lt; x &lt;150*t</td><td>x &lt; 150*t</td></tr><tr><td>2</td><td>=50*(2R+3t+T)</td><td>50*(2R+3t+T)&lt; x &lt;150*t</td><td>x &lt; 150*t</td></tr><tr><td>3</td><td>50*(2R+3t+T)</td><td>150*t</td><td>150*t</td></tr><tr><td>4</td><td>50*(3T)</td><td>50*(2R+3t+T)</td><td>150*t</td></tr><tr><td>5</td><td>50*(2R+2T)</td><td>150*t</td><td>150*t</td></tr><tr><td>6</td><td>50*(3T)</td><td>150*t</td><td>150*t</td></tr></tbody></table>
+
+<p>Qual das opções representa mais adequadamente o tempo de transporte?</p>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>Opção 1</li>
+<li><strong>[X]</strong> Opção 2</li>
+<li>Opção 3</li>
+<li>Opção 4</li>
+<li>Opção 5</li>
+<li>Opção 6</li>
+</ol>
+</blockquote>
+
+<hr />
+
+<h2><strong>Questão 3</strong></h2>
+
+<p>Uma aplicação precisa transmitir <code>X</code> bytes.</p>
+
+<p>Quantos pacotes serão efetivamente transmitidos, nas seguinte situações (a) sem perdas e (b) com perdas de 50%? Considere os seguintes parâmetros:</p>
+
+<ul>
+<li><code>C</code> = Tamanho do Cabeçalho</li>
+<li><code>J</code> = Tamanho da Janela</li>
+<li><p><code>MSS</code> = máximo tamanho do segmento</p>
+
+<pre><code>  Sem perdas    Com 50% de perdas
+1 X/J           2*X/2*J
+2 X/MSS         2*X/MSS
+3 (X/MSS)*(1+C) 2*X/MSS
+4 X/(MSS+C)     2*X/(MSS+C)
+5 X/MSS         (3*X)/(2*MSS)
+</code></pre></li>
+</ul>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>Opção 1</li>
+<li>Opção 2</li>
+<li>Opção 3</li>
+<li>Opção 4</li>
+<li><strong>[X]</strong> Opção 5</li>
+</ol>
+</blockquote>
+
+<hr />

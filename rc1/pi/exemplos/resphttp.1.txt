@@ -1,0 +1,12 @@
+HTTP/1.1 200 OK
+Date: Tue, 10 May 2016 19:27:01 GMT
+Server: marrakesh 1.10.0
+Last-Modified: Tue, 10 May 2016 19:26:09 GMT
+Content-Type: text/html;charset=UTF-8
+Cache-Control: max-age=30, private, proxy-revalidate, no-transform
+Etag: a4a7d9f3e880ac762c16dab45c24dc16
+Expires: Tue, 10 May 2016 19:27:31 GMT
+Vary: Accept-Encoding,User-Agent
+Content-Encoding: gzip
+Content-Length: 70828
+Connection: close

@@ -1,0 +1,253 @@
+<h2><strong>Questão 1</strong></h2>
+
+<p>Duas estações estão ligadas na mesma rede local. A entrega do pacote de rede de uma para a outra usa qual tipo de roteamento?</p>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>Direto</li>
+<li>Direto e estático</li>
+<li>Direto e dinâmico</li>
+<li>Indireto estático</li>
+<li>Indireto dinâmico</li>
+<li>Não envolve roteamento</li>
+</ol>
+</blockquote>
+
+<hr />
+
+<h2><strong>Questão 2</strong></h2>
+
+<p>O que diferencia o roteamento estático do dinâmico?</p>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>No estático, as tabelas de roteamento mantém rotas fixas, as rotas variam ao longo do tempo.</li>
+<li>No estático, os destinatários devem estar na mesma rede local dos remetentes das mensagens.</li>
+<li>No roteamento dinâmico, dois pacotes de uma mesma origem para um mesmo destino podem ser enviados por caminhos distintos e no estático os pacotes sempre seguem pelo mesmo caminho.</li>
+<li>No dinâmico, os possíveis destinatário só são conhecidos quando os pacotes chegam, enquanto que o estático já sabe a priori todos os possíveis destinatários.</li>
+</ol>
+</blockquote>
+
+<hr />
+
+<h2><strong>Questão 3</strong></h2>
+
+<p>Qual das funções abaixo não podem ser implementadas na camada de rede?</p>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>Entrega dos pacotes aos processos.</li>
+<li>Controle de congestionamento</li>
+<li>Detecção e recuperação de erros.</li>
+<li>Fragmentação de pacotes.</li>
+<li>Sequenciação dos pacotes.</li>
+<li>Roteamento dos pacotes.</li>
+</ol>
+</blockquote>
+
+<hr />
+
+<h2><strong>Questão 4</strong></h2>
+
+<p>Qual das funções abaixo o IP não implementa?</p>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>Determinação de todo o caminho do pacote até o destino.</li>
+<li>Verificação de erros no cabeçalho.</li>
+<li>Sequenciação dos pacotes.</li>
+<li>Roteamento dos pacotes.</li>
+<li>Fragmentação dos pacotes.</li>
+<li>Armazenamento da tabela de roteamento.</li>
+</ol>
+</blockquote>
+
+<hr />
+
+<h2><strong>Questão 5</strong></h2>
+
+<p>Quando chega um pacote, como o protocolo IP determina para qual protocolo de transporte ele deve ser entregue?</p>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>O IP entrega para o protocolo associado ao número indicado no campo Protocol.</li>
+<li>O IP entrega para a camada de transporte que identifica o protocolo correto ao inspecionar o campo de dados.</li>
+<li>Cada pacote já está associado a uma conexão TCP ou  conversa UDP.</li>
+<li>Pelo campo de Identification do pacote.</li>
+</ol>
+</blockquote>
+
+<hr />
+
+<h2><strong>Questão 6</strong></h2>
+
+<p>O checksum do pacote IP tem qual propósito?</p>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>Verificar a corretude do cabeçalho do pacote.</li>
+<li>Verificar a corretude do campo de dados do pacote.</li>
+<li>Verificar a corretude de todo o conteúdo do pacote.</li>
+<li>Verificar a corretude da rota por onde o pacote está sendo enviado.</li>
+<li>Verificar a consistência com o checksum do UDP e/ou TCP.</li>
+</ol>
+</blockquote>
+
+<hr />
+
+<h2><strong>Questão 7</strong></h2>
+
+<p>O tempo de vida de pacotes IP é definido em qual grandeza?</p>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>Número de saltos (estações/roteadores) em que o pacote poderá passar.</li>
+<li>Número de caminhos (rotas) em que o pacote poderá passar.</li>
+<li>Segundos</li>
+<li>Millisegundos.</li>
+<li>Bytes.</li>
+<li>O significado depende da estação transmissora.</li>
+<li>O significado depende da estação destino do pacote.</li>
+</ol>
+</blockquote>
+
+<hr />
+
+<h2><strong>Questão 8</strong></h2>
+
+<p>Por que os pacotes IP tem tempo de vida?</p>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>Para evitar que pacotes fiquem circulando indefinidamente na rede, na ocasião em que, por qualquer motivo, o pacote não possa ser entregue a um destino.</li>
+<li>Para evitar que ocorra o timeout dos pacotes.</li>
+<li>Para limitar os atrasos dos pacotes na rede.</li>
+<li>Para estabelecer o tempo de atraso que deve ser considerado pelas estações de destino do pacote.</li>
+<li>Para estabelecer o tempo de atraso que deve ser considerado pela estaççao de origem do pacote, para efeito de recebimento de ACKs.</li>
+</ol>
+</blockquote>
+
+<hr />
+
+<h2><strong>Questão 9</strong></h2>
+
+<p>Quem é responsável por definir o tempo de vida dos pacotes IP?</p>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>A estação de origem.</li>
+<li>A estação de destino.</li>
+<li>O primeiro roteador, após a origem.</li>
+<li>O último roteador, antes do destino.</li>
+<li>Cada um dos roteadores, entre origem e destino.</li>
+</ol>
+</blockquote>
+
+<hr />
+
+<h2><strong>Questão 10</strong></h2>
+
+<p>Quem é responsável por verificar a expiração do tempo de vida dos pacots IP?</p>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>Cada um dos roteadores, entre origem e destino.</li>
+<li>A estação de origem.</li>
+<li>A estação de destino.</li>
+<li>O primeiro roteador, após a origem.</li>
+<li>O último roteador, antes do destino.</li>
+</ol>
+</blockquote>
+
+<hr />
+
+<h2><strong>Questão 11</strong></h2>
+
+<p>Qual é o motivo do IP precisar fragmentar os pacotes?</p>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>Um pacote IP precisa transportar um segmento de transporte no seu campo de dados que não cabe no tamanho máximo do pacote (quadro) na camada de enlace.</li>
+<li>A camada de rede recebe uma stream (sequência não estruturada de bytes) da camada de transporte e precisa quebrá-la em pacotes para realizar o transporte.</li>
+<li>Roteadores não tem espaço em memória para processar todo um pacote e precisa ajustá-lo à memória disponível.</li>
+<li>Dois pacotes IPs precisam ser roteados (encaminhados) em rotas diferentes.</li>
+<li>Uma conexão TCP precisa ser fragmentada em diversos pacotes para serem transmitidos pela camada de rede.</li>
+</ol>
+</blockquote>
+
+<hr />
+
+<h2><strong>Questão 12</strong></h2>
+
+<p>Onde ocorre a remontagem de fragmentos do IP?</p>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>Na estação de destino do pacote.</li>
+<li>Em cada roteador.</li>
+<li>No roteador seguinte àquele que fragmentou o pacote.</li>
+<li>No último roteador antes da estação de destino.</li>
+<li>No roteador que recebe o fragmento com MF=0 (para um número de pacote com fragmentações).</li>
+<li>Na origem do pacote.</li>
+</ol>
+</blockquote>
+
+<hr />
+
+<h2><strong>Questão 13</strong></h2>
+
+<p>Quando chega um pacote com MF=1, qual ação o IP realiza?</p>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>Armazena o pacote, que trata-se de um fragmento, de aguarda a chegada dos demais fragmentos para então remontá-los.</li>
+<li>O IP conclui que é o primeiro fragmento de um pacote, e aguarda a chegada dos demais para remontá-lo.</li>
+<li>Identifica que o pacote não está fragmentado e então envia para a camada de transporte.</li>
+<li>Identifica que é o último fragmento esperado e realiza a remontagem do pacote.</li>
+</ol>
+</blockquote>
+
+<hr />
+
+<h2><strong>Questão 14</strong></h2>
+
+<p>Qual das situações abaixo não representa uma situação em que um pacote pode ser descartado no roteador?</p>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>Um dos fragmentos de pacotes não chegou até o timeout.</li>
+<li>O checksum do cabeçalho do pacote está incorreto.</li>
+<li>O campo TTL ficou com o valor zero.</li>
+<li>Não há memória para processar (armazenar) o pacote.</li>
+</ol>
+</blockquote>
+
+<hr />

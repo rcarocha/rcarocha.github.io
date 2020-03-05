@@ -1,0 +1,204 @@
+<h2><strong>Questão 1</strong></h2>
+
+<p>Por que o mecanismo de controle de congestionamento do TCP é necessário?</p>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>Para evitar que, em situações de congestionamento, o TCP insista em piorar o congestionamento com retransmissões que fatalmente serão perdidas.</li>
+<li>Para garantir que não haja congestionamento na rede.</li>
+<li>Para que o TCP detecte congestionamentos assim que possível e então aborte a transmissão de pacotes e a conexão.</li>
+<li>Para que o TCP detecte congestionamentos assim que possível e, então, evite caminhos congestionados na rede.</li>
+</ol>
+</blockquote>
+
+<hr />
+
+<h2><strong>Questão 2</strong></h2>
+
+<p>Como o TCP identifica que está ocorrendo congestionamento na rede?</p>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>Pela ocorrência de timeouts dos segmentos (não recebimento de reconhecimentos).</li>
+<li>Pela diminuição da janela de transmissão.</li>
+<li>Pelo aumento da janela de transmissão.</li>
+<li>Pelo aumento do RTT.</li>
+</ol>
+</blockquote>
+
+<hr />
+
+<h2><strong>Questão 3</strong></h2>
+
+<p>Quando identifica um congestionamento, qual é a reação do protocolo TCP?</p>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>Ele diminui a janela de transmissão de pacotes, passando a confiar em transmitir um número menor de pacotes sem o recebimento de ACK e, portanto, diminuindo a velocidade em que os pacotes TCP são transmitidos.</li>
+<li>Ele aumenta o timeout de recebimento de pacotes, fazendo com que a espera por reconhecimentos (ACKs) seja melhor ajustada ao maior tempo de entrega dos pacotes que resulta do congestionamento.</li>
+<li>Ele aumenta a janela de transmissão de pacotes, passando a confiar em transmitir um número maior de pacotes sem o recebimento de ACK para compensar a queda da velocidade de transmissão causada pelo aumento do congestionamento.</li>
+<li>Ele diminui o timeout de recebimento de pacotes, fazendo com que as retransmissões ocorram mais rapidamente, já que o RTT não é corrigido pelo congestionamento e passa a ter um valor inadequado para o cálculo do timeout..</li>
+</ol>
+</blockquote>
+
+<hr />
+
+<h2><strong>Questão 4</strong></h2>
+
+<p>Como a janela de congestionamento é usada?</p>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>Ela define o número máximo de segmentos transmitidos sem o recebimento do ACK, assim como a janela de controle de fluxo. A janela efetivamente usada, é o menor valor entre as duas janelas.</li>
+<li>Ela define o número máximo de segmentos transmitidos sem o recebimento do ACK, assim como a janela de controle de fluxo. A janela efetivamente usada, é o maior valor entre as duas janelas.</li>
+<li>Ela define o número máximo de segmentos que irá causar o congestionamento na rede.</li>
+<li>Ela é usada para estabelecer o tamanho da janela de controle de fluxo.</li>
+</ol>
+</blockquote>
+
+<hr />
+
+<h2><strong>Questão 5</strong></h2>
+
+<p>O que é o slow start no controle de congestionamento?</p>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>É o aumento gradual da janela de congestionamento, partindo do menor valor possível, quando o protocolo não "sabe" para qual tamanho da janela haverá congestionamento.</li>
+<li>É um tempo de espera inicial que o TCP usa para dar tempo de congestionamentos anteriormente detectados acabarem.</li>
+<li>E o atraso (ou demora) para a diminuição do congestionamento na rede, quando os timeouts começam a ser detectados.</li>
+</ol>
+</blockquote>
+
+<hr />
+
+<h2><strong>Questão 6</strong></h2>
+
+<p>Em qual situação uma janela de congestionamento pode aumentar?</p>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>Quando NÃO forem detectados timeouts dos segmentos.</li>
+<li>Quando forem detectados timeouts dos segmentos.</li>
+<li>Quando o threshold for atingindo.</li>
+<li>Quando o número do segmento a ser transmitido aumentar.</li>
+<li>Quanto o RTT da conexão diminuir.</li>
+</ol>
+</blockquote>
+
+<hr />
+
+<h2><strong>Questão 7</strong></h2>
+
+<p>Qual o propósito da região exponencial do aumento da janela de congestionamento?</p>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>Aumentar rapidamente o tamanho da janela de congestionamento de maneira a chegar mais rápido à janela adequada ao tráfego na rede e ao desempenho do TCP.</li>
+<li>Permitir que o controle de congestionamento reaja rapidamente à detecção de um congestionamento na rede.</li>
+<li>Aumentar lentamente o tamanho da janela de congestionamento de maneira a não extrapolar o tamanho da janela que causa congestionamentos.</li>
+<li>Aumentar o número de segmentos enviados na mesma proporção em que um congestionamento na rede causa perda de pacotes (no caso, também exponencial).</li>
+</ol>
+</blockquote>
+
+<hr />
+
+<h2><strong>Questão 8</strong></h2>
+
+<p>Qual o propósito da região linear do aumento da janela de congestionamento?</p>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>Aumentar lentamente e chegar ao valor mais próximo possível do tamanho da janela em que se tem o maior desempenho sem causar congestionamentos.</li>
+<li>Implementar o slow start, aumentando lentamente a janela de maneira a detectar os congestionamentos.</li>
+<li>Aumentar a janela na mesma proporção em que um congestionamento na rede causa perda de pacotes (no caso, também linear).</li>
+<li>Aumentar a janela na mesma proporção em que os timeouts aumentam (no caso, também linear).</li>
+<li>Permitir que o TCP chegue com maior precisão ao limite de janela definido no threashold.</li>
+</ol>
+</blockquote>
+
+<hr />
+
+<h2><strong>Questão 9</strong></h2>
+
+<p>Quais das razões a seguir é FALSA para um protocolo de aplicação preferir usar UDP ao invés de TCP?</p>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>A rede é extremamente confiável (exemplo: fibra ótica) e pacotes são raramente perdidos.</li>
+<li>O funcionamento do protocolo se resume a poucas mensagens e bytes trocados e por isso usar o UDP diminui o tempo de resposta do protocolo.</li>
+<li>O mecanismo de detecção e controle de erros do TCP não é adequado para o protocolo de aplicação.</li>
+<li>O protocolo de aplicação tem exigências mínimas de tempo de entrega das mensagens, que poderão ser violadas mais frequentemente com o uso de TCP.</li>
+</ol>
+</blockquote>
+
+<hr />
+
+<h2><strong>Questão 10</strong></h2>
+
+<p>Um segmento chegou em uma instância do TCP (conexão). Qual das condições abaixo NÃO É necessária para que ele possa entregue à aplicação?</p>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>O ACK do segmento já foi enviado para a origem.</li>
+<li>A aplicação executou a chamada de sistema de leitura dos bytes na conexão.</li>
+<li>Todos os segmentos anteriores já chegaram.</li>
+<li>Há lugar para o segmento do buffer de recepção.</li>
+</ol>
+</blockquote>
+
+<hr />
+
+<h2><strong>Questão 11</strong></h2>
+
+<p>De que maneira o TCP pode atrapalhar o funcionamento de uma aplicação de multimidia?</p>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>O TCP aumenta o atraso de entrega dos pacotes para a aplicação, podendo fazer com que o tempo de entrega não seja mais suficiente para a reprodução da respectiva mídia.</li>
+<li>O TCP aumenta o atraso total de entrega dos pacotes (RTT/2) para o destino, podendo fazer com que o tempo de entrega não seja mais suficiente para a reprodução da respectiva mídia.</li>
+<li>O TCP corrige todos os bytes transmitidos na conexão, fazendo com que a aplicação gaste mais tempo processando bytes recebidos sem necessidade e, por isso, tornando a aplicação mais lenta (o que eventualmente, pode inviabilizá-la).</li>
+<li>O controle de fluxo do TCP faz com que a velocidade de transmissão dos pacotes diminua, podendo atrasar o recebimento dos pacotes do receptor e inviabilizar a reprodução das mídias no tempo necessário.</li>
+</ol>
+</blockquote>
+
+<hr />
+
+<h2><strong>Questão 12</strong></h2>
+
+<p>Como o FEC corrige pacotes perdidos?</p>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>Ele transmite dados redundantes nos pacotes, de maneira que se um pacote for perdido, a perda por ser ao menos parcialmente corrigida pelos bytes redudantes recebidos em um pacote anterior ou posterior.</li>
+<li>O FEC implementa a correção de erros de maneira muito parecida com o TCP (reconhecimentos e retransmissão), mas usando UDP como protocolo de transporte e sem se preocupar com a ordem dos pacotes que chegam.</li>
+<li>O FEC - forward error correction - utiliza bufferização na entrega dos pacotes, de maneira que muitos pacotes são recebidos antes de serem entregues para a aplicação, fazendo com que dê tempo para a retransmissão dos pacotes perdidos sem influir no funcionamento da aplicação (de onde vem o termo "forward").</li>
+<li>O FEC realiza a correção de erros na transmissão - ao invés de na recepção - e por isso usa o termo "forward". Para isso, durante a transmissão o FEC copia partes dos pacotes sujeitos a perda (ex: quando perto do timeout) em pacotes anteriores ou posteriores.</li>
+</ol>
+</blockquote>
+
+<hr />

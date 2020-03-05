@@ -1,0 +1,405 @@
+<h2><strong>Questão 1</strong></h2>
+
+<p>Qual afirmativa NÃO corresponde ao funcionamento do algoritmo/protocolo de correção de erros Bit Alternado?</p>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>Só é necessário um bit para identificar os pacotes a serem transmitidos.</li>
+<li>Nenhuma identificação do pacote a ser transmitido é necessária.</li>
+<li>O protocolo identifica corretamente os erros durante a transmissão, mas não os erros durante o recebimento do ACK.</li>
+<li>O protocolo é capaz de enviar dois pacotes sem receber nenhuma confirmação.</li>
+<li>O timeout expira quando o tempo necessário para receptor (destinatário) receber a mensagem termina.</li>
+</ol>
+</blockquote>
+
+<hr />
+
+<h2><strong>Questão 2</strong></h2>
+
+<p>No algoritmo/protocolo de correção de erros do Bit Alternado, se em receptor recebeu um pacote Q1 então</p>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>Se ele receber um pacote Q1 deve descartá-lo e enviar o ACK do Q1.</li>
+<li>Se ele receber um pacote Q1 deve descartá-lo e enviar o ACK do Q0.</li>
+<li>Se ele receber um pacote Q1 deve simplesmente descartá-lo.</li>
+<li>Se ele receber um pacote Q1 deve simplesmente enviar o ACK do Q1.</li>
+<li>Se ele receber um pacote Q0 deve descartá-lo e enviar o ACK do Q1.</li>
+<li>Se ele receber um pacote Q0 deve descartá-lo e enviar o ACK do Q0.</li>
+<li>Se ele receber um pacote Q0 deve simplesmente descartá-lo.</li>
+</ol>
+</blockquote>
+
+<hr />
+
+<h2><strong>Questão 3</strong></h2>
+
+<p>O que ocorre no protocolo Bit Alternado quando o timeout escolhido é muito PEQUENO?</p>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>O transmissor retransmite continuada e desnecessariamente cada pacote, até receber o ACK.</li>
+<li>O transmissor retransmite continuadamente o primeiro pacote, sem nunca obter sucesso (receber o ACk e passar para o próximo pacote).</li>
+<li>O receptor jamais recebe o pacote transmitido.</li>
+<li>O receptor jamais envia os ACKs com sucesso.</li>
+<li>O transmissão não recebe os ACK do receptor.</li>
+<li>A rede fica ociosa, pois poucos  pacotes são transmitidos.</li>
+</ol>
+</blockquote>
+
+<hr />
+
+<h2><strong>Questão 4</strong></h2>
+
+<p>O que ocorre no protocolo Bit Alternado quando o timeout escolhido é muito GRANDE?</p>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>Quando um pacote é perdido, a rede fica ociosa por muito tempo.</li>
+<li>A rede fica ociosa, pois poucos  pacotes são transmitidos.</li>
+<li>O transmissor retransmite continuada e desnecessariamente cada pacote, até receber o ACK.</li>
+<li>O transmissor retransmite continuadamente o primeiro pacote, sem nunca obter sucesso (receber o ACk e passar para o próximo pacote).</li>
+<li>O receptor jamais recebe o pacote transmitido.</li>
+<li>O receptor jamais envia os ACKs com sucesso.</li>
+<li>O transmissão não recebe os ACK do receptor.</li>
+<li>Pacotes transmitidos com sucesso são frequentemente dados como perdidos e retransmitidos.</li>
+</ol>
+</blockquote>
+
+<hr />
+
+<h2><strong>Questão 5</strong></h2>
+
+<p>No protocolo Bit Alternado, utilizando timeout T, se não há nenhuma perda de pacotes então </p>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>Um pacote é enviado a cada intervalo T.</li>
+<li>T pacotes são enviados a cada unidade de tempo.</li>
+<li>Um pacote é enviado a cada intervalo T/2.</li>
+<li>T/2 pacotes são enviados a cada unidade de tempo.</li>
+<li>Dois pacotes são enviados a cada intervalo T.</li>
+<li>2*T pacotes são enviados a cada unidade de tempo.</li>
+</ol>
+</blockquote>
+
+<hr />
+
+<h2><strong>Questão 6</strong></h2>
+
+<p>Qual é a diferença fundamental entre o protocolo Bit Alternado e o Go-Back-N?</p>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>O Bit Alternado só envia um pacote até o recebimento do ACK do anterior, enquanto que o Go-Back-N envia até N pacotes.</li>
+<li>O Bit Alternado só envia um pacote até que ocorra o timeout, enquanto que o Go-Back-N envia até N pacotes.</li>
+<li>O Bit Alternado envia até dois pacotes até o recebimento do ACK do anterior, enquanto que o Go-Back-N envia até N pacotes.</li>
+<li>O Bit Alternado envia até dois pacotes até que ocorra o timeout, enquanto que o Go-Back-N envia até N pacotes.</li>
+<li>O Bit Alternado adota um timeout de T, enquanto que o Go-Back-N adota um timeout de N pacotes.</li>
+<li>O Bit Alternado adota um timeout de T, enquanto que o Go-Back-N adota um timeout de N/T pacotes.</li>
+<li>O Bit Alternado adota um timeout de T, enquanto que o Go-Back-N adota um timeout de T/N pacotes.</li>
+</ol>
+</blockquote>
+
+<hr />
+
+<h2><strong>Questão 7</strong></h2>
+
+<p>O que ocorre no protocolo Go-Back-N quando o timeout escolhido é MUITO PEQUENO?</p>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>O protocolo retransmite desnecessariamente pacotes que chegam ao destino, não dando a chance de completar a transmissão da janela N.</li>
+<li>O protocolo rapidamente atinge o limite da janela N, iniciando a retransmissão dos pacotes.</li>
+<li>O protocolo deixa a rede ociosa, sem pacotes transitando, durante boa parte do tempo quando a janela é esgotada.</li>
+<li>O protocolo passa a funcionar com o mesmo desempenho do Bit Alternado.</li>
+<li>A janela N diminui desnecessariamente.</li>
+</ol>
+</blockquote>
+
+<hr />
+
+<h2><strong>Questão 8</strong></h2>
+
+<p>O que ocorre no protocolo Go-Back-N quando o timeout escolhido é MUITO GRANDE?</p>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>O protocolo deixa a rede ociosa, sem pacotes transitando, durante boa parte do tempo quando a janela é esgotada.</li>
+<li>O protocolo retransmite desnecessariamente pacotes que chegam ao destino, não dando a chance de completar a transmissão da janela N.</li>
+<li>O protocolo rapidamente atinge o limite da janela N, iniciando a retransmissão dos pacotes.</li>
+<li>O protocolo passa a funcionar com o mesmo desempenho do Bit Alternado.</li>
+<li>A janela N aumenta desnecessariamente.</li>
+</ol>
+</blockquote>
+
+<hr />
+
+<h2><strong>Questão 9</strong></h2>
+
+<p>O que ocorre no protocolo Go-Back-N quando o N escolhido é MUITO PEQUENO?</p>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>O protocolo passa a funcionar com o mesmo desempenho do Bit Alternado.</li>
+<li>O protocolo deixa a rede ociosa, sem pacotes transitando, durante boa parte do tempo quando a janela é esgotada.</li>
+<li>O protocolo retransmite desnecessariamente pacotes que chegam ao destino, não dando a chance de completar a transmissão da janela N.</li>
+<li>O protocolo rapidamente atinge o limite da janela N, iniciando a retransmissão dos pacotes.</li>
+<li>O timeout passa a expirar muito rapidamente.</li>
+<li>O timeout demora a expirar, mesmo na ocorrência de erros de transmissão.</li>
+</ol>
+</blockquote>
+
+<hr />
+
+<h2><strong>Questão 10</strong></h2>
+
+<p>O que ocorre no protocolo Go-Back-N quando o N escolhido é MUITO GRANDE?</p>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>Se ocorrerem muitos erros de transmissão, o tamanho da janela N não terá efeito no funcionamento do protocolo.</li>
+<li>Se ocorrerem muitos erros de transmissão, o protocolo demorará muito para retransmitir os pacotes.</li>
+<li>Se ocorrerem muitos erros de transmissão, um número grande de pacotes terá que ser retransmitido.</li>
+<li>O protocolo passa a funcionar com o mesmo desempenho do Bit Alternado.</li>
+<li>O protocolo deixa a rede ociosa, sem pacotes transitando, durante boa parte do tempo quando a janela é esgotada.</li>
+<li>O protocolo retransmite desnecessariamente pacotes que chegam ao destino, não dando a chance de completar a transmissão da janela N.</li>
+<li>O protocolo rapidamente atinge o limite da janela N, iniciando a retransmissão dos pacotes.</li>
+<li>O timeout passa a expirar muito rapidamente.</li>
+<li>O timeout demora a expirar, mesmo na ocorrência de erros de transmissão.</li>
+</ol>
+</blockquote>
+
+<hr />
+
+<h2><strong>Questão 11</strong></h2>
+
+<p>Qual das opções abaixo corresponde ao que ocorre nas abordagens de retransmissão seletiva e integral no Go-Back-N caso um pacote num=X (e apenas ele) seja perdido?</p>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>SELETIVA                             INTEGRAL</li>
+<li>1 Os pacotes num>=X são retransmitidos Apenas X é retransmitido</li>
+<li>2 Os pacotes num>=X são retransmitidos Todos os pacotes são retransmitidos</li>
+<li>3 Apenas X é retransmitido             Os pacotes num&lt;=X são retransmitidos</li>
+<li>4 Apenas X é retransmitido             Os pacotes num>=X são retransmitidos</li>
+<li>5 Apenas X é retransmitido             Todos os pacotes são retransmitidos</li>
+<li>Opção 4</li>
+<li>Opção 1</li>
+<li>Opção 2</li>
+<li>Opção 3</li>
+<li>Opção 5</li>
+<li>Na retransmissão seletiva, só são retransmitidos os pacotes NÃO recebidos no destinatário (na melhor das hipóteses), enquanto que na integral todos os pacotes a partir do primeiro perdido são retransmitidos (em qualquer hipótese).</li>
+<li>Na retransmissão seletiva, só são retransmitidos os pacotes NÃO recebidos no destinatário (em qualquer hipótese), enquanto que na integral todos os pacotes a partir do primeiro perdido são retransmitidos (na melhor das hipóteses).</li>
+</ol>
+</blockquote>
+
+<hr />
+
+<h2><strong>Questão 12</strong></h2>
+
+<p>No Go-Back-N, a janela especifica</p>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>A faixa de números de pacotes que podem ser transmitidos sem o recebimento do ACK de nenhum deles.</li>
+<li>A faixa de números de pacotes que podem ser transmitidos sem que ocorra o timeout de nenhum deles.</li>
+<li>A faixa de números de pacotes para os quais o protocolo está esperando o recebimento do ACK.</li>
+<li>A faixa de números de pacotes que o protocolo ainda precisa transmitir.</li>
+<li>A faixa de números de pacotes cujos ACKs já foram recebidos.</li>
+</ol>
+</blockquote>
+
+<hr />
+
+<h2><strong>Questão 13</strong></h2>
+
+<p>Uma janela de transmissão do Go-Back-N está abrangendo os pacotes de número 10 até 100 ([10, 100]). O que ocorre com a janela quando o transmissor recebe um ACK do pacote 20?</p>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>A janela muda para [21, 111].</li>
+<li>A janela muda para [20, 110].</li>
+<li>A janela muda para [21, 100].</li>
+<li>A janela muda para [20, 100].</li>
+<li>A janela muda para [10, 19].</li>
+<li>A janela muda para [10, 21].</li>
+<li>A janela permanece em [10, 100], mas exclui o pacote 20 da região.</li>
+</ol>
+</blockquote>
+
+<hr />
+
+<h2><strong>Questão 14</strong></h2>
+
+<p>O TCP precisa manter buffers de transmissão e recepção dos pacotes.</p>
+
+<h4>Opções</h4>
+
+<hr />
+
+<h2><strong>Questão 15</strong></h2>
+
+<p>Como uma aplicação sabe quando iniciam e terminam as mensagens recebidas pela camada de transporte?</p>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>Isso é determinado pelo protocolo de aplicação.</li>
+<li>O TCP numera as mensagens, de maneira que as aplicações sabem ordenar as mensagens recebidas.</li>
+<li>O TCP numera as mensagens, de maneira que as aplicações sabem qual é a primeira a última mensagem.</li>
+<li>O TCP numera as mensagens e a aplicação pode consultar no campo "Sequence Number" se aquela é a primeira ou última mensagem.</li>
+</ol>
+</blockquote>
+
+<hr />
+
+<h2><strong>Questão 16</strong></h2>
+
+<p>Com qual campo do pacote o TCP indica qual é o número do pacote?</p>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>Sequence Number</li>
+<li>ACK Number</li>
+<li>Bit ACK</li>
+<li>Porta Destino</li>
+<li>Porta Origem</li>
+<li>Window</li>
+<li>Checksum</li>
+<li>Essa informação não é indica em nenhum campo.</li>
+</ol>
+</blockquote>
+
+<hr />
+
+<h2><strong>Questão 17</strong></h2>
+
+<p>Com qual campo do pacote o TCP sabe que o timeout expirou?</p>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>Essa informação não é indica em nenhum campo.</li>
+<li>ACK Number</li>
+<li>Bit ACK</li>
+<li>Sequence Number</li>
+<li>Porta Destino</li>
+<li>Porta Origem</li>
+<li>Window</li>
+<li>Checksum</li>
+</ol>
+</blockquote>
+
+<hr />
+
+<h2><strong>Questão 18</strong></h2>
+
+<p>Com qual campo do pacote o TCP indica quantos pacotes ainda pode receber?</p>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>Window</li>
+<li>ACK Number</li>
+<li>Bit ACK</li>
+<li>Sequence Number</li>
+<li>Porta Destino</li>
+<li>Porta Origem</li>
+<li>Checksum</li>
+<li>Essa informação não é indica em nenhum campo.</li>
+</ol>
+</blockquote>
+
+<hr />
+
+<h2><strong>Questão 19</strong></h2>
+
+<p>Com qual campo do pacote o TCP indica que o(s) pacotes recebidos?</p>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>ACK Number</li>
+<li>Bit ACK</li>
+<li>Sequence Number</li>
+<li>Porta Destino</li>
+<li>Porta Origem</li>
+<li>Window</li>
+<li>Checksum</li>
+<li>Essa informação não é indica em nenhum campo.</li>
+</ol>
+</blockquote>
+
+<hr />
+
+<h2><strong>Questão 20</strong></h2>
+
+<p>Com qual campo do pacote o TCP verifica se o pacote chegou com erros?</p>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>Checksum</li>
+<li>ACK Number</li>
+<li>Bit ACK</li>
+<li>Sequence Number</li>
+<li>Porta Destino</li>
+<li>Porta Origem</li>
+<li>Window</li>
+<li>Essa informação não é indica em nenhum campo.</li>
+</ol>
+</blockquote>
+
+<hr />
+
+<h2><strong>Questão 21</strong></h2>
+
+<p>O que é o MSS (Maximum Segment Size)?</p>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>É o tamanho máximo em bytes do pacote que o TCP deve utilizar para evitar novas fragmentações do pacote na camada de rede.</li>
+<li>É o tamanho máximo em bytes da janela que o TCP deve utilizar para ter um desempenho aceitável.</li>
+<li>É o tamanho máximo em bytes do pacote que o TCP irá utilizar.</li>
+<li>É o tamanho em bytes do pacote que o TCP.</li>
+<li>É a quantidade máxima de bytes que o TCP poderá transmitir.</li>
+</ol>
+</blockquote>
+
+<hr />

@@ -1,0 +1,381 @@
+<!--
+tags
+redes de computadores, ufg, camada de transporte, peer instruction, aprendizado por pares
+-->
+
+<h1>Capítulo 5: Camada de Rede</h1>
+
+<h1>AULA 5.1 (Capítulo 5) Camada de Rede: Visão Geral e Introdução ao IP</h1>
+
+<!-- redes de computadores, camada de rede, ufg, peer learning, aprendizado por pares  -->
+
+<h2>Conceitos explorados nesta video-aula</h2>
+
+<ul>
+<li><p><a href="http://www.portal.inf.ufg.br/~ricardo/rc1/pi/leituras/slides.rede.parte.1.pdf">Slides</a> utilizados nesta video-aula.</p></li>
+<li><p><strong>Conceito</strong>: Camada de Rede: Visão geral do nível de rede e Responsabilidades</p>
+
+<ul>
+<li>Parte 5.1: Visão geral do nível de rede e Responsabilidades</li>
+</ul></li>
+</ul>
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/2dibAy7gPvk" frameborder="0" allowfullscreen></iframe>
+
+<ul>
+<li><strong>Conceito</strong>: Camada de Rede: Nivel de Rede do IP: Características
+<ul>
+<li>Parte 5.2: Nivel de Rede do IP: Características</li>
+</ul></li>
+</ul>
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/7L0pgnb1l-0" frameborder="0" allowfullscreen></iframe>
+
+<ul>
+<li><strong>Conceito</strong>: Camada de Rede: Pacote IP (versão 4)
+<ul>
+<li>Parte 5.3: Pacote IP (versão 4)</li>
+</ul></li>
+</ul>
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/olE6529UaaY" frameborder="0" allowfullscreen></iframe>
+
+<ul>
+<li><strong>Conceito</strong>: Camada de Rede: Tempo de Vida de Pacotes IP (TTL)
+<ul>
+<li>Parte 5.4: Tempo de Vida de Pacotes IP (TTL)</li>
+</ul></li>
+</ul>
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/MxpJrhc8d_w" frameborder="0" allowfullscreen></iframe>
+
+<ul>
+<li><strong>Conceito</strong>: Camada de Rede: Fragmentação de Pacotes e QuadrosxPacotes
+<ul>
+<li>Parte 5.5: Fragmentação de Pacotes e QuadrosxPacotes</li>
+</ul></li>
+</ul>
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/6rHye3vVHdA" frameborder="0" allowfullscreen></iframe>
+
+<h2>Questões Pré-aula</h2>
+
+<ul>
+<li><a href="https://docs.google.com/forms/d/14FJz_shF59KS2Jk3m-yGHZKY_bdKtTUVQvWlaGTC7p4/viewform">Questões pré-aula a serem respondidas</a> até <strong>1 hora</strong> antes da aula.
+<!--   + <a href="http://www.portal.inf.ufg.br/~ricardo/rc1/pi/respostas/cap03-QP-2-resposta.pdf">Respostas</a>--></li>
+</ul>
+
+<!--
+   + [Respostas](http://www.portal.inf.ufg.br/~ricardo/rc1/pi/respostas/capitulo5-QP-1-RESP.html)
+
++ [Respostas aos testes feitos em sala](http://www.portal.inf.ufg.br/~ricardo/rc1/pi/respostas/capitulo5-QA-1-RESP.html)
+-->
+
+<p><a name="5.2" /></p>
+
+<h1>AULA 5.2 (Capítulo 5) Camada de Rede: Endereçamento IP v4</h1>
+
+<!-- redes de computadores, camada de rede, ufg, peer learning, aprendizado por pares  -->
+
+<h2>Conceitos explorados nesta video-aula</h2>
+
+<ul>
+<li><p><a href="http://www.portal.inf.ufg.br/~ricardo/rc1/pi/leituras/slides.rede.parte.1.pdf">Slides</a> utilizados nesta video-aula.</p></li>
+<li><p><strong>Conceito</strong>: Camada de Rede: Visão Geral de Endereçamento IP</p>
+
+<ul>
+<li>Parte 5.6: Visão Geral de Endereçamento IP</li>
+</ul></li>
+</ul>
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/o1xsjOzum54" frameborder="0" allowfullscreen></iframe>
+
+<ul>
+<li><strong>Conceito</strong>: Camada de Rede: Distribuição de Endereços
+<ul>
+<li>Parte 5.7: Distribuição de Endereços</li>
+</ul></li>
+</ul>
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/OGWQs0M5D3Q" frameborder="0" allowfullscreen></iframe>
+
+<ul>
+<li><strong>Conceito</strong>: Camada de Rede: Classes de Endereçamento
+<ul>
+<li>Parte 5.8: Classes de Endereçamento</li>
+</ul></li>
+</ul>
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/WhEDHXP_UE4" frameborder="0" allowfullscreen></iframe>
+
+<ul>
+<li><strong>Conceito</strong>: Camada de Rede: Interpretação de Endereços
+<ul>
+<li>Parte 5.9: Interpretação de Endereços</li>
+</ul></li>
+</ul>
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/qZIJvvOB84E" frameborder="0" allowfullscreen></iframe>
+
+<ul>
+<li><strong>Conceito</strong>: Camada de Rede: Endereços Privados e Reservados
+<ul>
+<li>Parte 5.10: Endereços Privados e Reservados</li>
+</ul></li>
+</ul>
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/qcz59ABndSw" frameborder="0" allowfullscreen></iframe>
+
+<ul>
+<li><strong>Conceito</strong>: Camada de Rede: NAT Estático
+<ul>
+<li>Parte 5.11: NAT Estático</li>
+</ul></li>
+</ul>
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/sQE7FR33_Gk" frameborder="0" allowfullscreen></iframe>
+
+<ul>
+<li><strong>Conceito</strong>: Camada de Rede: NAT Dinâmico
+<ul>
+<li>Parte 5.12: NAT Dinâmico</li>
+</ul></li>
+</ul>
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/Y-PFbRPHJ3I" frameborder="0" allowfullscreen></iframe>
+
+<ul>
+<li><strong>Conceito</strong>: Camada de Rede: Conexões com Endereços Privados vs. Públicos
+<ul>
+<li>Parte 5.13: Conexões com Endereços Privados vs. Públicos</li>
+</ul></li>
+</ul>
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/fl_QqMoOXlY" frameborder="0" allowfullscreen></iframe>
+
+<h2>Questões Pré-aula</h2>
+
+<ul>
+<li><a href="https://docs.google.com/forms/d/1tmM6rlpZgEy8dowv2HhsDHPyJOrTDGnVvBwxyLaPInk/viewform">Questões pré-aula a serem respondidas</a> até <strong>1 hora</strong> antes da aula.</li>
+</ul>
+
+<!--
+   + [Respostas](http://www.portal.inf.ufg.br/~ricardo/rc1/pi/respostas/capitulo5-QP-1-RESP.html)
+
++ [Respostas aos testes feitos em sala](http://www.portal.inf.ufg.br/~ricardo/rc1/pi/respostas/capitulo5-QA-1-RESP.html)
+-->
+
+<p><a name="5.3" /></p>
+
+<h1>AULA 5.3 (Capítulo 5) Camada de Rede: Máscaras de Rede</h1>
+
+<ul>
+<li><strong>Conceito</strong>: Camada de Rede: Máscaras de Rede: Objetivo
+<ul>
+<li>Parte 5.14: Máscaras de Rede: Objetivo</li>
+</ul></li>
+</ul>
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/1J922wQQOBE" frameborder="0" allowfullscreen></iframe>
+
+<ul>
+<li><strong>Conceito</strong>: Camada de Rede: Máscaras de Rede: Mecanismo
+<ul>
+<li>Parte 5.15: Máscaras de Rede: Mecanismo</li>
+</ul></li>
+</ul>
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/oota7841eUg" frameborder="0" allowfullscreen></iframe>
+
+<ul>
+<li><strong>Conceito</strong>: Camada de Rede: Máscaras de Rede: Interpretação e Exemplos
+<ul>
+<li>Parte 5.16: Máscaras de Rede: Interpretação e Exemplos</li>
+</ul></li>
+</ul>
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/qz5Ufuc7TkQ" frameborder="0" allowfullscreen></iframe>
+
+<ul>
+<li><strong>Conceito</strong>: Camada de Rede: Máscaras de Rede: Representação e Notação CIDR
+<ul>
+<li>Parte 5.17: Máscaras de Rede: Representação e Notação CIDR</li>
+</ul></li>
+</ul>
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/kD9hTbsZymA" frameborder="0" allowfullscreen></iframe>
+
+<ul>
+<li><strong>Conceito</strong>: Camada de Rede: Máscaras de Rede: Exemplos
+<ul>
+<li>Parte 5.18: Máscaras de Rede: Exemplos</li>
+</ul></li>
+</ul>
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/DoQYo3bxL90" frameborder="0" allowfullscreen></iframe>
+
+<h2>Questões Pré-aula</h2>
+
+<ul>
+<li><a href="https://docs.google.com/forms/d/15-8xB5xezurhCJq4X85a_G5fhTD-kUGyziWEsNlM3KI/viewform">Questões pré-aula a serem respondidas</a> até <strong>1 hora</strong> antes da aula.</li>
+</ul>
+
+<!-- 
+   + [Respostas](http://www.portal.inf.ufg.br/~ricardo/rc1/pi/respostas/capitulo5-QP-1-RESP.html)
+
++ [Respostas aos testes feitos em sala](http://www.portal.inf.ufg.br/~ricardo/rc1/pi/respostas/capitulo5-QA-1-RESP.html)
+-->
+
+<p><a name="5.4" /></p>
+
+<h1>AULA 5.4 (Capítulo 5) Camada de Rede: Comunicação Camada de Rede e Enlace, Serviços Básicos para Funcionamento de Redes</h1>
+
+<ul>
+<li><strong>Conceito</strong>: Camada de Rede: Endereços IP e Endereços MAC
+<ul>
+<li>Parte 5.19: Endereços IP e Endereços MAC</li>
+</ul></li>
+</ul>
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/_LuKXkv5EeY" frameborder="0" allowfullscreen></iframe>
+
+<ul>
+<li><strong>Conceito</strong>: Camada de Rede: ARP
+<ul>
+<li>Parte 5.20: ARP</li>
+</ul></li>
+</ul>
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/BaA5GVCqG4A" frameborder="0" allowfullscreen></iframe>
+
+<ul>
+<li>IP, MAC e Roteamento</li>
+<li><strong>Conceito</strong>: Camada de Rede: IP, MAC e Roteamento
+<ul>
+<li>Parte 5.21: IP, MAC e Roteamento</li>
+</ul></li>
+</ul>
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/UltGEyKe2Kc" frameborder="0" allowfullscreen></iframe>
+
+<ul>
+<li><strong>Conceito</strong>: Camada de Rede: DHCP
+<ul>
+<li>Parte 5.22: DHCP</li>
+</ul></li>
+</ul>
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/cZRSFvrFk24" frameborder="0" allowfullscreen></iframe>
+
+<!-- + **Conceito**: Camada de Rede: Multicasting -->
+
+<ul>
+<li><strong>Conceito</strong>: Camada de Rede: IPv6
+<ul>
+<li>Parte 5.24: IPV6</li>
+</ul></li>
+</ul>
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/xExzlxRX3is" frameborder="0" allowfullscreen></iframe>
+
+<ul>
+<li><p>Recursos complementares:</p>
+
+<ul>
+<li><a href="http://ipv6.br/">Portal de Referência de IPv6</a>
+<ul>
+<li><a href="http://ipv6.br/post/introducao/">http://ipv6.br/post/introducao/</a></li>
+<li><a href="http://ipv6.br/post/enderecamento/">http://ipv6.br/post/enderecamento/</a></li>
+<li>Endereçamento IPv6 - NIC.br - <a href="https://www.youtube.com/playlist?list=PLQq8-9yVHyOZF5bSWrhUu7aMiwyiAvuhQ">Playlist de Videos</a></li>
+</ul></li>
+<li><a href="https://www.google.com/intl/en/ipv6/statistics.html">Estatísticas de alocação mundial de IPv6</a></li>
+<li><a href="http://rosabaya.ceptro.br/ipv6-measurement-charts/">Gráfico de Alocação de Endereços IPv6 no Brasil</a></li>
+<li><a href="http://registro.br/tecnologia/provedor-acesso.html?secao=numeracao">Alocação de Endereços no Brasil - registro.br</a></li>
+<li><a href="ftp://ftp.registro.br/rfc/rfc2050.txt">INTERNET REGISTRY IP ALLOCATION GUIDELINES</a></li>
+<li><a href="https://tools.ietf.org/html/rfc6555#section-4">Happy eyeballs</a>: Algoritmo para estabelecimento de conexões de transporte em endpoints IPv6/IPv4, testando a disponibilidade dos tipos de endereços.</li>
+<li><p>Discussão sobre transição para endereços IPv6 e suporte de um grande provedor de nuvem (Cloudflare)</p>
+
+<ul>
+<li><p><a href="https://blog.cloudflare.com/supporting-the-transition-to-ipv6-only-networking-services-for-ios/">Supporting the transition to IPv6-only networking services for iOS</a></p>
+
+<ul>
+<li><a href="http://www.portal.inf.ufg.br/~ricardo/rc1/pi/respostas/capitulo5-QA-1-RESP.html">Respostas aos testes feitos em sala</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p><a name="5.5" /></p>
+
+<h1>AULA 5.5 (Capítulo 5) Camada de Rede: Introdução ao Roteamento e Roteamento Estático</h1>
+
+<p><a name="5.6" /></p>
+
+<h1>AULA 5.6 (Capítulo 5) Camada de Rede: Roteamento Dinâmico</h1>
+
+<!--
+---
+
+
+
+Roteamento: Conceituação e Visão Geral
+Classificação dos Algoritmos (ver Kurose)
+Tabela de Roteamento e Representação de Rotas
+Roteamento Estático
+Encaminhamento de Pacotes
+
+Roteamento dinâmico
+   - Algoritmos de Roteamento: Link state
+   - Algoritmos de Roteamento: Vetor de Distância
+   - Comparação Entre Algoritmos
+   - Roteamento Hierárquico
+
+- Roteamento na Internet
+   - RIP
+   - OSPF
+   - BGP
+
+- Diferenças roteamento intra-AS e inter-AS
+
+
+ICMP
+IPv6
+
+------
+arquivos
+
+5.1-visao.geral Visão geral do nível de rede e Responsabilidades
+5.2-nivel.rede.ip Nivel de Rede do IP: Características
+5.3-pacote.ipv4 Pacote IP (versão 4)
+5.4-tempo.de.vida Tempo de Vida
+5.5-fragmentacao Fragmentação de Pacotes e QuadrosxPacotes
+Endereçamento IP
+5.6-enderecamento-geral    Geral, hierárquico
+5.7-enderecamento-distribuicao   Distribuição de Endereços
+5.8-enderecamento-classes    Classes de Endereçamento
+5.9-enderecamento-interpretacao.enderecos    Interpretação de Endereços
+5.10-enderecamento-privados.reservados    Endereços Privados e Reservados
+5.11-enderecamento-NAT.estatico NAT Estático
+
+5.12-enderecamento-NAT.dinamico NAT Dinâmico
+5.13-conexoes.privados.publicos Conexões com Endereços Privados vs. Públicos
+5.14-mascaras.objetivo Máscaras de Rede: Objetivo
+5.15-mascaras.mecanismo Máscaras de Rede: Mecanismo
+5.16-mascaras.interpretacao Máscaras de Rede: Interpretação e Exemplos
+5.17-mascaras.representacao Máscaras de Rede: Representação e Notação CIDR
+5.18-mascaras.exemplos Máscaras de Rede: Exemplos
+
+5.19-IP.e.MAC Endereços IP e Endereços MAC
+5.20-ARP ARP
+5.21-ip.mac.roteamento IP, MAC e Roteamento
+5.22-dhcp DHCP
+5.23-multicasting Multicasting
+5.24-ipv6 IPv6
+
+5.25 Roteamento: Conceituação e Visão Geral
+5.26 Classificação dos Algoritmos (ver Kurose)
+5.27 Tabela de Roteamento e Representação de Rotas
+5.28 Roteamento Estático
+5.29 Encaminhamento de Pacotes
+
+-->
