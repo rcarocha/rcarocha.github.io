@@ -4,38 +4,38 @@
 
 <p><xmp theme="simplex" style="display:none;"></p>
 
-<h1>LaboratÃ³rio: IntroduÃ§Ã£o ao <strong><code>mininet</code></strong> com avaliaÃ§Ã£o TCP e UDP</h1>
+<h1>LaboratÃÂÃÂ³rio: IntroduÃÂÃÂ§ÃÂÃÂ£o ao <strong><code>mininet</code></strong> com avaliaÃÂÃÂ§ÃÂÃÂ£o TCP e UDP</h1>
 
 <h1>Objetivos</h1>
 
 <ul>
-<li>Introduzir a ferramenta de emulaÃ§Ã£o de redes <code>mininet</code> de maneira a tornar os alunos aptos a realizarem os prÃ³ximos laboratÃ³rios da disciplina.</li>
+<li>Introduzir a ferramenta de emulaÃÂÃÂ§ÃÂÃÂ£o de redes <code>mininet</code> de maneira a tornar os alunos aptos a realizarem os prÃÂÃÂ³ximos laboratÃÂÃÂ³rios da disciplina.</li>
 <li>Compreender a arquitetura de funcionamento do <code>mininet</code>.</li>
 </ul>
 
-<h1>PrÃ©-requisitos</h1>
+<h1>PrÃÂÃÂ©-requisitos</h1>
 
-<p>Se vocÃª for realizar os experimento na sua prÃ³pria mÃ¡quina, vocÃª deve ter o Virtual Box instalado, ou outro ambiente para execuÃ§Ã£o de mÃ¡quina virtual.</p>
+<p>Se vocÃÂÃÂª for realizar os experimento na sua prÃÂÃÂ³pria mÃÂÃÂ¡quina, vocÃÂÃÂª deve ter o Virtual Box instalado, ou outro ambiente para execuÃÂÃÂ§ÃÂÃÂ£o de mÃÂÃÂ¡quina virtual.</p>
 
-<h1>VisÃ£o Geral</h1>
+<h1>VisÃÂÃÂ£o Geral</h1>
 
-<p>Neste laboratÃ³rio, nÃ³s iremos aprender o propÃ³sito e funcionamento bÃ¡sico da ferramenta <code>mininet</code> que seja a principal ferramenta para os demais laboratÃ³rios da disciplina. Essas tarefas sÃ£o baseadas no tutorial do mininet descrito em <a href="http://mininet.org/walkthrough/">http://mininet.org/walkthrough/</a>.</p>
+<p>Neste laboratÃÂÃÂ³rio, nÃÂÃÂ³s iremos aprender o propÃÂÃÂ³sito e funcionamento bÃÂÃÂ¡sico da ferramenta <code>mininet</code> que seja a principal ferramenta para os demais laboratÃÂÃÂ³rios da disciplina. Essas tarefas sÃÂÃÂ£o baseadas no tutorial do mininet descrito em <a href="http://mininet.org/walkthrough/">http://mininet.org/walkthrough/</a>.</p>
 
 <h1>Recursos</h1>
 
 <ul>
-<li><p><a href="pdf/mininet-intro.pdf">Slides utilizados no laboratÃ³rio</a></p></li>
-<li><p>MÃ¡quina Virtual utilizada nos experimentos, inclui o sistema <code>mininet</code> (ver em <a href="https://github.com/mininet/mininet/wiki/Mininet-VM-Images">mininet.org</a>).</p>
+<li><p><a href="pdf/mininet-intro.pdf">Slides utilizados no laboratÃÂÃÂ³rio</a></p></li>
+<li><p>MÃÂÃÂ¡quina Virtual utilizada nos experimentos, inclui o sistema <code>mininet</code> (ver em <a href="https://github.com/mininet/mininet/wiki/Mininet-VM-Images">mininet.org</a>).</p>
 
 <ul>
-<li>A VM ficarÃ¡ disponÃ­vel no laboratÃ³rio em um servidor web na mÃ¡quina pessoal do professor no endereÃ§o IP indicado em sala, porta 8888 e caminho <strong><code>vmlab.zip</code></strong>. VocÃª poderÃ¡ baixar usando o comando <strong><code>wget http://ip.maq.professor:8888/vmlab.zip</code></strong>. A VM Ã© um Ubuntu 14.04 - 64 bit (com Mininet 2.2.1).</li>
+<li>A VM ficarÃÂÃÂ¡ disponÃÂÃÂ­vel no laboratÃÂÃÂ³rio em um servidor web na mÃÂÃÂ¡quina pessoal do professor no endereÃÂÃÂ§o IP indicado em sala, porta 8888 e caminho <strong><code>vmlab.zip</code></strong>. VocÃÂÃÂª poderÃÂÃÂ¡ baixar usando o comando <strong><code>wget http://ip.maq.professor:8888/vmlab.zip</code></strong>. A VM ÃÂÃÂ© um Ubuntu 14.04 - 64 bit (com Mininet 2.2.1).</li>
 </ul></li>
-<li><p>Na VM com mininet, tanto o login como a senha sÃ£o <code>mininet</code>.</p></li>
+<li><p>Na VM com mininet, tanto o login como a senha sÃÂÃÂ£o <code>mininet</code>.</p></li>
 </ul>
 
 <h1>Tarefas</h1>
 
-<p>As tarefas de 1 a 7 referenciam os comandos abaixo, identificados pelo seu nÃºmero. Quando iniciado com prefixo <code>$</code>, um comando indica que estÃ¡ sendo executado no prompt do Linux (VM), enquanto que se iniciado com <code>mininet &gt;</code>, o comando estÃ¡ sendo executado no ambiente mininet.</p>
+<p>As tarefas de 1 a 7 referenciam os comandos abaixo, identificados pelo seu nÃÂÃÂºmero. Quando iniciado com prefixo <code>$</code>, um comando indica que estÃÂÃÂ¡ sendo executado no prompt do Linux (VM), enquanto que se iniciado com <code>mininet &gt;</code>, o comando estÃÂÃÂ¡ sendo executado no ambiente mininet.</p>
 
 <pre><code>$ sudo mn                            #1
 mininet&gt; nodes                       #2
@@ -53,100 +53,100 @@ mininet&gt; xterm h1 h2                 #13
 </code></pre>
 
 <ol>
-<li>Instale a VM com o mininet na sua estaÃ§Ã£o, inicialize a mÃ¡quina e entre no sistema.</li>
-<li>Inicie o mininet com a topologia padrÃ£o (#1). Verifique os nÃ³s e a conectividade entre eles (2,3).</li>
-<li>Utilize o comando <code>ifconfig</code> para identificar a configuraÃ§Ã£o da rede de cada nÃ³-estaÃ§Ã£o (4).</li>
-<li>Teste a conectividade entre os nÃ³s utilizando <code>ping</code> (5) e <code>pingall</code> (6).</li>
-<li>Teste o desempenho da comunicaÃ§Ã£o TCP e UDP entre os nÃ³s usando <code>iperf</code>  e <code>iperfudp</code> (7).</li>
-<li>RefaÃ§a os testes acima configurando uma topologia de comunicaÃ§Ã£o <strong>single</strong> com 3 nÃ³s (8), e <strong>linear</strong> com 4 nÃ³s (9).</li>
-<li>RefaÃ§a os testes de desempenho de comunicaÃ§Ã£o TCP, UDP e ping, usando uma configuraÃ§Ã£o de nÃ³s com largura de banda 100Mbps e atraso de 5ms (10). MeÃ§a os atrasos entre os nÃ³s e a taxa de transferÃªncia.</li>
-<li>RefaÃ§a os testes de desempenho anteriores, invocando o comando <code>iperf</code> em um terminal (<code>xterm</code>) individual em cada nÃ³/estaÃ§Ã£o. Uma estaÃ§Ã£o deverÃ¡ ser um servidor <code>iperf</code> (12) e outra o cliente (11). Para abrir um terminal para cada nÃ³ vocÃª deverÃ¡ usar o comando <code>xterm</code> (13), e vocÃª deverÃ¡ configurar o seu ambiente Virtual Box, mininet e estaÃ§Ã£o host, conforme explicado na seÃ§Ã£o <a href="#execucao-do-wireshark-e-terminal-remoto">"ExecuÃ§Ã£o do wireshark e terminal remoto"</a>.</li>
+<li>Instale a VM com o mininet na sua estaÃÂÃÂ§ÃÂÃÂ£o, inicialize a mÃÂÃÂ¡quina e entre no sistema.</li>
+<li>Inicie o mininet com a topologia padrÃÂÃÂ£o (#1). Verifique os nÃÂÃÂ³s e a conectividade entre eles (2,3).</li>
+<li>Utilize o comando <code>ifconfig</code> para identificar a configuraÃÂÃÂ§ÃÂÃÂ£o da rede de cada nÃÂÃÂ³-estaÃÂÃÂ§ÃÂÃÂ£o (4).</li>
+<li>Teste a conectividade entre os nÃÂÃÂ³s utilizando <code>ping</code> (5) e <code>pingall</code> (6).</li>
+<li>Teste o desempenho da comunicaÃÂÃÂ§ÃÂÃÂ£o TCP e UDP entre os nÃÂÃÂ³s usando <code>iperf</code>  e <code>iperfudp</code> (7).</li>
+<li>RefaÃÂÃÂ§a os testes acima configurando uma topologia de comunicaÃÂÃÂ§ÃÂÃÂ£o <strong>single</strong> com 3 nÃÂÃÂ³s (8), e <strong>linear</strong> com 4 nÃÂÃÂ³s (9).</li>
+<li>RefaÃÂÃÂ§a os testes de desempenho de comunicaÃÂÃÂ§ÃÂÃÂ£o TCP, UDP e ping, usando uma configuraÃÂÃÂ§ÃÂÃÂ£o de nÃÂÃÂ³s com largura de banda 100Mbps e atraso de 5ms (10). MeÃÂÃÂ§a os atrasos entre os nÃÂÃÂ³s e a taxa de transferÃÂÃÂªncia.</li>
+<li>RefaÃÂÃÂ§a os testes de desempenho anteriores, invocando o comando <code>iperf</code> em um terminal (<code>xterm</code>) individual em cada nÃÂÃÂ³/estaÃÂÃÂ§ÃÂÃÂ£o. Uma estaÃÂÃÂ§ÃÂÃÂ£o deverÃÂÃÂ¡ ser um servidor <code>iperf</code> (12) e outra o cliente (11). Para abrir um terminal para cada nÃÂÃÂ³ vocÃÂÃÂª deverÃÂÃÂ¡ usar o comando <code>xterm</code> (13), e vocÃÂÃÂª deverÃÂÃÂ¡ configurar o seu ambiente Virtual Box, mininet e estaÃÂÃÂ§ÃÂÃÂ£o host, conforme explicado na seÃÂÃÂ§ÃÂÃÂ£o <a href="#execucao-do-wireshark-e-terminal-remoto">"ExecuÃÂÃÂ§ÃÂÃÂ£o do wireshark e terminal remoto"</a>.</li>
 </ol>
 
-<h2>SubmissÃ£o do laboratÃ³rio</h2>
+<h2>SubmissÃÂÃÂ£o do laboratÃÂÃÂ³rio</h2>
 
-<p>VocÃª deverÃ¡ submeter um arquivo <code>Lab1.2-7.txt</code> (arquivo de texto) contendo o resultado dos testes realizados na tarefa (7). <strong>Observe que</strong> para facilitar a obtenÃ§Ã£o dos resultados, vocÃª deverÃ¡ acessar o mininet por terminais remotos (exibidos no seu ambiente host).</p>
+<p>VocÃÂÃÂª deverÃÂÃÂ¡ submeter um arquivo <code>Lab1.2-7.txt</code> (arquivo de texto) contendo o resultado dos testes realizados na tarefa (7). <strong>Observe que</strong> para facilitar a obtenÃÂÃÂ§ÃÂÃÂ£o dos resultados, vocÃÂÃÂª deverÃÂÃÂ¡ acessar o mininet por terminais remotos (exibidos no seu ambiente host).</p>
 
 <!--
-Caso vocÃª tenha problemas no uso do teclado com o mininet (caracteres mostrados nÃ£o correspondem aos do teclado), seja a seÃ§Ã£o [*"ConfiguraÃ§Ã£o do teclado"*](#configuracao-teclado) abaixo.
+Caso vocÃÂÃÂª tenha problemas no uso do teclado com o mininet (caracteres mostrados nÃÂÃÂ£o correspondem aos do teclado), seja a seÃÂÃÂ§ÃÂÃÂ£o [*"ConfiguraÃÂÃÂ§ÃÂÃÂ£o do teclado"*](#configuracao-teclado) abaixo.
 -->
 
 <p><a id="execucao-do-wireshark-e-terminal-remoto"></a></p>
 
-<h2>ExecuÃ§Ã£o do wireshark e terminal remoto</h2>
+<h2>ExecuÃÂÃÂ§ÃÂÃÂ£o do wireshark e terminal remoto</h2>
 
-<p>Na execuÃ§Ã£o do wireshark (ou do terminal <code>xterm</code>), provavelmente vocÃª se depararÃ¡ com o erro da figura abaixo.</p>
+<p>Na execuÃÂÃÂ§ÃÂÃÂ£o do wireshark (ou do terminal <code>xterm</code>), provavelmente vocÃÂÃÂª se depararÃÂÃÂ¡ com o erro da figura abaixo.</p>
 
 <p><img src="img/mininet-X11-error.png" /></p>
 
-<p>Esse problema ocorre porque o wireshark pretende exportar (exibir) a sua interface grÃ¡fica (X11) na estaÃ§Ã£o anfitriÃ£ que abriga a VM em execuÃ§Ã£o, ao invÃ©s na mÃ¡quina virtualizada (que nÃ£o contÃ©m suporte a GUI). O sistema X11, utilizado em muitos  sistemas operacionais baseados em Unix, permite que um programa exiba a sua interface em outra estaÃ§Ã£o, oferecendo para tal um protocolo prÃ³prio de rede. A comunicaÃ§Ã£o entre a VM e a estaÃ§Ã£o serÃ¡ intermediada pelo SSH que Ã© um serviÃ§o de terminal remoto que utiliza criptografia. Para que isso seja possÃ­vel Ã© necessÃ¡rio atender aos seguintes prÃ©-requisitos:</p>
+<p>Esse problema ocorre porque o wireshark pretende exportar (exibir) a sua interface grÃÂÃÂ¡fica (X11) na estaÃÂÃÂ§ÃÂÃÂ£o anfitriÃÂÃÂ£ que abriga a VM em execuÃÂÃÂ§ÃÂÃÂ£o, ao invÃÂÃÂ©s na mÃÂÃÂ¡quina virtualizada (que nÃÂÃÂ£o contÃÂÃÂ©m suporte a GUI). O sistema X11, utilizado em muitos  sistemas operacionais baseados em Unix, permite que um programa exiba a sua interface em outra estaÃÂÃÂ§ÃÂÃÂ£o, oferecendo para tal um protocolo prÃÂÃÂ³prio de rede. A comunicaÃÂÃÂ§ÃÂÃÂ£o entre a VM e a estaÃÂÃÂ§ÃÂÃÂ£o serÃÂÃÂ¡ intermediada pelo SSH que ÃÂÃÂ© um serviÃÂÃÂ§o de terminal remoto que utiliza criptografia. Para que isso seja possÃÂÃÂ­vel ÃÂÃÂ© necessÃÂÃÂ¡rio atender aos seguintes prÃÂÃÂ©-requisitos:</p>
 
 <ol>
-<li>VM precisa executar um servidor SSH, que serÃ¡ contactado pelo estaÃ§Ã£o. 
+<li>VM precisa executar um servidor SSH, que serÃÂÃÂ¡ contactado pelo estaÃÂÃÂ§ÃÂÃÂ£o. 
 <ul>
-<li>Na VM mininet isso jÃ¡ Ã© garantido por padrÃ£o.</li>
+<li>Na VM mininet isso jÃÂÃÂ¡ ÃÂÃÂ© garantido por padrÃÂÃÂ£o.</li>
 </ul></li>
-<li>A estaÃ§Ã£o anfitriÃ£ precisa dispor de um cliente SSH para contactar o servidor na VM. 
+<li>A estaÃÂÃÂ§ÃÂÃÂ£o anfitriÃÂÃÂ£ precisa dispor de um cliente SSH para contactar o servidor na VM. 
 <ul>
-<li>Em qualquer distribuiÃ§Ã£o Linux isso jÃ¡ Ã© satisfeito. Em estaÃ§Ãµes Windows, vocÃª precisarÃ¡ realizar uma instalaÃ§Ã£o adicional (nÃ£o coberta nesse laboratÃ³rio).</li>
+<li>Em qualquer distribuiÃÂÃÂ§ÃÂÃÂ£o Linux isso jÃÂÃÂ¡ ÃÂÃÂ© satisfeito. Em estaÃÂÃÂ§ÃÂÃÂµes Windows, vocÃÂÃÂª precisarÃÂÃÂ¡ realizar uma instalaÃÂÃÂ§ÃÂÃÂ£o adicional (nÃÂÃÂ£o coberta nesse laboratÃÂÃÂ³rio).</li>
 </ul></li>
-<li>A estaÃ§Ã£o anfitriÃ£ precisa dispor de um servidor X11. 
+<li>A estaÃÂÃÂ§ÃÂÃÂ£o anfitriÃÂÃÂ£ precisa dispor de um servidor X11. 
 <ul>
-<li>Em qualquer distribuiÃ§Ã£o Linux com interface grÃ¡fica isso jÃ¡ Ã© satisfeito. Em estaÃ§Ãµes Windows, vocÃª precisarÃ¡ realizar uma instalaÃ§Ã£o adicional (nÃ£o coberta nesse laboratÃ³rio), sendo sugerido o uso do cygwin/x (<a href="http://www.cygwin.com/">http://www.cygwin.com/</a> e <a href="http://x.cygwin.com/">http://x.cygwin.com/</a>).</li>
+<li>Em qualquer distribuiÃÂÃÂ§ÃÂÃÂ£o Linux com interface grÃÂÃÂ¡fica isso jÃÂÃÂ¡ ÃÂÃÂ© satisfeito. Em estaÃÂÃÂ§ÃÂÃÂµes Windows, vocÃÂÃÂª precisarÃÂÃÂ¡ realizar uma instalaÃÂÃÂ§ÃÂÃÂ£o adicional (nÃÂÃÂ£o coberta nesse laboratÃÂÃÂ³rio), sendo sugerido o uso do cygwin/x (<a href="http://www.cygwin.com/">http://www.cygwin.com/</a> e <a href="http://x.cygwin.com/">http://x.cygwin.com/</a>).</li>
 </ul></li>
-<li>No seu player de mÃ¡quina virtual, vamos usar VirtualBox, precisarÃ¡ configurar a rede da VM para permitir acessibilidade externa a serviÃ§os locais (escutando por uma porta) e para isso precisaremos fazer um <em>port forwarding</em>.
+<li>No seu player de mÃÂÃÂ¡quina virtual, vamos usar VirtualBox, precisarÃÂÃÂ¡ configurar a rede da VM para permitir acessibilidade externa a serviÃÂÃÂ§os locais (escutando por uma porta) e para isso precisaremos fazer um <em>port forwarding</em>.
 <ul>
-<li>Na configuraÃ§Ã£o de <strong>network</strong> da VM, clique em <em>"Port forwarding"</em> (veja figura).</li>
+<li>Na configuraÃÂÃÂ§ÃÂÃÂ£o de <strong>network</strong> da VM, clique em <em>"Port forwarding"</em> (veja figura).</li>
 </ul></li>
 </ol>
 
 <p><img src="img/mininet-portf.png" /></p>
 
 <ul>
-<li>Crie uma regra de encaminhamento de portas adequado. No exemplo da figura, escolhi o encaminhamento da porta da estaÃ§Ã£o anfitriÃ£ 2222 para a porta 22 da VM, que Ã© a porta onde o servidor SSH da VM estarÃ¡ esperando conexÃµes. A porta 2222 Ã© um exemplo e outra porta pode ser escolhida, mas <strong>necessariamente</strong> a mesma porta deverÃ¡ ser usada no comando do item seguinte.</li>
+<li>Crie uma regra de encaminhamento de portas adequado. No exemplo da figura, escolhi o encaminhamento da porta da estaÃÂÃÂ§ÃÂÃÂ£o anfitriÃÂÃÂ£ 2222 para a porta 22 da VM, que ÃÂÃÂ© a porta onde o servidor SSH da VM estarÃÂÃÂ¡ esperando conexÃÂÃÂµes. A porta 2222 ÃÂÃÂ© um exemplo e outra porta pode ser escolhida, mas <strong>necessariamente</strong> a mesma porta deverÃÂÃÂ¡ ser usada no comando do item seguinte.</li>
 </ul>
 
 <p><img src="img/mininet-portf-2.png" /></p>
 
 <ul>
-<li><p>Para  estabelecer a conexÃ£o SSH com o servidor, serÃ¡ necessÃ¡rio executar o seguinte comando</p>
+<li><p>Para  estabelecer a conexÃÂÃÂ£o SSH com o servidor, serÃÂÃÂ¡ necessÃÂÃÂ¡rio executar o seguinte comando</p>
 
 <pre><code>ssh -X mininet@127.0.0.1 -p 2222
 </code></pre></li>
-<li><p>Agora, vocÃª conseguirÃ¡ executar o wireshark no mininet, exibindo a sua interface na sua estaÃ§Ã£o (anfitriÃ£), executando (no terminal criado anteriormente):</p>
+<li><p>Agora, vocÃÂÃÂª conseguirÃÂÃÂ¡ executar o wireshark no mininet, exibindo a sua interface na sua estaÃÂÃÂ§ÃÂÃÂ£o (anfitriÃÂÃÂ£), executando (no terminal criado anteriormente):</p>
 
 <pre><code>sudo wireshark &amp;
 </code></pre></li>
 </ul>
 
-<p>Para iniciar o wireshark no ambiente de um dos hosts virtualizados, vocÃª deve abrir um terminal naquele respectivo host, via mininet. Por exemplo, para abrir um terminal para o host <code>h1</code>, use o seguinte comando de dentro do mininet:</p>
+<p>Para iniciar o wireshark no ambiente de um dos hosts virtualizados, vocÃÂÃÂª deve abrir um terminal naquele respectivo host, via mininet. Por exemplo, para abrir um terminal para o host <code>h1</code>, use o seguinte comando de dentro do mininet:</p>
 
 <pre><code>    xterm h1
 </code></pre>
 
-<p>DocumentaÃ§Ã£o detalhada sobre esse problema e sua soluÃ§Ã£o pode ser encontrada em <a href="https://github.com/mininet/mininet/wiki/FAQ#x11-forwarding">https://github.com/mininet/mininet/wiki/FAQ#x11-forwarding</a>.</p>
+<p>DocumentaÃÂÃÂ§ÃÂÃÂ£o detalhada sobre esse problema e sua soluÃÂÃÂ§ÃÂÃÂ£o pode ser encontrada em <a href="https://github.com/mininet/mininet/wiki/FAQ#x11-forwarding">https://github.com/mininet/mininet/wiki/FAQ#x11-forwarding</a>.</p>
 
 <h3>Problemas comuns</h3>
 
 <ul>
-<li>Se algumas teclas nÃ£o estÃ£o funcionando corretamente (exemplo: <code>/</code>), reconfigure o teclado utilizando o comando <code>sudo dpkg-reconfigure keyboard-configuration</code>.</li>
+<li>Se algumas teclas nÃÂÃÂ£o estÃÂÃÂ£o funcionando corretamente (exemplo: <code>/</code>), reconfigure o teclado utilizando o comando <code>sudo dpkg-reconfigure keyboard-configuration</code>.</li>
 </ul>
 
-<h1>ReferÃªncias</h1>
+<h1>ReferÃÂÃÂªncias</h1>
 
 <ul>
 <li><code>mininet</code>: <a href="http://mininet.org/">http://mininet.org/</a>
 <ul>
-<li>DocumentaÃ§Ã£o 
+<li>DocumentaÃÂÃÂ§ÃÂÃÂ£o 
 <ul>
-<li><a href="https://github.com/mininet/mininet/wiki/Introduction-to-Mininet">IntroduÃ§Ã£o ao Mininet</a></li>
-<li>DemonstraÃ§Ã£o de comandos mininet: <a href="http://mininet.org/walkthrough/">http://mininet.org/walkthrough/</a></li>
-<li>Comandos (interface nÃ£o programada): <a href="http://mininet.org/walkthrough/#part-3-mininet-command-line-interface-cli-commands">http://mininet.org/walkthrough/#part-3-mininet-command-line-interface-cli-commands</a></li>
+<li><a href="https://github.com/mininet/mininet/wiki/Introduction-to-Mininet">IntroduÃÂÃÂ§ÃÂÃÂ£o ao Mininet</a></li>
+<li>DemonstraÃÂÃÂ§ÃÂÃÂ£o de comandos mininet: <a href="http://mininet.org/walkthrough/">http://mininet.org/walkthrough/</a></li>
+<li>Comandos (interface nÃÂÃÂ£o programada): <a href="http://mininet.org/walkthrough/#part-3-mininet-command-line-interface-cli-commands">http://mininet.org/walkthrough/#part-3-mininet-command-line-interface-cli-commands</a></li>
 <li>Iniciando com o Mininet (incluindo download): <a href="http://mininet.org/download/">http://mininet.org/download/</a></li>
-<li>Encaminhamento da interface grÃ¡fica das aplicaÃ§Ãµes na VM (forwarding X11): <a href="https://github.com/mininet/mininet/wiki/FAQ#x11-forwarding">https://github.com/mininet/mininet/wiki/FAQ#x11-forwarding</a></li>
+<li>Encaminhamento da interface grÃÂÃÂ¡fica das aplicaÃÂÃÂ§ÃÂÃÂµes na VM (forwarding X11): <a href="https://github.com/mininet/mininet/wiki/FAQ#x11-forwarding">https://github.com/mininet/mininet/wiki/FAQ#x11-forwarding</a></li>
 </ul></li>
 </ul></li>
-<li><code>traceroute</code> (no Windows <code>tracert</code>): o capÃ­tulo 1 do livro do Kurose oferece uma explicaÃ§Ã£o sobre a ferramenta.</li>
+<li><code>traceroute</code> (no Windows <code>tracert</code>): o capÃÂÃÂ­tulo 1 do livro do Kurose oferece uma explicaÃÂÃÂ§ÃÂÃÂ£o sobre a ferramenta.</li>
 <li><code>iperf</code>
 <ul>
 <li><a href="http://iperf.sourceforge.net/">http://iperf.sourceforge.net/</a></li>
@@ -159,7 +159,7 @@ Caso vocÃª tenha problemas no uso do teclado com o mininet (caracteres mostrad
 <li><a href="http://www.comlore.com/httperf.html">http://www.comlore.com/httperf.html</a></li>
 <li><a href="http://mervine.net/performance-testing-with-httperf">http://mervine.net/performance-testing-with-httperf</a></li>
 </ul></li>
-<li>DiscussÃ£o geral de ferramentas de teste de desempenho
+<li>DiscussÃÂÃÂ£o geral de ferramentas de teste de desempenho
 <ul>
 <li><a href="http://kb.pert.geant.net/twiki/bin/view/PERTKB/IperfTool">http://kb.pert.geant.net/twiki/bin/view/PERTKB/IperfTool</a></li>
 </ul></li>

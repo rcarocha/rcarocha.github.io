@@ -4,49 +4,49 @@
 
 <p><xmp theme="simplex" style="display:none;"></p>
 
-<h1>Laboratório: Comunicação com Sockets e Arquitetura do HTTP</h1>
+<h1>LaboratÃÂ³rio: ComunicaÃÂ§ÃÂ£o com Sockets e Arquitetura do HTTP</h1>
 
 <h1>Objetivos</h1>
 
 <ul>
-<li>Reforçar o conceito de sockets como primitiva de comunicação na rede</li>
+<li>ReforÃÂ§ar o conceito de sockets como primitiva de comunicaÃÂ§ÃÂ£o na rede</li>
 <li>Compreender o uso de sockets no funcionamento de um protocolo, utilizando como exemplo o HTTP</li>
-<li>Compreender as primitivas de uso de sockets e o seu mapeamento no funcionamento de um protocolo e no estado de conexão TCP.</li>
+<li>Compreender as primitivas de uso de sockets e o seu mapeamento no funcionamento de um protocolo e no estado de conexÃÂ£o TCP.</li>
 </ul>
 
-<h1>Visão Geral</h1>
+<h1>VisÃÂ£o Geral</h1>
 
-<p>Neste laboratório você irá inspecionar o funcionamento de uma comunicação HTTP, verificando tanto os bytes transmitidos por meio da conexão TCP como os diversos estados da conexão. </p>
+<p>Neste laboratÃÂ³rio vocÃÂª irÃÂ¡ inspecionar o funcionamento de uma comunicaÃÂ§ÃÂ£o HTTP, verificando tanto os bytes transmitidos por meio da conexÃÂ£o TCP como os diversos estados da conexÃÂ£o. </p>
 
 <h1>Recursos</h1>
 
 <h2>Slides</h2>
 
 <ul>
-<li><a href="SOCKETS.HTTP.I.pdf">Slides utilizados no laboratório</a> pelo professor.</li>
+<li><a href="SOCKETS.HTTP.I.pdf">Slides utilizados no laboratÃÂ³rio</a> pelo professor.</li>
 </ul>
 
 <h2>Softwares</h2>
 
 <ul>
-<li><p><strong><code>netstat</code></strong>: ferramenta para verificação das conexões TCP e UDP.
-Opções no Linux</p>
+<li><p><strong><code>netstat</code></strong>: ferramenta para verificaÃÂ§ÃÂ£o das conexÃÂµes TCP e UDP.
+OpÃÂ§ÃÂµes no Linux</p>
 
 <pre><code>-t : sockets TCP
 -u : sockets UDP
--n : exibe o valor numérico das portas
--l : sockets esperando conexões (ouvindo)
+-n : exibe o valor numÃÂ©rico das portas
+-l : sockets esperando conexÃÂµes (ouvindo)
 -c : atualiza continuamente o estado dos sockets
 </code></pre>
 
-<p><a href="http://pt.wikipedia.org/wiki/Netstat">Opções no Windows</a> (ou utilize a opção /?)</p></li>
-<li><p><strong><code>nc</code></strong> (<code>netcat</code>): ferramenta de propósito gerar para criação de sockets UDP e TCP para comunicação.
-Opções utilizadas neste laboratório</p>
+<p><a href="http://pt.wikipedia.org/wiki/Netstat">OpÃÂ§ÃÂµes no Windows</a> (ou utilize a opÃÂ§ÃÂ£o /?)</p></li>
+<li><p><strong><code>nc</code></strong> (<code>netcat</code>): ferramenta de propÃÂ³sito gerar para criaÃÂ§ÃÂ£o de sockets UDP e TCP para comunicaÃÂ§ÃÂ£o.
+OpÃÂ§ÃÂµes utilizadas neste laboratÃÂ³rio</p>
 
 <pre><code>-t : sockets TCP
 -u : sockets UDP
--n : valor numérico das portas
--l : sockets esperando conexões (ouvindo)
+-n : valor numÃÂ©rico das portas
+-l : sockets esperando conexÃÂµes (ouvindo)
 -c : atualiza continuamente o estado dos sockets
 </code></pre>
 
@@ -54,9 +54,9 @@ Opções utilizadas neste laboratório</p>
 
 <ul>
 <li>Servidor: <code>nc -l 8888</code>: cria um socket servidor TCP ouvindo na porta 8888</li>
-<li>Servidor: <code>nc -kl 8888</code>: mesmo que o anterior, mas se mantém ouvindo novas conexões após o término da primeira</li>
+<li>Servidor: <code>nc -kl 8888</code>: mesmo que o anterior, mas se mantÃÂ©m ouvindo novas conexÃÂµes apÃÂ³s o tÃÂ©rmino da primeira</li>
 <li>Servidor: <code>nc -ul 8888</code>: cria um socket servidor UDP ouvindo na porta 8888</li>
-<li>Cliente: <code>nc  127.0.0.1 8888</code>: estabelece uma conexão TCP com o socket servidor no IP <code>127.0.0.1</code>, ouvindo na porta <code>8888</code>.</li>
+<li>Cliente: <code>nc  127.0.0.1 8888</code>: estabelece uma conexÃÂ£o TCP com o socket servidor no IP <code>127.0.0.1</code>, ouvindo na porta <code>8888</code>.</li>
 <li>Cliente: <code>nc -u 127.0.0.1 8888</code>: envia pacotes UDP por sockets cliente UDP para o servidor no IP <code>127.0.0.1</code> na porta <code>8888</code>.</li>
 </ul></li>
 </ul>
@@ -64,95 +64,95 @@ Opções utilizadas neste laboratório</p>
 <h1>Atividades</h1>
 
 <ol>
-<li>Execute o <code>nc</code> como cliente e como servidor, se comunicando e verifique a mudança dos estados na conexão TCP usando o <code>netstat</code>, com atenção particular a:
+<li>Execute o <code>nc</code> como cliente e como servidor, se comunicando e verifique a mudanÃÂ§a dos estados na conexÃÂ£o TCP usando o <code>netstat</code>, com atenÃÂ§ÃÂ£o particular a:
 <ol>
 <li>Socket em estado de "listening"</li>
-<li>Sockets com conexão estabelecida</li>
-<li>Sockets fechando a conexão</li>
+<li>Sockets com conexÃÂ£o estabelecida</li>
+<li>Sockets fechando a conexÃÂ£o</li>
 </ol></li>
-<li><p>Após uma revisão sobre o funcionamento do HTTP, utilize novamente o <code>nc</code> para inspecionar as mensagens enviadas por clientes e servidores HTTP.</p>
+<li><p>ApÃÂ³s uma revisÃÂ£o sobre o funcionamento do HTTP, utilize novamente o <code>nc</code> para inspecionar as mensagens enviadas por clientes e servidores HTTP.</p>
 
 <ol>
-<li>Execute o <code>nc</code> como socket servidor e faça uma requisição HTTP para ele com um browser. <strong>Anote</strong> toda requisição HTTP recebida pelo <code>nc</code>.</li>
-<li>Qual é o valor do cabeçalho <code>USER-AGENT</code> recebido?</li>
-<li>Copie a requisição do item anterior e faça uma requisição ao servidor web da página da disciplina (você terá que modificar o cabeçalho <code>LOCATION</code> para o endereço da página <code>www.inf.ufg.br</code>). Copie a resposta HTTP recebida.</li>
-<li>Faça sucessivas requisições nesse mesmo endereço, usando o <strong>browser</strong> e depois <strong>usando <code>nc</code></strong>  para obter os seguintes recursos HTTP:
+<li>Execute o <code>nc</code> como socket servidor e faÃÂ§a uma requisiÃÂ§ÃÂ£o HTTP para ele com um browser. <strong>Anote</strong> toda requisiÃÂ§ÃÂ£o HTTP recebida pelo <code>nc</code>.</li>
+<li>Qual ÃÂ© o valor do cabeÃÂ§alho <code>USER-AGENT</code> recebido?</li>
+<li>Copie a requisiÃÂ§ÃÂ£o do item anterior e faÃÂ§a uma requisiÃÂ§ÃÂ£o ao servidor web da pÃÂ¡gina da disciplina (vocÃÂª terÃÂ¡ que modificar o cabeÃÂ§alho <code>LOCATION</code> para o endereÃÂ§o da pÃÂ¡gina <code>www.inf.ufg.br</code>). Copie a resposta HTTP recebida.</li>
+<li>FaÃÂ§a sucessivas requisiÃÂ§ÃÂµes nesse mesmo endereÃÂ§o, usando o <strong>browser</strong> e depois <strong>usando <code>nc</code></strong>  para obter os seguintes recursos HTTP:
 <ul>
 <li><code>/~ricardo/rc2/labs/exemplos/1.html</code></li>
 <li><code>/~ricardo/rc2/labs/exemplos/1.txt</code></li>
 <li><code>/~ricardo/rc2/labs/exemplos/1.pdf</code></li>
 <li><code>/~ricardo/rc2/labs/exemplos/1.png</code></li>
 </ul></li>
-<li><p>Obtenha o cabeçalho HTTP de todas as <strong>respostas</strong>, que identificam o conteúdo retornado. <strong>Atenção:</strong> apenas o cabeçalho da resposta. Indique as respostas no seguinte formato (para as quatro solicitações):</p>
+<li><p>Obtenha o cabeÃÂ§alho HTTP de todas as <strong>respostas</strong>, que identificam o conteÃÂºdo retornado. <strong>AtenÃÂ§ÃÂ£o:</strong> apenas o cabeÃÂ§alho da resposta. Indique as respostas no seguinte formato (para as quatro solicitaÃÂ§ÃÂµes):</p>
 
 <pre><code>/~ricardo/rc2/labs/exemplos/1.html
-&lt;coloque as linhas do cabeçalho aqui&gt;
+&lt;coloque as linhas do cabeÃÂ§alho aqui&gt;
 -----
 /~ricardo/rc2/labs/exemplos/1.txt
-&lt;coloque as linhas do cabeçalho aqui&gt;
+&lt;coloque as linhas do cabeÃÂ§alho aqui&gt;
 </code></pre></li>
-<li><p>Faça a requisição do primeiro recurso via um browser a servidor <code>nc</code>, de maneira que o <code>nc</code> responda com o cabeçalho de uma das outras respostas. Observe o comportamento do browser.</p></li>
+<li><p>FaÃÂ§a a requisiÃÂ§ÃÂ£o do primeiro recurso via um browser a servidor <code>nc</code>, de maneira que o <code>nc</code> responda com o cabeÃÂ§alho de uma das outras respostas. Observe o comportamento do browser.</p></li>
 </ol></li>
-<li><p>Utilize o "Developer Tools"->"Network" (Firefox ou Chrome)  para reinspecionar as interações novamente, mas agora usando o próprio browser para se comunicar com o servidor. Mantenha particular atenção em:</p>
+<li><p>Utilize o "Developer Tools"->"Network" (Firefox ou Chrome)  para reinspecionar as interaÃÂ§ÃÂµes novamente, mas agora usando o prÃÂ³prio browser para se comunicar com o servidor. Mantenha particular atenÃÂ§ÃÂ£o em:</p>
 
 <ul>
-<li>As diversas interações na rede necessárias para o carregamento de uma página, incluindo a resolução de DNS.</li>
-<li>Os diversos servidores acessados durante uma interação.</li>
-<li>Os tempos envolvidos nas requisições e respostas.</li>
-<li>Quanto um conteúdo está no cache do browser e quando não está (assim como a requisição e resposta HTTP que levaram a este comportamento).</li>
+<li>As diversas interaÃÂ§ÃÂµes na rede necessÃÂ¡rias para o carregamento de uma pÃÂ¡gina, incluindo a resoluÃÂ§ÃÂ£o de DNS.</li>
+<li>Os diversos servidores acessados durante uma interaÃÂ§ÃÂ£o.</li>
+<li>Os tempos envolvidos nas requisiÃÂ§ÃÂµes e respostas.</li>
+<li>Quanto um conteÃÂºdo estÃÂ¡ no cache do browser e quando nÃÂ£o estÃÂ¡ (assim como a requisiÃÂ§ÃÂ£o e resposta HTTP que levaram a este comportamento).</li>
 </ul></li>
-<li>(<em>deverá ser realizado com o Firefox</em>) Verifique o efeito do envio simultâneo de requisições HTTP no desempenho da comunicação, seguindo as seguintes etapas:
+<li>(<em>deverÃÂ¡ ser realizado com o Firefox</em>) Verifique o efeito do envio simultÃÂ¢neo de requisiÃÂ§ÃÂµes HTTP no desempenho da comunicaÃÂ§ÃÂ£o, seguindo as seguintes etapas:
 <ol>
-<li>Carregue uma página em particular (preferencialmente que gere diversas requisições HTTP) e estime (utilizando o "Developer Tools") o tempo de carga total.</li>
+<li>Carregue uma pÃÂ¡gina em particular (preferencialmente que gere diversas requisiÃÂ§ÃÂµes HTTP) e estime (utilizando o "Developer Tools") o tempo de carga total.</li>
 <li>Apague o cache do browser.</li>
-<li>Acesse as configurações de baixo nível do Firefox digitando na barra de endereços <code>about:config</code>.</li>
+<li>Acesse as configuraÃÂ§ÃÂµes de baixo nÃÂ­vel do Firefox digitando na barra de endereÃÂ§os <code>about:config</code>.</li>
 <li>Modifique as propriedades <strong><code>network.http.max-connections</code></strong> para <code>1</code>.</li>
 <li>Repita o item (1).</li>
-<li><strong>ATENÇÃO:</strong> volte a configuração do Firefox para o valor original!</li>
+<li><strong>ATENÃÂÃÂO:</strong> volte a configuraÃÂ§ÃÂ£o do Firefox para o valor original!</li>
 </ol></li>
 </ol>
 
 <!--
 RETIRADO DO LABORATORIO ANTERIOR
-Siga as sugestões do professor sobre os exemplos a serem utilizados. 
-   * Inspecione os cabeçalhos HTTP tanto de cliente como de servidor e procure compreender o significado deles.
-      + Procure gerar tipos de respostas (código) diferentes do servidor
-   * Simule algumas interações HTTP do `nc` para o um servidor (exemplo: `www.google.com`), que ocorrem durante uma interação entre browser e servidor (não meramente uma requisição HTTP).
-   * Modifique um dos campos o cabeçalho HTTP de maneira a forçar uma mudança na resposta (o professor dará exemplos simples durante a aula. Um deles pode ser com a modificação do `user-agent` do cliente.
+Siga as sugestÃÂµes do professor sobre os exemplos a serem utilizados. 
+   * Inspecione os cabeÃÂ§alhos HTTP tanto de cliente como de servidor e procure compreender o significado deles.
+      + Procure gerar tipos de respostas (cÃÂ³digo) diferentes do servidor
+   * Simule algumas interaÃÂ§ÃÂµes HTTP do `nc` para o um servidor (exemplo: `www.google.com`), que ocorrem durante uma interaÃÂ§ÃÂ£o entre browser e servidor (nÃÂ£o meramente uma requisiÃÂ§ÃÂ£o HTTP).
+   * Modifique um dos campos o cabeÃÂ§alho HTTP de maneira a forÃÂ§ar uma mudanÃÂ§a na resposta (o professor darÃÂ¡ exemplos simples durante a aula. Um deles pode ser com a modificaÃÂ§ÃÂ£o do `user-agent` do cliente.
       + **Firefox no Android**: `Mozilla/5.0 (Android 5.1; Mobile; rv:50.0) Gecko/50.0 Firefox/50.0`
       + **Chrome no Android**: `Mozilla/5.0 (Linux; Android 5.1; XT1033 Build/LPBS23.13-56-2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.91 Mobile Safari/537.36`.
 -->
 
-<h1>Relatório</h1>
+<h1>RelatÃÂ³rio</h1>
 
-<p>A entrega do relatório deve ser pelo github classroom, com o qual vocês terão uma área indicada a partir de email enviado para vocês. Esse relatório deve ser entregue em até 5 dias.</p>
+<p>A entrega do relatÃÂ³rio deve ser pelo github classroom, com o qual vocÃÂªs terÃÂ£o uma ÃÂ¡rea indicada a partir de email enviado para vocÃÂªs. Esse relatÃÂ³rio deve ser entregue em atÃÂ© 5 dias.</p>
 
 <p>Todos os arquivos colocados no githuv devem estar codificados em <code>UTF-8</code> e devem ser arquivos de texto, seguindo a seguinte estrutura</p>
 
 <pre><code>    README.md       - deve conter uma linha com o seu nome
-    Lab2.2.2.1.txt    - resposta do item (2.1), com o dado indicado (obtido da mensagem HTTP) sem qualquer modificação
+    Lab2.2.2.1.txt    - resposta do item (2.1), com o dado indicado (obtido da mensagem HTTP) sem qualquer modificaÃÂ§ÃÂ£o
     Lab2.2.2.2.txt    - resposta do item (2.2) 
     Lab2.2.2.3.txt    - resposta do item (2.3)
     Lab2.2.2.5.txt    - resposta do item (2.5)
 </code></pre>
 
 <!--
-# Relatório
+# RelatÃÂ³rio
 
-No seu relatório, você deverá responder às seguintes questões:
+No seu relatÃÂ³rio, vocÃÂª deverÃÂ¡ responder ÃÂ s seguintes questÃÂµes:
 
-1. Explique o significado dos estados de uma conexão TCP, e em quais condições a conexão fica em cada estado.
-2. Como um servidor sabe - considerando apenas o cabeçalho da requisição - as seguintes informações do cliente (dê exemplos):
-   1. O sistema operacional e/ou browser do usuário
+1. Explique o significado dos estados de uma conexÃÂ£o TCP, e em quais condiÃÂ§ÃÂµes a conexÃÂ£o fica em cada estado.
+2. Como um servidor sabe - considerando apenas o cabeÃÂ§alho da requisiÃÂ§ÃÂ£o - as seguintes informaÃÂ§ÃÂµes do cliente (dÃÂª exemplos):
+   1. O sistema operacional e/ou browser do usuÃÂ¡rio
    1. O tamanho da tela do dispositivo
-   3. A localização do usuário
-   4. A língua falada pelo usuário
-3. Dê dois exemplos de mudanças no cabeçalho de uma requisição HTTP que provocou mudança na resposta (conteúdo) HTTP do servidor. Sugestão: use `accept-language` para uma delas. Para cada exemplo, informe:
-   * Endereço do servidor
-   * Requisições HTTP realizadas
-   * Respostas HTTP diferentes obtidas (mostre só as diferenças e de maneira resumida, se necessário).
+   3. A localizaÃÂ§ÃÂ£o do usuÃÂ¡rio
+   4. A lÃÂ­ngua falada pelo usuÃÂ¡rio
+3. DÃÂª dois exemplos de mudanÃÂ§as no cabeÃÂ§alho de uma requisiÃÂ§ÃÂ£o HTTP que provocou mudanÃÂ§a na resposta (conteÃÂºdo) HTTP do servidor. SugestÃÂ£o: use `accept-language` para uma delas. Para cada exemplo, informe:
+   * EndereÃÂ§o do servidor
+   * RequisiÃÂ§ÃÂµes HTTP realizadas
+   * Respostas HTTP diferentes obtidas (mostre sÃÂ³ as diferenÃÂ§as e de maneira resumida, se necessÃÂ¡rio).
 
-O link para submissão do relatório será indicado em tempo hábil. Procure realizar as atividades antes - guardando em arquivo - para depois submeter tudo de uma vez.
+O link para submissÃÂ£o do relatÃÂ³rio serÃÂ¡ indicado em tempo hÃÂ¡bil. Procure realizar as atividades antes - guardando em arquivo - para depois submeter tudo de uma vez.
 -->
 
 <!--

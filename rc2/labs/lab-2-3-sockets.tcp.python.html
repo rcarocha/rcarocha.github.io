@@ -4,40 +4,40 @@
 
 <p><xmp theme="simplex" style="display:none;"></p>
 
-<h1>Laboratório: Sockets TCP em Python</h1>
+<h1>LaboratÃÂ³rio: Sockets TCP em Python</h1>
 
 <h1>Objetivos</h1>
 
 <ul>
-<li>Reforçar a compreensão do conceito de sockets como primitiva de comunicação na rede</li>
-<li>Compreender as chamadas de sistema do SO para manipulação de sockets e suas consequências</li>
-<li>Compreender como as chamadas de sistema para sockets podem ser mapeadas para construções de software (em APIs)</li>
-<li>Compreender a estrutura básica de um programa baseado em sockets.</li>
-<li>Ter uma visão geral da API de manipulação de sockets do Python</li>
-<li>Ter uma compreensão inicial sobre a construção de protocolos e os problemas envolvidos (incluindo problemas de comunicação)</li>
+<li>ReforÃÂ§ar a compreensÃÂ£o do conceito de sockets como primitiva de comunicaÃÂ§ÃÂ£o na rede</li>
+<li>Compreender as chamadas de sistema do SO para manipulaÃÂ§ÃÂ£o de sockets e suas consequÃÂªncias</li>
+<li>Compreender como as chamadas de sistema para sockets podem ser mapeadas para construÃÂ§ÃÂµes de software (em APIs)</li>
+<li>Compreender a estrutura bÃÂ¡sica de um programa baseado em sockets.</li>
+<li>Ter uma visÃÂ£o geral da API de manipulaÃÂ§ÃÂ£o de sockets do Python</li>
+<li>Ter uma compreensÃÂ£o inicial sobre a construÃÂ§ÃÂ£o de protocolos e os problemas envolvidos (incluindo problemas de comunicaÃÂ§ÃÂ£o)</li>
 </ul>
 
-<h1>Visão Geral</h1>
+<h1>VisÃÂ£o Geral</h1>
 
-<p>Neste laboratório você irá construir programas simples em Python para se comportarem como cliente e servidor TCP. </p>
+<p>Neste laboratÃÂ³rio vocÃÂª irÃÂ¡ construir programas simples em Python para se comportarem como cliente e servidor TCP. </p>
 
-<p>Este laboratório é uma versão adaptada a Python e levemente diferente, de um laboratório baseado em Java. Embora o aluno possa usar Java como linguagem para resolução deste laboratório, é fortemente recomendado usar Python, por questões didáticas. </p>
+<p>Este laboratÃÂ³rio ÃÂ© uma versÃÂ£o adaptada a Python e levemente diferente, de um laboratÃÂ³rio baseado em Java. Embora o aluno possa usar Java como linguagem para resoluÃÂ§ÃÂ£o deste laboratÃÂ³rio, ÃÂ© fortemente recomendado usar Python, por questÃÂµes didÃÂ¡ticas. </p>
 
 <h1>Recursos</h1>
 
 <p>Utilizaremos o <code>netstat</code> e o <code>netcat</code> (<code>nc</code>) como ferramentas auxiliares.</p>
 
-<p>Há uma documentação bem resumida e superficial sobre as chamadas oferecidas no módulo <code>socket</code> em: <a href="http://www.inf.ufg.br/~ricardo/python/programacao.sockets.html">http://www.inf.ufg.br/~ricardo/python/programacao.sockets.html</a></p>
+<p>HÃÂ¡ uma documentaÃÂ§ÃÂ£o bem resumida e superficial sobre as chamadas oferecidas no mÃÂ³dulo <code>socket</code> em: <a href="http://www.inf.ufg.br/~ricardo/python/programacao.sockets.html">http://www.inf.ufg.br/~ricardo/python/programacao.sockets.html</a></p>
 
 <h2>Slides</h2>
 
 <ul>
-<li><a href="../slides/SOCKETS.TCP.PYTHON.pdf">Slides utilizados no laboratório</a> pelo professor.</li>
+<li><a href="../slides/SOCKETS.TCP.PYTHON.pdf">Slides utilizados no laboratÃÂ³rio</a> pelo professor.</li>
 </ul>
 
-<h2>Códigos e Snippets de Código</h2>
+<h2>CÃÂ³digos e Snippets de CÃÂ³digo</h2>
 
-<p>Duas alternativas de código para ler strings terminadas com <code>\n</code> em conexões:</p>
+<p>Duas alternativas de cÃÂ³digo para ler strings terminadas com <code>\n</code> em conexÃÂµes:</p>
 
 <ul>
 <li><p><a href="http://stackoverflow.com/questions/29023885/python-socket-readline-without-socket-makefile">Snippet 1</a></p>
@@ -73,25 +73,25 @@ print buff.getvalue().splitlines()[0]
 <h2>Softwares</h2>
 
 <ul>
-<li>Máquina Virtual utilizada nos experimentos, inclui o sistema <code>mininet</code> (ver em <a href="https://github.com/mininet/mininet/wiki/Mininet-VM-Images">mininet.org</a>).</li>
-<li><p><strong><code>netstat</code></strong>: ferramenta para verificação das conexões TCP e UDP.
-Opções no Linux</p>
+<li>MÃÂ¡quina Virtual utilizada nos experimentos, inclui o sistema <code>mininet</code> (ver em <a href="https://github.com/mininet/mininet/wiki/Mininet-VM-Images">mininet.org</a>).</li>
+<li><p><strong><code>netstat</code></strong>: ferramenta para verificaÃÂ§ÃÂ£o das conexÃÂµes TCP e UDP.
+OpÃÂ§ÃÂµes no Linux</p>
 
 <pre><code>-t : sockets TCP
 -u : sockets UDP
--n : exibe o valor numérico das portas
--l : sockets esperando conexões (ouvindo)
+-n : exibe o valor numÃÂ©rico das portas
+-l : sockets esperando conexÃÂµes (ouvindo)
 -c : atualiza continuamente o estado dos sockets
 </code></pre>
 
-<p><a href="http://pt.wikipedia.org/wiki/Netstat">Opções no Windows</a> (ou utilize a opção /?)</p></li>
-<li><p><strong><code>nc</code></strong> (<code>netcat</code>): ferramenta de propósito gerar para criação de sockets UDP e TCP para comunicação.
-Opções utilizadas neste laboratório</p>
+<p><a href="http://pt.wikipedia.org/wiki/Netstat">OpÃÂ§ÃÂµes no Windows</a> (ou utilize a opÃÂ§ÃÂ£o /?)</p></li>
+<li><p><strong><code>nc</code></strong> (<code>netcat</code>): ferramenta de propÃÂ³sito gerar para criaÃÂ§ÃÂ£o de sockets UDP e TCP para comunicaÃÂ§ÃÂ£o.
+OpÃÂ§ÃÂµes utilizadas neste laboratÃÂ³rio</p>
 
 <pre><code>-t : sockets TCP
 -u : sockets UDP
--n : valor numérico das portas
--l : sockets esperando conexões (ouvindo)
+-n : valor numÃÂ©rico das portas
+-l : sockets esperando conexÃÂµes (ouvindo)
 -c : atualiza continuamente o estado dos sockets
 </code></pre>
 
@@ -99,41 +99,41 @@ Opções utilizadas neste laboratório</p>
 
 <ul>
 <li>Servidor: <code>nc -l 8888</code>: cria um socket servidor TCP ouvindo na porta 8888</li>
-<li>Servidor: <code>nc -kl 8888</code>: mesmo que o anterior, mas se mantém ouvindo novas conexões após o término da primeira</li>
+<li>Servidor: <code>nc -kl 8888</code>: mesmo que o anterior, mas se mantÃÂ©m ouvindo novas conexÃÂµes apÃÂ³s o tÃÂ©rmino da primeira</li>
 <li>Servidor: <code>nc -ul 8888</code>: cria um socket servidor UDP ouvindo na porta 8888</li>
-<li>Cliente: <code>nc  127.0.0.1 8888</code>: estabelece uma conexão TCP com o socket servidor no IP <code>127.0.0.1</code>, ouvindo na porta <code>8888</code>.</li>
+<li>Cliente: <code>nc  127.0.0.1 8888</code>: estabelece uma conexÃÂ£o TCP com o socket servidor no IP <code>127.0.0.1</code>, ouvindo na porta <code>8888</code>.</li>
 <li>Cliente: <code>nc -u 127.0.0.1 8888</code>: envia pacotes UDP por sockets cliente UDP para o servidor no IP <code>127.0.0.1</code> na porta <code>8888</code>.</li>
 </ul></li>
 </ul>
 
-<h1>Atividades do Laboratório</h1>
+<h1>Atividades do LaboratÃÂ³rio</h1>
 
-<h2>Resumo livre das demonstrações feitas pelo professor</h2>
+<h2>Resumo livre das demonstraÃÂ§ÃÂµes feitas pelo professor</h2>
 
-<p>A documentação base relacionada a essas tarefas está em <a href="http://www.inf.ufg.br/~ricardo/python/programacao.sockets.html">http://www.inf.ufg.br/~ricardo/python/programacao.sockets.html</a>. Utilize como referência durante a demonstração. Outros textos simples sugeridos como alternativa:</p>
+<p>A documentaÃÂ§ÃÂ£o base relacionada a essas tarefas estÃÂ¡ em <a href="http://www.inf.ufg.br/~ricardo/python/programacao.sockets.html">http://www.inf.ufg.br/~ricardo/python/programacao.sockets.html</a>. Utilize como referÃÂªncia durante a demonstraÃÂ§ÃÂ£o. Outros textos simples sugeridos como alternativa:</p>
 
 <ul>
 <li><a href="https://blog.4linux.com.br/socket-em-python/">Socket em Python</a></li>
 <li><a href="http://alissonmachado.com.br/socket-em-python/">http://alissonmachado.com.br/socket-em-python/</a></li>
-<li><a href="https://wiki.python.org.br/SocketBasico">Socket Básico em python</a></li>
+<li><a href="https://wiki.python.org.br/SocketBasico">Socket BÃÂ¡sico em python</a></li>
 </ul>
 
-<p>Nesta demonstração, construiremos código Python para realizar as seguintes tarefas:</p>
+<p>Nesta demonstraÃÂ§ÃÂ£o, construiremos cÃÂ³digo Python para realizar as seguintes tarefas:</p>
 
 <ol>
 <li>chamadas de sistema para uso de sockets</li>
-<li>módulo para programação em sockets de python</li>
-<li>criação de sockets e inspeção de estados dos sockets</li>
+<li>mÃÂ³dulo para programaÃÂ§ÃÂ£o em sockets de python</li>
+<li>criaÃÂ§ÃÂ£o de sockets e inspeÃÂ§ÃÂ£o de estados dos sockets</li>
 <li>leitura e escrita em sockets clientes</li>
-<li>estrutura do código de um servidor (uso de sockets servidores)</li>
-<li>chamadas de sistemas e protocolos de aplicação</li>
-<li>criação de pequeno par cliente e servidor.</li>
+<li>estrutura do cÃÂ³digo de um servidor (uso de sockets servidores)</li>
+<li>chamadas de sistemas e protocolos de aplicaÃÂ§ÃÂ£o</li>
+<li>criaÃÂ§ÃÂ£o de pequeno par cliente e servidor.</li>
 </ol>
 
 <h2>Roteiro de Atividades</h2>
 
 <ol>
-<li><p>Crie um programa servidor utilizando sockets para retornar ao cliente a string <code>"Ok"</code>, para cada linha recebida (bytes terminados com <code>\n</code>). E depois modifique o programa servidor para acumular (somar) números enviados pelo cliente (também terminados com <code>\n</code>) e retornar para o cliente a soma quando este enviar a string <code>=</code>. Por exemplo</p>
+<li><p>Crie um programa servidor utilizando sockets para retornar ao cliente a string <code>"Ok"</code>, para cada linha recebida (bytes terminados com <code>\n</code>). E depois modifique o programa servidor para acumular (somar) nÃÂºmeros enviados pelo cliente (tambÃÂ©m terminados com <code>\n</code>) e retornar para o cliente a soma quando este enviar a string <code>=</code>. Por exemplo</p>
 
 <pre><code>Cliente      Servidor
    2    ---&gt; 
@@ -145,16 +145,16 @@ Opções utilizadas neste laboratório</p>
 </code></pre>
 
 <ul>
-<li>Neste código, para converter a string "456" em inteiro, utilize o código Python <code>int("456")</code>. Depois da soma, considere que o acumulador volta a zero.</li>
+<li>Neste cÃÂ³digo, para converter a string "456" em inteiro, utilize o cÃÂ³digo Python <code>int("456")</code>. Depois da soma, considere que o acumulador volta a zero.</li>
 </ul></li>
 <li><p>Teste o acesso ao seu servidor utilizando <code>nc</code> (caso o seu protocolo comporte o acesso via <code>nc</code>)</p></li>
-<li><p>Provoque erros no funcionamento do socket (comunicação) e/ou de seus programas e perceba qual o efeito na saída dos programas. Por exemplo:</p>
+<li><p>Provoque erros no funcionamento do socket (comunicaÃÂ§ÃÂ£o) e/ou de seus programas e perceba qual o efeito na saÃÂ­da dos programas. Por exemplo:</p>
 
 <ul>
-<li>iniciar mais de um servidor na mesma estação (<strong>P1</strong>)</li>
+<li>iniciar mais de um servidor na mesma estaÃÂ§ÃÂ£o (<strong>P1</strong>)</li>
 <li>derrubar o cliente ou o servidor durante uma conversa (<strong>P2</strong>)</li>
-<li>desconectar a sua estação da rede durante uma conversa (<strong>P3</strong>)</li>
-<li>solicitar mais de uma conexão de um cliente para o servidor (<strong>P4</strong>)</li>
+<li>desconectar a sua estaÃÂ§ÃÂ£o da rede durante uma conversa (<strong>P3</strong>)</li>
+<li>solicitar mais de uma conexÃÂ£o de um cliente para o servidor (<strong>P4</strong>)</li>
 <li>iniciar um cliente antes do servidor (<strong>P5</strong>)</li>
 </ul>
 
@@ -169,25 +169,25 @@ P5: descreva o que ocorreu em uma linha
 </ol>
 
 <!-- 
-4. Crie um outro programa servidor para permitir o acesso remoto às funcionalidades da [tartaruga](https://docs.python.org/3/library/turtle.html#turtle-methods) do Python, permitindo a um programa cliente mover em todas as direções a tartaruga. 
+4. Crie um outro programa servidor para permitir o acesso remoto ÃÂ s funcionalidades da [tartaruga](https://docs.python.org/3/library/turtle.html#turtle-methods) do Python, permitindo a um programa cliente mover em todas as direÃÂ§ÃÂµes a tartaruga. 
 -->
 
-<h1>Relatório</h1>
+<h1>RelatÃÂ³rio</h1>
 
-<p>A entrega do relatório deve ser pelo github classroom, com o qual vocês terão uma área indicada a partir de email enviado para vocês. Esse relatório deve ser entregue em até 7 dias.</p>
+<p>A entrega do relatÃÂ³rio deve ser pelo github classroom, com o qual vocÃÂªs terÃÂ£o uma ÃÂ¡rea indicada a partir de email enviado para vocÃÂªs. Esse relatÃÂ³rio deve ser entregue em atÃÂ© 7 dias.</p>
 
 <p>Todos os arquivos colocados no githuv devem estar codificados em <code>UTF-8</code> e devem ser arquivos de texto, seguindo a seguinte estrutura</p>
 
 <pre><code>    README.md     - deve conter uma linha com o seu nome
-    Lab2.3.1/     - diretório com o(s) código(s) resposta do item (3.1)
+    Lab2.3.1/     - diretÃÂ³rio com o(s) cÃÂ³digo(s) resposta do item (3.1)
     Lab2.3.3.txt  - resposta do item (3.3), de acordo com o formato indicado
 </code></pre>
 
-<h1>Discussões adicionais</h1>
+<h1>DiscussÃÂµes adicionais</h1>
 
 <ul>
-<li>Sobre o problema de não conseguir utilizar imediatamente uma porta servidora (socket servidor), há uma discussão aprofundada em <a href="https://hea-www.harvard.edu/~fine/Tech/addrinuse.html">https://hea-www.harvard.edu/~fine/Tech/addrinuse.html</a>.</li>
-<li><p>Para obter no Linux o tempo de espera em <code>TIME_WAIT</code> pelos sockets, basta ver o conteúdo do arquivo <code>/proc/sys/net/ipv4/tcp_fin_timeout</code>. Na meu caso, esse valor é 60 segundos. Para ver o arquivo, use o comando abaixo.</p>
+<li>Sobre o problema de nÃÂ£o conseguir utilizar imediatamente uma porta servidora (socket servidor), hÃÂ¡ uma discussÃÂ£o aprofundada em <a href="https://hea-www.harvard.edu/~fine/Tech/addrinuse.html">https://hea-www.harvard.edu/~fine/Tech/addrinuse.html</a>.</li>
+<li><p>Para obter no Linux o tempo de espera em <code>TIME_WAIT</code> pelos sockets, basta ver o conteÃÂºdo do arquivo <code>/proc/sys/net/ipv4/tcp_fin_timeout</code>. Na meu caso, esse valor ÃÂ© 60 segundos. Para ver o arquivo, use o comando abaixo.</p>
 
 <pre><code>cat /proc/sys/net/ipv4/tcp_fin_timeout
 </code></pre></li>

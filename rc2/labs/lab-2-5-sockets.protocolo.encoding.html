@@ -1,0 +1,118 @@
+<p><!DOCTYPE html>
+<html>
+<title>Redes de Computadores 2 - Prof. Ricardo da Rocha</title></p>
+
+<p><xmp theme="simplex" style="display:none;"></p>
+
+<h1>Laboratório: Construção de um Protocolo e Encoding de Mensagens</h1>
+
+<h1>Objetivos</h1>
+
+<ul>
+<li>Dar uma noção sobre os aspectos envolvidos na construção de um protocolo de rede, particularmente, na especificação de mensagens e no <strong>encoding/decoding</strong> de mensagens.</li>
+<li>Reforçar a compreensão do conceito de sockets como primitiva de comunicação na rede</li>
+<li>Ter uma compreensão inicial sobre a construção de protocolos e os problemas envolvidos (incluindo problemas de comunicação)</li>
+</ul>
+
+<h1>Visão Geral</h1>
+
+<p>Neste laboratório você irá construir um protocolo simples para emular a funcionalidade mais elementar do HTTP. Nos exemplos usados, codificaremos as mensagens em JSON.</p>
+
+<h1>Recursos</h1>
+
+<ul>
+<li>Biblioteca JSON do Python
+<ul>
+<li><a href="https://docs.python.org/2/library/json.html">Codificação e decodificação com o módulo <code>json</code> do Python</a>.</li>
+<li>Documentação do <a href="https://docs.python.org/3/library/json.html">módulo para Python 3</a></li>
+</ul></li>
+<li>Exemplos de JSON
+<ul>
+<li><a href="http://json.org/example.html">Exemplo com comparações</a> com XML</li>
+</ul></li>
+<li>Serialização de objetos Python
+<ul>
+<li><a href="https://docs.python.org/2/library/pickle.html">Módulo Pickle</a>. <a href="https://docs.python.org/2/library/pickle.html#example">Exemplo</a>.</li>
+</ul></li>
+<li>Programação com sockets
+<ul>
+<li>Há uma documentação bem resumida e superficial sobre as chamadas oferecidas no módulo <code>socket</code> em: <a href="http://www.inf.ufg.br/~ricardo/python/programacao.sockets.html">http://www.inf.ufg.br/~ricardo/python/programacao.sockets.html</a></li>
+</ul></li>
+</ul>
+
+<h1>Slides</h1>
+
+<ul>
+<li><a href="slides/SOCKETS.PROTOCOLOS.pdf">Slides utilizados no laboratório</a> pelo professor.</li>
+</ul>
+
+<h1>Atividades do Laboratório</h1>
+
+<ol>
+<li><p>Construa um cliente e servidor em Python que permita emular as funcionalidades elementares do HTTP, e atenda aos seguintes requisitos:</p>
+
+<ul>
+<li>Permita a Requisição de um recurso no servidor, armazenado em arquivo estático.</li>
+<li>Uma resposta deve retornar a data do recurso retornado (ver seção "snippets de código")</li>
+<li>Deve considerar que uma requisição pode não ser atendida, retornando um erro quando o arquivo não existe (como no erro 404 do HTTP).</li>
+<li>O cliente deve simplesmente exibir na tela o conteúdo do arquivo.</li>
+<li>Seu protocolo pode ser em TCP ou UDP.</li>
+<li><p>Para efeito de simplificação, considere que os recursos são armazenados em um dicionário Python. Exemplo:</p>
+
+<pre><code>bd_recursos = {
+   "/": "frases sobre programacao",
+   "/recurso1": "Talk is cheap. Show me the code.",
+   "/recurso2": "when you don't create things, you become defined by your tastes rather than ability. your tastes only narrow &amp; exclude people. so  create.",
+   "/recurso3": "Programs must be written for people to read, and only incidentally for machines to execute.",
+   "/recurso4": "Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live",
+   "/recurso5": "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.",
+   "/recurso6": "The most disastrous thing that you can ever learn is your first programming language."
+}
+</code></pre></li>
+</ul></li>
+</ol>
+
+<p><strong>Dicas</strong>:</p>
+
+<ul>
+<li>Inicie com um cliente e servidor o mais simples possível e depois adicione as funcionalidades pretendidas. Por exemplo, crie um servidor que retorne o valor de uma variável, armazenada em um <a href="https://docs.python.org/2/tutorial/datastructures.html">dicionário</a> (dictionary) Python.</li>
+</ul>
+
+<h1>Relatório</h1>
+
+<p>Todos os arquivos colocados no github devem estar codificados em <code>UTF-8</code> e devem ser arquivos de texto, seguindo a seguinte estrutura</p>
+
+<pre><code>    README.md     - deve conter uma linha com o seu nome
+    Lab2.5.1/     - diretório com o(s) código(s) resposta do item (3)
+</code></pre>
+
+<p>Procure pela mensagem de email <strong>"[RC2] submissão do relatório 2.5"</strong> para o link github com o repositório para submissão do relatório.</p>
+
+<h1>Snippets de código</h1>
+
+<ul>
+<li>JSON e Pickles: veja snippets da documentação referenciada no inicio do laboratório.</li>
+<li><a href="https://docs.python.org/2/tutorial/inputoutput.html#reading-and-writing-files">Abertura e leitura de arquivos</a></li>
+</ul>
+
+<h1>Referências Adicionais</h1>
+
+<ul>
+<li>Timeout em sockets
+<ul>
+<li><a href="https://docs.python.org/2/library/socket.html#socket.socket.settimeout"><code>socket.settimeout()</code></a>: especifica o timeout para operações no socket (definindo se as operações serão bloqueantes ou não)</li>
+<li>Gera exceção <a href="https://docs.python.org/2/library/socket.html#socket.timeout"><code>socket.timeout</code></a> (em Python 2)</li>
+<li><a href="https://docs.python.org/3/tutorial/errors.html#handling-exceptions">Tratamento de exceções</a> em Python</li>
+</ul></li>
+<li>Uso de timers e recursos de tempo no Python: módulo <a href="https://docs.python.org/3/library/time.html"><code>time</code></a>
+<ul>
+<li><a href="https://docs.python.org/3/library/time.html#time.sleep"><code>sleep</code></a>: cria um contador de tempo</li>
+<li><a href="https://docs.python.org/3/library/time.html#time.localtime"><code>localtime</code></a>: retorno o tempo (horário) atual</li>
+</ul></li>
+</ul>
+
+<p></xmp></p>
+
+<script src="https://strapdownjs.com/v/0.2/strapdown.js"></script>
+
+<p></html></p>
