@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html lang="ar" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
 <!-- Copyright (C) 2014 Kerry Veenstra -->
 <head>
 <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
@@ -220,15 +220,6 @@ disabled.  Please enable Javscript for the buttons below to work.</div>
 <form name="go" action="http://www.kerryveenstra.com/cryptosystem.html">
 <h1>Demonstração de Conceitos de Criptografia Simétrica e Assimétrica</h1>
 
-<p>
-We use cryptosystems to send secret messages and to read them.
-This demo lets you send and receive secret messages using two
-kinds of encryption: Symmetric-Key Encryption and Public-Key Encryption.
-
-<i>Be aware that this demonstration does not use real encryption algorithms.
-If you really need to send secret messages, be sure to use
-a real cryptosystem.</i>
-
 </p>
 <table border="0"><tr><td style="background-color: #87CEFA;"><h2>Encriptação Simétrica</h2>
 
@@ -330,50 +321,6 @@ name="generated_private_key" /></td></tr>
 
 </center>
 
-<!--
-<h3>Step 2a: (Optional) Sign a Message</h3>
-<p>
-Before sending a message, you may want to <i>sign</i> it.
-By signing a message you are proving to your recipient that the
-message has come from you.  You sign plaintext by
-encrypting it using <i>your</i> Private Key.
-
-</p>
-
-<center>
-<table border="0"><tr><td class="right"><label
-for="plaintext_to_be_signed">Plaintext:</label></td><td
-class="left"><input type="text"
-class="message"
-id="plaintext_to_be_signed"
-name="plaintext_to_be_signed"
-/></td></tr><tr><td class="right"><label
-for="private_key_to_sign_message">Sender's Private Key:</label></td><td class="left"><input type="text"
-class="key"
-id="private_key_to_sign_message"
-name="private_key_to_sign_message" /></td></tr><tr><td>&nbsp;</td><td class="left"><input type="button"
-id="sign_message"
-name="sign_message"
-value="Encrypt Using Sender's Private Key" 
-onclick="encrypt_using_your_private_key()" /></td></tr><tr><td
-class="right"><label
-for="signed_message">Signed Message:</label></td><td class="left"><input type="text"
-class="message"
-id="signed_message"
-name="signed_message" /></td></tr>
-</table>
-</center>
-
-<p>
-How is this secure? <i>Anyone</i> can get your Public Key and decrypt the
-ciphertext! Yes, and that's the point. Signing a message does not
-<i>protect</i> it.
-After you <i>sign</i> a message with your Private Key,
-anyone can show that the message must have been signed by you
-because they can decrypt it using <i>only</i> your Public Key.
-
-</p>
--->
 
 <h3>Encriptar uma mensagem com encriptação assimétrica</h3>
 
@@ -397,13 +344,6 @@ name="encrypt_message"
 value="Encripte usando uma chave assimétrica" 
 onclick="encrypt_using_recipient_public_key()" /></td></tr>
 
-<!--
-<tr><td>&nbsp;</td><td class="left"><input type="button"
-id="encrypt_message"
-name="encrypt_message"
-value="Encripte usando uma chave assimétrica PRIVADA" 
-onclick="encrypt_using_your_private_key()" /></td></tr>
--->
 
 <tr><td
 class="right"><label
@@ -446,106 +386,6 @@ id="decrypted_message" name="decrypted_message" /></td></tr>
 </table>
 </center>
 
-<!-- 
-<h3>Step 3b: (Optional) Verify a Signature</h3>
-<p>
-Someone claims that they have sent you a message? Confirm their
-signature by decrypting the message using <i>their</i> Public Key.
-
-</p>
-<center>
-<table border="0"><tr><td class="right"><label
-for="message_to_be_verified">Signed Message:</label></td><td
-class="left"><input type="text"
-class="message"
-id="message_to_be_verified"
-name="message_to_be_verified"
-/></td></tr><tr><td class="right"><label
-for="public_key_to_verify_signature">Sender's Public Key:</label></td><td class="left"><input type="text"
-class="key"
-id="public_key_to_verify_signature"
-name="public_key_to_verify_signature" /></td></tr><tr><td>&nbsp;</td><td class="left"><input type="button"
-id="verify_signature"
-name="verify_signature"
-value="Decrypt Using Sender's Public Key" 
-onclick="verify_using_sender_public_key()" /></td></tr><tr><td
-class="right"><label
-for="verified_message">Plaintext:</label></td><td
-class="left"><input type="text"
-class="message"
-id="verified_message"
-name="verified_message" /></td></tr>
-</table>
-</center>
-<p>
-Realize that when we say we &quot;verify a signature,&quot; 
-really we are removing a
-layer of encryption from the entire message. There is no
-separate signature appended to the message&mdash;a signature
-in the form of <i>encryption</i> has been applied to the entire message.
-
-</p>
-
-
-</td></tr>
-</table>
-
-<p>
-The four steps 2a&ndash;2b and 3a&ndash;3b
-above are <i>not</i> all applied to each message!
-Instead, you apply the steps depending on what you need to do.
-When sending a signed message, you do steps 2a and 2b, in that order.
-When receiving a signed message, you do steps 3a and 3b, in that order. 
-Consider for a moment why the order is important.
-
-</p>
-<p>
-Step 2a signs a message, and step 2b protects the 
-message <i>and the signature</i>.
-So the protection must be applied second. Similarly,
-when decrypting someone else's signed message, their signature
-is protected along with the message, and so you decrypt the ciphertext
-first, and then you verify their signature.
-
-</p>
-<p>
-Consider what could happen
-if you encrypted a message <i>first</i> and <i>then</i> signed it.
-Signing last is a bad idea because someone could <i>remove your
-signature</i> and then add their own, claiming that the message
-came from them. So we always encrypt last.
-
-</p>
-<h3>Practice</h3>
-
-<p>
-3. Generate a public/private key pair, and share just the Public Key
-with a friend.
-</p>
-
-<p>
-4. Have your friend do the same, sharing just their Public Key with you.
-At this point, you each have your own Private Key and the other's Public
-Key.
-</p>
-
-<p>
-5. Exchange <i>unsigned</i> messages. The sender uses just step 2b,
-and the recipient uses just step 3a. 
-</p>
-
-<p>
-6.  Note that you can't decrypt a
-message unless you use the proper key. Encrypt a
-message to your friend using their Public Key, but don't send it yet.
-Can you decrypt the ciphertext using their Public Key?
-</p>
-
-<p>
-7. Now exchange <i>signed</i> messages. The sender uses steps 2a and 2b,
-and the recipient uses steps 3a and 3b.
-</p>
--->
 
 </table>
 
