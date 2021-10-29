@@ -1,0 +1,97 @@
+<p><!DOCTYPE html>
+<html>
+<title>Redes de Computadores 2 - Prof. Ricardo da Rocha</title></p>
+
+<p><xmp theme="readable" style="display:none;"></p>
+
+<h1>Laboratório: Sockets e Servidores Multithreading</h1>
+
+<h1>Objetivos</h1>
+
+<ul>
+<li>Experimentar o efeito no multithreading no desempenho de servidores</li>
+<li>Dar uma noção geral de uso de threads no Python</li>
+</ul>
+
+<h1>Visão Geral</h1>
+
+<p>Neste laboratório você irá experimentar a criação de um servidor que aceita conexões simultâneas de clientes pelo uso de threads e o efeito dessa reorganização no desempenho do servidor.</p>
+
+<h1>Recursos</h1>
+
+<ul>
+<li>Ferramenta <strong><code>ab</code></strong> de teste de desempenho de servidores HTTP
+<ul>
+<li><a href="https://httpd.apache.org/docs/2.4/programs/ab.html">Documentação do <code>ab</code></a> (ferramenta da Apache). Em particular, você precisará usar dois parâmetros:
+<ul>
+<li><code>-r &lt;req&gt;</code>: envia <code>&lt;req&gt;</code> requisições no total</li>
+<li><code>-c &lt;n&gt;</code>: envia <code>n</code> requisições simultâneas (por threads)</li>
+</ul></li>
+</ul></li>
+<li><a href="https://docs.python.org/2/library/threading.html">Documentação do Módulo Threads</a> do Python</li>
+</ul>
+
+<h1>Código Exemplo</h1>
+
+<p>Este código exemplo em Python é de um servidor que responde uma requisição HTTP com um conteúdo estático. Na verdade, ele sequer avalia a requisição enviada.</p>
+
+<pre><code>    import socket
+    import time
+
+    RESPOSTA_HTTP = """HTTP/1.1 301 Moved Permanently\r\n
+    Date: Wed, 15 Feb 2017 10:32:07 GMT\r\n
+    Server: Apache\r\n
+    Location: https://www.uol.com.br/\r\n
+    Content-Length: 231\r\n
+    Connection: close\r\n
+    Content-Type: text/html; charset=iso-8859-1\r\n\r\n
+    &lt;!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"&gt;
+    &lt;html&gt;&lt;head&gt;
+    &lt;title&gt;301 Moved Permanently&lt;/title&gt;
+    &lt;/head&gt;&lt;body&gt;
+    &lt;h1&gt;Moved Permanently&lt;/h1&gt;
+    &lt;p&gt;The document has moved &lt;a href="https://www.uol.com.br/"&gt;here&lt;/a&gt;.&lt;/p&gt;
+    &lt;/body&gt;&lt;/html&gt;
+    """
+    TEMPO_PROCESSAMENTO = 0.01
+
+    SERVIDOR = ''
+    PORTA = 9898
+
+    servidor = socket.socket(socket.AF_INET,        socket.SOCK_STREAM)
+
+    servidor.bind((SERVIDOR, PORTA))
+    servidor.listen(1)
+
+    print(" ----- ")
+    while True:
+       (socketCliente, enderecoCliente) = servidor.accept()
+       print("Conexao com ", enderecoCliente, "\n")
+       requisicao = socketCliente.recv(1024)
+       print(" .... ok request\n")
+       time.sleep(TEMPO_PROCESSAMENTO)
+       socketCliente.sendall(RESPOSTA_HTTP.encode())
+       socketCliente.close()
+</code></pre>
+
+<h1>Atividades do Laboratório</h1>
+
+<ol>
+<li>Utilizando a ferramenta <code>ab</code> teste o desempenho do servidor no código Python, analisando particularmente os seguintes fatores:
+<ul>
+<li>Efeito do tempo de processamento (fictício) da requisição (variável <code>TEMPO_PROCESSAMENTO</code>).</li>
+<li>Efeito de requisições simultâneas no desempenho do servidor.</li>
+<li>Efeito do tamanho da fila de espera por conexões no servidor.</li>
+</ul></li>
+<li>Modique o código do servidor de maneira a torná-lo multitarefa, criando um thread por requisição, e avalie o efeito no desempenho nas situações anteriores.</li>
+</ol>
+
+<h1>Relatório</h1>
+
+<p>Como relatório deste laboratório, você deverá <strong>submeter</strong> o código do servidor multitarefa e responder a questões colocadas a posteriori.</p>
+
+<p></xmp></p>
+
+<script src="https://strapdownjs.com/v/0.2/strapdown.js"></script>
+
+<p></html></p>

@@ -1,0 +1,206 @@
+<p><!DOCTYPE html>
+<html>
+<title>Redes de Computadores 2 - Prof. Ricardo da Rocha</title></p>
+
+<p><xmp theme="simplex" style="display:none;"></p>
+
+<h1>Laboratório: Sockets UDP em Python</h1>
+
+<h1>Objetivos</h1>
+
+<ul>
+<li>Reforçar a compreensão do conceito de sockets como primitiva de comunicação na rede</li>
+<li>Compreender as chamadas de sistema do SO para manipulação de sockets e suas consequências</li>
+<li>Compreender como as chamadas de sistema para sockets podem ser mapeadas para construções de software (em APIs)</li>
+<li>Compreender a estrutura básica de um programa baseado em sockets UDP</li>
+<li>Ter uma visão geral da API de manipulação de sockets do Python</li>
+<li>Ter uma compreensão inicial sobre a construção de protocolos e os problemas envolvidos (incluindo problemas de comunicação)</li>
+</ul>
+
+<h1>Visão Geral</h1>
+
+<p>Neste laboratório você irá construir programas simples em Python para se comportarem como cliente e servidor UDP. </p>
+
+<p>Este laboratório é uma versão adaptada a Python e levemente diferente, de um laboratório baseado em Java. Embora o aluno possa usar Java como linguagem para resolução deste laboratório, é fortemente recomendado usar Python, por questões didáticas. </p>
+
+<h1>Recursos</h1>
+
+<p>Utilizaremos o <code>netstat</code> e o <code>netcat</code> (<code>nc</code>) como ferramentas auxiliares.</p>
+
+<p>Documentações adicionais:</p>
+
+<ul>
+<li>Há uma documentação bem resumida e superficial sobre as chamadas oferecidas no módulo <code>socket</code> em: <a href="http://www.inf.ufg.br/~ricardo/python/programacao.sockets.html">http://www.inf.ufg.br/~ricardo/python/programacao.sockets.html</a></li>
+<li>Estrutura de uma resposta HTTP: <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec6.html">https://www.w3.org/Protocols/rfc2616/rfc2616-sec6.html</a></li>
+</ul>
+
+<h2>Slides</h2>
+
+<ul>
+<li><a href="slides/SOCKETS.TCP.PYTHON.pdf">Slides utilizados no laboratório</a> pelo professor.</li>
+</ul>
+
+<h2>Primitivas Python para Manipulação de Sockets UDP</h2>
+
+<ul>
+<li>Módulos necessário: <code>socket</code>.</li>
+<li>Criação de socket UDP: <code>socket_udp = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)</code>
+<ul>
+<li>Não há diferenciação se é cliente ou servidor.</li>
+</ul></li>
+<li>Associação de porta a socket (necessário quando é servidor): <code>udp_socket.bind(('127.0.0.1',9000))</code> (no caso, a porta 9000)</li>
+<li>Envio de bytes: <code>socket_udp.sendto(mensagem,servidor)</code> (<code>servidor</code> deve ser uma tupla com endereço IP - string - e porta - inteiro)</li>
+<li>Recebimento de bytes: <code>msg, origem = udp.recvfrom(1024)</code></li>
+</ul>
+
+<h2>Códigos e Snippets de Código</h2>
+
+<p>Duas alternativas de código para ler strings terminadas com <code>\n</code> em conexões:</p>
+
+<ul>
+<li><p><a href="http://stackoverflow.com/questions/29023885/python-socket-readline-without-socket-makefile">Snippet 1</a>. Para usar esta solução você deverá instalar a biblioteca <strong><code>StringIO</code></strong> no ambiente Python.</p>
+
+<pre><code>import StringIO
+
+
+buff = StringIO.StringIO(2048)
+while True:
+    data = sock.recv()
+    buff.write(data)
+    if '\n' in data: break
+
+
+# Get the buffer data, split it over newlines, print the first line
+print buff.getvalue().splitlines()[0]
+</code></pre></li>
+<li><p><a href="https://synack.me/blog/using-python-tcp-sockets">Snippet 2</a></p>
+
+<pre><code>def readlines(sock, recv_buffer=4096, delim='\n'):
+    buffer = ''
+    data = True
+    while data:
+        data = sock.recv(recv_buffer)
+        buffer += data      
+        while buffer.find(delim) != -1:
+            line, buffer = buffer.split('\n', 1)
+            yield line
+    return
+</code></pre></li>
+</ul>
+
+<h2>Softwares</h2>
+
+<ul>
+<li>Máquina Virtual utilizada nos experimentos, inclui o sistema <code>mininet</code> (ver em <a href="https://github.com/mininet/mininet/wiki/Mininet-VM-Images">mininet.org</a>).</li>
+<li><p><strong><code>netstat</code></strong>: ferramenta para verificação das conexões TCP e UDP.
+Opções no Linux</p>
+
+<pre><code>-t : sockets TCP
+-u : sockets UDP
+-n : exibe o valor numérico das portas
+-l : sockets esperando conexões (ouvindo)
+-c : atualiza continuamente o estado dos sockets
+</code></pre>
+
+<p><a href="http://pt.wikipedia.org/wiki/Netstat">Opções no Windows</a> (ou utilize a opção /?)</p></li>
+<li><p><strong><code>nc</code></strong> (<code>netcat</code>): ferramenta de propósito gerar para criação de sockets UDP e TCP para comunicação.
+Opções utilizadas neste laboratório</p>
+
+<pre><code>-t : sockets TCP
+-u : sockets UDP
+-n : valor numérico das portas
+-l : sockets esperando conexões (ouvindo)
+-c : atualiza continuamente o estado dos sockets
+</code></pre>
+
+<p>Exemplos de uso: </p>
+
+<ul>
+<li>Servidor: <code>nc -l 8888</code>: cria um socket servidor TCP ouvindo na porta 8888</li>
+<li>Servidor: <code>nc -kl 8888</code>: mesmo que o anterior, mas se mantém ouvindo novas conexões após o término da primeira</li>
+<li>Servidor: <code>nc -ul 8888</code>: cria um socket servidor UDP ouvindo na porta 8888</li>
+<li>Cliente: <code>nc  127.0.0.1 8888</code>: estabelece uma conexão TCP com o socket servidor no IP <code>127.0.0.1</code>, ouvindo na porta <code>8888</code>.</li>
+<li>Cliente: <code>nc -u 127.0.0.1 8888</code>: envia pacotes UDP por sockets cliente UDP para o servidor no IP <code>127.0.0.1</code> na porta <code>8888</code>.</li>
+</ul></li>
+</ul>
+
+<h1>Atividades do Laboratório</h1>
+
+<h2>Resumo livre das demonstrações feitas pelo professor</h2>
+
+<ol>
+<li>Demonstração do efeito da perda de pacotes do UDP</li>
+<li><strong>Diferenças</strong> em chamadas de sistema para uso de sockets UDP em relação a TCP</li>
+<li>Módulo para programação em sockets de python</li>
+<li>Criação de sockets e inspeção de estados dos sockets UDP</li>
+<li>Leitura e escrita em sockets clientes</li>
+<li>Estrutura do código de um servidor (uso de sockets servidores)</li>
+<li>Chamadas de sistemas e protocolos de aplicação</li>
+<li>Criação de pequeno par cliente e servidor.</li>
+<li>Verificação de erros de comunicação</li>
+</ol>
+
+<h2>Roteiro de Atividades</h2>
+
+<!--
+   efeito do udp vs. tcp
+   api e programação udp
+-->
+
+<ol>
+<li>Comunicação UDP sem erros
+<ol>
+<li>Teste a comunicação entre dois sockets UDP usando o <strong>netcat</strong>, e verifique o efeito de erros na comunicação.</li>
+</ol></li>
+<li><p>Comunicação UDP com erros de transmissão</p>
+
+<ol>
+<li>Configure o ambiente virtual do <strong>mininet</strong> para exportar aplicações gráficas para a estação anfitriã, e execute o <strong>mininet</strong> configurando os enlaces para uma taxa de perda de pacotes de 10%. Para tal, utilize a seguinte linha de comando: <code>sudo mn --link tc,loss=10</code>.</li>
+<li>Abra dois terminais <strong>xterm</strong> para duas estações mininet, e transfira um arquivo BMP de um cliente UDP para um servidor UDP usando o netcat. Necessariamente, você deverá acrescentar o parâmetro <code>-u</code> no <code>nc</code> para que ele utilize pacotes UDP para comunicação. Visualize a imagem transferida e perceba as perdas encontradas. Para um exemplo de BMP, você poderá utilizar <a href="http://www.inf.ufg.br/~ricardo/rc2/labs/exemplos/grafite.bmp">este arquivo</a>.</li>
+</ol>
+
+<p><p>Você pode transferir o arquivo para da estação mininet para a estação anfitriã utilizando o seguinte comando <code>scp</code>: <code>scp -P 2222 mininet@127.0.0.1:/home/mininet/grafite.bmp grafite-via-udp.bmp</code> (considerando que o arquivo <code>grafite.bmp</code> esta no diretório <code>/home/mininet</code>).</p></li>
+<li>Crie uma nova versão do protocolo do <a href="lab-2-3-sockets.tcp.python.html">laboratório 2.3</a>, utilizando sockets UDP.</li>
+<li>Teste o acesso ao seu servidor utilizando <code>nc</code> com o parâmetro <code>-u</code> e diversas taxas de erros (via <code>mininet</code>).</li>
+<li>Provoque erros no funcionamento do socket (comunicação) e/ou de seus programas e perceba qual o efeito na saída dos programas:</p>
+
+<ul>
+<li>Efeito de servidor inoperante ou indisponível</li>
+<li>Efeito do uso ou não dos timeouts no funcionamento dos programas.</li>
+</ul></li>
+<li>Quais modificações deveriam ser realizadas nos protocolos de maneira à solução continuar funcionando, mesmo na ocorrência de perdas de pacotes? Considere opções como:
+<ul>
+<li>Cliente espera por respostas até um limite de tempo (timeout) determinado (veja na seção <strong>"Referências Adicionais"</strong> indicações de documentações de bibliotecas que você pode precisar).</li>
+</ul></li>
+</ol>
+<h1>Relatório</h1>
+
+Todos os arquivos colocados no github devem estar codificados em `UTF-8` e devem ser arquivos de texto, seguindo a seguinte estrutura
+
+<pre><code>    README.md     - deve conter uma linha com o seu nome
+    Lab2.4.3/     - diretório com o(s) código(s) resposta do item (3)
+</code></pre>
+
+Procure pela mensagem de email **"[RC2] submissão do relatório 2.4"** para o link github com o repositório para submissão do relatório.
+
+<h1>Referências Adicionais</h1>
+
+<ul>
+<li>Timeout em sockets
+<ul>
+<li><a href="https://docs.python.org/2/library/socket.html#socket.socket.settimeout"><code>socket.settimeout()</code></a>: especifica o timeout em segundos para operações no socket (definindo se as operações serão bloqueantes ou não)</li>
+<li>Gera exceção <a href="https://docs.python.org/2/library/socket.html#socket.timeout"><code>socket.timeout</code></a> (em Python 2)</li>
+<li><a href="https://docs.python.org/3/tutorial/errors.html#handling-exceptions">Tratamento de exceções</a> em Python</li>
+</ul></li>
+<li>Uso de timers e recursos de tempo no Python: módulo <a href="https://docs.python.org/3/library/time.html"><code>time</code></a> e <a href="https://docs.python.org/3/library/datetime.html"><code>datetime</code></a>, exigindo que você acrescente <code>import time</code> e <code>import datetime</code> no seu programa Python.
+<ul>
+<li><a href="https://docs.python.org/3/library/time.html#time.sleep"><code>sleep</code></a>: cria um contador de tempo, que espera por <code>t</code> segundos.</li>
+<li><a href="https://docs.python.org/3/library/datetime.html#module-datetime"><code>datetime</code></a>: retorna o tempo (horário) atual com a função <code>now()</code> (<code>datetime.datetime.now()</code>).</li>
+</ul></li>
+</ul>
+
+<p></xmp></p>
+
+<script src="https://strapdownjs.com/v/0.2/strapdown.js"></script>
+
+<p></html></p>

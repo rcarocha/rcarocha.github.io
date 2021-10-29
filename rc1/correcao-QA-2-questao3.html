@@ -1,0 +1,55 @@
+<p>Um protocolo confiável na camada de transporte precisa enviar 100 pacotes para outra estação, com erro de transmissão de 50% dos pacotes transmitidos (ignore erros nos ACKs). . Considere os seguintes parâmetros:</p>
+
+<ul>
+<li><code>100</code> pacotes para serem entregues</li>
+<li><code>R</code> = tempo de ida e volta</li>
+<li><code>T</code> = timeout</li>
+<li><code>t</code> = tempo de transmissão de cada pacote na origem (colocação dos bits na rede)</li>
+</ul>
+
+<p>Quanto tempo demora para transmitir esses pacotes? Considere três possíveis abordagens de correção de erros: Bit Alternado e Go-Back-N com retransmissão integral e seletiva. Considere que a janela de transmissão <strong>é maior que os 100 pacotes</strong>. Não também nenhum impeditivo na transmissão, como largura de banda de transmissão ou congestionamento, e há simetria nos caminhos dos pacotes.</p>
+
+<h3>Bit alternado</h3>
+
+<p>O tempo de transmissão para os pacotes transmitidos com sucesso é <code>50(t+R)</code>. O tempo de transmissão para os pacotes retransmitidos é <code>50(t+R+T)</code>, totalizando <code>50(2t+2R+T)</code>.</p>
+
+<h3>Go-Back-N, retransmissão seletiva</h3>
+
+<p>Se a janela de transmissão é maior que os 100 pacotes, então eles serão totalmente transmitidos sem que tenha sido necessário o recebimento de nenhum ACK.</p>
+
+<p>No Go-Back-N com retransmissão seletiva, o tempo para transmitir é:</p>
+
+<pre><code>    100t (pacotes transmitidos com sucesso)
+    + 50t (pacotes retransmitidos)
+    + T (após timeout é que retransmissão é iniciada) 
+    = 150t + T
+</code></pre>
+
+<h3>Go-Back-N, retransmissão integral</h3>
+
+<ul>
+<li><strong>Melhor caso</strong> - últimos 50 pacotes perdidos (e não mais perdidos), que é igual da retransmissão seletiva</li>
+<li><strong>Pior caso</strong> - apenas primeiro pacote é perdido a cada retransmissão, fazendo com que todos os pacotes seguintes devam ser retransmitidos, ocasionando a seguinte situação: 
+<ol>
+<li>1&ordf; transmissão: P1 é perdido e todos os demais descartados do receptor</li>
+<li>após timeout do P1, pacote P2 é perdido na retransmissão, e todos os seguintes são descartados no receptor</li>
+<li>após timeout do P2, pacote P3 é perdido na retransmissão, e todos os seguintes são descartados no receptor</li>
+<li>após timeout do P3, pacote P4 é perdido na retransmissão, e todos os seguintes são descartados no receptor</li>
+<li>e assim por diante, até perder o pacote P50 (para garantir a perda de 50% dos pacotes. Os pacotes de P51 a P100 são transmitidos depois com sucesso.</li>
+</ol></li>
+</ul>
+
+<p>A cada passo temos o tempo <code>T+t</code> (o tempo de transmissão dos demais pacotes não influencia, mas apenas o timeout). Como isso ocorre com 50 pacotes, temos <code>50(t+T)</code>. Para a transmissão dos demais precisamos de <code>50t</code>, totalizando</p>
+
+<pre><code>    50(2t + T)
+</code></pre>
+
+<p>No pior caso.</p>
+
+<h2>Resposta</h2>
+
+<ul>
+<li>Bit alternado: <code>50(2t+2R+T)</code>.</li>
+<li>Go-Back-N retransmissão <strong>integral</strong>: <code>50(2t + T)</code> &lt;= tempo &lt;= <code>150t + T</code></li>
+<li>Go-Back-N retransmissão <strong>seletiva</strong>: <code>150t + T</code></li>
+</ul>

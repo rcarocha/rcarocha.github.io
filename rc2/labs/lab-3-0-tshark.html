@@ -1,0 +1,194 @@
+<p><!DOCTYPE html>
+<html>
+<title>Redes de Computadores 2 - Prof. Ricardo da Rocha</title></p>
+
+<p><xmp theme="simplex" style="display:none;"></p>
+
+<h1>Laboratório: Inspeção de pacotes com TShark e funcionamento do TCP</h1>
+
+<!--
+KEEPALIVE
+
+
+https://holmeshe.me/network-essentials-setsockopt-SO_KEEPALIVE/
+https://www.tldp.org/HOWTO/html_single/TCP-Keepalive-HOWTO/
+http://tldp.org/HOWTO/TCP-Keepalive-HOWTO/usingkeepalive.html
+
+padrao linux:
+
+  # cat /proc/sys/net/ipv4/tcp_keepalive_time
+  7200
+
+  # cat /proc/sys/net/ipv4/tcp_keepalive_intvl
+  75
+
+  # cat /proc/sys/net/ipv4/tcp_keepalive_probes
+  9
+
+2 horas, 75 segundos de intervalo, 9 tentativas
+
+netcat do mininet não modifica esse valor.
+
+necessário usar ncat (pacote nmap) com opção -k)
+
+-->
+
+<h1>Objetivos</h1>
+
+<ul>
+<li>Compreender o funcionamento do TCP a partir de inspeção de pacotes pelo Wireshark/Tshark.</li>
+</ul>
+
+<h3>Uso básico do TShark</h3>
+
+<p>Opções resumidas do tshark, mostrando apenas aquelas que possivelmente nos interessarão no laboratório:</p>
+
+<pre><code>    Usage: tshark [options] ...
+
+    Captura de interface:
+      -i &lt;interface&gt;           nome ou identificador da interface
+      -f &lt;capture filter&gt;      filtro de pacotes a ser aplicado (ver abaixo)
+      -D                       print list of interfaces and exit
+      -L                       print list of link-layer types of iface and exit
+    -Y &lt;display filter&gt;      aplica um filtro de visualização de pacote, limitando aqueles exibidos
+
+    Entrada de arquivo:
+      -r &lt;infile&gt;              le os pacotes capturados de um arquivo
+
+    Saida em arquivo:
+      -w &lt;outfile&gt;             grava os pacotes capturados em um arquivo (formato pcapng)
+</code></pre>
+
+<ul>
+<li><a href="https://www.wireshark.org/docs/wsug_html_chunked/AppToolstshark.html">Documentação do <code>tshark</code></a></li>
+</ul>
+
+<h3>Filtros de Visualização do Wireshark/TShark</h3>
+
+<p>Alguns filtros úteis que eu retirei de <a href="https://medium.com/canivete-sui%C3%A7o-hacker/wireshark-guia-r%C3%A1pido-de-filtros-49dee2bcf1b">https://medium.com/canivete-sui%C3%A7o-hacker/wireshark-guia-r%C3%A1pido-de-filtros-49dee2bcf1b</a>. Você deverá aplicar como uma string limitada por aspas, após a opção <code>-f</code>.</p>
+
+<ul>
+<li><p>Filtra por IP: mostra o tráfego de IP seja destino ou origem</p>
+
+<pre><code>ip.addr == 192.168.1.1
+</code></pre></li>
+<li><p>Filtra por IP de origem</p>
+
+<pre><code>ip.src == 192.168.0.1
+</code></pre></li>
+<li><p>Filtra por IP de destino</p>
+
+<pre><code>ip.dst == 192.168.0.1
+</code></pre></li>
+<li><p>Filtra por subnet IP</p>
+
+<pre><code>ip.addr == 192.168.0.1/24
+</code></pre></li>
+<li><p>Filtra por protocolo</p>
+
+<pre><code>dns
+http
+ftp
+arp
+ssh
+telnet
+icmp
+</code></pre></li>
+<li><p>Exclui IP</p>
+
+<pre><code>!ip.addr ==192.168.0.1
+</code></pre></li>
+<li><p>Apresenta tráfego entre duas subnets</p>
+
+<pre><code>ip.addr == 192.168.0.1/24 and ip.addr == 192.168.1.1/24
+</code></pre></li>
+<li><p>Apresenta tráfego entre dois dispositivos</p>
+
+<pre><code>ip.addr == 192.168.0.1 and ip.addr == 192.168.0.2
+</code></pre></li>
+<li><p>Filtra por MAC</p>
+
+<pre><code>eth.addr = 00:50:7f:c5:b6:78
+</code></pre></li>
+<li><p>Filtra por porta TCP</p>
+
+<pre><code>tcp.port == 80
+</code></pre></li>
+<li><p>Filter TCP port source</p>
+
+<pre><code>tcp.srcport == 80
+</code></pre></li>
+<li><p>Filtra porta TCP de destino</p>
+
+<pre><code>tcp.dstport == 80
+</code></pre></li>
+<li><p>Procura user-agents</p>
+
+<pre><code>http.user_agent contains Firefox
+!http.user_agent contains || !http.user_agent contains Chrome
+</code></pre></li>
+<li><p>Filtra tráfego broadcast</p>
+
+<pre><code>!(arp or icmp or dns)
+</code></pre></li>
+<li><p>Filtra IP e porta</p>
+
+<pre><code>tcp.port == 80 &amp;&amp; ip.addr == 192.168.0.1
+</code></pre></li>
+<li><p>Filtra todos pedidos http get</p>
+
+<pre><code>http.request
+</code></pre></li>
+<li><p>Filtra todos pedidos http get e respostas</p>
+
+<pre><code>http.request or http.response
+</code></pre></li>
+<li><p>Filtra "three way handshake"</p>
+
+<pre><code>tcp.flags.syn==1 or (tcp.seq==1 and tcp.ack==1 and tcp.len==0 and tcp.analysis.initial_rtt)
+</code></pre></li>
+<li><p>Detecta SYN Floods</p>
+
+<pre><code>tcp.flags.syn == 1 and tcp.flags.ack == 0
+</code></pre></li>
+</ul>
+
+<h1>Atividades</h1>
+
+<p>Utilize o TShark para inspecionar os pacotes trocados entre duas estações no Mininet. A recomendação é que você teste primeiro a situação sem capturar os pacotes e depois, com a certeza de que conseguiu reproduzir a situação, reexecutá-la. Use o <strong>netcat</strong> para ajudar os experimentos e observe a saída do relatório desejada (seção abaixo) antes de iniciar os experimentos. </p>
+
+<ol>
+<li>Ping entre duas estações.</li>
+<li>Three-way handshake de uma conexão TCP (com sucesso).</li>
+<li>Tentativa de three-way handshake de uma conexão TCP com uma estação inexistente.</li>
+<li>Three-way handshake de uma conexão TCP com sucesso mas com atrasos grandes na comunicação, forçando retransmissão de SYN (experimente com atrasos aumentando de 5 em 5 segundos, até observar a retransmissão).</li>
+<li>Término de uma conexão TCP.</li>
+<li>Troca de pacotes T-PDUs para manutenção de conexão TCP (com pares de sockets sem troca de mensagens).</li>
+<li>Término de conexão TCP por falta de ACKs às T-PDUs.</li>
+<li>Retransmissao de pacotes em uma conexão TCP
+<ul>
+<li>Neste caso, você deverá estabelecer no Mininet um link com uma taxa de erros aceitável e inspecionar a troca de mensagens entre duas aplicações.</li>
+</ul></li>
+</ol>
+
+<h2>Submissão do laboratório</h2>
+
+<p>A entrega do relatório deve ser pelo github classroom, com o qual vocês terão uma área indicada a partir de email enviado para vocês. Esse relatório deve ser entregue em até 7 dias.</p>
+
+<p>Todos os arquivos colocados no github devem estar codificados em <code>UTF-8</code> e devem ser arquivos de texto, seguindo a seguinte estrutura</p>
+
+<pre><code>    README.md    - deve conter uma linha com o seu nome
+    Lab3.0.2.txt ou Lab3.0.2.pcap - pacotes capturados no item (2), no formato textual ou formato pcap
+    Lab3.0.3.txt ou Lab3.0.3.pcap - pacotes capturados no item (3), no formato textual ou formato pcap
+    Lab3.0.4.txt ou Lab3.0.4.pcap - pacotes capturados no item (4), no formato textual ou formato pcap
+    Lab3.0.5.txt ou Lab3.0.5.pcap - pacotes capturados no item (5), no formato textual ou formato pcap
+    Lab3.0.6.txt ou Lab3.0.6.pcap - pacotes capturados no item (6), no formato textual ou formato pcap
+    Lab3.0.7.txt ou Lab3.0.7.pcap - pacotes capturados no item (7), no formato textual ou formato pcap
+    Lab3.0.8.txt ou Lab3.0.8.pcap - pacotes capturados no item (8), no formato textual ou formato pcap
+</code></pre>
+
+<p></xmp></p>
+
+<script src="https://strapdownjs.com/v/0.2/strapdown.js"></script>
+
+<p></html></p>

@@ -1,0 +1,108 @@
+<h1>Resposta das Questões Pré-aula</h1>
+
+<h3>QP-3.3-1: Qual das frases abaixo melhor define o que é um socket?</h3>
+
+<ul>
+<li><strong>Construção de programação para permitir a programas enviar e receber mensagens diretamente pela camada de transporte.</strong></li>
+<li>API de programação para esconder as chamadas de sistemas operacional como socket(), bind() e listen().</li>
+<li>Conjunto de primitivas para manipular o TCP e UDP.</li>
+<li>Protocolos da camada de aplicação que permitem aos programas enviar e receber mensagens pela rede.</li>
+<li>Conjunto de classes Java que permitem enviar e receber mensagens pela rede.</li>
+</ul>
+
+<h3>QP-3.3-2:  Qual a relação entre sockets e protocolos da camada de transporte?</h3>
+
+<ul>
+<li><strong>Os sockets são uma interface com os protocolos da camada de transporte (TCP e UDP), permitindo receber e enviar mensagens por eles.</strong></li>
+<li>Os sockets são alternativas ao uso dos protocolos da camada de transporte (TCP e UDP).</li>
+<li>Os sockets implementam os protocolos da camada de transporte.</li>
+<li>Os sockets oferecem os mesmos serviços que são oferecidos pelos protocolos TCP e UDP.</li>
+<li>Todas as demais afirmativas estão corretas.</li>
+</ul>
+
+<h3>QP-3.3-3:  Dois processos precisam conversar entre si e ambos precisam tanto enviar como receber mensagens (comunicação bidirecional). Então serão necessários ...</h3>
+
+<ul>
+<li><strong>um socket para cada processo, sendo que um é socket servidor e outro é socket cliente.</strong></li>
+<li>dois sockets para cada processo (quatro no total), sendo que cada um precisa de um socket cliente para transmitir mensagens e um servidor para receber mensagens.</li>
+<li>um socket para os dois processos, que deve ser criado no processo cliente.</li>
+<li>um socket para os dois processos, que deve ser criado no processo servidor.</li>
+<li>um socket para os dois processos, se o socket for TCP (um única conexão), ou um para cada processo (dois no total), se forem sockets UDP.</li>
+</ul>
+
+<h3>QP-3.3-4:  O que ocorre na chamada de sistema listen()?</h3>
+
+<ul>
+<li><strong>Socket servidor solicita a espera por conexões em uma determinada porta.</strong></li>
+<li>Socket servidor fica bloqueado na chamada até que chegue um pedido de comunicação (conexão TCP) de um cliente, quando então o socket aceita o pedido e o canal de comunicação se estabelece.</li>
+<li>Socket cliente conecta a um socket servidor (conexão TCP), estabelecendo um canal de comunicação onde ambos podem enviar e receber bytes.</li>
+<li>Associa um número de porta a um socket.</li>
+</ul>
+
+<h3>QP-3.3-5:  O que ocorre na chamada de sistema accept()?</h3>
+
+<ul>
+<li><strong>Socket servidor fica bloqueado na chamada até que chegue um pedido de comunicação (conexão TCP) de um cliente, quando então o socket aceita o pedido e o canal de comunicação se estabelece.</strong></li>
+<li>Socket servidor solicita a espera por conexões em uma determinada porta.</li>
+<li>Socket cliente conecta a um socket servidor (conexão TCP), estabelecendo um canal de comunicação onde ambos podem enviar e receber bytes.</li>
+<li>Associa um número de porta a um socket.</li>
+</ul>
+
+<h3>QP-3.3-6:  O que ocorre na chamada de sistema bind()?</h3>
+
+<ul>
+<li><strong>Associa um número de porta a um socket.</strong></li>
+<li>Socket servidor fica bloqueado na chamada até que chegue um pedido de comunicação (conexão TCP) de um cliente.</li>
+<li>Socket servidor solicita a espera por conexões em uma determinada porta.</li>
+<li>Socket cliente conecta a um socket servidor (conexão TCP), estabelecendo um canal de comunicação onde ambos podem enviar e receber bytes.</li>
+</ul>
+
+<h3>QP-3.3-7:  O que ocorre na chamada de sistema connect()?</h3>
+
+<ul>
+<li><strong>Socket cliente conecta a um socket servidor (conexão TCP), estabelecendo um canal de comunicação onde ambos podem enviar e receber bytes.</strong></li>
+<li>Socket cliente conecta a um socket servidor (TCP ou UDP), estabelecendo um canal de comunicação onde ambos podem enviar e receber bytes.</li>
+<li>Socket servidor fica bloqueado na chamada até que chegue um pedido de comunicação (conexão TCP) de um cliente.</li>
+<li>Socket servidor solicita a espera por conexões em uma determinada porta.</li>
+<li>Associa um número de porta a um socket.</li>
+</ul>
+
+<h3>QP-3.3-8:  O código de um processo servidor possui um laço no qual ele realiza, em cada interação, sucessivas camadas recv(...) para receber bytes em uma conexão pré-estabelecida. Considere que ele realiza uma chamada por interação do laço. Se houver um bug no código que faça com que as interações do laço ocorram muito lentamente, o efeito resultante na conexão de comunicação</h3>
+
+<ul>
+<li><strong>será a diminuição da velocidade de comunicação entre o servidor e o cliente com quem ele conversa.</strong></li>
+<li>será a interrupção da comunicação.</li>
+<li>será a mudança do protocolo de transporte, de TCP para UDP, de maneira a diminuir os atrasos e aumentar a largura de banda.</li>
+<li>será o estabelecimento de diversas conexões (sockets) concorrente para aliviar o fluxo de comunicação entre os dois.</li>
+<li>será nulo.</li>
+</ul>
+
+<h3>QP-3.3-9:  Qual das sequências abaixo é uma sequencia de chamadas de sistema para sockets que permite construir um servidor mínimo para receber conexões de vários clientes?</h3>
+
+<ul>
+<li><strong><code>socket(); bind(); listen(); while() {accept(); /* múltiplos recv() e send() */ close();}</code></strong></li>
+<li><code>socket(); while() {bind(); listen(); accept(); /* múltiplos recv() e send() */ close();}</code></li>
+<li><code>socket(); bind(); while() {listen(); accept(); /* múltiplos recv() e send() */ close();}</code></li>
+<li><code>socket(); bind(); listen(); while() {accept(); /* múltiplos recv() e send() */ close();}</code></li>
+<li><code>socket(); bind(); listen(); while() {accept();} /* múltiplos recv() e send() */ close();</code></li>
+</ul>
+
+<h3>QP-3.3-10:  O objetivo dos buffers de transmissão e recepção é</h3>
+
+<ul>
+<li><strong>Armazenar pacotes que chegaram na estação, mas ainda não foram lidos pelo processo, ou aqueles que ainda não puderam ser enviados pelo protocolo de transporte.</strong></li>
+<li>Fazer o caching de pacotes no receptor, diminuindo a necessidade de acesso à rede para acessar as mensagens.</li>
+<li>Fazer o caching de pacotes no transmissor, diminuindo a necessidade de acesso à rede para acessar as mensagens.</li>
+<li>Aumentar a velocidade efetiva de transmissão entre os processos.</li>
+</ul>
+
+<h3>QP-3.3-11:  Dizemos que uma aplicação que é tolerante a perdas se</h3>
+
+<ul>
+<li><strong>um certo percentual dos pacotes puder ser pedido ou corrompido sem prejudicar o funcionamento da aplicação para o usuário.</strong></li>
+<li>os pacotes podem ser perdidos, mas ela esteja utilizando UDP.</li>
+<li>a velocidade de transmissão (banda) compensar a perda de pacotes.</li>
+<li>ela adotar UDP como protocolo de transporte.</li>
+<li>ela adotar TCP como protocolo de transporte.</li>
+<li>se ela parar de funcionar corretamente se qualquer perda de pacotes ocorrer.</li>
+</ul>

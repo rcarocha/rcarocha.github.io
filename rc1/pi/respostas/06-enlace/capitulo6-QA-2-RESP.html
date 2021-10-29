@@ -1,0 +1,95 @@
+<h2><strong>Questão 1</strong></h2>
+
+<p>No np-CSMA, o que ocorre se o tempo de espera aleatório escolhido for sempre muito pequeno?</p>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>o canal ficará mais ocioso.</li>
+<li><strong>[X]</strong> colisões serão mais frequentes.</li>
+<li>colisões serão menos frequentes.</li>
+<li>a rede comportará um número pequeno de estações.</li>
+<li>os tamanho dos quadros precisão ser pequenos.</li>
+</ol>
+</blockquote>
+
+<hr />
+
+<h2><strong>Questão 2</strong></h2>
+
+<p>Considere as estações <strong>A</strong>, <strong>B</strong> e <strong>C</strong> dispostas como indicado na figura, sendo que <strong>B</strong> é equidistante de <strong>A</strong> e <strong>C</strong>. Considere que o tempo de transmissão de um quadro completo é <code>q</code> e o tempo de propagação no meio entre A e C é <code>t</code>. Nenhuma outra está transmitindo, além de A. Qual o tempo mínimo que <strong>A</strong> demorará para saber se ocorreu uma colisão no quadro, sabendo que o protocolo de controle de acesso ao meio é np-CSMA?</p>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>t</li>
+<li>q</li>
+<li>q+t</li>
+<li><strong>[X]</strong> 2q+2t</li>
+</ol>
+</blockquote>
+
+<hr />
+
+<h2><strong>Questão 3</strong></h2>
+
+<p>Considere as estações <strong>A</strong>, <strong>B</strong> e <strong>C</strong> dispostas como indicado na figura, sendo que <strong>B</strong> é equidistante de <strong>A</strong> e <strong>C</strong>. Considere que o tempo de transmissão de um quadro completo é <code>t</code>.</p>
+
+<p>Se <strong>A</strong> e <strong>B</strong> iniciam a transmissão de um quadro um para o outro exatamente no mesmo instante, por quanto tempo cada estação irá perceber um sinal de colisão ou quadro corrompido no meio.</p>
+
+<!-- CSMA/CD
+    A   B   C
+1   t/2 t/2 t
+2   t   t   t
+3   3t/2    3t/2    t
+4   t/2 t/2 0
+5   t   t   0
+6   3t/2    3t/2    0
+-->
+
+<pre><code>    =======================
+    |   |  A   |  B   | C |
+    =======================
+    | 1 | t/2  | t/2  | t |
+    | 2 | t    | t    | t |
+    | 3 | 3t/2 | 3t/2 | t |
+    | 4 | t/2  | t/2  | 0 |
+    | 5 | t    | t    | 0 |
+    | 6 | 3t/2 | 3t/2 | 0 |
+    =======================
+</code></pre>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li><strong>[X]</strong> Opção 1</li>
+<li>Opção 2</li>
+<li>Opção 3</li>
+<li>Opção 4</li>
+<li>Opção 5</li>
+<li>Opção 6</li>
+<li>Nenhuma das opções</li>
+</ol>
+</blockquote>
+
+<hr />
+
+<h2><strong>Questão 4</strong></h2>
+
+<p>No token-ring, se uma estação X transmite um quadro e todas as demais também precisam transmitir, a próxima estação a transmitir </p>
+
+<h4>Opções</h4>
+
+<blockquote>
+  <ol>
+<li>pode ser qualquer uma das demais estações, pois depende de qual estação recolher o token de transmissão.</li>
+<li>é aquela que esperar o menor tempo para inspecionar o anel novamente para verificar se ele está livre.</li>
+<li><strong>[X]</strong> é a estação vizinha X no sentido de transmissão dos quadros/tokens no anel.</li>
+<li>é a estação vizinha X no sentido contrário de transmissão dos quadros/tokens no anel.</li>
+</ol>
+</blockquote>
+
+<hr />

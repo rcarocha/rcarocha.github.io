@@ -1,0 +1,116 @@
+<p><!DOCTYPE html>
+<html>
+<title>Programação Funcional e Lógica - Prof. Ricardo da Rocha</title></p>
+
+<p><xmp theme="simplex" style="display:none;"></p>
+
+<h1>Tarefa 9 de Programação Funcional e Lógica</h1>
+
+<h1>Visão geral</h1>
+
+<p>Nesta tarefa você deverá resolver quatro problemas de programação em lógica usando corte (<code>!</code>), backtracking e <code>fail</code>.</p>
+
+<h2>Submissão</h2>
+
+<p>Atenção para instruções <strong>obrigatórias</strong>.</p>
+
+<ul>
+<li>A submissão desta tarefa deve ser via repositório Github Classroom em: <a href="https://classroom.github.com/a/HmF7qbov">https://classroom.github.com/a/HmF7qbov</a></li>
+<li>O <strong>limite de submissão</strong> é sexta, 12/dez, às 20h00 (na data em que esta tarefa foi lançada).</li>
+<li>As tarefas são individuais e nenhum tipo de cópia ou similaridade com código, seja de outro aluno, seja da Internet ou livros, será aceita.</li>
+</ul>
+
+<h2>Formato de submissão</h2>
+
+<p>A sua submissão deve respeitar a seguinte estrutura</p>
+
+<pre><code>    tarefa9.1-respostas.txt - respostas textuais das questões da tarefa
+    tarefa9.1-codigo.pl - implementação corrigida do predicado factorial
+    tarefa9.2-codigo.pl - implementação do predicado p
+    tarefa9.3-codigo.pl - codigo resposta da tarefa, incluindo a implementacao do predicado ave
+    tarefa9.4-respostas.txt - respostas textuais das questoes da tarefa
+    tarefa9.4-codigo.pl - implementação dos predicados pertence1 e pertence2
+</code></pre>
+
+<!-- 2019.2 - submissao
+https://classroom.github.com/a/kY1qr9va
+-->
+
+<h1>Descrição</h1>
+
+<h3>Tarefa 9.1: Predicado fatorial</h3>
+
+<p>Considere a seguinte implementação do predicado <code>fatorial/2</code> para cálculo dos números fatoriais.</p>
+
+<pre><code>    fatorial(1,1).
+    fatorial(N,Nfat) :- N1 is N-1,
+                        fatorial(N1,Nfat1),
+                        Nfat is N*Nfat1.
+</code></pre>
+
+<ol>
+<li>Essa implementação possui um bug - funcionamento incorreto. Mostre um exemplo de ocorrência do bug e explique por que ele ocorre, baseando-se no seu exemplo.</li>
+<li>Reescreva o predicado, corrigindo o bug.</li>
+</ol>
+
+<h3>Tarefa 9.2: Construção de predicado a partir da saída</h3>
+
+<p>Implemente um predicado <strong><code>p</code></strong> que se comporta da seguite maneira:</p>
+
+<ul>
+<li><p>Resultado da consulta <code>?- p(X).</code></p>
+
+<pre><code>X = 1
+X = 2
+</code></pre></li>
+<li><p>Resultado da consulta <code>?- p(3).</code></p>
+
+<pre><code>true
+</code></pre></li>
+</ul>
+
+<h3>Tarefa 9.3: Negação de predicados</h3>
+
+<p>Considere as seguintes regras gerais para o predicado <code>ave/1</code>.</p>
+
+<pre><code>    ave(papagaio).
+    ave(carcara).
+    ave(pato).
+    ave(gaviao).
+    ave(curicaca).
+    ave(seriema).
+    ave(ema).
+    ave(tucano).
+</code></pre>
+
+<p>Uma regra natural para adicionar nessa base de dados é:</p>
+
+<pre><code>    pode_voar(X) :- ave(X).
+</code></pre>
+
+<p>indicando que todas as aves podem voar. Entretanto, <code>seriema</code> e <code>ema</code> não voam. Reescreva essa regra, atendendo aos casos particulares das aves mencionadas que não voam.</p>
+
+<h3>Tarefa 9.4: Comportamento com e sem corte</h3>
+
+<p>Considere dois predicados <code>pertence1</code> e <code>pertence2</code> que permitem verificar a pertinência de um elemento em uma lista. Suponha que alguém queira listar os elementos comuns a duas listas
+usando a seguinte consulta:</p>
+
+<pre><code>    ?- pertence1(X, [a, b, a, c, a]), pertence2(X, [c, a, c, a]).
+</code></pre>
+
+<p>Quais serão os resultados nas seguintes situações, em que os predicados podem ser implementados com ou sem cortes:</p>
+
+<ol>
+<li><code>pertence1</code> sem corte e <code>pertence2</code> sem corte?</li>
+<li><code>pertence1</code> sem corte e <code>pertence2</code> com corte?</li>
+<li><code>pertence1</code> com corte e <code>pertence2</code> sem corte?</li>
+<li><code>pertence1</code> com corte e <code>pertence2</code> com corte?</li>
+</ol>
+
+<p><strong>Explique o resultado encontrado</strong>, incluindo na sua resposta as quatro possíveis implementações dos predicados.</p>
+
+<p></xmp></p>
+
+<script src="https://strapdownjs.com/v/0.2/strapdown.js"></script>
+
+<p></html></p>
