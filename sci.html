@@ -2,8 +2,8 @@
 <html lang="ar" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
 <!-- Copyright (C) 2014 Kerry Veenstra -->
 <head>
-<meta http-equiv="Content-type" content="text/html;charset=ISO-8859-1" />
-<title>Demonstração de Conceitos de Criptografia Simétrica e Assimétrica</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+<title>DemonstraÃ§Ã£o de Conceitos de Criptografia SimÃ©trica e AssimÃ©trica</title>
 <style type="text/css">
 div.centered {width: 37em; margin-left: auto; margin-right: auto;}
 table {border-spacing:0px;}
@@ -218,7 +218,7 @@ display: block; background-color: #aa0000; padding: 3px; color: #FFFFFF;
 text-align: center; margin-left: auto; margin-right: auto;">Javascript is
 disabled.  Please enable Javscript for the buttons below to work.</div> 
 <form name="go" action="http://www.kerryveenstra.com/cryptosystem.html">
-<h1>Demonstração de Conceitos de Criptografia Simétrica e Assimétrica</h1>
+<h1>DemonstraÃ§Ã£o de Conceitos de Criptografia SimÃ©trica e AssimÃ©trica</h1>
 
 <p>
 We use cryptosystems to send secret messages and to read them.
@@ -230,16 +230,16 @@ If you really need to send secret messages, be sure to use
 a real cryptosystem.</i>
 
 </p>
-<table border="0"><tr><td style="background-color: #87CEFA;"><h2>Encriptação Simétrica</h2>
+<table border="0"><tr><td style="background-color: #87CEFA;"><h2>EncriptaÃ§Ã£o SimÃ©trica</h2>
 
 
-<h3>Geração de Chave Simétrica</h3>
+<h3>GeraÃ§Ã£o de Chave SimÃ©trica</h3>
 
 <center>
 <input type="button"
 id="generate_symmetric_key"
 name="generate_symmetric_key"
-value="Gere uma chave simétrica" 
+value="Gere uma chave simÃ©trica" 
 onclick="generate_symmetric_key_action()" /><input
 type="text" class="key"
 id="generated_symmetric_key"
@@ -247,7 +247,7 @@ name="generated_symmetric_key" />
 
 </center>
 
-<h3>Encriptação de Mensagem</h3>
+<h3>EncriptaÃ§Ã£o de Mensagem</h3>
 <center>
 <table border="0"><tr><td class="right"><label
 for="plaintext_for_encryption_using_symmetric_key">Texto plano da mensagem:</label></td><td class="left"><input type="text"
@@ -255,7 +255,7 @@ class="message"
 id="plaintext_for_encryption_using_symmetric_key"
 name="plaintext_for_encryption_using_symmetric_key"
 /></td></tr><tr><td class="right"><label
-for="symmetric_key_for_encryption">Chave simétrica:</label></td><td
+for="symmetric_key_for_encryption">Chave simÃ©trica:</label></td><td
 class="left"><input type="text"
 class="key"
 id="symmetric_key_for_encryption"
@@ -263,7 +263,7 @@ name="symmetric_key_for_encryption" /></td></tr><tr><td>&nbsp;</td><td
 class="left"><input type="button"
 id="encrypt_using_symmetric_key"
 name="encrypt_using_symmetric_key"
-value="Encripte usando chave simétrica" 
+value="Encripte usando chave simÃ©trica" 
 onclick="encrypt_using_symmetric_key_action()" /></td></tr><tr><td
 class="right"><label
 for="ciphertext_of_encryption_using_symmetric_key">Mensagem encriptada:</label></td><td class="left"><input type="text"
@@ -273,7 +273,7 @@ name="ciphertext_of_encryption_using_symmetric_key" /></td></tr>
 </table>
 </center>
 
-<h3>Decriptação de Mensagem</h3>
+<h3>DecriptaÃ§Ã£o de Mensagem</h3>
 
 <center>
 <table border="0"><tr><td class="right"><label
@@ -282,7 +282,7 @@ class="message"
 id="ciphertext_for_decryption_using_symmetric_key"
 name="ciphertext_for_decryption_using_symmetric_key"
 /></td></tr><tr><td class="right"><label
-for="symmetric_key_for_decryption">Chave simétrica:</label></td><td class="left"><input type="text"
+for="symmetric_key_for_decryption">Chave simÃ©trica:</label></td><td class="left"><input type="text"
 class="key"
 id="symmetric_key_for_decryption"
 name="symmetric_key_for_decryption" /></td></tr>
@@ -290,7 +290,7 @@ name="symmetric_key_for_decryption" /></td></tr>
 <tr><td>&nbsp;</td><td class="left"><input type="button"
 id="decrypt_using_symmetric_key"
 name="decrypt_using_symmetric_key"
-value="Decripte usando Chave Simétrica" 
+value="Decripte usando Chave SimÃ©trica" 
 onclick="decrypt_using_symmetric_key_action()" /></td></tr>
 
 <tr><td
@@ -305,17 +305,17 @@ name="plaintext_of_decryption_using_symmetric_key" /></td></tr>
 <br />
 
 
-<table border="0"><tr><td style="background-color: #ffe76f;"><h2>Criptografia Assimétrica</h2>
+<table border="0"><tr><td style="background-color: #ffe76f;"><h2>Criptografia AssimÃ©trica</h2>
 
-<h3>Geração do par de chaves</h3>
+<h3>GeraÃ§Ã£o do par de chaves</h3>
 
 <center>
 <table border="0"><tr><td><input type="button"
 id="generate_public_private_keys"
 name="generate_public_private_keys"
-value="Gere um par de chaves pública/privada" 
+value="Gere um par de chaves pÃºblica/privada" 
 onclick="generate_public_private_keys_action()" /></td><td class="right"><label
-for="generated_public_key">Chave pública:</label></td><td class="left"><input
+for="generated_public_key">Chave pÃºblica:</label></td><td class="left"><input
 type="text"
 class="key"
 id="generated_public_key"
@@ -375,7 +375,7 @@ because they can decrypt it using <i>only</i> your Public Key.
 </p>
 -->
 
-<h3>Encriptar uma mensagem com encriptação assimétrica</h3>
+<h3>Encriptar uma mensagem com encriptaÃ§Ã£o assimÃ©trica</h3>
 
 <center>
 <table border="0">
@@ -385,7 +385,7 @@ class="message"
 id="plaintext_to_be_encrypted"
 name="plaintext_to_be_encrypted"
 /></td></tr><tr><td class="right"><label
-for="public_key_to_encrypt_message">Chave de encriptação:</label></td><td
+for="public_key_to_encrypt_message">Chave de encriptaÃ§Ã£o:</label></td><td
 class="left"><input type="text"
 class="key"
 id="public_key_to_encrypt_message"
@@ -394,14 +394,14 @@ name="public_key_to_encrypt_message" /></td></tr>
 <tr><td>&nbsp;</td><td class="left"><input type="button"
 id="encrypt_message"
 name="encrypt_message"
-value="Encripte usando uma chave assimétrica" 
+value="Encripte usando uma chave assimÃ©trica" 
 onclick="encrypt_using_recipient_public_key()" /></td></tr>
 
 <!--
 <tr><td>&nbsp;</td><td class="left"><input type="button"
 id="encrypt_message"
 name="encrypt_message"
-value="Encripte usando uma chave assimétrica PRIVADA" 
+value="Encripte usando uma chave assimÃ©trica PRIVADA" 
 onclick="encrypt_using_your_private_key()" /></td></tr>
 -->
 
@@ -416,7 +416,7 @@ name="encrypted_message" /></td></tr>
 </center>
 
 
-<h3>Decriptação assimétrica de uma mensagem</h3>
+<h3>DecriptaÃ§Ã£o assimÃ©trica de uma mensagem</h3>
 
 <center>
 <table border="0"><tr><td class="right"><label
@@ -426,7 +426,7 @@ class="message"
 id="message_to_be_decrypted"
 name="message_to_be_decrypted"
 /></td></tr><tr><td class="right"><label
-for="private_key_to_decrypt_message">Chave de decriptação:</label></td>
+for="private_key_to_decrypt_message">Chave de decriptaÃ§Ã£o:</label></td>
 
 <td class="left"><input type="text"
 class="key"
@@ -434,7 +434,7 @@ id="private_key_to_decrypt_message"
 name="private_key_to_decrypt_message" /></td></tr><tr><td>&nbsp;</td><td class="left"><input type="button"
 id="decrypt_message"
 name="decrypt_message"
-value="Decripte usando uma chave assimétrica" 
+value="Decripte usando uma chave assimÃ©trica" 
 onclick="decrypt_using_your_private_key()" /></td></tr>
 
 
