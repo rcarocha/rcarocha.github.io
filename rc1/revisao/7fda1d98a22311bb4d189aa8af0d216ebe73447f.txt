@@ -1,7 +1,0 @@
-201614340	MARCOS VINICIUS NUNES RIBEIRO
-
-* Revisão de Prova P1: 5,5 => 6,0
-  - correção de nota em questão após solicitação do aluno 
-* Correção na nota da QP11: gerando mudança na média N2.
-
-- todas as correções foram incorporadas na planilha.
