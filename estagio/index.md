@@ -3,12 +3,15 @@
 
 Desde o dia 1 de abril de 2023, eu (Prof. Ricardo da Rocha) sou o **coordenador** de estágio do curso de **Ciência da Computação** (UFCAT). Na falta de um local melhor, deixarei aqui informações para auxiliar os alunos sobre a realização e regularização de estágio. 
 
+* Documentos e Formulários
+* [FAQ - Perguntas Frequentes](#faq)
+
 ## Documentos e Formulários
 
 Os documentos e formulários que devem ser utilizados no processo de estágio são os seguintes ([originalmente encontrados aqui](https://estagio.catalao.ufg.br/p/39629-estagio-nao-obrigatorio-com-empresas-e-instituicoes-conveniadas-com-a-ufcat)):
 
 * **Termo de Compromisso de Estágio**: contrato de estágio que deve ser assinado por todas as partes
-   [TCE Estágio não obrigatório empresas/instituições conveniadas](https://files.cercomp.ufg.br/weby/up/610/o/1.1_TCE_Est%C3%A1gio_n%C3%A3o_obrigat%C3%B3rio_em_empresas_conveniadas_com_a_UFCAT.docx)
+  * [TCE Estágio não obrigatório empresas/instituições conveniadas](https://files.cercomp.ufg.br/weby/up/610/o/1.1_TCE_Est%C3%A1gio_n%C3%A3o_obrigat%C3%B3rio_em_empresas_conveniadas_com_a_UFCAT.docx)
 * **Plano de Atividades de Estágio**: descrição das atividades que serão realizadas durante o estágio, que é um compromisso entre a empresa e o estagiário e deve ser coerente com um estágio em computação
   * [Plano de Atividades estágio não obrigatório empresas/instituições conveniadas](https://files.cercomp.ufg.br/weby/up/610/o/1.2_Plano_de_Atividades_Est%C3%A1gio_n%C3%A3o_obrigat%C3%B3rio_em_empresas_conveniadas_com_a_UFCAT.docx)
 * **Termo de Prorrogação de Estágio**: necessário quando o estágio será prorrogado para além do tempo indicado no TCE.
@@ -22,7 +25,7 @@ Os documentos e formulários que devem ser utilizados no processo de estágio s�
 
 
 
-## FAQ - Perguntas Frequentes
+## <a name="faq" />FAQ - Perguntas Frequentes
 
 1. **Como saber se o meu estágio está regularizado junto à UFCAT?**
 
