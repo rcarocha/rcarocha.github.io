@@ -5,7 +5,7 @@
 * MsC in Computer Science by Institute of Mathematics and Statistics ([IME](http://www.ime.usp.br/dcc)) at University of Sao Paulo ([USP](http://www.usp.br)) - 2001.
 * Member of Brazilian Computer Society ([SBC](http://www.sbc.org.br/)), Association for Computer Machinery (ACM) and IEEE.
 
-<img align="right" height="150" src="img/foto-ufcat.png" />
+<!-- <img align="right" height="150" src="img/foto-ufcat.png" /> -->
 
 
 # Research Interests
