@@ -3,10 +3,12 @@
 
 Desde o dia 1 de abril de 2023, eu (Prof. Ricardo da Rocha) sou o **coordenador** de estágio do curso de **Ciência da Computação** (UFCAT). Na falta de um local melhor, deixarei aqui informações para auxiliar os alunos sobre a realização e regularização de estágio. 
 
-* Documentos e Formulários
+* [Documentos e Formulários](#docs)
 * [FAQ - Perguntas Frequentes](#faq)
+* [Oportunidades de Estágio](#oportunidades)
+* [Contato com o Coordenador de Estágio](#contato)
 
-## Documentos e Formulários
+## <a name="docs" />Documentos e Formulários
 
 Os documentos e formulários que devem ser utilizados no processo de estágio são os seguintes ([originalmente encontrados aqui](https://estagio.catalao.ufg.br/p/39629-estagio-nao-obrigatorio-com-empresas-e-instituicoes-conveniadas-com-a-ufcat)):
 
@@ -50,11 +52,11 @@ Os documentos e formulários que devem ser utilizados no processo de estágio s�
    
    O coordenador é o representante oficial do curso e UFCAT no estágio do aluno, responsável por assinar documentos pelo curso. 
 
-## Oportunidades de Estágio
+## <a name="oportunidades" />Oportunidades de Estágio
 
 Em construção. Por enquanto, você poderá procurar as oportunidades no [portal de estágios da UFCAT](https://estagio.catalao.ufg.br/news?direction=desc&sort=journal_news.created_at&tags=noticias).
 
-### Como entrar em contato comigo
+## <a name="contato" />Como entrar em contato comigo
 
 Para entrar em contato comigo, você deve enviar um email para <a href="javascript:location='mailto:\u0072\u0063\u0061\u0072\u006f\u0063\u0068\u0061\u0040\u0075\u0066\u0063\u0061\u0074\u002e\u0065\u0064\u0075\u002e\u0062\u0072';void 0"><script type="text/javascript">document.write('\u0072\u0063\u0061\u0072\u006f\u0063\u0068\u0061\u0040\u0075\u0066\u0063\u0061\u0074\u002e\u0065\u0064\u0075\u002e\u0062\u0072')</script></a>. 
 
