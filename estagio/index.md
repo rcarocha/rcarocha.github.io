@@ -18,6 +18,8 @@ Desde o dia 1 de abril de 2023, eu (Prof. Ricardo da Rocha) sou o **coordenador*
 
 ## <a name="docs" />Documentos e Formulários
 
+* [Regulamento de Estágio](https://files.cercomp.ufg.br/weby/up/498/o/regulamento_estagio.pdf?1382352175) do Departamento de Ciência da Computação
+
 Os documentos e formulários que devem ser utilizados no processo de estágio são os seguintes ([originalmente encontrados aqui](https://estagio.catalao.ufg.br/p/39629-estagio-nao-obrigatorio-com-empresas-e-instituicoes-conveniadas-com-a-ufcat)):
 
 * **Termo de Compromisso de Estágio**: contrato de estágio que deve ser assinado por todas as partes
@@ -47,7 +49,7 @@ Os documentos e formulários que devem ser utilizados no processo de estágio s�
 
 1. **Qual é o problema em não regularizar o meu estágio junto à UFCAT apesar dele ser não obrigatório no curso de Ciência da Computação?**
 
-   Você corre o risco de não conseguir aproveitar as horas do estágio nas horas de atividades complementares, que são necessárias para que você obtenha o diploma.
+   Você corre o risco de não conseguir aproveitar as horas do estágio nas horas de atividades complementares, que são necessárias para que você obtenha o diploma. Neste caso, você teria que completar as horas com outras atividades (veja o [PPC do curso](https://files.cercomp.ufg.br/weby/up/498/o/PPC-Computa%C3%A7%C3%A3o-RC.pdf) na seção *"6.6 - Atividades Complementares"*).
 
 1. **Estou fazendo estágio já há algum tempo mas o meu estágio não está regularizado. O que eu devo fazer?**
 
