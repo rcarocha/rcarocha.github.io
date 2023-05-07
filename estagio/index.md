@@ -3,10 +3,18 @@
 
 Desde o dia 1 de abril de 2023, eu (Prof. Ricardo da Rocha) sou o **coordenador** de estágio do curso de **Ciência da Computação** (UFCAT). Na falta de um local melhor, deixarei aqui informações para auxiliar os alunos sobre a realização e regularização de estágio. 
 
+* [Etapas Oficiais do Estágio](#etapas)
 * [Documentos e Formulários](#docs)
 * [FAQ - Perguntas Frequentes](#faq)
 * [Oportunidades de Estágio](#oportunidades)
 * [Contato com o Coordenador de Estágio](#contato)
+
+## <a name="etapas" />Etapas Oficiais do Estágio
+
+* A empresa precisa estar conveniada com a UFCAT. [Lista das empresas conveniadas](https://estagio.catalao.ufg.br/p/40059-convenios)
+  * Caso a empresa não possua um convênio, então basta a empresa solicitar um convênio em um processo que não está indicado aqui. A empresa deve entrar em contato com a [coordenação de estágio da UFCAT](https://estagio.catalao.ufg.br/) para entender qual é o procedimento que deve ser seguido (email da coordenação: <a href="javascript:location='mailto:\u0063\u0067\u0065\u002e\u0070\u0072\u006f\u0067\u0072\u0061\u0064\u0040\u0075\u0066\u0063\u0061\u0074\u002e\u0065\u0064\u0075\u002e\u0062\u0072';void 0"><script type="text/javascript">document.write('\u0063\u0067\u0065\u002e\u0070\u0072\u006f\u0067\u0072\u0061\u0064\u0040\u0075\u0066\u0063\u0061\u0074\u002e\u0065\u0064\u0075\u002e\u0062\u0072')</script></a>). [Equipe de atendimento](https://estagio.catalao.ufg.br/p/5916-equipe-horario-de-atendimento). 
+* [Tutorial do peticionamento de estágio](https://estagio.catalao.ufg.br/p/41500-tutoriais-peticionamento-de-estagio-nao-obrigatorio-no-sei) - Coordenação de Estágio da UFCAT
+  * Os passos indicados nesse tutorial devem ser seguidos pelo interessado no estágio/estagiário.
 
 ## <a name="docs" />Documentos e Formulários
 
@@ -24,7 +32,6 @@ Os documentos e formulários que devem ser utilizados no processo de estágio s�
   * [Relatório estágio não obrigatório empresas/instituições conveniadas](https://files.cercomp.ufg.br/weby/up/610/o/1.4_Relat%C3%B3rio_de_Atividades_Est%C3%A1gio_n%C3%A3o_obrigat%C3%B3rio_em_empresas_conveniadas_com_a_UFCAT.docx)
 * **Formulário de Desligamento**: oficialização do término do estágio.
   * [Formulário de desligamento estágio não obrigatório empresas/instituições conveniadas](https://files.cercomp.ufg.br/weby/up/610/o/1.5_Formul%C3%A1rio_de_Desligamento_Est%C3%A1gio_n%C3%A3o_obrigat%C3%B3rio_em_empresas_conveniadas_com_a_UFCAT.docx)
-
 
 
 ## <a name="faq" />FAQ - Perguntas Frequentes
@@ -54,10 +61,12 @@ Os documentos e formulários que devem ser utilizados no processo de estágio s�
 
 ## <a name="oportunidades" />Oportunidades de Estágio
 
-Em construção. Por enquanto, você poderá procurar as oportunidades no [portal de estágios da UFCAT](https://estagio.catalao.ufg.br/news?direction=desc&sort=journal_news.created_at&tags=noticias).
+*Em construção*. Por enquanto, você poderá procurar as oportunidades no [portal de estágios da UFCAT](https://estagio.catalao.ufg.br/news?direction=desc&sort=journal_news.created_at&tags=noticias).
 
 ## <a name="contato" />Como entrar em contato comigo
 
 Para entrar em contato comigo, você deve enviar um email para <a href="javascript:location='mailto:\u0072\u0063\u0061\u0072\u006f\u0063\u0068\u0061\u0040\u0075\u0066\u0063\u0061\u0074\u002e\u0065\u0064\u0075\u002e\u0062\u0072';void 0"><script type="text/javascript">document.write('\u0072\u0063\u0061\u0072\u006f\u0063\u0068\u0061\u0040\u0075\u0066\u0063\u0061\u0074\u002e\u0065\u0064\u0075\u002e\u0062\u0072')</script></a>. 
 
 A minha sala é sala **314** do Bloco M, duas salas antes da sala da coordenadora (Liliane). Entretanto, você deve fazer um contato por email, pois nem sempre estarei disponível na minha sala e a grande maioria dos problemas são resolvidos digitalmente.
+
+Outras informações sobre mim [na minha página](https://rcarocha.github.io/).
