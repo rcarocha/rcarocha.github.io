@@ -40,7 +40,7 @@ Os documentos e formulários que devem ser utilizados no processo de estágio s�
 
 1. **Como saber se o meu estágio está regularizado junto à UFCAT?**
 
-   O seu estágio só estará regulalizado se **todas** as seguintes condições forem atendidas:
+   O seu estágio só estará regularizado se **todas** as seguintes condições forem atendidas:
    
    1. Você possui um contrato de estágio assinado pela empresa e pela UFCAT.
    2. O seu contrato e todo o andamento do estágio estiver documentado e com as assinaturas necessárias em um processo SEI!, que é o sistema de protocolos do governo federal. 
@@ -57,7 +57,7 @@ Os documentos e formulários que devem ser utilizados no processo de estágio s�
    
 1. **Qual é a diferença entre o orientador de estágio e o coordenador de estágio?**
 
-   Como o estágio em Ciência da Computação é **não-origatório**, então o orientador não tem papel muito relevante. Em teoria, ele deveria atuar na área da computação em que as atividades do estagiário e certificar que as atividades desenvolvidas são coerentes para um estágio em computação. Na prática, apenas este segundo papel é importante, mas ele pode ser desempenhado pelo próprio coordenador de estágio. Entretanto, oficialmente sempre haverá um orientador e um coordenador, ainda que as tarefas sejam desempenhadas pela mesma pessoa.
+   Como o estágio em Ciência da Computação é **não-obrigatório**, então o orientador não tem papel muito relevante. Em teoria, ele deveria atuar na área da computação em que as atividades do estagiário e certificar que as atividades desenvolvidas são coerentes para um estágio em computação. Na prática, apenas este segundo papel é importante, mas ele pode ser desempenhado pelo próprio coordenador de estágio. Entretanto, oficialmente sempre haverá um orientador e um coordenador, ainda que as tarefas sejam desempenhadas pela mesma pessoa.
    
    O coordenador é o representante oficial do curso e UFCAT no estágio do aluno, responsável por assinar documentos pelo curso. 
 
