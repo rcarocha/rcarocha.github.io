@@ -1,11 +1,11 @@
 # Ricardo Couto Antunes da Rocha
 
-* Assistant Professor at Department of Computer Science ([DCC](https://dcc.catalao.ufg.br/)), Federal University of Goias ([UFG](http://www.ufg.br/)) - Regional Campus at Catalão, Brazil (formerly professor at [Institute of Informatics](http://www.inf.ufg.br/), UFG, Goiania)
+* Assistant Professor at Department of Computer Science ([DCC](https://dcc.catalao.ufg.br/)), Federal University of Catalão ([UFCAT](https://portal.ufcat.edu.br/)) - Catalão (GO), Brazil (formerly professor at [Institute of Informatics](http://www.inf.ufg.br/), UFG, Goiania)
 * PhD in Computer Science at Pontifical Catholic University of Rio de Janeiro ([PUC-Rio](http://www.puc-rio.br/english/)) - 2009.
 * MsC in Computer Science by Institute of Mathematics and Statistics ([IME](http://www.ime.usp.br/dcc)) at University of Sao Paulo ([USP](http://www.usp.br)) - 2001.
 * Member of Brazilian Computer Society ([SBC](http://www.sbc.org.br/)), Association for Computer Machinery (ACM) and IEEE.
 
-<img align="right" height="150" src="images/ricardo-rocha-photo.jpg" />
+<img align="right" height="150" src="img/foto-ufcat.png" />
 
 
 # Research Interests
@@ -49,11 +49,11 @@ Please, check my [Lattes CV](http://buscatextual.cnpq.br/buscatextual/visualizac
 # Address and Contact
 
 Prof. Dr. Ricardo Couto Antunes da Rocha<br>
+Instituto de Biotecnologia<br>
 Departamento de Ciências da Computação<br>
-Universidade Federal de Goiás - Regional Catalão<br>
+Universidade Federal de Catalão<br>
 Av. Dr. Lamartine P. de Avelar, 1120<br>
 Setor Universitário<br>
 75704-020 - Catalão - GO - Brazil<br>
-<ricardo@inf.ufg.br> or <rcarocha@ufg.br><br>
-<img src="images/email.gif"></img><br>
-(I'm at room **314**)
+<a href="javascript:location='mailto:\u0072\u0063\u0061\u0072\u006f\u0063\u0068\u0061\u0040\u0075\u0066\u0063\u0061\u0074\u002e\u0065\u0064\u0075\u002e\u0062\u0072';void 0"><script type="text/javascript">document.write('\u0072\u0063\u0061\u0072\u006f\u0063\u0068\u0061\u0040\u0075\u0066\u0063\u0061\u0074\u002e\u0065\u0064\u0075\u002e\u0062\u0072')</script></a><br>
+(I'm at room **314** - sala **314**)
