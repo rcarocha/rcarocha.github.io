@@ -13,8 +13,11 @@ Desde o dia 1 de abril de 2023, eu (Prof. Ricardo da Rocha) sou o **coordenador*
 
 * A empresa precisa estar conveniada com a UFCAT. [Lista das empresas conveniadas](https://estagio.catalao.ufg.br/p/40059-convenios)
   * Caso a empresa não possua um convênio, então basta a empresa solicitar um convênio em um processo que não está indicado aqui. A **empresa** deve entrar em contato com a [coordenação de estágio da UFCAT](https://estagio.catalao.ufg.br/) para entender qual é o procedimento que deve ser seguido (email da coordenação: <a href="javascript:location='mailto:\u0063\u0067\u0065\u002e\u0070\u0072\u006f\u0067\u0072\u0061\u0064\u0040\u0075\u0066\u0063\u0061\u0074\u002e\u0065\u0064\u0075\u002e\u0062\u0072';void 0"><script type="text/javascript">document.write('\u0063\u0067\u0065\u002e\u0070\u0072\u006f\u0067\u0072\u0061\u0064\u0040\u0075\u0066\u0063\u0061\u0074\u002e\u0065\u0064\u0075\u002e\u0062\u0072')</script></a>). [Equipe de atendimento](https://estagio.catalao.ufg.br/p/5916-equipe-horario-de-atendimento). 
-* [Tutorial do peticionamento de estágio](https://estagio.catalao.ufg.br/p/41500-tutoriais-peticionamento-de-estagio-nao-obrigatorio-no-sei) - Coordenação de Estágio da UFCAT
+* O estudante precisa realizar o [**peticionamento de estágio**](peticionamento.md). 
+
+<!-- [Tutorial do peticionamento de estágio](https://estagio.catalao.ufg.br/p/41500-tutoriais-peticionamento-de-estagio-nao-obrigatorio-no-sei) - Coordenação de Estágio da UFCAT
   * Os passos indicados nesse tutorial devem ser seguidos pelo interessado no estágio/estagiário.
+-->
 
 ## <a name="docs" />Documentos e Formulários
 
@@ -44,8 +47,14 @@ Os documentos e formulários que devem ser utilizados no processo de estágio s�
    
    1. Você possui um contrato de estágio assinado pela empresa e pela UFCAT.
    2. O seu contrato e todo o andamento do estágio estiver documentado e com as assinaturas necessárias em um processo SEI!, que é o sistema de protocolos do governo federal. 
-   3. Você tiver enviado relatórios parciais de estágio a cada seis meses e o relatório final no término do estágio. Esses documentos devem ser colocados no SEI! e assinados.
+   3. Você tiver enviado relatórios parciais de estágio a cada seis meses e o relatório final no término do estágio. Esses documentos devem ser colocados no SEI! e assinados. O envio de relatórios é feito em [processos intercorrentes](peticionamento.md#acrescimo-processo).
    4. Caso tenha terminado o estágio, o documento de finalização estiver assinado e incluído no processo. 
+
+1. **O que é o peticionamento do estágio?**
+
+   É uma solicitação oficial do estudante para a UFCAT para que o estágio seja oficializado e que inclui diversos documentos para que essa solicitação seja aceita. Na UFCAT utilizamos o peticionamento eletrônico no [sistema SEI!](https://sei.ufg.br/) que é o sistema eletrônico de protocolos do governo federal. 
+   
+   Para utilizar o sistema SEI! e realizar o petitionamento, você deve ter um usuário e seguir diversas regras para que o seu peticionamento seja reconhecimento e processado corretamente pela UFCAT. Veja em ["Etapas Oficiais do Estágio"](#etapas).
 
 1. **Qual é o problema em não regularizar o meu estágio junto à UFCAT apesar dele ser não obrigatório no curso de Ciência da Computação?**
 
@@ -57,7 +66,7 @@ Os documentos e formulários que devem ser utilizados no processo de estágio s�
    
 1. **Qual é a diferença entre o orientador de estágio e o coordenador de estágio?**
 
-   Como o estágio em Ciência da Computação é **não-obrigatório**, então o orientador não tem papel muito relevante. Em teoria, ele deveria atuar na mesma área da computação das atividades do estagiário e certificar que as atividades desenvolvidas são coerentes para um estágio em computação. Na prática, apenas este segundo papel é importante, mas ele pode ser desempenhado pelo próprio coordenador de estágio. Entretanto, oficialmente sempre haverá um orientador e um coordenador, ainda que as tarefas sejam desempenhadas pela mesma pessoa.
+   Como o estágio em Ciência da Computação é **não-obrigatório**, então o orientador não tem papel muito relevante. Em teoria, ele deveria atuar na mesma área da computação das atividades do estagiário e certificar que as atividades desenvolvidas são coerentes para um estágio em computação. Na prática, apenas este segundo papel é importante, mas ele pode ser desempenhado pelo próprio coordenador de estágio. Entretanto, oficialmente sempre haverá um orientador e um coordenador, ainda que as tarefas sejam desempenhadas pela mesma pessoa. (Isso não se aplicada a cursos com estágio obrigatório, especialmente em saúde)
    
    O coordenador é o representante oficial do curso e UFCAT no estágio do aluno, responsável por assinar documentos pelo curso. 
 
