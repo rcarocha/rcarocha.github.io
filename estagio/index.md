@@ -13,7 +13,7 @@ Desde o dia 1 de abril de 2023, eu (Prof. Ricardo da Rocha) sou o **coordenador*
 
 * A empresa precisa estar conveniada com a UFCAT. [Lista das empresas conveniadas](https://estagio.catalao.ufg.br/p/40059-convenios)
   * Caso a empresa não possua um convênio, então basta a empresa solicitar um convênio em um processo que não está indicado aqui. A **empresa** deve entrar em contato com a [coordenação de estágio da UFCAT](https://estagio.catalao.ufg.br/) para entender qual é o procedimento que deve ser seguido (email da coordenação: <a href="javascript:location='mailto:\u0063\u0067\u0065\u002e\u0070\u0072\u006f\u0067\u0072\u0061\u0064\u0040\u0075\u0066\u0063\u0061\u0074\u002e\u0065\u0064\u0075\u002e\u0062\u0072';void 0"><script type="text/javascript">document.write('\u0063\u0067\u0065\u002e\u0070\u0072\u006f\u0067\u0072\u0061\u0064\u0040\u0075\u0066\u0063\u0061\u0074\u002e\u0065\u0064\u0075\u002e\u0062\u0072')</script></a>). [Equipe de atendimento](https://estagio.catalao.ufg.br/p/5916-equipe-horario-de-atendimento). 
-* O estudante precisa realizar o **[peticionamento de estágio](peticionamento.md)**. 
+* O estudante precisa realizar o 🚨 **[peticionamento de estágio](peticionamento.md)** 🚨. 
 
 <!-- [Tutorial do peticionamento de estágio](https://estagio.catalao.ufg.br/p/41500-tutoriais-peticionamento-de-estagio-nao-obrigatorio-no-sei) - Coordenação de Estágio da UFCAT
   * Os passos indicados nesse tutorial devem ser seguidos pelo interessado no estágio/estagiário.
@@ -46,7 +46,7 @@ Os documentos e formulários que devem ser utilizados no processo de estágio s�
    O seu estágio só estará regularizado se **todas** as seguintes condições forem atendidas:
    
    1. Você possui um contrato de estágio assinado pela empresa e pela UFCAT.
-   2. O seu contrato e todo o andamento do estágio estiver documentado e com as assinaturas necessárias em um processo SEI!, que é o sistema de protocolos do governo federal. 
+   2. Você criou um **peticionamento de estágio**, que é a documentação oficial do seu contrato e do andamento do estágio em um processo SEI!, que é o sistema de protocolos do governo federal. 
    3. Você tiver enviado relatórios parciais de estágio a cada seis meses e o relatório final no término do estágio. Esses documentos devem ser colocados no SEI! e assinados. O envio de relatórios é feito em [processos intercorrentes](peticionamento.md#acrescimo-processo).
    4. Caso tenha terminado o estágio, o documento de finalização estiver assinado e incluído no processo. 
 
@@ -72,7 +72,7 @@ Os documentos e formulários que devem ser utilizados no processo de estágio s�
 
 ## <a name="oportunidades" />Oportunidades de Estágio
 
-*Em construção*. Por enquanto, você poderá procurar as oportunidades no [portal de estágios da UFCAT](https://estagio.catalao.ufg.br/news?direction=desc&sort=journal_news.created_at&tags=noticias).
+🚧 *Em construção* 🚧. Por enquanto, você poderá procurar as oportunidades no [portal de estágios da UFCAT](https://estagio.catalao.ufg.br/news?direction=desc&sort=journal_news.created_at&tags=noticias).
 
 ## <a name="contato" />Como entrar em contato comigo
 
