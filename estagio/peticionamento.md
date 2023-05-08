@@ -37,12 +37,13 @@ Você precisará realizar os seguintes passos:
 
 Ao final do processo, você terá um número de processo SEI! associado ao seu estágio, que terá o formato `23070.999999/2023-99`.
 
-
-### <a name="#acrescimo-processo"/>Acréscimo de Documentos 
+<a name="acrescimo-processo" />
+### Acréscimo de Documentos 
 
 Para acrescentar novos documentos no processo mais à frente, tais como relatórios, você precisará fazer um **processo intercorrente**, que é explicado no tutorial de peticionamento, na página 12.
 
-## <a name="assinatura"> /a>Assinatura Digital de Documentos
+<a name="assinatura" />
+##  Assinatura Digital de Documentos
 
 Para assinar digital documentos, você deve utilizar o serviço de assinatura digital oferecido pelo Governo Federal por meio da [conta gov.br](https://acesso.gov.br) do cidadão. Todos os requisitos e **como** utilizar o serviço estão em: <https://www.gov.br/pt-br/servicos/assinatura-eletronica>.
 
