@@ -57,7 +57,7 @@ Os documentos e formulários que devem ser utilizados no processo de estágio s�
    
 1. **Qual é a diferença entre o orientador de estágio e o coordenador de estágio?**
 
-   Como o estágio em Ciência da Computação é **não-obrigatório**, então o orientador não tem papel muito relevante. Em teoria, ele deveria atuar na área da computação em que as atividades do estagiário e certificar que as atividades desenvolvidas são coerentes para um estágio em computação. Na prática, apenas este segundo papel é importante, mas ele pode ser desempenhado pelo próprio coordenador de estágio. Entretanto, oficialmente sempre haverá um orientador e um coordenador, ainda que as tarefas sejam desempenhadas pela mesma pessoa.
+   Como o estágio em Ciência da Computação é **não-obrigatório**, então o orientador não tem papel muito relevante. Em teoria, ele deveria atuar na mesma área da computação das atividades do estagiário e certificar que as atividades desenvolvidas são coerentes para um estágio em computação. Na prática, apenas este segundo papel é importante, mas ele pode ser desempenhado pelo próprio coordenador de estágio. Entretanto, oficialmente sempre haverá um orientador e um coordenador, ainda que as tarefas sejam desempenhadas pela mesma pessoa.
    
    O coordenador é o representante oficial do curso e UFCAT no estágio do aluno, responsável por assinar documentos pelo curso. 
 
