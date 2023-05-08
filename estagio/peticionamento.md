@@ -1,9 +1,9 @@
 # Peticionamento em Estágio Não-obrigatorio na UFCAT
 
-| ⛔ Atenção ⛔ |
-|---------|
-| Este documento tem como objetivo facilitar o acesso e compreensão às normas para peticionamento de estágio na UFCAT. |
-| Essas normas **não** são mantidas ou atualizadas por mim, mas pela [Coordenação Geral de Estágios](https://estagio.catalao.ufg.br/) da UFCAT (CGE/PROGRAD). |
+### ⛔ Atenção ⛔
+
+* Este documento tem como objetivo facilitar o acesso e compreensão às normas para peticionamento de estágio na UFCAT.
+* Essas normas **não** são mantidas ou atualizadas por mim, mas pela [Coordenação Geral de Estágios](https://estagio.catalao.ufg.br/) da UFCAT (CGE/PROGRAD).
 
 Por isso, não assuma que os procedimentos aqui indicados estão atualizados. Sempre que possível, tentarei manter este conteúdo atualizado, mas a fonte original e oficial das informações aqui dispostas é a seguinte página: 
 
