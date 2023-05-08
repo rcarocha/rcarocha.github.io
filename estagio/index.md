@@ -13,7 +13,7 @@ Desde o dia 1 de abril de 2023, eu (Prof. Ricardo da Rocha) sou o **coordenador*
 
 * A empresa precisa estar conveniada com a UFCAT. [Lista das empresas conveniadas](https://estagio.catalao.ufg.br/p/40059-convenios)
   * Caso a empresa não possua um convênio, então basta a empresa solicitar um convênio em um processo que não está indicado aqui. A **empresa** deve entrar em contato com a [coordenação de estágio da UFCAT](https://estagio.catalao.ufg.br/) para entender qual é o procedimento que deve ser seguido (email da coordenação: <a href="javascript:location='mailto:\u0063\u0067\u0065\u002e\u0070\u0072\u006f\u0067\u0072\u0061\u0064\u0040\u0075\u0066\u0063\u0061\u0074\u002e\u0065\u0064\u0075\u002e\u0062\u0072';void 0"><script type="text/javascript">document.write('\u0063\u0067\u0065\u002e\u0070\u0072\u006f\u0067\u0072\u0061\u0064\u0040\u0075\u0066\u0063\u0061\u0074\u002e\u0065\u0064\u0075\u002e\u0062\u0072')</script></a>). [Equipe de atendimento](https://estagio.catalao.ufg.br/p/5916-equipe-horario-de-atendimento). 
-* O estudante precisa realizar o ❗ **[peticionamento de estágio](peticionamento.md)** ❗. 
+* O estudante precisa realizar o 🚩**[peticionamento de estágio](peticionamento.md)**🚩. 
 
 <!-- [Tutorial do peticionamento de estágio](https://estagio.catalao.ufg.br/p/41500-tutoriais-peticionamento-de-estagio-nao-obrigatorio-no-sei) - Coordenação de Estágio da UFCAT
   * Os passos indicados nesse tutorial devem ser seguidos pelo interessado no estágio/estagiário.
