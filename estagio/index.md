@@ -58,7 +58,7 @@ Os documentos e formulários que devem ser utilizados no processo de estágio s�
 
 1. **Qual é o problema em não regularizar o meu estágio junto à UFCAT apesar dele ser não obrigatório no curso de Ciência da Computação?**
 
-   :warning: Você corre o risco de não conseguir aproveitar as horas do estágio nas horas de atividades complementares :warning:, que são necessárias para que você obtenha o diploma. Neste caso, você teria que completar as horas com outras atividades (veja o [PPC do curso](https://files.cercomp.ufg.br/weby/up/498/o/PPC-Computa%C3%A7%C3%A3o-RC.pdf) na seção *"6.6 - Atividades Complementares"*).
+   🚩 Você corre o risco de não conseguir aproveitar as horas do estágio nas horas de atividades complementares 🚩, que são necessárias para que você obtenha o diploma. Neste caso, você teria que completar as horas com outras atividades (veja o [PPC do curso](https://files.cercomp.ufg.br/weby/up/498/o/PPC-Computa%C3%A7%C3%A3o-RC.pdf) na seção *"6.6 - Atividades Complementares"*).
    
    Ainda, se o processo de estágio foi intermediado pelo IEL:
    
