@@ -59,6 +59,10 @@ Os documentos e formulários que devem ser utilizados no processo de estágio s�
 1. **Qual é o problema em não regularizar o meu estágio junto à UFCAT apesar dele ser não obrigatório no curso de Ciência da Computação?**
 
    :warning: Você corre o risco de não conseguir aproveitar as horas do estágio nas horas de atividades complementares :warning:, que são necessárias para que você obtenha o diploma. Neste caso, você teria que completar as horas com outras atividades (veja o [PPC do curso](https://files.cercomp.ufg.br/weby/up/498/o/PPC-Computa%C3%A7%C3%A3o-RC.pdf) na seção *"6.6 - Atividades Complementares"*).
+   
+   Ainda, se o processo de estágio foi intermediado pelo IEL:
+   
+   > A não regularização do processo de estágio é motivo para a UFCAT notificar ao IEL as eventuais irregularidades do estagiário, conforme os termos do Item I.13, Cláusula Terceira, do Contrato UFCAT n.º 552/2020 celebrado entre a UFCAT e o IEL/GO, podendo acarretar o encerramento do contrato de estágio, em razão do descumprimento das normativas internas da UFCAT por parte do estagiário. Ressaltamos ainda que, somente com o processo devidamente regularizado no sistema, é possível que vocês solicitem o aproveitamento do Estágio Não Obrigatório como Horas de Atividades Complementares, bem como a inserção do mesmo no Histórico Acadêmico.
 
 1. **Estou fazendo estágio já há algum tempo mas o meu estágio não está regularizado. O que eu devo fazer?**
 
