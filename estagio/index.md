@@ -27,6 +27,9 @@ Os documentos e formulários que devem ser utilizados no processo de estágio s�
 
 * **Termo de Compromisso de Estágio**: contrato de estágio que deve ser assinado por todas as partes
   * [TCE Estágio não obrigatório empresas/instituições conveniadas](https://files.cercomp.ufg.br/weby/up/610/o/1.1_TCE_Est%C3%A1gio_n%C3%A3o_obrigat%C3%B3rio_em_empresas_conveniadas_com_a_UFCAT.docx)
+  * Os campos da seção 3 devem estar assim preenchidos: 
+    * Coordenador de Estágio do Curso: Ricardo Couto Antunes da Rocha                                                                                                         
+    * Portaria de Designação: PORTARIA IBiotec n° 22, de 29 de março de 2023
 * **Plano de Atividades de Estágio**: descrição das atividades que serão realizadas durante o estágio, que é um compromisso entre a empresa e o estagiário e deve ser coerente com um estágio em computação
   * [Plano de Atividades estágio não obrigatório empresas/instituições conveniadas](https://files.cercomp.ufg.br/weby/up/610/o/1.2_Plano_de_Atividades_Est%C3%A1gio_n%C3%A3o_obrigat%C3%B3rio_em_empresas_conveniadas_com_a_UFCAT.docx)
 * **Termo de Prorrogação de Estágio**: necessário quando o estágio será prorrogado para além do tempo indicado no TCE.
