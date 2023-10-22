@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /rc2/
+Disallow: /apc/
