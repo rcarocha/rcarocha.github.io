@@ -51,3 +51,9 @@ Para assinar digital documentos, você deve utilizar o serviço de assinatura di
 
 A assinatura digital só possui validade para documentos digitais (exemplo: um PDF). Imprimir um documento assinado digitalmente faz com que as assinaturas digitais lá estampadas percam a sua validade, pois não podem mais ser validadas (ao menos nas assinaturas geradas pelo gov.br). Portanto, se você pretende ter um documento com um misto de assinaturas físicas e assinaturas digitais, todas as assinaturas digitais precisam ser incluídas **por último**. O documento incluído no processo do SEI! precisa ser o documento digital assinado, e não uma digitalização de documento impresso, **caso** ele utilize alguma assinatura digital.
 
+Uma vez que um documento tiver uma assinatura digital, você **não pode em hipótese alguma** editar o documento. Fazendo isso você estará invalidando o documento assinado que **perderá** a assinatura. As "figuras" que aparecem no documento indicando quem assinou e a data não tem qualquer validade. O seu leitor de PDF ou o [validador de assinaturas do GOV](https://validar.iti.gov.br/) deve mostrar **TODAS** as pessoas que assinaram o documento.
+
+Pense um pouco: se você pudesse editar um documento assinado sem perder a assinatura, então seria possível cometer qualquer tipo de fraude.
+
+Se você precisa editar um documento com assinatura digital, então você precisará retomar o processo desde o inicio e pedir novamente as assinaturas de todas as pessoas envolvidas.
+
