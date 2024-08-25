@@ -3,11 +3,11 @@
 ### ⛔ Atenção ⛔
 
 * Este documento tem como objetivo facilitar o acesso e compreensão às normas para peticionamento de estágio na UFCAT.
-* Essas normas **não** são mantidas ou atualizadas por mim, mas pela [Coordenação Geral de Estágios](https://estagio.catalao.ufg.br/) da UFCAT (CGE/PROGRAD).
+* Essas normas **não** são mantidas ou atualizadas por mim, mas pela [Coordenação Geral de Estágios](https://sites.google.com/ufcat.edu.br/cge-ufcat/a-cge) da UFCAT (CGE/PROGRAD).
 
 Por isso, não assuma que os procedimentos aqui indicados estão atualizados. Sempre que possível, tentarei manter este conteúdo atualizado, mas a fonte original e oficial das informações aqui dispostas é a seguinte página: 
 
-* <https://estagio.catalao.ufg.br/p/41500-tutoriais-peticionamento-de-estagio-nao-obrigatorio-no-sei>
+* <https://sites.google.com/ufcat.edu.br/cge-ufcat/tutoriais#h.qhkcm8cmv05r>
 
 Tenha isso em mente, especialmente se algum link não estiver funcionando ou se houver alguma divergência nesta página em relação aos sistemas e documentos efetivamente utilizados. 
 
@@ -18,7 +18,8 @@ Se você não sabe o que é um **peticionamento de estágio**, veja em [resposta
 
 Para realizar o peticionamento, você precisará:
 
-* Sabem quem será seu Supervisor de Estágio (na empresa), e ter algumas informações de contato.
+* Estar, no mínimo, no segundo período do curso de Ciência da Computação.
+* Saber quem será seu Supervisor de Estágio (na empresa), e ter algumas informações de contato.
 * Definir o Orientador de Estágio (na UFCAT, podendo ser o próprio coordenador)
 * Definir com o supervisor o plano de trabalho, que especifica as atividades que serão desenvolvidas no estágio.
 * Saber se a empresa realizará um convenio direto com a UFCAT ou se estará usando um agente de integração de estágio (página 9 do tutorial)
@@ -29,13 +30,13 @@ Para realizar o peticionamento, você precisará:
 
 Você precisará realizar os seguintes passos: 
 
-1. Criar um login como usuário externo no sistema SEI! da UFG (por enquanto, é da UFG mesmo!)
+1. Criar um login como usuário externo no sistema SEI! da UFCAT   
    1. Ingressante a **partir de 2021**: pode ser que o sistema não tenha seu pré-cadastro e não reconheça seu e-mail pessoal de quando ingressou na UFCAT. 
-      * Siga os passos indicados em ["ORIENTAÇÕES PARA REALIZAR O CADASTRO DE USUÁRIO EXTERNO NO SEI/UFG – 2º Modo"](https://estagio.catalao.ufg.br/p/41500-tutoriais-peticionamento-de-estagio-nao-obrigatorio-no-sei)
-   2. Ingressante **antes de 2021**: siga os passos indicados no tutorial ["Como fazer meu peticionamento de Estágio Não Obrigatório no SEI-UFG?"](https://files.cercomp.ufg.br/weby/up/610/o/Orienta%C3%A7%C3%B5es_peticionamento_de_est%C3%A1gio_n%C3%A3o_obrigat%C3%B3rio_atualizado_28_abri.pdf), paginas 1 a 3.  
-2. Crie o peticionamento no SEI! indicados no tutorial ["Como fazer meu peticionamento de Estágio Não Obrigatório no SEI-UFG?"](https://files.cercomp.ufg.br/weby/up/610/o/Orienta%C3%A7%C3%B5es_peticionamento_de_est%C3%A1gio_n%C3%A3o_obrigat%C3%B3rio_atualizado_28_abri.pdf), a partir da quarta página.
+      * Siga os passos indicados em ["ORIENTAÇÕES PARA REALIZAR O CADASTRO DE USUÁRIO EXTERNO NO SEI/UFCAT"](https://ufcat.edu.br/manual-de-orientacao-cadastro-de-usuarios-externos-no-sei-ufcat)
+<!-- 2. Ingressante **antes de 2021**: siga os passos indicados no tutorial ["Como fazer meu peticionamento de Estágio Não Obrigatório no SEI-UFG?"](https://files.cercomp.ufg.br/weby/up/610/o/Orienta%C3%A7%C3%B5es_peticionamento_de_est%C3%A1gio_n%C3%A3o_obrigat%C3%B3rio_atualizado_28_abri.pdf), paginas 1 a 3.  -->
+2. Crie o peticionamento no SEI! indicados no tutorial ["Como fazer meu peticionamento de Estágio Não Obrigatório no SEI-UFG?"](https://files.cercomp.ufg.br/weby/up/610/o/Manual_de_Peticionamento_Eletr%C3%B4nico_no_SEI_UFCAT.pdf), a partir da quarta página.
 
-Ao final do processo, você terá um número de processo SEI! associado ao seu estágio, que terá o formato `23070.999999/2023-99`.
+Ao final do processo, você terá um número de processo SEI! associado ao seu estágio, que terá o formato `23852.999999/2023-99`.
 
 <a name="acrescimo-processo" />
 ### Acréscimo de Documentos 
