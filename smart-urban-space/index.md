@@ -22,6 +22,8 @@ O objetivo deste projeto é investigar e propor uma arquitetura de middleware pa
 
 * Ricardo Couto Antunes da Rocha - coordenador
 * Alunos de iniciação e projeto final de curso
-  * Luan Diniz Mazaro Rodovalho - Iniciação Científica (PIBIC) - Disseminação de Informações com QoS para Cidades Inteligentes
-  * Marcelo Ribeiro Tormim - Projeto Final de Curso - Dados sobre Som para Cidades Inteligentes
+  * Luan Diniz Mazaro Rodovalho - Iniciação Científica (PIBIC) - [Disseminação de Informações com QoS para Cidades Inteligentes](/pub/2023-artigo-luan.rodovalho-ic-disseminacaodedados.pdf)
+  * Marcelo Ribeiro Tormim - Projeto Final de Curso - [Dados sobre Som para Cidades Inteligentes](pub/2023-monografia-pfc-marcelo.tormin-dadossobresom.pdf)
+  
+<!--2023-artigo-marcelo.tormin-dadossobresom.pdf-->
 
