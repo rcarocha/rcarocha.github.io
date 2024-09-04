@@ -13,5 +13,5 @@ O objetivo deste projeto é desenvolver e aplicar técnicas de Inteligência Art
 ## Participantes
 
 * Ricardo Couto Antunes da Rocha - coordenador
-* Alunos de iniciação e projeto final de curso
+* [Andréa Marcondes de Freitas](https://www.ifch.unicamp.br/ifch/colaboradores/pos-ciencias-sociais/601/Andr%C3%A9a%20Marcondes%20de%20Freitas) - Departamento de Ciência Política - UNICAMP
 
