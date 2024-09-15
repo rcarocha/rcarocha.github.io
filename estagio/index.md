@@ -88,6 +88,11 @@ Os documentos e formulários que devem ser utilizados no processo de estágio s�
    
    O coordenador é o representante oficial do curso e UFCAT no estágio do aluno, responsável por assinar documentos pelo curso. 
 
+   
+1. **Irei terminar/encerrar um estágio antes do prazo indicado no contrato? Preciso fazer alguma coisa?**
+
+   Sim, particularmente se você pretende iniciar um estágio em outro local. É necessário que você preencha e assine (assim como o seu supervisor na empresa) o ["Formulário de Desligamento de Estágio"](https://docs.google.com/document/d/1dJyuL19_knqbfCITLH_l3i0pE43TMlYD/edit?usp=sharing&ouid=107891874171297541317&rtpof=true&sd=true), que encontra-se na [página de formulários do CGE](https://sites.google.com/ufcat.edu.br/cge-ufcat/FORMULARIOS).
+   
 ## <a name="oportunidades" />Oportunidades de Estágio
 
 🚧 *Em construção* 🚧. Por enquanto, você poderá procurar as oportunidades no [portal de estágios da UFCAT](https://sites.google.com/ufcat.edu.br/cge-ufcat/a-cge).
