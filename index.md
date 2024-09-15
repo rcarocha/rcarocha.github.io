@@ -10,7 +10,7 @@
 
 # Research Interests
 
-+ **Middleware for Mobile and Ubiquitous Computing**
++ **Middleware for Mobile and Ubiquitous Computing** 
 + **Cloud Computing and Microservices**
 + **Smart Cities**
 + **Digital Citizenship**
