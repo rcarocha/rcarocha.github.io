@@ -12,15 +12,25 @@ Desde o dia 1 de abril de 2023, eu (Prof. Ricardo da Rocha) sou o **coordenador*
 
 ## Organização desta página
 
+* [Atendimento com Coordenação](#atendimento)
 * [Etapas Oficiais do Estágio](#etapas)
 * [Documentos e Formulários](#docs)
 * [FAQ - Perguntas Frequentes](#faq)
 * [Oportunidades de Estágio](#oportunidades)
 * [Contato com o Coordenador de Estágio](#contato)
 
+## Atendimento com a Coordenação de Estágio
+
+Todo atendimento com a Coordenação de Estágios do curso de Ciência da Computação deverá ser solicitado pelo seguinte formulário:
+
+<https://forms.gle/M7RC4AgGZEHGAep27>
+
+Isso vale para dúvidas e **solicitação de assinatura de documentos**. Por isso, antes de enviar o documento para assinatura, faça a solicitação pelo formulário acima. Este procedimento foi criado para evitar problemas que tem ocorrido frequentemente em solicitações de alunos e tornar o atendimento mais ágil e confiável.
+
+Absolutamente NENHUM atendimento será realizado por outra via. Mensagens enviadas por telefone serão ignoradas e o número de telefone será bloqueado.
+
 ## <a name="etapas" />Etapas Oficiais do Estágio
 
-<!-- A T U A L I Z A D O   A T E  A Q U I  -->
 
 * A empresa precisa estar [conveniada](https://sites.google.com/ufcat.edu.br/cge-ufcat/CONVENIOS) com a UFCAT. [Lista das empresas conveniadas](https://sites.google.com/ufcat.edu.br/cge-ufcat/CONVENIOS)
   * Caso a empresa não possua um convênio, então basta a empresa solicitar um convênio em um processo que não está indicado aqui. A **empresa** deve entrar em contato com a [coordenação de estágio da UFCAT](https://sites.google.com/ufcat.edu.br/cge-ufcat/a-cge) para entender qual é o procedimento que deve ser seguido (email da coordenação: <a href="cge.prograd@ufcat.edu.br">cge.prograd@ufcat.edu.br</a>). [Equipe de atendimento](https://sites.google.com/ufcat.edu.br/cge-ufcat/a-cge/equipe). 
