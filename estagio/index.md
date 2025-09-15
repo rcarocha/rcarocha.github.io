@@ -34,8 +34,8 @@ Absolutamente NENHUM atendimento será realizado por outra via. Mensagens enviad
 ## <a name="etapas" />Etapas Oficiais do Estágio
 
 
-* A empresa precisa estar [conveniada](https://sites.google.com/ufcat.edu.br/cge-ufcat/CONVENIOS) com a UFCAT. [Lista das empresas conveniadas](https://sites.google.com/ufcat.edu.br/cge-ufcat/CONVENIOS)
-  * Caso a empresa não possua um convênio, então basta a empresa solicitar um convênio em um processo que não está indicado aqui. A **empresa** deve entrar em contato com a [coordenação de estágio da UFCAT](https://sites.google.com/ufcat.edu.br/cge-ufcat/a-cge) para entender qual é o procedimento que deve ser seguido (email da coordenação: <a href="cge.prograd@ufcat.edu.br">cge.prograd@ufcat.edu.br</a>). [Equipe de atendimento](https://sites.google.com/ufcat.edu.br/cge-ufcat/a-cge/equipe). 
+* A empresa precisa estar [conveniada](https://estagio.ufcat.edu.br/convenios-estagio) com a UFCAT. [Lista das empresas conveniadas](https://estagio.ufcat.edu.br/convenios-empresas-conveniadas)
+  * Caso a empresa não possua um convênio, então basta a empresa solicitar um convênio em um processo que não está indicado aqui. A **empresa** deve entrar em contato com a [coordenação de estágio da UFCAT](https://estagio.ufcat.edu.br/) para entender qual é o procedimento que deve ser seguido (email da coordenação: <a href="cge.prograd@ufcat.edu.br">cge.prograd@ufcat.edu.br</a>). [Equipe de atendimento](https://sites.google.com/ufcat.edu.br/cge-ufcat/a-cge/equipe). 
 * O estudante precisa realizar o 🚩**[peticionamento de estágio](peticionamento.md)**🚩. 
 
 <!-- [Tutorial do peticionamento de estágio](https://estagio.catalao.ufg.br/p/41500-tutoriais-peticionamento-de-estagio-nao-obrigatorio-no-sei) - Coordenação de Estágio da UFCAT
@@ -46,7 +46,7 @@ Absolutamente NENHUM atendimento será realizado por outra via. Mensagens enviad
 
 * [Regulamento de Estágio](https://files.cercomp.ufg.br/weby/up/498/o/regulamento_estagio.pdf?1382352175) do Departamento de Ciência da Computação
 
-Os documentos e formulários que devem ser utilizados no processo de estágio são os seguintes ([originalmente encontrados aqui](https://sites.google.com/ufcat.edu.br/cge-ufcat/FORMULARIOS)):
+Os documentos e formulários que devem ser utilizados no processo de estágio são os seguintes ([originalmente encontrados aqui](https://estagio.ufcat.edu.br/formularios-nao-obrigatorio-empresas-conveniadas-ufcat) e [aqui](https://estagio.ufcat.edu.br/formularios-nao-obrigatorio-via-agentes-integracao)):
 
 * **Termo de Compromisso de Estágio**: contrato de estágio que deve ser assinado por todas as partes
   * [TCE Estágio não obrigatório empresas/instituições conveniadas](https://docs.google.com/document/d/1PXfUppX2TIFmBuTwCp-fZ_ZaJ5wW2YiT/edit?usp=sharing&ouid=107891874171297541317&rtpof=true&sd=true)
@@ -103,11 +103,11 @@ Os documentos e formulários que devem ser utilizados no processo de estágio s�
    
 1. **Irei terminar/encerrar um estágio antes do prazo indicado no contrato? Preciso fazer alguma coisa?**
 
-   Sim, particularmente se você pretende iniciar um estágio em outro local. É necessário que você preencha e assine (assim como o seu supervisor na empresa) o ["Formulário de Desligamento de Estágio"](https://docs.google.com/document/d/1dJyuL19_knqbfCITLH_l3i0pE43TMlYD/edit?usp=sharing&ouid=107891874171297541317&rtpof=true&sd=true), que encontra-se na [página de formulários do CGE](https://sites.google.com/ufcat.edu.br/cge-ufcat/FORMULARIOS).
+   Sim, particularmente se você pretende iniciar um estágio em outro local. É necessário que você preencha e assine (assim como o seu supervisor na empresa) o ["Formulário de Desligamento de Estágio"](https://docs.google.com/document/d/1dJyuL19_knqbfCITLH_l3i0pE43TMlYD/edit?usp=sharing&ouid=107891874171297541317&rtpof=true&sd=true), que encontra-se na [página de formulários do CGE](https://estagio.ufcat.edu.br/) (procurar Menu / Formulários / Estágio Não Obrigatório).
    
 ## <a name="oportunidades" />Oportunidades de Estágio
 
-🚧 *Em construção* 🚧. Por enquanto, você poderá procurar as oportunidades no [portal de estágios da UFCAT](https://sites.google.com/ufcat.edu.br/cge-ufcat/a-cge).
+🚧 *Em construção* 🚧. Por enquanto, você poderá procurar as oportunidades no [portal de estágios da UFCAT](https://estagio.ufcat.edu.br/).
 
 ## <a name="contato" />Como entrar em contato comigo
 
