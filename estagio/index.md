@@ -8,7 +8,9 @@ Desde o dia 1 de abril de 2023, eu (Prof. Ricardo da Rocha) sou o **coordenador*
 - Prof. Ricardo Couto Antunes da Rocha (coordenador)
 - Prof. Dalton Matsuo Tavares (vice-coordenador)
 
-- [Coordenação Geral de Estágio da UFCAT](https://sites.google.com/ufcat.edu.br/cge-ufcat/a-cge)
+- [Coordenação Geral de Estágio da UFCAT](https://estagio.ufcat.edu.br/)
+
+<!--OLD (https://sites.google.com/ufcat.edu.br/cge-ufcat/a-cge)-->
 
 ## Organização desta página
 
