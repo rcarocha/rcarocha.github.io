@@ -3,11 +3,11 @@
 ### ⛔ Atenção ⛔
 
 * Este documento tem como objetivo facilitar o acesso e compreensão às normas para peticionamento de estágio na UFCAT.
-* Essas normas **não** são mantidas ou atualizadas por mim, mas pela [Coordenação Geral de Estágios](https://sites.google.com/ufcat.edu.br/cge-ufcat/a-cge) da UFCAT (CGE/PROGRAD).
+* Essas normas **não** são mantidas ou atualizadas por mim, mas pela [Coordenação Geral de Estágios](https://estagio.ufcat.edu.br/) da UFCAT (CGE/PROGRAD).
 
 Por isso, não assuma que os procedimentos aqui indicados estão atualizados. Sempre que possível, tentarei manter este conteúdo atualizado, mas a fonte original e oficial das informações aqui dispostas é a seguinte página: 
 
-* <https://sites.google.com/ufcat.edu.br/cge-ufcat/tutoriais#h.qhkcm8cmv05r>
+* <https://estagio.ufcat.edu.br/tutoriais-para-estudantes>
 
 Tenha isso em mente, especialmente se algum link não estiver funcionando ou se houver alguma divergência nesta página em relação aos sistemas e documentos efetivamente utilizados. 
 
