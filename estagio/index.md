@@ -52,7 +52,7 @@ Os documentos e formulários que devem ser utilizados no processo de estágio s�
   * [TCE Estágio não obrigatório empresas/instituições conveniadas](https://docs.google.com/document/d/1PXfUppX2TIFmBuTwCp-fZ_ZaJ5wW2YiT/edit?usp=sharing&ouid=107891874171297541317&rtpof=true&sd=true)
   * Os campos da seção 3 devem estar assim preenchidos: 
     * **Coordenador de Estágio do Curso**: Ricardo Couto Antunes da Rocha                                                                                                         
-    * **Portaria de Designação**: PORTARIA IBiotec n° 34, de 04 de julho de 2024
+    * **Portaria de Designação**: PORTARIA IBiotec n° 38, de 09 de junho de 2025
 * **Plano de Atividades de Estágio**: descrição das atividades que serão realizadas durante o estágio, que é um compromisso entre a empresa e o estagiário e deve ser coerente com um estágio em computação
   * [Plano de Atividades estágio não obrigatório empresas/instituições conveniadas](https://docs.google.com/document/d/1Yn3u2oU4AfxiC83qQWeaACmZgVVcOHYZ/edit?usp=sharing&ouid=107891874171297541317&rtpof=true&sd=true)
 * **Termo de Prorrogação de Estágio**: necessário quando o estágio será prorrogado para além do tempo indicado no TCE.
