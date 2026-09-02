@@ -14,6 +14,7 @@ Desde o dia 1 de abril de 2023, eu (Prof. Ricardo da Rocha) sou o **coordenador*
 
 ## Organização desta página
 
+* [Manual para Orientadores de Estágio](orientadores.md)
 * [Atendimento com Coordenação](#atendimento)
 * [Etapas Oficiais do Estágio](#etapas)
 * [Documentos e Formulários](#docs)
